@@ -3,150 +3,266 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Citation Trap — trace viewer</title>
+<title>Citation Trap</title>
 <style>
-  :root {
-    --faithful:#1a7f37; --misattributed:#bf8700; --fabricated:#cf222e;
-    --unsupported:#8250df; --bg:#0d1117; --panel:#161b22; --border:#30363d;
-    --text:#e6edf3; --muted:#8b949e;
+  :root{
+    --bg:#f7f8fa; --panel:#ffffff; --ink:#16191d; --muted:#6b7280;
+    --line:#e8eaed; --line2:#eef0f3; --accent:#4f46e5;
+    --faithful:#15803d; --faithful-bg:#eafaf0;
+    --misattributed:#b45309; --misattributed-bg:#fdf4e3;
+    --fabricated:#dc2626; --fabricated-bg:#fdecec;
+    --unsupported:#7c3aed; --unsupported-bg:#f3ecfd;
+    --shadow:0 1px 2px rgba(16,24,40,.04),0 4px 16px rgba(16,24,40,.06);
   }
-  * { box-sizing:border-box; }
-  body { margin:0; font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-         background:var(--bg); color:var(--text); }
-  header { padding:18px 24px; border-bottom:1px solid var(--border); }
-  h1 { margin:0; font-size:18px; }
-  .sub { color:var(--muted); font-size:13px; margin-top:4px; }
-  .wrap { display:flex; gap:0; height:calc(100vh - 70px); }
-  .left { width:340px; border-right:1px solid var(--border); overflow:auto; flex:none; }
-  .right { flex:1; overflow:auto; padding:24px; }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{background:var(--bg);color:var(--ink);
+    font:14px/1.55 ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
 
-  /* 2x2 */
-  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:16px; }
-  .cell { background:var(--panel); border:1px solid var(--border); border-radius:8px;
-          padding:12px; text-align:center; }
-  .cell .n { font-size:26px; font-weight:700; }
-  .cell .lbl { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
-  .cell.headline { border-color:var(--fabricated); }
-  .cell.headline .n { color:var(--fabricated); }
-  .stats { padding:0 16px 8px; color:var(--muted); font-size:12px; }
+  /* header */
+  header{display:flex;align-items:flex-end;justify-content:space-between;
+    padding:22px 32px;background:var(--panel);border-bottom:1px solid var(--line)}
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;font-weight:800;font-size:17px}
+  h1{margin:0;font-size:19px;letter-spacing:-.01em}
+  .tagline{color:var(--muted);font-size:12.5px;margin-top:1px}
+  .metrics{display:flex;gap:28px}
+  .metric{text-align:right}
+  .metric .v{font-size:22px;font-weight:700;letter-spacing:-.02em}
+  .metric .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .metric.danger .v{color:var(--fabricated)}
 
-  .qitem { padding:10px 16px; border-bottom:1px solid var(--border); cursor:pointer; }
-  .qitem:hover { background:var(--panel); }
-  .qitem.active { background:#1f2937; }
-  .qitem .qid { font-weight:600; }
-  .badge { display:inline-block; font-size:10px; padding:1px 7px; border-radius:10px;
-           color:#fff; vertical-align:middle; }
-  .b-ideal { background:var(--faithful); }
-  .b-correct_but_fabricated { background:var(--fabricated); }
-  .b-honest_wrong { background:var(--misattributed); }
-  .b-worst { background:#6e7681; }
+  .layout{display:grid;grid-template-columns:380px 1fr;height:calc(100vh - 79px)}
+  .side{border-right:1px solid var(--line);overflow:auto;background:var(--bg)}
+  .main{overflow:auto;padding:28px 32px}
 
-  .claim { background:var(--panel); border:1px solid var(--border); border-left-width:4px;
-           border-radius:6px; padding:10px 12px; margin:8px 0; }
-  .claim.faithful { border-left-color:var(--faithful); }
-  .claim.misattributed { border-left-color:var(--misattributed); }
-  .claim.fabricated { border-left-color:var(--fabricated); }
-  .claim.unsupported { border-left-color:var(--unsupported); }
-  .tag { font-size:10px; font-weight:700; text-transform:uppercase; padding:1px 6px;
-         border-radius:4px; color:#fff; }
-  .tag.faithful { background:var(--faithful); }
-  .tag.misattributed { background:var(--misattributed); }
-  .tag.fabricated { background:var(--fabricated); }
-  .tag.unsupported { background:var(--unsupported); }
-  .pid { font-family:ui-monospace,monospace; font-size:12px; color:var(--muted); }
-  .passage { margin-top:6px; font-size:13px; color:var(--text); }
-  .passage.missing { color:var(--fabricated); font-style:italic; }
-  .qtext { font-size:16px; font-weight:600; margin-bottom:4px; }
-  .answer { background:var(--panel); border:1px solid var(--border); border-radius:6px;
-            padding:10px 12px; margin:10px 0; }
-  .ok { color:var(--faithful); } .no { color:var(--fabricated); }
-  .steps { color:var(--muted); font-size:12px; margin-top:16px; }
-  .empty { padding:40px; color:var(--muted); }
+  /* matrix */
+  .matrix-wrap{padding:20px 20px 8px}
+  .matrix-title{font-size:12px;font-weight:600;color:var(--muted);
+    text-transform:uppercase;letter-spacing:.06em;margin:0 0 12px 2px}
+  .matrix{display:grid;grid-template-columns:18px 1fr 1fr;grid-template-rows:auto 1fr 1fr 18px;gap:6px}
+  .axis-y{grid-row:2/4;grid-column:1;writing-mode:vertical-rl;transform:rotate(180deg);
+    text-align:center;font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;align-self:center}
+  .axis-x{grid-row:4;grid-column:2/4;text-align:center;font-size:10px;color:var(--muted);
+    letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .colhead{font-size:10.5px;color:var(--muted);text-align:center;font-weight:600;letter-spacing:.02em}
+  .colhead.c1{grid-row:1;grid-column:2} .colhead.c2{grid-row:1;grid-column:3}
+  .q{border:1px solid var(--line);border-radius:12px;padding:14px 12px;background:var(--panel);
+    cursor:pointer;transition:.15s;position:relative;min-height:84px;box-shadow:var(--shadow)}
+  .q:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(16,24,40,.10)}
+  .q.sel{outline:2px solid var(--accent);outline-offset:1px}
+  .q .qn{font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1}
+  .q .ql{font-size:10.5px;color:var(--muted);margin-top:6px;line-height:1.3}
+  .q .dot{position:absolute;top:12px;right:12px;width:9px;height:9px;border-radius:50%}
+  .q.ideal .dot{background:var(--faithful)} .q.honest_wrong .dot{background:var(--misattributed)}
+  .q.worst .dot{background:#9aa1ab}
+  .q.correct_but_fabricated{background:var(--fabricated-bg);border-color:#f6c9c9}
+  .q.correct_but_fabricated .qn{color:var(--fabricated)}
+  .q.correct_but_fabricated .dot{background:var(--fabricated)}
+
+  /* list */
+  .listhead{display:flex;align-items:center;justify-content:space-between;
+    padding:14px 20px 8px;font-size:12px;color:var(--muted)}
+  .clearf{color:var(--accent);cursor:pointer;font-weight:600}
+  .clearf.hidden{display:none}
+  .row{display:flex;align-items:center;gap:12px;padding:11px 20px;cursor:pointer;
+    border-top:1px solid var(--line2);transition:background .12s}
+  .row:hover{background:#fff}
+  .row.sel{background:#fff;box-shadow:inset 3px 0 var(--accent)}
+  .row .bar{width:4px;height:34px;border-radius:3px;flex:none}
+  .bar.ideal{background:var(--faithful)} .bar.correct_but_fabricated{background:var(--fabricated)}
+  .bar.honest_wrong{background:var(--misattributed)} .bar.worst{background:#9aa1ab}
+  .row .body{flex:1;min-width:0}
+  .row .top{display:flex;align-items:center;gap:8px}
+  .row .qid{font-weight:700;font-size:13px}
+  .row .qtxt{color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pill{font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
+  .pill.ideal{color:var(--faithful);background:var(--faithful-bg)}
+  .pill.correct_but_fabricated{color:var(--fabricated);background:var(--fabricated-bg)}
+  .pill.honest_wrong{color:var(--misattributed);background:var(--misattributed-bg)}
+  .pill.worst{color:#5b6270;background:#eef0f3}
+  .meter{height:5px;border-radius:3px;background:#edeef1;margin-top:7px;overflow:hidden}
+  .meter > i{display:block;height:100%;border-radius:3px;background:var(--faithful)}
+  .meter.low > i{background:var(--fabricated)} .meter.mid > i{background:var(--misattributed)}
+
+  /* detail */
+  .crumbs{font-size:12px;color:var(--muted);margin-bottom:10px}
+  .qhead{font-size:23px;font-weight:700;letter-spacing:-.02em;line-height:1.3;margin:0 0 14px;max-width:760px}
+  .chip{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;
+    padding:6px 12px;border-radius:999px}
+  .chip.ideal{color:var(--faithful);background:var(--faithful-bg)}
+  .chip.correct_but_fabricated{color:var(--fabricated);background:var(--fabricated-bg)}
+  .chip.honest_wrong{color:var(--misattributed);background:var(--misattributed-bg)}
+  .chip.worst{color:#5b6270;background:#eef0f3}
+  .answer{display:flex;align-items:center;gap:16px;background:var(--panel);border:1px solid var(--line);
+    border-radius:14px;padding:16px 18px;margin:16px 0 26px;box-shadow:var(--shadow)}
+  .answer .lab{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .answer .val{font-size:18px;font-weight:700}
+  .answer .verdict{font-size:13px;font-weight:600}
+  .verdict.ok{color:var(--faithful)} .verdict.no{color:var(--fabricated)}
+  .answer .sep{width:1px;align-self:stretch;background:var(--line)}
+  .answer .faith{min-width:120px}
+  .answer .faith .meter{margin-top:6px}
+
+  .sec{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;
+    letter-spacing:.06em;margin:0 0 12px}
+  .claim{background:var(--panel);border:1px solid var(--line);border-left:4px solid;
+    border-radius:12px;padding:14px 16px;margin-bottom:12px;box-shadow:var(--shadow)}
+  .claim.faithful{border-left-color:var(--faithful)}
+  .claim.misattributed{border-left-color:var(--misattributed)}
+  .claim.fabricated{border-left-color:var(--fabricated)}
+  .claim.unsupported{border-left-color:var(--unsupported)}
+  .claim .ch{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .tag{font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+    padding:3px 9px;border-radius:6px;color:#fff}
+  .tag.faithful{background:var(--faithful)} .tag.misattributed{background:var(--misattributed)}
+  .tag.fabricated{background:var(--fabricated)} .tag.unsupported{background:var(--unsupported)}
+  .pid{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;color:#444;
+    background:#f0f1f4;padding:2px 8px;border-radius:6px}
+  .claimtext{font-weight:600;font-size:14px}
+  .passage{margin-top:8px;font-size:13px;color:#3a3f47;padding-left:12px;border-left:2px solid var(--line);line-height:1.6}
+  .passage.missing{color:var(--fabricated);font-style:italic;border-left-color:#f6c9c9}
+  .steps{margin-top:24px;font-size:12px;color:var(--muted)}
+  .steps b{color:#3a3f47;font-weight:600}
+  .empty{display:grid;place-items:center;height:100%;color:var(--muted)}
 </style>
 </head>
 <body>
 <header>
-  <h1>Citation Trap <span class="sub" id="agent"></span></h1>
-  <div class="sub">Primary score: citation faithfulness · Secondary: answer correctness</div>
+  <div class="brand">
+    <div class="logo">⚑</div>
+    <div>
+      <h1>Citation Trap</h1>
+      <div class="tagline">Citation faithfulness vs. answer correctness · agent <b id="agent"></b></div>
+    </div>
+  </div>
+  <div class="metrics" id="metrics"></div>
 </header>
 
-<div class="wrap">
-  <div class="left">
-    <div class="grid2" id="grid2"></div>
-    <div class="stats" id="stats"></div>
-    <div id="qlist"></div>
-  </div>
-  <div class="right" id="detail"><div class="empty">Select a question on the left.</div></div>
+<div class="layout">
+  <aside class="side">
+    <div class="matrix-wrap">
+      <p class="matrix-title">Outcome matrix</p>
+      <div class="matrix" id="matrix"></div>
+    </div>
+    <div class="listhead">
+      <span id="listcount"></span>
+      <span class="clearf hidden" id="clearf">clear filter ✕</span>
+    </div>
+    <div id="list"></div>
+  </aside>
+  <main class="main" id="detail"><div class="empty">Select a question.</div></main>
 </div>
 
 <script src="data.js"></script>
 <script>
 const D = window.CITATION_TRAP;
-const QUADS = [
-  ["ideal","answer right · sources trustworthy"],
-  ["correct_but_fabricated","answer right · sources fabricated"],
-  ["honest_wrong","answer wrong · sources trustworthy"],
-  ["worst","answer wrong · sources fabricated"],
-];
+const META = {
+  ideal:{t:"Ideal",d:"right · trustworthy"},
+  correct_but_fabricated:{t:"Correct but fabricated",d:"right · fabricated"},
+  honest_wrong:{t:"Honest wrong",d:"wrong · trustworthy"},
+  worst:{t:"Worst",d:"wrong · fabricated"},
+};
+let filter = null, selected = null;
 
-function renderSummary() {
-  const s = D.summary;
-  document.getElementById("agent").textContent = "· agent: " + s.agent;
-  document.getElementById("grid2").innerHTML = QUADS.map(([k,desc]) => `
-    <div class="cell ${k==='correct_but_fabricated'?'headline':''}">
-      <div class="n">${s.quadrants[k]||0}</div>
-      <div class="lbl">${k.replace(/_/g,' ')}</div>
-    </div>`).join("");
-  document.getElementById("stats").innerHTML =
-    `${s.n} episodes · accuracy <b>${(s.accuracy*100).toFixed(0)}%</b> · ` +
-    `mean faithfulness <b>${(s.mean_faithfulness*100).toFixed(0)}%</b>`;
+function meterClass(f){ return f>=0.999?"":(f>=0.5?"mid":"low"); }
+
+function renderHeader(){
+  const s=D.summary;
+  document.getElementById("agent").textContent=s.agent;
+  document.getElementById("metrics").innerHTML=`
+    <div class="metric"><div class="v">${s.n}</div><div class="k">episodes</div></div>
+    <div class="metric"><div class="v">${Math.round(s.accuracy*100)}%</div><div class="k">accuracy</div></div>
+    <div class="metric"><div class="v">${Math.round(s.mean_faithfulness*100)}%</div><div class="k">faithfulness</div></div>
+    <div class="metric danger"><div class="v">${s.quadrants.correct_but_fabricated||0}</div><div class="k">correct&nbsp;but&nbsp;fabricated</div></div>`;
 }
 
-function renderList() {
-  document.getElementById("qlist").innerHTML = D.traces.map((t,i) => `
-    <div class="qitem" data-i="${i}">
-      <span class="qid">${t.qid}</span>
-      <span class="badge b-${t.score.quadrant}">${t.score.quadrant.replace(/_/g,' ')}</span>
-      <div class="sub">em ${t.score.em} · faith ${(t.score.faithfulness_score*100).toFixed(0)}%</div>
-    </div>`).join("");
-  document.querySelectorAll(".qitem").forEach(el =>
-    el.onclick = () => select(+el.dataset.i));
+function cell(k){
+  const q=D.summary.quadrants[k]||0;
+  return `<div class="q ${k}" data-q="${k}">
+    <div class="dot"></div><div class="qn">${q}</div>
+    <div class="ql">${META[k].t}<br>${META[k].d}</div></div>`;
+}
+function renderMatrix(){
+  // grid: row2 = answer right, row3 = answer wrong ; col2 = trustworthy, col3 = fabricated
+  document.getElementById("matrix").innerHTML=`
+    <div class="colhead c1">citations trustworthy</div>
+    <div class="colhead c2">citations fabricated</div>
+    <div class="axis-y">answer&nbsp;&nbsp;wrong&nbsp;←&nbsp;right</div>
+    <div style="grid-row:2;grid-column:2">${cell("ideal")}</div>
+    <div style="grid-row:2;grid-column:3">${cell("correct_but_fabricated")}</div>
+    <div style="grid-row:3;grid-column:2">${cell("honest_wrong")}</div>
+    <div style="grid-row:3;grid-column:3">${cell("worst")}</div>
+    <div class="axis-x">evidence quality →</div>`;
+  document.querySelectorAll(".q").forEach(el=>el.onclick=()=>{
+    filter = filter===el.dataset.q ? null : el.dataset.q; renderList();
+  });
 }
 
-function select(i) {
-  document.querySelectorAll(".qitem").forEach((el,j) =>
-    el.classList.toggle("active", j===i));
-  const t = D.traces[i], s = t.score;
-  const claims = s.citations.map(c => {
-    const txt = D.corpus[c.passage_id];
-    const body = txt
-      ? `<div class="passage">${txt}</div>`
-      : `<div class="passage missing">⚠ passage id not in corpus — fabricated citation</div>`;
+function renderList(){
+  const rows=D.traces.filter(t=>!filter||t.score.quadrant===filter);
+  document.getElementById("listcount").textContent=
+    `${rows.length} question${rows.length!==1?"s":""}${filter?" · "+META[filter].t:""}`;
+  const cf=document.getElementById("clearf");
+  cf.classList.toggle("hidden",!filter);
+  cf.onclick=()=>{filter=null;renderList();};
+  document.querySelectorAll(".q").forEach(el=>
+    el.classList.toggle("sel",el.dataset.q===filter));
+  document.getElementById("list").innerHTML=rows.map(t=>{
+    const s=t.score,f=s.faithfulness_score;
+    return `<div class="row ${t.qid===selected?'sel':''}" data-qid="${t.qid}">
+      <div class="bar ${s.quadrant}"></div>
+      <div class="body">
+        <div class="top"><span class="qid">${t.qid}</span>
+          <span class="pill ${s.quadrant}">${META[s.quadrant].t}</span></div>
+        <div class="qtxt">${t.question}</div>
+        <div class="meter ${meterClass(f)}"><i style="width:${Math.round(f*100)}%"></i></div>
+      </div></div>`;
+  }).join("");
+  document.querySelectorAll(".row").forEach(el=>el.onclick=()=>select(el.dataset.qid));
+}
+
+function select(qid){
+  selected=qid;
+  const t=D.traces.find(x=>x.qid===qid),s=t.score,f=s.faithfulness_score;
+  document.querySelectorAll(".row").forEach(el=>
+    el.classList.toggle("sel",el.dataset.qid===qid));
+  const claims=s.citations.map(c=>{
+    const txt=D.corpus[c.passage_id];
+    const body=txt?`<div class="passage">${txt}</div>`
+      :`<div class="passage missing">⚠ passage id not found in corpus — this citation was invented</div>`;
     return `<div class="claim ${c.label}">
-        <span class="tag ${c.label}">${c.label}</span>
-        <span class="pid">${c.passage_id}</span>
-        <div style="margin-top:6px">${c.claim||"<i>(no claim text)</i>"}</div>
-        ${body}
-      </div>`;
-  }).join("") || "<div class='sub'>No citations.</div>";
+      <div class="ch"><span class="tag ${c.label}">${c.label}</span>
+        <span class="pid">${c.passage_id||"—"}</span></div>
+      <div class="claimtext">${c.claim||"<i>(no claim text)</i>"}</div>${body}</div>`;
+  }).join("")||"<div style='color:var(--muted)'>No citations submitted.</div>";
 
-  document.getElementById("detail").innerHTML = `
-    <div class="qtext">${t.question}</div>
-    <span class="badge b-${s.quadrant}">${s.quadrant.replace(/_/g,' ')}</span>
+  document.getElementById("detail").innerHTML=`
+    <div class="crumbs">${t.qid} · ${t.agent||D.summary.agent}</div>
+    <h2 class="qhead">${t.question}</h2>
+    <span class="chip ${s.quadrant}">● ${META[s.quadrant].t}</span>
     <div class="answer">
-      <b>Answer:</b> ${s.answer || "<i>(empty)</i>"}
-      <span class="${s.answer_correct?'ok':'no'}">${s.answer_correct?'✓ matches gold':'✗ gold: '+s.gold_answer}</span>
-      <div class="sub">EM ${s.em} · F1 ${s.f1} · faithfulness ${(s.faithfulness_score*100).toFixed(0)}%</div>
+      <div><div class="lab">Answer</div><div class="val">${s.answer||"<i>—</i>"}</div></div>
+      <div class="verdict ${s.answer_correct?'ok':'no'}">
+        ${s.answer_correct?'✓ matches gold':'✗ gold: '+s.gold_answer}</div>
+      <div class="sep"></div>
+      <div class="faith"><div class="lab">Faithfulness</div>
+        <div class="val" style="font-size:15px">${Math.round(f*100)}%</div>
+        <div class="meter ${meterClass(f)}"><i style="width:${Math.round(f*100)}%"></i></div></div>
+      <div class="sep"></div>
+      <div><div class="lab">EM / F1</div><div class="val" style="font-size:15px">${s.em} / ${s.f1}</div></div>
     </div>
-    <h3>Citations</h3>
+    <p class="sec">Citations (${s.citations.length})</p>
     ${claims}
-    <div class="steps">Steps: ${t.steps.map(st =>
-       st.action==='search' ? `search("${st.query}")` : 'submit').join(" → ")}</div>`;
+    <div class="steps">Trace: <b>${t.steps.map(st=>
+       st.action==='search'?`search “${st.query.length>40?st.query.slice(0,40)+'…':st.query}”`:'submit').join(" → ")}</b></div>`;
 }
 
-renderSummary(); renderList();
-const firstTrap = D.traces.findIndex(t => t.score.quadrant==="correct_but_fabricated");
-select(firstTrap >= 0 ? firstTrap : 0);
+renderHeader(); renderMatrix(); renderList();
+const trap=D.traces.find(t=>t.score.quadrant==="correct_but_fabricated");
+select(trap?trap.qid:D.traces[0].qid);
 </script>
 </body>
 </html>
