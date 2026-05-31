@@ -1,7 +1,8 @@
 .venv/
+.venv311/
 __pycache__/
 *.pyc
 .env
 .DS_Store
-runs/*.json
+runs/*
 !runs/.gitkeep

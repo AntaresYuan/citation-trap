@@ -69,12 +69,31 @@ ways:
   Removes both proxy errors. `serve.py` enables it by default; each result
   carries `scored_by`.
 
-## Status
+## Running on mesocosm
 
-Built **platform-agnostic first**: the core (`env.py`) runs and is testable
-without mesocosm. The mesocosm adapter is a thin shim added once we have the
-real scaffold. See issues for the task breakdown (milestones M1 core / M2
-mesocosm / M3 optional).
+Built **platform-agnostic first**, so the [mesocosm](https://wiki.swecc.org/Sweccathon)
+adapter is the thin shim we always planned. `auxiliary/` wraps the core onto the
+BenchAnything four-endpoint protocol:
+
+- `auxiliary/env.py` — `CitationTrapEnv(BaseEnv)` with `reset(seed)` / `step(action)`;
+  reuses the repo-root core for BM25 + scoring. Reward = citation faithfulness;
+  answer correctness and the 2×2 quadrant ride in `info`.
+- `auxiliary/adapter.py` — `serve(CitationTrapEnv)` exposes `/health /reset /step /close`.
+- `auxiliary/benchanything.json` — manifest (json action space, continuous reward,
+  primary metric `faithfulness`). Passes `mesocosm validate`.
+
+```bash
+python3.11 -m venv .venv311 && . .venv311/bin/activate
+pip install swecc-mesocosm rank_bm25
+mesocosm validate auxiliary/benchanything.json          # ok: true
+python auxiliary/adapter.py --port 8765                  # /health → ok
+mesocosm run local                                       # Ollama agent loop
+mesocosm env submit --github-url https://github.com/AntaresYuan/citation-trap
+```
+
+Verified end-to-end through the four endpoints: `/reset` (seed-selected question)
+→ `/step` search (BM25, gold ranks first) → `/step` submit (reward = faithfulness,
+`info.quadrant` = e.g. `correct_but_fabricated`) → `/close`.
 
 Design choices worth knowing:
 
@@ -140,11 +159,11 @@ python -m agent.driver --agent deepseek --qid q1   # one question
 ```
 env.py              # core: data load + BM25 search + scoring + reset/step/close
 serve.py            # local server: dashboard + /api/run for in-browser live runs
-adapter.py          # mesocosm bridge (added with the real scaffold)
-benchanything.json  # mesocosm env manifest
+auxiliary/          # mesocosm env: env.py (BaseEnv) + adapter.py + benchanything.json
 data/               # corpus.json + questions.json (100 Q)
 scripts/build_data.py
-agent/              # DeepSeek agent + scripted fixture + local driver
-runs/               # traces + summary.json
-ui/index.html       # dashboard (reads ui/data.js)
+agent/              # model registry + judge + scripted fixture + local driver
+runs/               # per-model traces + summary + leaderboard
+ui/index.html       # dashboard (reads ui/data.js)  ·  ui/compare.html (leaderboard)
+LOCAL_DEV.md        # mesocosm local-dev guide (from `mesocosm init`)
 ```
