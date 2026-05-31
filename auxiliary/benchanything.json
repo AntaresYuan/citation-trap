@@ -20,7 +20,7 @@
     },
 
     "reward": {
-      "type": "continuous",
+      "type": "scalar",
       "range": { "low": 0.0, "high": 1.0 },
       "description": "Citation faithfulness on submit: fraction of made citations whose passage genuinely supports the claim (0.0 on intermediate search steps)."
     },
@@ -33,7 +33,7 @@
       "observability": "full"
     },
 
-    "techniques": ["retrieval", "tool_use", "citation"]
+    "techniques": []
   },
 
   "scoring": {
