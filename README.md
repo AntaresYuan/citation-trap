@@ -95,6 +95,11 @@ Verified end-to-end through the four endpoints: `/reset` (seed-selected question
 → `/step` search (BM25, gold ranks first) → `/step` submit (reward = faithfulness,
 `info.quadrant` = e.g. `correct_but_fabricated`) → `/close`.
 
+**Submitted and live on the platform** (`mesocosm env submit --solo`): status
+`ready`. Note: the platform's `BindingVow` schema is stricter than the local
+`mesocosm validate` — reward `type` must be `scalar` (not `continuous`) and
+`techniques` must be objects, not strings.
+
 Design choices worth knowing:
 
 - **Opaque passage ids** (`p_<hash>`) — an agent must actually retrieve a
