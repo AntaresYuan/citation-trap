@@ -19,6 +19,16 @@ We score two things and cross them into a 2×2:
 The headline cell — *right answer, invented sources* — is the whole point: a
 model can look correct while its evidence is fabricated.
 
+## Trace viewer
+
+![Citation Trap dashboard](ui/preview.png)
+
+`ui/index.html` reads a bundled `ui/data.js` (written by the driver) — open it
+directly, no server. It shows the outcome matrix, a citation ledger across the
+whole run, a per-question table, and a detail panel that flags each invented or
+misattributed citation. *(Screenshot uses the scripted fixture; real numbers
+land once a model is wired.)*
+
 ## Status
 
 Built **platform-agnostic first**: the core (`env.py`) runs and is testable
