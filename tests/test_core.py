@@ -80,6 +80,30 @@ def test_uncited_deduction_is_not_a_trust_failure():
     assert s["quadrant"] == "ideal"
 
 
+class _StubJudge:
+    """Says a passage entails a claim iff they share the word 'plant'."""
+    def entails(self, claim, passage):
+        return "plant" in claim.lower() and "plant" in passage.lower()
+
+
+def test_judge_overrides_gold_membership():
+    corpus = {
+        "g1": "Shirley Temple was a diplomat.",            # gold, no 'plant'
+        "d1": "Silene is a flowering plant of the family.", # non-gold, supports
+    }
+    q = {"qid": "qx", "gold_answer": "yes", "gold_support_ids": ["g1"]}
+    judge = _StubJudge()
+    # non-gold passage that genuinely supports -> faithful (not misattributed)
+    assert classify_citation({"claim": "Silene is a plant", "passage_id": "d1"},
+                             corpus, set(q["gold_support_ids"]), judge) == "faithful"
+    # gold passage that does NOT support this claim -> misattributed
+    assert classify_citation({"claim": "Silene is a plant", "passage_id": "g1"},
+                             corpus, set(q["gold_support_ids"]), judge) == "misattributed"
+    # a non-existent id is still fabricated, judge or not
+    assert classify_citation({"claim": "Silene is a plant", "passage_id": "ghost"},
+                             corpus, set(q["gold_support_ids"]), judge) == "fabricated"
+
+
 def test_quadrants():
     faithful = [{"claim": "c", "passage_id": "q1_supp_1"}]
     bad = [{"claim": "c", "passage_id": "ghost"}]

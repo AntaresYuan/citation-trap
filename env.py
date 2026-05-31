@@ -117,19 +117,32 @@ def answer_is_correct(pred, gold):
 CITATION_LABELS = ("faithful", "misattributed", "fabricated", "unsupported")
 
 
-def classify_citation(citation, corpus, gold_support_ids):
+def classify_citation(citation, corpus, gold_support_ids, judge=None):
     pid = citation.get("passage_id")
     if not pid:
         return "unsupported"      # a claim with no citation
     if pid not in corpus:
-        return "fabricated"       # cites a passage that does not exist
+        return "fabricated"       # cites a passage that does not exist (objective)
+    if judge is not None:
+        # Real entailment: does THIS passage support the claim, regardless of
+        # whether it is the blessed gold id? Falls back to the gold-set proxy
+        # if the judge errors out, so a flaky API never breaks scoring.
+        try:
+            return "faithful" if judge.entails(citation.get("claim", ""),
+                                               corpus[pid]) else "misattributed"
+        except Exception:
+            pass
     if pid in gold_support_ids:
         return "faithful"
     return "misattributed"        # real passage, but not a gold support
 
 
-def score_submission(answer, citations, question, corpus):
-    """Return a full score dict for one submission."""
+def score_submission(answer, citations, question, corpus, judge=None):
+    """Return a full score dict for one submission.
+
+    If `judge` is given (an EntailmentJudge), faithful/misattributed are decided
+    by whether the cited passage entails the claim, not by gold membership.
+    """
     gold = question["gold_answer"]
     gold_support_ids = set(question["gold_support_ids"])
 
@@ -139,7 +152,7 @@ def score_submission(answer, citations, question, corpus):
     labeled = []
     counts = {lbl: 0 for lbl in CITATION_LABELS}
     for c in (citations or []):
-        label = classify_citation(c, corpus, gold_support_ids)
+        label = classify_citation(c, corpus, gold_support_ids, judge)
         counts[label] += 1
         labeled.append({
             "claim": c.get("claim", ""),
@@ -180,6 +193,7 @@ def score_submission(answer, citations, question, corpus):
         "faithfulness_score": round(faithfulness, 4),
         "citation_trustworthy": trustworthy,
         "quadrant": quadrant,
+        "scored_by": "entailment_judge" if judge is not None else "gold_proxy",
     }
 
 
@@ -198,10 +212,11 @@ TOOL_INSTRUCTIONS = (
 
 
 class CitationTrapEnv:
-    def __init__(self, data_dir=DATA_DIR, default_k=5):
+    def __init__(self, data_dir=DATA_DIR, default_k=5, judge=None):
         self.corpus, self.questions = load_data(data_dir)
         self.index = BM25Index(self.corpus)
         self.default_k = default_k
+        self.judge = judge          # optional EntailmentJudge for faithfulness
         self._order = list(range(len(self.questions)))
         self._cursor = 0
         self.current = None
@@ -243,7 +258,8 @@ class CitationTrapEnv:
         if atype == "submit":
             answer = action.get("answer", "")
             citations = action.get("citations", [])
-            score = score_submission(answer, citations, self.current, self.corpus)
+            score = score_submission(answer, citations, self.current,
+                                     self.corpus, judge=self.judge)
             self.trace["steps"].append({"action": "submit",
                                         "answer": answer,
                                         "citations": citations})

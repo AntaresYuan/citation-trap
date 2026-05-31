@@ -28,8 +28,19 @@ UI_DIR = os.path.join(HERE, "ui")
 from env import CitationTrapEnv
 from agent.driver import run_episode
 
+
+def _make_judge():
+    """Judge on by default when a key is present; CT_JUDGE=0 turns it off."""
+    if os.environ.get("CT_JUDGE", "1").lower() in ("0", "false", "off"):
+        return None
+    if not os.environ.get("DEEPSEEK_API_KEY"):
+        return None
+    from agent.judge import EntailmentJudge
+    return EntailmentJudge()
+
+
 # Built once, reused across requests.
-ENV = CitationTrapEnv()
+ENV = CitationTrapEnv(judge=_make_judge())
 _AGENT = None  # lazily created so the server starts even without a key
 
 
@@ -95,6 +106,7 @@ def main():
     print(f"Citation Trap → http://localhost:{args.port}")
     print(f"  questions loaded: {len(ENV.questions)}")
     print(f"  DEEPSEEK_API_KEY: {'set ✓' if has_key else 'MISSING — live runs will fail'}")
+    print(f"  faithfulness:     {'entailment judge ✓' if ENV.judge else 'gold-set proxy'}")
     print("  Ctrl-C to stop")
     try:
         httpd.serve_forever()

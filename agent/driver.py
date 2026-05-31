@@ -56,9 +56,16 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--agent", default="scripted", choices=["scripted", "deepseek"])
     ap.add_argument("--qid", default=None, help="run a single question")
+    ap.add_argument("--judge", action="store_true",
+                    help="score faithfulness with the LLM entailment judge")
     args = ap.parse_args()
 
-    env = CitationTrapEnv()
+    judge = None
+    if args.judge:
+        from agent.judge import EntailmentJudge
+        judge = EntailmentJudge()
+        print("entailment judge: ON")
+    env = CitationTrapEnv(judge=judge)
     agent = make_agent(args.agent, env)
     os.makedirs(RUNS_DIR, exist_ok=True)
 
