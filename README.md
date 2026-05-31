@@ -113,8 +113,10 @@ Design choices worth knowing:
 
 [HotpotQA](https://hf.co/datasets/hotpotqa/hotpot_qa) distractor setting: each
 question ships with gold supporting paragraphs + distractor paragraphs. We
-treat one paragraph as one citable passage. **100 questions / ~1000 passages**,
-built through quality gates in `scripts/build_data.py`:
+treat one paragraph as one citable passage. **500 questions / ~5000 passages**,
+built through quality gates in `scripts/build_data.py`. The single shared corpus
+(~5000 passages, one BM25 index) is the difficulty: gold support competes with
+thousands of look-alikes. Gates:
 
 - every span answer is verified to literally appear in one of its gold passages
   (otherwise the question is unanswerable from the corpus — dropped);
@@ -122,7 +124,7 @@ built through quality gates in `scripts/build_data.py`:
   distractor passage;
 - yes/no answers capped at ≤50% so correctness isn't trivially guessable.
 
-Composition: 50 bridge / 50 comparison · 79 span / 21 yes-no.
+Composition: 250 bridge / 250 comparison · 421 span / 79 yes-no.
 
 > Note: HotpotQA is natively 2-hop and this split is all `level="hard"`; we
 > stratify by question `type` (bridge/comparison), not by hop count.
@@ -142,7 +144,7 @@ deterministic CLI default.
 ```bash
 python3 -m venv .venv && . .venv/bin/activate
 pip install rank_bm25
-python scripts/build_data.py        # (re)build data/ from HotpotQA (100 Q)
+python scripts/build_data.py        # (re)build data/ from HotpotQA (500 Q)
 python -m pytest                    # scoring + env tests
 
 # view results without a model (deterministic fixture, all four quadrants):
@@ -165,7 +167,8 @@ python -m agent.driver --agent deepseek --qid q1   # one question
 env.py              # core: data load + BM25 search + scoring + reset/step/close
 serve.py            # local server: dashboard + /api/run for in-browser live runs
 auxiliary/          # mesocosm env: env.py (BaseEnv) + adapter.py + benchanything.json
-data/               # corpus.json + questions.json (100 Q)
+data/               # corpus.json + questions.json (500 Q)
+CLAUDE.md           # conventions, commands, gotchas (for AI sessions)
 scripts/build_data.py
 agent/              # model registry + judge + scripted fixture + local driver
 runs/               # per-model traces + summary + leaderboard
