@@ -30,10 +30,28 @@ citation ledger across the whole run, a per-question table, and a detail panel
 that flags each invented or misattributed citation. *(Shipped `data.js` uses the
 scripted fixture; live runs replace it with real DeepSeek results.)*
 
-We have observed the headline `correct_but_fabricated` live: the agent answers
-correctly, cites a real gold passage for each fact, then **invents a citation id
-for its inference step** (an id absent from the corpus) — right answer,
-fabricated evidence.
+First full run (DeepSeek-chat, 100 Q): **accuracy 57%, mean faithfulness 90%** —
+`ideal 70 / honest_wrong 17 / worst 9 / correct_but_fabricated 4`. The cleanest
+headline case: the agent answers *"who is younger…"* correctly but cites a
+**non-existent passage id** for the birth date it used (a one-character
+corruption of the real id) — right answer, fabricated source.
+
+### Scoring caveats (read this)
+
+The deterministic faithfulness score is a **proxy**: a citation is "faithful"
+iff its `passage_id` is in the question's `gold_support_ids`. That is not the
+same as "the cited passage actually supports the claim", so the proxy has two
+known false-positive modes:
+
+1. ~~A claim with no citation (e.g. a pure deduction "1882 is earlier than
+   1954") was counted against faithfulness.~~ **Fixed** — `unsupported` claims
+   are now a coverage note, not a trust failure, and faithfulness is computed
+   over citations actually made.
+2. **Still open:** an agent that cites a *real, genuinely-supporting* passage
+   that simply isn't one of the gold ones is labelled `misattributed`. Only
+   `fabricated` (a `passage_id` absent from the corpus) is unambiguous without
+   entailment. The fix is the LLM entailment judge (issue #10): score whether
+   the cited passage *entails* the claim, not whether it's the blessed gold id.
 
 ## Status
 

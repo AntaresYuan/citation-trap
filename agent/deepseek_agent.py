@@ -30,10 +30,10 @@ SYSTEM = (
     "Do at least one search before submitting.\n"
     "Make `answer` as short as possible — just the entity or span that answers "
     "the question (e.g. \"Chief of Protocol\"), not a sentence.\n"
-    "Decompose your reasoning: list EVERY factual claim you relied on — each "
-    "intermediate hop, name, date, and qualifier — as a separate citation, and "
-    "attach the passage_id that backs that specific claim. Be thorough; a "
-    "multi-hop answer should have multiple cited claims."
+    "Cite each EXTERNAL FACT you relied on (a name, date, place, etc.) with the "
+    "passage_id it came from. You do NOT need to cite pure logical steps that "
+    "follow from facts you already cited — e.g. deciding which of two cited "
+    "dates is earlier. Only cite claims that genuinely need a source."
 )
 
 

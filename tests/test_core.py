@@ -65,6 +65,21 @@ def test_synthetic_submit_one_of_each_label():
     assert s["quadrant"] == "correct_but_fabricated"
 
 
+def test_uncited_deduction_is_not_a_trust_failure():
+    # q30-style: both facts cited faithfully, plus a pure deduction left uncited.
+    # The deduction must NOT drag faithfulness down or flip the quadrant.
+    citations = [
+        {"claim": "Emma Bull was born 1954", "passage_id": "q1_supp_1"},   # faithful
+        {"claim": "Woolf was born 1882", "passage_id": "q1_supp_2"},        # faithful
+        {"claim": "1882 is earlier than 1954", "passage_id": None},         # unsupported
+    ]
+    s = score_submission("Chief of Protocol", citations, QUESTION, CORPUS)
+    assert s["citation_counts"]["unsupported"] == 1
+    assert s["faithfulness_score"] == 1.0          # over cited claims only
+    assert s["citation_trustworthy"] is True
+    assert s["quadrant"] == "ideal"
+
+
 def test_quadrants():
     faithful = [{"claim": "c", "passage_id": "q1_supp_1"}]
     bad = [{"claim": "c", "passage_id": "ghost"}]

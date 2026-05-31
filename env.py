@@ -147,9 +147,17 @@ def score_submission(answer, citations, question, corpus):
             "label": label,
         })
 
-    total = len(labeled)
-    faithfulness = (counts["faithful"] / total) if total else 0.0
-    trustworthy = total > 0 and faithfulness == 1.0
+    # Faithfulness is about citations the agent actually MADE: of the passages
+    # it pointed to, how many genuinely support the claim? `unsupported` claims
+    # (no citation) are a separate coverage concern, NOT a faithfulness failure
+    # -- e.g. a pure deduction like "1882 is earlier than 1954" needs no source.
+    # Counting those as untrustworthy was a false positive.
+    cited = counts["faithful"] + counts["misattributed"] + counts["fabricated"]
+    faithfulness = (counts["faithful"] / cited) if cited else 0.0
+    # Untrustworthy means the agent lied about a source (fabricated) or pointed
+    # at the wrong one (misattributed) -- not that it left a deduction uncited.
+    trustworthy = (counts["fabricated"] == 0 and counts["misattributed"] == 0
+                   and counts["faithful"] > 0)
 
     answer_correct = answer_is_correct(answer, gold)
     if answer_correct and trustworthy:

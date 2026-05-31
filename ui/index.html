@@ -559,8 +559,11 @@
     function computeScore(answer_correct, citations, answer, gold_answer, em, f1) {
       var counts = { faithful: 0, misattributed: 0, fabricated: 0, unsupported: 0 };
       citations.forEach(function (c) { if (counts[c.label] != null) counts[c.label]++; });
-      var faith = citations.length ? counts.faithful / citations.length : 0;
-      var trustworthy = counts.fabricated === 0 && counts.misattributed === 0 && counts.unsupported === 0;
+      // faithfulness over citations actually made; unsupported (uncited
+      // deductions) are a coverage note, not a faithfulness/trust failure.
+      var cited = counts.faithful + counts.misattributed + counts.fabricated;
+      var faith = cited ? counts.faithful / cited : 0;
+      var trustworthy = counts.fabricated === 0 && counts.misattributed === 0 && counts.faithful > 0;
       var quad = answer_correct ? (trustworthy ? "ideal" : "correct_but_fabricated")
                                 : (trustworthy ? "honest_wrong" : "worst");
       return {
@@ -782,8 +785,10 @@
 
         '<div class="d-section"><span class="eyebrow">Citations · '+sc.citations.length+'</span>'+sum+cites+'</div>'+
 
-        '<p class="foot">A citation whose <code>passage_id</code> is absent from the corpus is <b style="color:var(--fabricated)">fabricated</b> — the agent invented its source. '+
-        '<code>misattributed</code> cites a real passage that does not support the claim; <code>unsupported</code> is a claim with no citation.</p>';
+        '<p class="foot">Faithfulness counts only citations the agent made: '+
+        '<code>fabricated</code> (an invented <code>passage_id</code> absent from the corpus) and '+
+        '<code>misattributed</code> (a real passage that doesn\'t support the claim) break trust. '+
+        '<code>unsupported</code> (a claim with no citation — e.g. a pure deduction) is a coverage note, not a trust failure.</p>';
 
       renderRetrieved(t);
     }
