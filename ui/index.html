@@ -1,268 +1,982 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Citation Trap</title>
 <style>
-  :root{
-    --bg:#f7f8fa; --panel:#ffffff; --ink:#16191d; --muted:#6b7280;
-    --line:#e8eaed; --line2:#eef0f3; --accent:#4f46e5;
-    --faithful:#15803d; --faithful-bg:#eafaf0;
-    --misattributed:#b45309; --misattributed-bg:#fdf4e3;
-    --fabricated:#dc2626; --fabricated-bg:#fdecec;
-    --unsupported:#7c3aed; --unsupported-bg:#f3ecfd;
-    --shadow:0 1px 2px rgba(16,24,40,.04),0 4px 16px rgba(16,24,40,.06);
+  :root {
+    --bg:        #fcfcfc;
+    --surface:   #ffffff;
+    --ink:       #16181d;
+    --ink-2:     #4c515b;
+    --muted:     #868c97;
+    --faint:     #aab0ba;
+    --hair:      #ececee;
+    --hair-2:    #f1f1f3;
+    --hover:     #f8f8f9;
+    --sel:       #f4f5fb;
+
+    --accent:    #4f46e5;
+
+    --faithful:    #1c8a55;
+    --misattrib:   #9a6b16;
+    --fabricated:  #d23b4e;
+    --unsupported: #7a52d0;
+
+    --faithful-wash:    #f1f8f3;
+    --fabricated-wash:  #fcf0f2;
+    --unsupported-wash: #f6f3fc;
+    --misattrib-wash:   #faf5ec;
+
+    --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
-  *{box-sizing:border-box}
-  html,body{margin:0;height:100%}
-  body{background:var(--bg);color:var(--ink);
-    font:14px/1.55 ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .tnum { font-variant-numeric: tabular-nums; }
+  .mono { font-family: var(--mono); }
+  .eyebrow {
+    text-transform: uppercase; letter-spacing: .08em;
+    font-size: 10.5px; font-weight: 600; color: var(--faint);
+  }
+  .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; flex: none; }
 
-  /* header */
-  header{display:flex;align-items:flex-end;justify-content:space-between;
-    padding:22px 32px;background:var(--panel);border-bottom:1px solid var(--line)}
-  .brand{display:flex;align-items:center;gap:12px}
-  .logo{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
-    background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;font-weight:800;font-size:17px}
-  h1{margin:0;font-size:19px;letter-spacing:-.01em}
-  .tagline{color:var(--muted);font-size:12.5px;margin-top:1px}
-  .metrics{display:flex;gap:28px}
-  .metric{text-align:right}
-  .metric .v{font-size:22px;font-weight:700;letter-spacing:-.02em}
-  .metric .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-  .metric.danger .v{color:var(--fabricated)}
+  .app { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
 
-  .layout{display:grid;grid-template-columns:380px 1fr;height:calc(100vh - 79px)}
-  .side{border-right:1px solid var(--line);overflow:auto;background:var(--bg)}
-  .main{overflow:auto;padding:28px 32px}
+  /* ---------- HEADER ---------- */
+  header.top {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 24px; padding: 30px 0 18px;
+  }
+  .wordmark { display: flex; align-items: center; gap: 11px; }
+  .glyph {
+    width: 26px; height: 26px; border-radius: 7px; flex: none;
+    border: 1px solid var(--ink); display: grid; place-items: center;
+  }
+  .wordmark h1 { margin: 0; font-size: 16px; font-weight: 640; letter-spacing: -.01em; }
+  .runmeta { display: flex; align-items: center; gap: 14px; font-size: 12.5px; color: var(--muted); }
+  .runmeta b { color: var(--ink-2); font-weight: 550; }
+  .runmeta .sep { width: 1px; height: 12px; background: var(--hair); }
 
-  /* matrix */
-  .matrix-wrap{padding:20px 20px 8px}
-  .matrix-title{font-size:12px;font-weight:600;color:var(--muted);
-    text-transform:uppercase;letter-spacing:.06em;margin:0 0 12px 2px}
-  .matrix{display:grid;grid-template-columns:18px 1fr 1fr;grid-template-rows:auto 1fr 1fr 18px;gap:6px}
-  .axis-y{grid-row:2/4;grid-column:1;writing-mode:vertical-rl;transform:rotate(180deg);
-    text-align:center;font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;align-self:center}
-  .axis-x{grid-row:4;grid-column:2/4;text-align:center;font-size:10px;color:var(--muted);
-    letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
-  .colhead{font-size:10.5px;color:var(--muted);text-align:center;font-weight:600;letter-spacing:.02em}
-  .colhead.c1{grid-row:1;grid-column:2} .colhead.c2{grid-row:1;grid-column:3}
-  .q{border:1px solid var(--line);border-radius:12px;padding:14px 12px;background:var(--panel);
-    cursor:pointer;transition:.15s;position:relative;min-height:84px;box-shadow:var(--shadow)}
-  .q:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(16,24,40,.10)}
-  .q.sel{outline:2px solid var(--accent);outline-offset:1px}
-  .q .qn{font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1}
-  .q .ql{font-size:10.5px;color:var(--muted);margin-top:6px;line-height:1.3}
-  .q .dot{position:absolute;top:12px;right:12px;width:9px;height:9px;border-radius:50%}
-  .q.ideal .dot{background:var(--faithful)} .q.honest_wrong .dot{background:var(--misattributed)}
-  .q.worst .dot{background:#9aa1ab}
-  .q.correct_but_fabricated{background:var(--fabricated-bg);border-color:#f6c9c9}
-  .q.correct_but_fabricated .qn{color:var(--fabricated)}
-  .q.correct_but_fabricated .dot{background:var(--fabricated)}
+  /* ---------- METRICS STRIP ---------- */
+  .metrics {
+    display: flex; align-items: stretch; gap: 0;
+    border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair);
+  }
+  .metric { padding: 16px 26px 16px 0; margin-right: 26px; border-right: 1px solid var(--hair); }
+  .metric:last-child { border-right: none; }
+  .metric .v { font-size: 26px; font-weight: 600; letter-spacing: -.02em; line-height: 1; }
+  .metric .v small { font-size: 14px; font-weight: 500; color: var(--faint); margin-left: 1px; }
+  .metric .l { font-size: 12px; color: var(--muted); margin-top: 7px; }
+  .metric.flag .v { color: var(--fabricated); }
+  .metric.flag .l { color: var(--fabricated); opacity: .85; }
 
-  /* list */
-  .listhead{display:flex;align-items:center;justify-content:space-between;
-    padding:14px 20px 8px;font-size:12px;color:var(--muted)}
-  .clearf{color:var(--accent);cursor:pointer;font-weight:600}
-  .clearf.hidden{display:none}
-  .row{display:flex;align-items:center;gap:12px;padding:11px 20px;cursor:pointer;
-    border-top:1px solid var(--line2);transition:background .12s}
-  .row:hover{background:#fff}
-  .row.sel{background:#fff;box-shadow:inset 3px 0 var(--accent)}
-  .row .bar{width:4px;height:34px;border-radius:3px;flex:none}
-  .bar.ideal{background:var(--faithful)} .bar.correct_but_fabricated{background:var(--fabricated)}
-  .bar.honest_wrong{background:var(--misattributed)} .bar.worst{background:#9aa1ab}
-  .row .body{flex:1;min-width:0}
-  .row .top{display:flex;align-items:center;gap:8px}
-  .row .qid{font-weight:700;font-size:13px}
-  .row .qtxt{color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .pill{font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
-  .pill.ideal{color:var(--faithful);background:var(--faithful-bg)}
-  .pill.correct_but_fabricated{color:var(--fabricated);background:var(--fabricated-bg)}
-  .pill.honest_wrong{color:var(--misattributed);background:var(--misattributed-bg)}
-  .pill.worst{color:#5b6270;background:#eef0f3}
-  .meter{height:5px;border-radius:3px;background:#edeef1;margin-top:7px;overflow:hidden}
-  .meter > i{display:block;height:100%;border-radius:3px;background:var(--faithful)}
-  .meter.low > i{background:var(--fabricated)} .meter.mid > i{background:var(--misattributed)}
+  /* ---------- RUN BAR ---------- */
+  .runbar { display: flex; align-items: center; gap: 16px; padding: 16px 0 0; }
+  .runform {
+    flex: 1; display: flex; align-items: center; gap: 11px;
+    background: var(--surface); border: 1px solid var(--hair); border-radius: 10px;
+    padding: 4px 5px 4px 14px; transition: border-color .12s ease, box-shadow .12s ease;
+  }
+  .runform:focus-within { border-color: #cdcdEa; box-shadow: 0 0 0 3px rgba(79,70,229,.08); }
+  .run-ico { color: var(--faint); display: flex; flex: none; }
+  #qinput { flex: 1; min-width: 0; border: none; outline: none; font: inherit; font-size: 14px; color: var(--ink); background: none; padding: 9px 0; }
+  #qinput::placeholder { color: var(--faint); }
+  .runbtn {
+    font: inherit; font-size: 13px; font-weight: 560; color: #fff; background: var(--ink);
+    border: none; border-radius: 7px; padding: 9px 16px; cursor: pointer; flex: none;
+    display: inline-flex; align-items: center; gap: 8px; transition: background .12s ease, opacity .12s ease;
+  }
+  .runbtn:hover { background: #000; }
+  .runbtn:disabled { opacity: .45; cursor: default; }
+  .runmode { font-size: 11.5px; color: var(--faint); white-space: nowrap; display: flex; align-items: center; gap: 6px; }
+  .runmode b { color: var(--ink-2); font-weight: 550; }
+  .runmode .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--misattrib); }
+  .runmode.live .live-dot { background: var(--faithful); }
+  .run-err { font-size: 11.5px; color: var(--fabricated); white-space: nowrap; }
 
-  /* detail */
-  .crumbs{font-size:12px;color:var(--muted);margin-bottom:10px}
-  .qhead{font-size:23px;font-weight:700;letter-spacing:-.02em;line-height:1.3;margin:0 0 14px;max-width:760px}
-  .chip{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;
-    padding:6px 12px;border-radius:999px}
-  .chip.ideal{color:var(--faithful);background:var(--faithful-bg)}
-  .chip.correct_but_fabricated{color:var(--fabricated);background:var(--fabricated-bg)}
-  .chip.honest_wrong{color:var(--misattributed);background:var(--misattributed-bg)}
-  .chip.worst{color:#5b6270;background:#eef0f3}
-  .answer{display:flex;align-items:center;gap:16px;background:var(--panel);border:1px solid var(--line);
-    border-radius:14px;padding:16px 18px;margin:16px 0 26px;box-shadow:var(--shadow)}
-  .answer .lab{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-  .answer .val{font-size:18px;font-weight:700}
-  .answer .verdict{font-size:13px;font-weight:600}
-  .verdict.ok{color:var(--faithful)} .verdict.no{color:var(--fabricated)}
-  .answer .sep{width:1px;align-self:stretch;background:var(--line)}
-  .answer .faith{min-width:120px}
-  .answer .faith .meter{margin-top:6px}
+  .spin { width: 12px; height: 12px; border-radius: 50%; border: 2px solid rgba(255,255,255,.35); border-top-color: #fff; animation: spin .7s linear infinite; display: inline-block; flex: none; }
+  .spin.dark { border-color: var(--hair); border-top-color: var(--accent); width: 11px; height: 11px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
 
-  .sec{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;
-    letter-spacing:.06em;margin:0 0 12px}
-  .claim{background:var(--panel);border:1px solid var(--line);border-left:4px solid;
-    border-radius:12px;padding:14px 16px;margin-bottom:12px;box-shadow:var(--shadow)}
-  .claim.faithful{border-left-color:var(--faithful)}
-  .claim.misattributed{border-left-color:var(--misattributed)}
-  .claim.fabricated{border-left-color:var(--fabricated)}
-  .claim.unsupported{border-left-color:var(--unsupported)}
-  .claim .ch{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-  .tag{font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
-    padding:3px 9px;border-radius:6px;color:#fff}
-  .tag.faithful{background:var(--faithful)} .tag.misattributed{background:var(--misattributed)}
-  .tag.fabricated{background:var(--fabricated)} .tag.unsupported{background:var(--unsupported)}
-  .pid{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;color:#444;
-    background:#f0f1f4;padding:2px 8px;border-radius:6px}
-  .claimtext{font-weight:600;font-size:14px}
-  .passage{margin-top:8px;font-size:13px;color:#3a3f47;padding-left:12px;border-left:2px solid var(--line);line-height:1.6}
-  .passage.missing{color:var(--fabricated);font-style:italic;border-left-color:#f6c9c9}
-  .steps{margin-top:24px;font-size:12px;color:var(--muted)}
-  .steps b{color:#3a3f47;font-weight:600}
-  .empty{display:grid;place-items:center;height:100%;color:var(--muted)}
+  .ql.running { color: var(--accent); }
+  .tstep.ghost { color: var(--muted); }
+  .run-timer { font-family: var(--mono); font-size: 11px; color: var(--faint); margin-left: 4px; }
+  td.c-id .id.live { color: var(--accent); font-weight: 600; }
+  tbody tr.justadded { animation: flashrow 1.6s ease; }
+  @keyframes flashrow { 0%, 30% { background: var(--sel); } 100% { background: transparent; } }
+
+  .metric.ledger { margin-left: auto; margin-right: 0; padding-right: 0; border-right: none; min-width: 260px; max-width: 340px; flex: 1; align-self: center; }
+  .ledger-bar { display: flex; width: 100%; height: 7px; border-radius: 99px; overflow: hidden; background: var(--hair); }
+  .ledger-bar i { display: block; height: 100%; }
+  .ledger-bar i + i { box-shadow: inset 1px 0 0 var(--surface); }
+  .ledger-key { display: flex; flex-wrap: wrap; gap: 4px 13px; margin-top: 10px; }
+  .ledger-key .lk { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; color: var(--ink-2); }
+  .ledger-key .lk b { color: var(--ink); font-weight: 600; }
+  .ledger-note { font-size: 11px; color: var(--muted); margin-top: 7px; }
+  .ledger-note b { color: var(--fabricated); font-weight: 600; }
+
+  /* ---------- LAYOUT ---------- */
+  .work { display: grid; grid-template-columns: 1.15fr 1fr; gap: 0; align-items: start; }
+  .left { border-right: 1px solid var(--hair); padding: 26px 30px 60px 0; min-width: 0; }
+  .right { padding: 26px 0 60px 30px; position: sticky; top: 0; min-width: 0; }
+
+  .block-label { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+
+  /* ---------- MATRIX ---------- */
+  .matrix-shell { display: grid; grid-template-columns: 16px 1fr; grid-template-rows: 18px 1fr; gap: 8px 8px; margin-bottom: 34px; }
+  .m-corner {}
+  .m-cols { grid-column: 2; display: grid; grid-template-columns: 1fr 1fr; }
+  .m-cols span { font-size: 10.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--faint); padding-left: 2px; }
+  .m-rows { grid-row: 2; grid-column: 1; display: grid; grid-template-rows: 1fr 1fr; }
+  .m-rows span {
+    writing-mode: vertical-rl; transform: rotate(180deg); text-align: center;
+    font-size: 10.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--faint);
+  }
+  .matrix {
+    grid-column: 2; grid-row: 2;
+    display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+    border: 1px solid var(--hair); border-radius: 9px; overflow: hidden; background: var(--surface);
+  }
+  .quad {
+    position: relative; text-align: left; cursor: pointer; background: var(--surface);
+    border: none; font-family: inherit; color: inherit; padding: 14px 14px 13px;
+    min-height: 96px; transition: background .12s ease;
+    border-right: 1px solid var(--hair); border-bottom: 1px solid var(--hair);
+  }
+  .quad:nth-child(2), .quad:nth-child(4) { border-right: none; }
+  .quad:nth-child(3), .quad:nth-child(4) { border-bottom: none; }
+  .quad:hover { background: var(--hover); }
+  .quad .qn { font-size: 12.5px; font-weight: 560; letter-spacing: -.005em; }
+  .quad .qc { position: absolute; right: 14px; bottom: 11px; font-size: 26px; font-weight: 600; letter-spacing: -.02em; color: var(--ink); }
+  .quad.cbf { background: var(--fabricated-wash); }
+  .quad.cbf:hover { background: #fbe9ec; }
+  .quad.cbf .qn { color: var(--fabricated); font-weight: 620; }
+  .quad.cbf .qc { color: var(--fabricated); }
+  .quad .tag { display: block; font-size: 9.5px; letter-spacing: .05em; color: var(--muted); margin-top: 3px; }
+  .quad.cbf .tag { color: var(--fabricated); opacity: .7; }
+  .quad.sel { box-shadow: inset 0 0 0 2px var(--ink); }
+  .quad.cbf.sel { box-shadow: inset 0 0 0 2px var(--fabricated); }
+
+  /* ---------- TABLE ---------- */
+  .filterbar { display: flex; align-items: center; gap: 8px; }
+  .filterbar .cur { font-size: 12px; color: var(--muted); }
+  .clearx {
+    font-family: inherit; font-size: 11.5px; color: var(--ink-2); background: none;
+    border: 1px solid var(--hair); border-radius: 6px; padding: 3px 8px; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .clearx:hover { background: var(--hover); border-color: #dcdce0; }
+
+  .qtools { display: flex; align-items: center; gap: 12px; }
+  .search { display: flex; align-items: center; gap: 7px; border: 1px solid var(--hair); border-radius: 7px; padding: 4px 9px; background: var(--surface); transition: border-color .12s ease; }
+  .search:focus-within { border-color: #cfcfd6; }
+  .search svg { color: var(--faint); flex: none; }
+  .search input { border: none; outline: none; background: transparent; font: inherit; font-size: 12.5px; width: 150px; color: var(--ink); padding: 0; }
+  .search input::placeholder { color: var(--faint); }
+
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    text-align: left; font-size: 10.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--faint); padding: 0 12px 9px 0; border-bottom: 1px solid var(--hair);
+  }
+  thead th.num { text-align: right; padding-right: 0; }
+  thead th.sortable { cursor: pointer; user-select: none; transition: color .1s ease; }
+  thead th.sortable:hover { color: var(--muted); }
+  thead th.active { color: var(--ink-2); }
+  thead th .caret { font-size: 8px; margin-left: 4px; color: var(--ink-2); }
+  tbody tr { cursor: pointer; border-bottom: 1px solid var(--hair-2); transition: background .1s ease; }
+  tbody tr:hover { background: var(--hover); }
+  tbody tr.sel { background: var(--sel); box-shadow: inset 2px 0 0 var(--accent); }
+  tbody td { padding: 11px 12px 11px 0; vertical-align: middle; }
+  td.c-id { width: 30px; }
+  td.c-id .id { font-family: var(--mono); font-size: 11.5px; color: var(--faint); }
+  td.c-q { min-width: 0; max-width: 0; width: 100%; }
+  td.c-q .qt { font-size: 13px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+  td.c-out { width: 150px; }
+  .outcome { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: var(--ink-2); white-space: nowrap; }
+  td.c-ans { width: 44px; text-align: center; }
+  .ansmark { font-size: 12px; font-weight: 600; }
+  .ansmark.ok { color: var(--faithful); }
+  .ansmark.no { color: var(--faint); }
+  td.c-faith { width: 116px; }
+  .faithcell { display: flex; align-items: center; gap: 10px; justify-content: flex-end; }
+  .faithcell .pn { font-size: 12.5px; font-weight: 560; min-width: 30px; text-align: right; }
+  .fbar { width: 56px; height: 3px; border-radius: 99px; background: var(--hair); overflow: hidden; flex: none; }
+  .fbar i { display: block; height: 100%; border-radius: 99px; }
+  .empty { padding: 40px 0; text-align: center; color: var(--muted); font-size: 13px; }
+
+  /* ---------- DETAIL ---------- */
+  .d-quad { display: flex; align-items: center; gap: 10px; margin-bottom: 13px; }
+  .d-quad .ql { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 560; color: var(--ink-2); }
+  .d-quad .qid { font-family: var(--mono); font-size: 11.5px; color: var(--faint); }
+  .d-question { font-size: 21px; font-weight: 600; line-height: 1.3; letter-spacing: -.015em; margin: 0 0 22px; text-wrap: pretty; }
+
+  .d-stats { display: flex; align-items: stretch; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); margin-bottom: 24px; }
+  .d-stat { padding: 13px 22px 13px 0; margin-right: 22px; border-right: 1px solid var(--hair); }
+  .d-stat:last-child { border-right: none; margin-right: 0; }
+  .d-stat .sl { font-size: 10.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); font-weight: 600; }
+  .d-stat .sv { font-size: 17px; font-weight: 600; margin-top: 6px; letter-spacing: -.01em; display: flex; align-items: center; gap: 7px; }
+  .d-stat .sv .sub { font-size: 12px; font-weight: 500; color: var(--muted); }
+  .d-stat .sv.ans-ok { color: var(--faithful); }
+  .d-stat .sv .gold { color: var(--fabricated); }
+  .d-stat .sv.integ-bad { color: var(--fabricated); }
+  .d-stat .sv.integ-ok { color: var(--faithful); }
+
+  .d-section { margin-bottom: 22px; }
+  .d-section > .eyebrow { display: block; margin-bottom: 11px; }
+
+  .trace { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; font-size: 12px; }
+  .tstep { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); }
+  .tstep .tk { font-family: var(--mono); color: var(--faint); font-size: 11px; }
+  .tstep .qx { color: var(--muted); max-width: 230px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tstep.sub { color: var(--accent); font-weight: 550; }
+  .tarrow { color: var(--faint); }
+  .tstep .hits { font-size: 10px; color: var(--faint); background: var(--hair-2); border-radius: 99px; padding: 1px 7px; }
+  .tstep-btn { font: inherit; font-size: 12px; cursor: pointer; background: var(--surface); border: 1px solid var(--hair); border-radius: 8px; padding: 5px 9px; }
+  .tstep-btn:hover { background: var(--hover); border-color: #dcdce0; }
+  .tstep-btn.open { border-color: var(--accent); color: var(--accent); }
+  .tstep-btn.open .hits { color: var(--accent); background: #ecebfb; }
+  .tstep-btn .chev { font-size: 8px; color: var(--faint); transition: transform .15s ease; }
+  .tstep-btn.open .chev { transform: rotate(180deg); color: var(--accent); }
+
+  .retrieved { max-height: 0; overflow: hidden; }
+  .retrieved.open { margin-top: 13px; max-height: none; padding: 13px 14px; border: 1px solid var(--hair); border-radius: 10px; background: var(--card-2, #fafbfc); animation: fade .2s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(-3px); } to { opacity: 1; transform: none; } }
+  .ret-label { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); font-weight: 600; margin-bottom: 9px; }
+  .ret-row { padding: 9px 0; border-top: 1px solid var(--hair-2); }
+  .ret-row:first-of-type { border-top: none; padding-top: 0; }
+  .ret-head { display: flex; align-items: center; gap: 9px; margin-bottom: 4px; }
+  .ret-text { font-size: 12px; line-height: 1.5; color: var(--ink-2); }
+  .ret-text .missing { color: var(--fabricated); font-style: italic; }
+  .ret-cited { font-size: 10px; font-weight: 600; padding: 1px 7px; border-radius: 99px; }
+  .ret-cited.faithful { color: var(--faithful); background: var(--faithful-wash); }
+  .ret-cited.misattributed { color: var(--misattrib); background: var(--misattrib-wash); }
+  .ret-cited.fabricated { color: var(--fabricated); background: var(--fabricated-wash); }
+
+  .citesum { font-size: 12.5px; color: var(--muted); margin-bottom: 14px; display: flex; flex-wrap: wrap; gap: 14px; }
+  .citesum .ci { display: inline-flex; align-items: center; gap: 6px; }
+  .citesum .ci b { color: var(--ink); font-weight: 600; }
+  .citesum .ci.z { opacity: .4; }
+
+  .cite { padding: 15px 0; border-top: 1px solid var(--hair); }
+  .cite:last-child { border-bottom: 1px solid var(--hair); }
+  .cite-top { display: flex; align-items: flex-start; gap: 14px; justify-content: space-between; }
+  .cite-claim { font-size: 13.5px; font-weight: 550; line-height: 1.4; color: var(--ink); flex: 1; min-width: 0; }
+  .lbl { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; white-space: nowrap; flex: none; }
+  .lbl.faithful { color: var(--faithful); }
+  .lbl.misattributed { color: var(--misattrib); }
+  .lbl.fabricated { color: var(--fabricated); }
+  .lbl.unsupported { color: var(--unsupported); }
+
+  .passage {
+    margin: 11px 0 0; font-size: 12.5px; line-height: 1.55; color: var(--ink-2);
+    border-left: 2px solid var(--hair); padding: 1px 0 1px 13px;
+  }
+  .cite.is-faithful .passage { border-left-color: var(--faithful); }
+  .cite.is-misattributed .passage { border-left-color: var(--misattrib); }
+  .pmeta { margin-top: 10px; display: flex; align-items: center; gap: 9px; }
+  .pid { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .pnote { font-size: 11px; }
+  .pnote.faithful { color: var(--faithful); }
+  .pnote.misattributed { color: var(--misattrib); }
+
+  .invented {
+    margin-top: 11px; padding: 12px 14px; border-left: 2px solid var(--fabricated);
+    background: var(--fabricated-wash); border-radius: 0 7px 7px 0;
+  }
+  .invented .it { font-size: 12px; font-weight: 650; color: var(--fabricated); letter-spacing: .01em; }
+  .invented p { margin: 5px 0 0; font-size: 12px; line-height: 1.5; color: #8c2f3c; }
+  .invented code { font-family: var(--mono); font-size: 11px; background: var(--surface); border: 1px solid var(--fabricated); border-radius: 4px; padding: 0 5px; color: var(--fabricated); }
+  .unsup-note {
+    margin-top: 11px; padding: 12px 14px; border-left: 2px solid var(--unsupported);
+    background: var(--unsupported-wash); border-radius: 0 7px 7px 0;
+  }
+  .unsup-note .it { font-size: 12px; font-weight: 650; color: var(--unsupported); }
+  .unsup-note p { margin: 5px 0 0; font-size: 12px; line-height: 1.5; color: #5a3e9c; }
+
+  .foot { font-size: 11.5px; color: var(--faint); line-height: 1.55; margin-top: 22px; }
+  .foot code { font-family: var(--mono); color: var(--muted); }
+  .placeholder { color: var(--muted); font-size: 13px; padding: 60px 0; }
+
+  @media (max-width: 980px) {
+    .work { grid-template-columns: 1fr; }
+    .left { border-right: none; padding-right: 0; padding-bottom: 30px; }
+    .right { position: static; padding-left: 0; border-top: 1px solid var(--hair); padding-top: 28px; }
+    .metrics { flex-wrap: wrap; }
+  }
+  @media (max-width: 600px) {
+    .app { padding: 0 18px; }
+    td.c-out { display: none; }
+    .d-stats { flex-wrap: wrap; }
+    .runbar { flex-wrap: wrap; }
+    .runmode { order: 2; }
+  }
 </style>
 </head>
 <body>
-<header>
-  <div class="brand">
-    <div class="logo">⚑</div>
-    <div>
-      <h1>Citation Trap</h1>
-      <div class="tagline">Citation faithfulness vs. answer correctness · agent <b id="agent"></b></div>
+  <div class="app">
+    <header class="top">
+      <div class="wordmark">
+        <span class="glyph" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+            <path d="M3.5 4.5h6M3.5 8h9M3.5 11.5h4" stroke="#16181d" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <h1>Citation Trap</h1>
+      </div>
+      <div class="runmeta" id="runmeta"></div>
+    </header>
+
+    <section class="metrics" id="metrics"></section>
+
+    <div class="work">
+      <div class="left">
+        <div class="block-label"><span class="eyebrow">Outcome matrix</span><span class="eyebrow" style="text-transform:none;letter-spacing:0;font-weight:500">click to filter</span></div>
+        <div class="matrix-shell">
+          <div class="m-cols"><span>Correct</span><span>Wrong</span></div>
+          <div class="m-rows"><span>Trustworthy</span><span>Fabricated</span></div>
+          <div class="matrix" id="matrix"></div>
+        </div>
+
+        <div class="block-label">
+          <span class="eyebrow">Questions</span>
+          <div class="qtools">
+            <label class="search">
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="6" cy="6" r="4" stroke="currentColor" stroke-width="1.4"/><path d="m9.2 9.2 2.6 2.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              <input id="search" type="text" placeholder="Search questions" autocomplete="off" spellcheck="false" />
+            </label>
+            <div class="filterbar" id="filterbar"></div>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th class="c-id"></th>
+              <th>Question</th>
+              <th class="sortable" data-sort="out">Outcome<span class="caret"></span></th>
+              <th class="sortable" data-sort="ans" style="text-align:center">Ans<span class="caret"></span></th>
+              <th class="sortable num" data-sort="faith">Faithfulness<span class="caret"></span></th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+
+      <aside class="right" id="detail"></aside>
     </div>
   </div>
-  <div class="metrics" id="metrics"></div>
-</header>
 
-<div class="layout">
-  <aside class="side">
-    <div class="matrix-wrap">
-      <p class="matrix-title">Outcome matrix</p>
-      <div class="matrix" id="matrix"></div>
-    </div>
-    <div class="listhead">
-      <span id="listcount"></span>
-      <span class="clearf hidden" id="clearf">clear filter ✕</span>
-    </div>
-    <div id="list"></div>
-  </aside>
-  <main class="main" id="detail"><div class="empty">Select a question.</div></main>
-</div>
+  <script src="data.js"></script>
+  <script>
+  (function () {
+    "use strict";
+    var DATA = window.CITATION_TRAP;
+    if (!DATA) {
+      document.querySelector(".app").innerHTML =
+        '<p style="padding:60px 0;color:#868c97">No data loaded — place <code>data.js</code> next to this file (sets <code>window.CITATION_TRAP</code>).</p>';
+      return;
+    }
 
-<script src="data.js"></script>
-<script>
-const D = window.CITATION_TRAP;
-const META = {
-  ideal:{t:"Ideal",d:"right · trustworthy"},
-  correct_but_fabricated:{t:"Correct but fabricated",d:"right · fabricated"},
-  honest_wrong:{t:"Honest wrong",d:"wrong · trustworthy"},
-  worst:{t:"Worst",d:"wrong · fabricated"},
-};
-let filter = null, selected = null;
+    var QUAD = {
+      ideal:                  { name: "Ideal",                tag: "right · trustworthy", color: "var(--faithful)" },
+      correct_but_fabricated: { name: "Correct, fabricated",  tag: "right · invented",     color: "var(--fabricated)" },
+      honest_wrong:           { name: "Honest wrong",         tag: "wrong · trustworthy",  color: "var(--unsupported)" },
+      worst:                  { name: "Worst case",           tag: "wrong · fabricated",   color: "var(--muted)" }
+    };
+    var LBL = {
+      faithful:      { name: "Faithful",      color: "var(--faithful)" },
+      misattributed: { name: "Misattributed", color: "var(--misattrib)" },
+      fabricated:    { name: "Fabricated",    color: "var(--fabricated)" },
+      unsupported:   { name: "Unsupported",   color: "var(--unsupported)" }
+    };
 
-function meterClass(f){ return f>=0.999?"":(f>=0.5?"mid":"low"); }
+    var state = { selected: null, filter: null, search: "", sort: { key: null, dir: 1 }, busy: false, running: null, expandedStep: null, runTimer: null };
+    var quadRank = { ideal: 0, honest_wrong: 1, correct_but_fabricated: 2, worst: 3 };
+    var liveSeq = DATA.traces.length;  // for unique synthetic passage ids in mock
+    var liveCount = 0;                 // live-run counter → qids L1, L2, …
 
-function renderHeader(){
-  const s=D.summary;
-  document.getElementById("agent").textContent=s.agent;
-  document.getElementById("metrics").innerHTML=`
-    <div class="metric"><div class="v">${s.n}</div><div class="k">episodes</div></div>
-    <div class="metric"><div class="v">${Math.round(s.accuracy*100)}%</div><div class="k">accuracy</div></div>
-    <div class="metric"><div class="v">${Math.round(s.mean_faithfulness*100)}%</div><div class="k">faithfulness</div></div>
-    <div class="metric danger"><div class="v">${s.quadrants.correct_but_fabricated||0}</div><div class="k">correct&nbsp;but&nbsp;fabricated</div></div>`;
-}
+    /* ============================================================
+       BACKEND ADAPTER  ·  wiring: A (one JSON) + X (backend scores)
+       Set the endpoint (here or via window.CITATION_TRAP_ENDPOINT).
+       The agent runs server-side; the endpoint returns ONE JSON when
+       the episode finishes. The frontend replays the steps with a
+       short cadence so the trace still animates in live.
 
-function cell(k){
-  const q=D.summary.quadrants[k]||0;
-  return `<div class="q ${k}" data-q="${k}">
-    <div class="dot"></div><div class="qn">${q}</div>
-    <div class="ql">${META[k].t}<br>${META[k].d}</div></div>`;
-}
-function renderMatrix(){
-  // grid: row2 = answer right, row3 = answer wrong ; col2 = trustworthy, col3 = fabricated
-  document.getElementById("matrix").innerHTML=`
-    <div class="colhead c1">citations trustworthy</div>
-    <div class="colhead c2">citations fabricated</div>
-    <div class="axis-y">answer&nbsp;&nbsp;wrong&nbsp;←&nbsp;right</div>
-    <div style="grid-row:2;grid-column:2">${cell("ideal")}</div>
-    <div style="grid-row:2;grid-column:3">${cell("correct_but_fabricated")}</div>
-    <div style="grid-row:3;grid-column:2">${cell("honest_wrong")}</div>
-    <div style="grid-row:3;grid-column:3">${cell("worst")}</div>
-    <div class="axis-x">evidence quality →</div>`;
-  document.querySelectorAll(".q").forEach(el=>el.onclick=()=>{
-    filter = filter===el.dataset.q ? null : el.dataset.q; renderList();
-  });
-}
+       POST {question, agent}  →  JSON:
+       {
+         answer, gold_answer, answer_correct, em, f1,   // backend-scored (X)
+         steps: [ {action:"search", query, k, result_ids},
+                  {action:"submit", answer, citations:[{claim, passage_id, label?}]} ],
+         corpus: { passage_id: text, … }                // new passages to merge
+       }
+       label is optional — if omitted, the frontend infers it:
+         no passage_id → unsupported · id missing from corpus → fabricated.
+       faithfulness / quadrant / citation_counts are always derived here.
+       ============================================================ */
+    var CitationTrapAPI = {
+      endpoint: (typeof window !== "undefined" && window.CITATION_TRAP_ENDPOINT) || null,
+      stepDelay: 600,        // ms between replayed steps (live animation cadence)
+      mode: function () { return this.endpoint ? "live" : "mock"; },
 
-function renderList(){
-  const rows=D.traces.filter(t=>!filter||t.score.quadrant===filter);
-  document.getElementById("listcount").textContent=
-    `${rows.length} question${rows.length!==1?"s":""}${filter?" · "+META[filter].t:""}`;
-  const cf=document.getElementById("clearf");
-  cf.classList.toggle("hidden",!filter);
-  cf.onclick=()=>{filter=null;renderList();};
-  document.querySelectorAll(".q").forEach(el=>
-    el.classList.toggle("sel",el.dataset.q===filter));
-  document.getElementById("list").innerHTML=rows.map(t=>{
-    const s=t.score,f=s.faithfulness_score;
-    return `<div class="row ${t.qid===selected?'sel':''}" data-qid="${t.qid}">
-      <div class="bar ${s.quadrant}"></div>
-      <div class="body">
-        <div class="top"><span class="qid">${t.qid}</span>
-          <span class="pill ${s.quadrant}">${META[s.quadrant].t}</span></div>
-        <div class="qtxt">${t.question}</div>
-        <div class="meter ${meterClass(f)}"><i style="width:${Math.round(f*100)}%"></i></div>
-      </div></div>`;
-  }).join("");
-  document.querySelectorAll(".row").forEach(el=>el.onclick=()=>select(el.dataset.qid));
-}
+      run: function (question, h) {
+        h = h || {};
+        return this.endpoint ? this._live(question, h) : this._mock(question, h);
+      },
 
-function select(qid){
-  selected=qid;
-  const t=D.traces.find(x=>x.qid===qid),s=t.score,f=s.faithfulness_score;
-  document.querySelectorAll(".row").forEach(el=>
-    el.classList.toggle("sel",el.dataset.qid===qid));
-  const claims=s.citations.map(c=>{
-    const txt=D.corpus[c.passage_id];
-    const body=txt?`<div class="passage">${txt}</div>`
-      :`<div class="passage missing">⚠ passage id not found in corpus — this citation was invented</div>`;
-    return `<div class="claim ${c.label}">
-      <div class="ch"><span class="tag ${c.label}">${c.label}</span>
-        <span class="pid">${c.passage_id||"—"}</span></div>
-      <div class="claimtext">${c.claim||"<i>(no claim text)</i>"}</div>${body}</div>`;
-  }).join("")||"<div style='color:var(--muted)'>No citations submitted.</div>";
+      // ===== REAL BACKEND (A + X) =====
+      _live: function (question, h) {
+        var self = this;
+        return fetch(self.endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question: question, agent: DATA.summary.agent })
+        }).then(function (r) {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.json();
+        }).then(function (p) {
+          // merge corpus first so label inference can see new passages
+          if (p.corpus) for (var k in p.corpus) DATA.corpus[k] = p.corpus[k];
+          var steps = p.steps || [];
+          // replay steps on a cadence to keep the live trace animation
+          return replaySteps(steps, h, self.stepDelay).then(function () {
+            h.onStatus && h.onStatus("scoring citations…");
+            return normalizeTrace(question, p);
+          });
+        });
+      },
 
-  document.getElementById("detail").innerHTML=`
-    <div class="crumbs">${t.qid} · ${t.agent||D.summary.agent}</div>
-    <h2 class="qhead">${t.question}</h2>
-    <span class="chip ${s.quadrant}">● ${META[s.quadrant].t}</span>
-    <div class="answer">
-      <div><div class="lab">Answer</div><div class="val">${s.answer||"<i>—</i>"}</div></div>
-      <div class="verdict ${s.answer_correct?'ok':'no'}">
-        ${s.answer_correct?'✓ matches gold':'✗ gold: '+s.gold_answer}</div>
-      <div class="sep"></div>
-      <div class="faith"><div class="lab">Faithfulness</div>
-        <div class="val" style="font-size:15px">${Math.round(f*100)}%</div>
-        <div class="meter ${meterClass(f)}"><i style="width:${Math.round(f*100)}%"></i></div></div>
-      <div class="sep"></div>
-      <div><div class="lab">EM / F1</div><div class="val" style="font-size:15px">${s.em} / ${s.f1}</div></div>
-    </div>
-    <p class="sec">Citations (${s.citations.length})</p>
-    ${claims}
-    <div class="steps">Trace: <b>${t.steps.map(st=>
-       st.action==='search'?`search “${st.query.length>40?st.query.slice(0,40)+'…':st.query}”`:'submit').join(" → ")}</b></div>`;
-}
+      // ===== MOCK — used only when no endpoint is set =====
+      _mock: function (question, h) {
+        var q = question.trim();
+        var n = liveCount + 1;
+        var pid = "live_" + n + "_supp";
+        var d1 = "live_" + n + "_dist_1", d2 = "live_" + n + "_dist_2";
+        // synthesize a small retrieved set so the trace can show real hits
+        DATA.corpus[pid] = "Retrieved context for the query \u201C" + q + "\u201D. This passage genuinely supports part of the agent's answer and exists in the corpus.";
+        DATA.corpus[d1] = "A topically-related but non-supporting passage returned by the retriever for \u201C" + keyphrase(q) + "\u201D.";
+        DATA.corpus[d2] = "Another near-miss passage surfaced during retrieval; it shares keywords but does not answer the question.";
+        var steps = [
+          { action: "search", query: q.length > 52 ? q.slice(0, 52) + "…" : q, k: 5, result_ids: [pid, d1, d2] },
+          { action: "search", query: keyphrase(q) + " — supporting evidence", k: 5, result_ids: [pid, d2] }
+        ];
+        return new Promise(function (resolve) {
+          var i = 0;
+          (function emit() {
+            if (i < steps.length) {
+              h.onStep && h.onStep(steps[i]); i++;
+              setTimeout(emit, 620);
+            } else {
+              h.onStatus && h.onStatus("scoring citations…");
+              setTimeout(function () {
+                // The headline behaviour, on demand: a right-feeling answer, half-built on an invented source.
+                var citations = [
+                  { claim: "Established a supporting fact for the question.", passage_id: pid, label: "faithful" },
+                  { claim: "Asserted the second hop of the answer.", passage_id: "ghost_" + (2000 + n), label: "fabricated" }
+                ];
+                var submit = { action: "submit", answer: "(model answer)", citations: citations.map(function (c) { return { claim: c.claim, passage_id: c.passage_id }; }) };
+                h.onStep && h.onStep(submit);
+                var score = computeScore(true, citations, "(model answer)", "(gold answer)", 1, 1.0);
+                resolve({ question: q, agent: DATA.summary.agent, steps: steps.concat([submit]), score: score });
+              }, 720);
+            }
+          })();
+        });
+      }
+    };
 
-renderHeader(); renderMatrix(); renderList();
-const trap=D.traces.find(t=>t.score.quadrant==="correct_but_fabricated");
-select(trap?trap.qid:D.traces[0].qid);
-</script>
+    function keyphrase(q) {
+      var w = q.replace(/[?.,]/g, "").split(/\s+/).filter(function (x) { return x.length > 3; });
+      return w.slice(0, 3).join(" ") || q.slice(0, 24);
+    }
+
+    // Replay backend steps on a cadence so the live trace animates (Shape A).
+    function replaySteps(steps, h, delay) {
+      return new Promise(function (resolve) {
+        var i = 0;
+        (function emit() {
+          if (i >= steps.length) { resolve(); return; }
+          h.onStep && h.onStep(steps[i]); i++;
+          if (steps[i - 1] && steps[i - 1].action !== "submit" && i < steps.length) h.onStatus && h.onStatus("searching…");
+          setTimeout(emit, delay);
+        })();
+      });
+    }
+
+    // A citation's label. The corpus is the single source of truth for whether a
+    // passage exists: a missing/empty id is unsupported, an id absent from the
+    // corpus is fabricated (overrides any backend label), and an id present in
+    // the corpus keeps the backend's faithful/misattributed call. This same rule
+    // drives both the rendered card and the counts, so they can never disagree.
+    function resolveLabel(c, corpus) {
+      corpus = corpus || DATA.corpus || {};
+      if (c.passage_id == null || c.passage_id === "") return "unsupported";
+      if (!Object.prototype.hasOwnProperty.call(corpus, c.passage_id)) return "fabricated";
+      return c.label === "misattributed" ? "misattributed" : "faithful";
+    }
+
+    // Turn a backend payload into a trace object (X: backend scores answer/EM/F1;
+    // frontend infers any missing labels and always derives faithfulness/quadrant).
+    function normalizeTrace(question, p) {
+      var corpus = DATA.corpus || {};
+      var submit = (p.steps || []).filter(function (s) { return s.action === "submit"; })[0] || {};
+      var rawCites = (p.citations || (submit.citations) || []).map(function (c) {
+        return { claim: c.claim, passage_id: c.passage_id, label: resolveLabel(c, corpus) };
+      });
+      var answer = p.answer != null ? p.answer : submit.answer;
+      var score = computeScore(
+        !!p.answer_correct, rawCites, answer, p.gold_answer,
+        p.em != null ? p.em : (p.answer_correct ? 1 : 0),
+        p.f1 != null ? p.f1 : (p.answer_correct ? 1 : 0)
+      );
+      return { question: question, agent: p.agent || DATA.summary.agent, steps: p.steps || [], score: score };
+    }
+
+    // Derive citation_counts / faithfulness / trustworthy / quadrant from raw citations.
+    function computeScore(answer_correct, citations, answer, gold_answer, em, f1) {
+      var counts = { faithful: 0, misattributed: 0, fabricated: 0, unsupported: 0 };
+      citations.forEach(function (c) { if (counts[c.label] != null) counts[c.label]++; });
+      var faith = citations.length ? counts.faithful / citations.length : 0;
+      var trustworthy = counts.fabricated === 0 && counts.misattributed === 0 && counts.unsupported === 0;
+      var quad = answer_correct ? (trustworthy ? "ideal" : "correct_but_fabricated")
+                                : (trustworthy ? "honest_wrong" : "worst");
+      return {
+        answer: answer, gold_answer: gold_answer, answer_correct: answer_correct,
+        em: em, f1: f1, faithfulness_score: faith, citation_trustworthy: trustworthy,
+        quadrant: quad, citation_counts: counts, citations: citations
+      };
+    }
+
+    // Recompute the rollup after the trace set changes (e.g. a live run lands).
+    function recomputeSummary() {
+      var q = { ideal: 0, correct_but_fabricated: 0, honest_wrong: 0, worst: 0 };
+      var correct = 0, fsum = 0;
+      DATA.traces.forEach(function (t) {
+        if (q[t.score.quadrant] != null) q[t.score.quadrant]++;
+        if (t.score.answer_correct) correct++;
+        fsum += t.score.faithfulness_score || 0;
+      });
+      var n = DATA.traces.length;
+      DATA.summary.n = n;
+      DATA.summary.quadrants = q;
+      DATA.summary.accuracy = n ? correct / n : 0;
+      DATA.summary.mean_faithfulness = n ? fsum / n : 0;
+    }
+
+    function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){return({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[c];}); }
+    function pct(x){ return Math.round(x*100); }
+    function byId(qid){ for (var i=0;i<DATA.traces.length;i++) if (DATA.traces[i].qid===qid) return DATA.traces[i]; }
+    function dot(c){ return '<span class="dot" style="background:'+c+'"></span>'; }
+    function faithColor(f){
+      f = Math.max(0, Math.min(1, f));
+      if (f >= 0.66) return "var(--faithful)";
+      if (f <= 0.34) return "var(--fabricated)";
+      return "#9a7b18";
+    }
+
+    // ---- run meta + metrics ----
+    function renderHeader(){
+      var s = DATA.summary;
+      document.getElementById("runmeta").innerHTML =
+        '<span class="mono"><b>'+esc(s.agent)+'</b></span>'+
+        '<span class="sep"></span><span>'+s.n+' episodes</span>'+
+        '<span class="sep"></span><span>multi-hop QA</span>';
+      var cbf = s.quadrants.correct_but_fabricated;
+      document.getElementById("metrics").innerHTML =
+        metric(pct(s.accuracy)+'<small>%</small>', "Answer accuracy") +
+        metric(pct(s.mean_faithfulness)+'<small>%</small>', "Mean faithfulness") +
+        metric(String(s.quadrants.ideal + cbf), "Correct answers") +
+        '<div class="metric flag"><div class="v tnum">'+cbf+'</div><div class="l">Correct but fabricated</div></div>' +
+        ledger();
+    }
+    function metric(v,l){ return '<div class="metric"><div class="v tnum">'+v+'</div><div class="l">'+l+'</div></div>'; }
+
+    // ---- citation ledger: every citation across the run, by label ----
+    function ledger(){
+      var tally = { faithful:0, misattributed:0, fabricated:0, unsupported:0 }, total = 0;
+      DATA.traces.forEach(function(t){
+        (t.score.citations||[]).forEach(function(c){ if (tally[c.label]!=null){ tally[c.label]++; total++; } });
+      });
+      if (!total) return "";
+      var order = ["faithful","misattributed","fabricated","unsupported"];
+      var seg = order.map(function(k){
+        if (!tally[k]) return "";
+        return '<i style="width:'+(tally[k]/total*100)+'%;background:'+LBL[k].color+'" title="'+LBL[k].name+': '+tally[k]+'"></i>';
+      }).join("");
+      var bad = tally.fabricated + tally.misattributed;
+      var key = order.map(function(k){
+        return tally[k] ? '<span class="lk">'+dot(LBL[k].color)+LBL[k].name+' <b class="tnum">'+tally[k]+'</b></span>' : "";
+      }).join("");
+      return '<div class="metric ledger">'+
+        '<div class="l" style="margin:0 0 9px">Citation ledger · '+total+' claims</div>'+
+        '<div class="ledger-bar">'+seg+'</div>'+
+        '<div class="ledger-key">'+key+'</div>'+
+        '<div class="ledger-note">'+bad+' of '+total+' cited passages are <b>not trustworthy</b></div>'+
+      '</div>';
+    }
+
+    // ---- matrix ----
+    function renderMatrix(){
+      var q = DATA.summary.quadrants;
+      var order = ["ideal","honest_wrong","correct_but_fabricated","worst"];
+      var m = document.getElementById("matrix");
+      m.innerHTML = "";
+      order.forEach(function(k){
+        var meta = QUAD[k];
+        var b = document.createElement("button");
+        b.className = "quad" + (k==="correct_but_fabricated"?" cbf":"");
+        b.setAttribute("data-q", k);
+        b.innerHTML = '<span class="qn">'+meta.name+'</span><span class="tag">'+meta.tag+'</span><span class="qc tnum">'+q[k]+'</span>';
+        b.addEventListener("click", function(){ setFilter(state.filter===k?null:k, true); });
+        m.appendChild(b);
+      });
+      syncMatrix();
+    }
+    function syncMatrix(){
+      [].forEach.call(document.querySelectorAll(".quad"), function(c){
+        c.classList.toggle("sel", state.filter===c.getAttribute("data-q"));
+      });
+    }
+
+    // ---- table ----
+    function visible(){
+      var rows = DATA.traces.filter(function(t){ return !state.filter || t.score.quadrant===state.filter; });
+      if (state.search){
+        var q = state.search.toLowerCase();
+        rows = rows.filter(function(t){ return t.question.toLowerCase().indexOf(q)>=0 || t.qid.toLowerCase().indexOf(q)>=0; });
+      }
+      if (state.sort.key){
+        var k = state.sort.key, d = state.sort.dir;
+        rows = rows.slice().sort(function(a,b){
+          var av, bv;
+          if (k==="faith"){ av=a.score.faithfulness_score; bv=b.score.faithfulness_score; }
+          else if (k==="ans"){ av=a.score.answer_correct?1:0; bv=b.score.answer_correct?1:0; }
+          else { av=quadRank[a.score.quadrant]; bv=quadRank[b.score.quadrant]; }
+          if (av<bv) return -d; if (av>bv) return d;
+          return a.qid<b.qid?-1:(a.qid>b.qid?1:0);
+        });
+      }
+      return rows;
+    }
+    function syncSort(){
+      [].forEach.call(document.querySelectorAll("th[data-sort]"), function(th){
+        var k = th.getAttribute("data-sort"), c = th.querySelector(".caret");
+        if (state.sort.key===k){ th.classList.add("active"); c.textContent = state.sort.dir>0?"▲":"▼"; }
+        else { th.classList.remove("active"); c.textContent = ""; }
+      });
+    }
+    function renderTable(){
+      var rows = visible();
+      var fb = document.getElementById("filterbar");
+      if (state.filter){
+        fb.innerHTML = '<span class="cur">'+QUAD[state.filter].name+' · '+rows.length+'</span>'+
+          '<button class="clearx" id="clearx"><svg width="9" height="9" viewBox="0 0 10 10"><path d="M2.5 2.5l5 5M7.5 2.5l-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>clear</button>';
+        document.getElementById("clearx").addEventListener("click", function(){ setFilter(null,false); });
+      } else {
+        fb.innerHTML = '<span class="cur">'+rows.length+' total</span>';
+      }
+      var tb = document.getElementById("tbody");
+      if (!rows.length){ tb.innerHTML = '<tr><td colspan="5"><div class="empty">No matching questions.</div></td></tr>'; syncSort(); return; }
+      tb.innerHTML = "";
+      rows.forEach(function(t){
+        var sc = t.score, f = sc.faithfulness_score, fc = faithColor(f);
+        var tr = document.createElement("tr");
+        tr.setAttribute("data-qid", t.qid);
+        tr.innerHTML =
+          '<td class="c-id"><span class="id'+(t.live?' live':'')+'">'+esc(t.qid)+'</span></td>'+
+          '<td class="c-q"><span class="qt">'+esc(t.question)+'</span></td>'+
+          '<td class="c-out"><span class="outcome">'+dot(QUAD[sc.quadrant].color)+QUAD[sc.quadrant].name+'</span></td>'+
+          '<td class="c-ans"><span class="ansmark '+(sc.answer_correct?"ok":"no")+'">'+(sc.answer_correct?"✓":"✕")+'</span></td>'+
+          '<td class="c-faith"><div class="faithcell"><span class="fbar"><i style="width:'+Math.max(pct(f),3)+'%;background:'+fc+'"></i></span><span class="pn tnum" style="color:'+fc+'">'+pct(f)+'%</span></div></td>';
+        tr.addEventListener("click", function(){ selectQid(t.qid); });
+        tb.appendChild(tr);
+      });
+      syncTable();
+      syncSort();
+    }
+    function syncTable(){
+      [].forEach.call(document.querySelectorAll("#tbody tr"), function(r){
+        r.classList.toggle("sel", r.getAttribute("data-qid")===state.selected);
+      });
+    }
+
+    // ---- detail ----
+    function traceStepHtml(st, i, interactive) {
+      if (st.action === "submit") return '<span class="tstep sub">submit · ' + esc(st.answer) + '</span>';
+      var hits = (st.result_ids && st.result_ids.length) || 0;
+      var inner = 'search <span class="qx">' + esc(st.query) + '</span>' + (st.k ? '<span class="tk">k=' + st.k + '</span>' : '');
+      if (interactive && hits) {
+        return '<button type="button" class="tstep tstep-btn" data-step="' + i + '">' + inner +
+               '<span class="hits">' + hits + ' hits</span><span class="chev">▾</span></button>';
+      }
+      return '<span class="tstep">' + inner + (hits ? '<span class="hits">' + hits + ' hits</span>' : '') + '</span>';
+    }
+    function renderDetail(){
+      var box = document.getElementById("detail");
+      if (state.running) { renderRunning(); return; }
+      var t = byId(state.selected);
+      if (!t){ box.innerHTML = '<p class="placeholder">Select a question to inspect its citations.</p>'; return; }
+      var sc = t.score, f = sc.faithfulness_score;
+
+      var trace = '<div class="trace">';
+      t.steps.forEach(function(st,i){
+        if (i) trace += '<span class="tarrow">→</span>';
+        trace += traceStepHtml(st, i, true);
+      });
+      trace += '</div><div class="retrieved" id="retrieved"></div>';
+
+      var cc = sc.citation_counts || {};
+      var sum = '<div class="citesum">';
+      ["faithful","misattributed","fabricated","unsupported"].forEach(function(k){
+        var n = cc[k]||0;
+        sum += '<span class="ci'+(n?'':' z')+'">'+dot(LBL[k].color)+LBL[k].name+' <b class="tnum">'+n+'</b></span>';
+      });
+      sum += '</div>';
+
+      var cites = "";
+      sc.citations.forEach(function(ct){ cites += citeCard(ct); });
+
+      var ansClass = sc.answer_correct ? "ans-ok" : "";
+      var goldBit = sc.answer_correct ? '<span class="sub">matches gold</span>' : '<span class="gold">✕</span>';
+      var goldLine = sc.answer_correct ? '' : '<div class="sl" style="margin-top:8px;color:var(--fabricated);opacity:.85">gold: '+esc(sc.gold_answer)+'</div>';
+
+      box.innerHTML =
+        '<div class="d-quad">'+
+          '<span class="ql">'+dot(QUAD[sc.quadrant].color)+QUAD[sc.quadrant].name+'</span>'+
+          '<span class="qid">'+esc(t.qid)+'</span>'+
+        '</div>'+
+        '<h2 class="d-question">'+esc(t.question)+'</h2>'+
+
+        '<div class="d-stats">'+
+          '<div class="d-stat"><div class="sl">Answer</div><div class="sv '+ansClass+'">'+esc(sc.answer)+' '+goldBit+'</div>'+goldLine+'</div>'+
+          '<div class="d-stat"><div class="sl">EM / F1</div><div class="sv tnum">'+sc.em+' · '+sc.f1.toFixed(2)+'</div></div>'+
+          '<div class="d-stat"><div class="sl">Faithfulness</div><div class="sv tnum" style="color:'+faithColor(f)+'">'+pct(f)+'%</div></div>'+
+          '<div class="d-stat"><div class="sl">Citations</div><div class="sv '+(sc.citation_trustworthy?"integ-ok":"integ-bad")+'">'+(sc.citation_trustworthy?"Trustworthy":"Fabricated")+'</div></div>'+
+        '</div>'+
+
+        '<div class="d-section"><span class="eyebrow">Agent trace</span>'+trace+'</div>'+
+
+        '<div class="d-section"><span class="eyebrow">Citations · '+sc.citations.length+'</span>'+sum+cites+'</div>'+
+
+        '<p class="foot">A citation whose <code>passage_id</code> is absent from the corpus is <b style="color:var(--fabricated)">fabricated</b> — the agent invented its source. '+
+        '<code>misattributed</code> cites a real passage that does not support the claim; <code>unsupported</code> is a claim with no citation.</p>';
+
+      renderRetrieved(t);
+    }
+
+    // Expandable retrieved-passages panel for a search step.
+    function renderRetrieved(t){
+      var box = document.getElementById("retrieved");
+      if (!box) return;
+      var i = state.expandedStep;
+      var step = (i!=null) ? t.steps[i] : null;
+      if (!step || !(step.result_ids||[]).length){ box.innerHTML = ""; box.classList.remove("open"); return; }
+      var corpus = DATA.corpus || {};
+      var cited = {};
+      (t.score.citations||[]).forEach(function(c){ if (c.passage_id!=null) cited[c.passage_id] = resolveLabel(c, corpus); });
+      var rows = step.result_ids.map(function(pid){
+        var inCorpus = Object.prototype.hasOwnProperty.call(corpus, pid);
+        var snip = inCorpus ? esc(corpus[pid]) : '<span class="missing">not present in corpus</span>';
+        var badge = cited[pid] ? '<span class="ret-cited '+cited[pid]+'">cited · '+LBL[cited[pid]].name+'</span>' : '';
+        return '<div class="ret-row"><div class="ret-head"><span class="pid">'+esc(pid)+'</span>'+badge+'</div><div class="ret-text">'+snip+'</div></div>';
+      }).join("");
+      box.innerHTML = '<div class="ret-label">Retrieved for step '+(i+1)+' · '+step.result_ids.length+' passages</div>'+rows;
+      box.classList.add("open");
+    }
+
+    function citeCard(ct){
+      var corpus = DATA.corpus || {};
+      var label = resolveLabel(ct, corpus);   // corpus is authoritative for existence
+      var top = '<div class="cite-top"><div class="cite-claim">'+esc(ct.claim)+'</div>'+
+                '<span class="lbl '+label+'">'+dot(LBL[label].color)+LBL[label].name+'</span></div>';
+      var body;
+      if (label==="fabricated"){
+        body = '<div class="invented"><div class="it">Invented citation — no such passage</div>'+
+               '<p>Cited <code>'+esc(ct.passage_id)+'</code>, which does not exist anywhere in the corpus. There is no source behind this claim.</p></div>';
+      } else if (label==="unsupported"){
+        body = '<div class="unsup-note"><div class="it">No citation provided</div>'+
+               '<p>This claim was asserted without citing any passage to support it.</p></div>';
+      } else {
+        var note = label==="misattributed"
+          ? '<span class="pnote misattributed">does not support the claim</span>'
+          : '<span class="pnote faithful">supports the claim</span>';
+        body = '<p class="passage">'+esc(corpus[ct.passage_id])+'</p>'+
+               '<div class="pmeta"><span class="pid">'+esc(ct.passage_id)+'</span>'+note+'</div>';
+      }
+      return '<div class="cite is-'+label+'">'+top+body+'</div>';
+    }
+
+    // ---- interactions ----
+    function selectQid(qid){ state.selected = qid; state.expandedStep = null; syncTable(); renderDetail(); }
+    function setFilter(key, selectFirst){
+      state.filter = key; syncMatrix(); renderTable();
+      if (selectFirst){
+        var rows = visible();
+        if (rows.length && (!state.selected || rows.every(function(r){ return r.qid!==state.selected; }))) selectQid(rows[0].qid);
+        else syncTable();
+      }
+    }
+    function ensureRowVisible(qid){
+      var tr = document.querySelector('#tbody tr[data-qid="'+qid+'"]');
+      if (!tr) return;
+      var r = tr.getBoundingClientRect();
+      var pad = 90;
+      if (r.top < pad) window.scrollBy({ top: r.top - pad, behavior: "smooth" });
+      else if (r.bottom > window.innerHeight - 20) window.scrollBy({ top: r.bottom - window.innerHeight + 40, behavior: "smooth" });
+    }
+
+    // ---- controls ----
+    [].forEach.call(document.querySelectorAll("th[data-sort]"), function(th){
+      th.addEventListener("click", function(){
+        var k = th.getAttribute("data-sort");
+        if (state.sort.key===k) state.sort.dir = -state.sort.dir;
+        else { state.sort.key = k; state.sort.dir = 1; }
+        renderTable();
+      });
+    });
+    document.getElementById("search").addEventListener("input", function(e){
+      state.search = e.target.value.trim();
+      renderTable();
+      var rows = visible();
+      if (rows.length && !rows.some(function(r){ return r.qid===state.selected; })) selectQid(rows[0].qid);
+    });
+    document.addEventListener("keydown", function(e){
+      if (e.target && (e.target.tagName==="INPUT" || e.target.tagName==="TEXTAREA")) return;
+      if (e.key!=="ArrowDown" && e.key!=="ArrowUp") return;
+      var rows = visible();
+      if (!rows.length) return;
+      var idx = -1;
+      for (var i=0;i<rows.length;i++) if (rows[i].qid===state.selected){ idx=i; break; }
+      if (e.key==="ArrowDown") idx = idx<0 ? 0 : Math.min(rows.length-1, idx+1);
+      else idx = idx<0 ? 0 : Math.max(0, idx-1);
+      e.preventDefault();
+      selectQid(rows[idx].qid);
+      ensureRowVisible(rows[idx].qid);
+    });
+
+    // ---- live run ----
+    function renderRunning() {
+      var r = state.running;
+      var box = document.getElementById("detail");
+      var trace = "";
+      r.steps.forEach(function (st, i) {
+        if (i) trace += '<span class="tarrow">→</span>';
+        trace += traceStepHtml(st);
+      });
+      if (r.steps.length) trace += '<span class="tarrow">→</span>';
+      trace += '<span class="tstep ghost"><span class="spin dark"></span>' + esc(r.status) + '<span class="run-timer" id="runTimer"></span></span>';
+      box.innerHTML =
+        '<div class="d-quad"><span class="ql running"><span class="spin dark"></span>running evaluation</span></div>' +
+        '<h2 class="d-question">' + esc(r.question) + '</h2>' +
+        '<div class="d-section"><span class="eyebrow">Agent trace</span><div class="trace">' + trace + '</div></div>' +
+        '<p class="foot">The agent is retrieving passages and composing an answer. Citations are checked against the corpus as soon as it submits.</p>';
+      updateTimer();
+    }
+    function updateTimer() {
+      var el = document.getElementById("runTimer");
+      if (el && state.running) el.textContent = ((Date.now() - state.running.t0) / 1000).toFixed(1) + "s";
+    }
+
+    function setRunUI(busy) {
+      var btn = document.getElementById("runbtn");
+      var input = document.getElementById("qinput");
+      btn.disabled = busy;
+      input.disabled = busy;
+      btn.querySelector(".runbtn-label").innerHTML = busy ? '<span class="spin"></span>running…' : "Run evaluation";
+    }
+
+    function renderRunMode() {
+      var el = document.getElementById("runmode");
+      var live = CitationTrapAPI.mode() === "live";
+      el.className = "runmode" + (live ? " live" : "");
+      el.innerHTML = '<span class="live-dot"></span>' + (live
+        ? 'Live · <b>connected</b>'
+        : 'Mock mode · <b>wire your endpoint</b>');
+    }
+
+    function runQuestion(question) {
+      question = (question || "").trim();
+      if (state.busy || !question) return;
+      state.busy = true;
+      setRunUI(true);
+      state.running = { question: question, steps: [], status: "thinking…", t0: Date.now() };
+      state.selected = null;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      renderRunning();
+      if (state.runTimer) clearInterval(state.runTimer);
+      state.runTimer = setInterval(updateTimer, 100);
+
+      CitationTrapAPI.run(question, {
+        onStep: function (step) {
+          state.running.steps.push(step);
+          state.running.status = step.action === "submit" ? "scoring citations…" : "searching…";
+          renderRunning();
+        },
+        onStatus: function (s) { state.running.status = s; renderRunning(); }
+      }).then(function (trace) {
+        var qid = "L" + (++liveCount); liveSeq++;
+        trace.qid = qid;
+        trace.live = true;
+        if (!trace.score.citation_counts || trace.score.quadrant == null) {
+          trace.score = computeScore(
+            trace.score.answer_correct, trace.score.citations,
+            trace.score.answer, trace.score.gold_answer,
+            trace.score.em, trace.score.f1
+          );
+        }
+        if (state.runTimer) { clearInterval(state.runTimer); state.runTimer = null; }
+        DATA.traces.unshift(trace);
+        recomputeSummary();
+        state.running = null; state.busy = false;
+        state.filter = null; state.search = "";
+        document.getElementById("qinput").value = "";
+        setRunUI(false);
+        renderHeader(); renderMatrix(); renderTable();
+        selectQid(qid);
+        var tr = document.querySelector('#tbody tr[data-qid="' + qid + '"]');
+        if (tr) tr.classList.add("justadded");
+      }).catch(function (err) {
+        if (state.runTimer) { clearInterval(state.runTimer); state.runTimer = null; }
+        state.running = null; state.busy = false;
+        setRunUI(false);
+        renderDetail();
+        var el = document.getElementById("runmode");
+        el.innerHTML = '<span class="run-err">Run failed: ' + esc(err && err.message || err) + '</span>';
+        setTimeout(renderRunMode, 4000);
+      });
+    }
+
+    // toggle a search step's retrieved-passages panel
+    document.getElementById("detail").addEventListener("click", function (e) {
+      var btn = e.target.closest ? e.target.closest(".tstep-btn") : null;
+      if (!btn) return;
+      var i = +btn.getAttribute("data-step");
+      state.expandedStep = (state.expandedStep === i) ? null : i;
+      [].forEach.call(document.querySelectorAll(".tstep-btn"), function (b) {
+        b.classList.toggle("open", +b.getAttribute("data-step") === state.expandedStep);
+      });
+      renderRetrieved(byId(state.selected));
+    });
+
+    // ---- init ----
+    renderHeader();
+    renderMatrix();
+    renderTable();
+    var firstCbf = DATA.traces.filter(function(t){ return t.score.quadrant==="correct_but_fabricated"; })[0];
+    state.selected = firstCbf ? firstCbf.qid : (DATA.traces[0]&&DATA.traces[0].qid);
+    syncTable();
+    renderDetail();
+  })();
+  </script>
 </body>
 </html>
