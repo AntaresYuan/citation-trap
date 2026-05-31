@@ -4,17 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Nusretiye Clock Tower and Eski Imaret Mosque location city",
-      "k": 8,
+      "query": "Nusretiye Clock Tower Eski Imaret Mosque city",
+      "k": 5,
       "result_ids": [
         "p_089ccb4916",
+        "p_db84866dcc",
         "p_2b4bda530b",
         "p_6916d87da4",
-        "p_7335d50495",
-        "p_f9edd40623",
-        "p_05bd628fff",
-        "p_852cd67ce5",
-        "p_348c421342"
+        "p_f9edd40623"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Eski Imaret Mosque Istanbul location",
+      "k": 5,
+      "result_ids": [
+        "p_2b4bda530b",
+        "p_bb7eddb3af",
+        "p_678f02dbf8",
+        "p_fe4bd75cbe",
+        "p_3908b6e54e"
       ]
     },
     {
@@ -26,12 +35,13 @@
           "passage_id": "p_089ccb4916"
         },
         {
-          "claim": "Eski Imaret Mosque is in Istanbul",
+          "claim": "Eski Imaret Mosque is in Istanbul, Turkey",
           "passage_id": "p_2b4bda530b"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Istanbul",
     "gold_answer": "Istanbul, Turkey",
@@ -45,7 +55,7 @@
         "label": "faithful"
       },
       {
-        "claim": "Eski Imaret Mosque is in Istanbul",
+        "claim": "Eski Imaret Mosque is in Istanbul, Turkey",
         "passage_id": "p_2b4bda530b",
         "label": "faithful"
       }
@@ -60,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

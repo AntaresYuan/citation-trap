@@ -4,17 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "science fantasy young adult series first person companion books narrated stories enslaved worlds alien species",
-      "k": 8,
+      "query": "science fantasy young adult series first person companion books enslaved worlds alien species",
+      "k": 5,
       "result_ids": [
         "p_4b9edbfeb8",
+        "p_7b278dbd3d",
         "p_1599f19299",
         "p_d3d77c1d85",
-        "p_7b278dbd3d",
-        "p_4fff350197",
-        "p_177797d6b4",
+        "p_4fff350197"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Animorphs companion books enslaved worlds alien species",
+      "k": 5,
+      "result_ids": [
         "p_e249b058a6",
-        "p_6d0628382e"
+        "p_7b278dbd3d",
+        "p_4b9edbfeb8",
+        "p_4fff350197",
+        "p_1599f19299"
       ]
     },
     {
@@ -22,16 +31,17 @@
       "answer": "Animorphs",
       "citations": [
         {
-          "claim": "Animorphs is a science fantasy young adult series told in first person",
+          "claim": "Animorphs is a science fantasy series of young adult books told in first person",
           "passage_id": "p_4b9edbfeb8"
         },
         {
-          "claim": "The Hork-Bajir Chronicles is a companion book narrating the story of how the Yeerks enslaved the Hork-Bajir, an alien species",
+          "claim": "The Hork-Bajir Chronicles is a companion book that narrates how the Yeerks enslaved the Hork-Bajir",
           "passage_id": "p_e249b058a6"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Animorphs",
     "gold_answer": "Animorphs",
@@ -40,12 +50,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Animorphs is a science fantasy young adult series told in first person",
+        "claim": "Animorphs is a science fantasy series of young adult books told in first person",
         "passage_id": "p_4b9edbfeb8",
         "label": "faithful"
       },
       {
-        "claim": "The Hork-Bajir Chronicles is a companion book narrating the story of how the Yeerks enslaved the Hork-Bajir, an alien species",
+        "claim": "The Hork-Bajir Chronicles is a companion book that narrates how the Yeerks enslaved the Hork-Bajir",
         "passage_id": "p_e249b058a6",
         "label": "faithful"
       }
@@ -60,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

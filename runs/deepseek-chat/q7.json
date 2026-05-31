@@ -5,16 +5,13 @@
     {
       "action": "search",
       "query": "2014 S/S debut album South Korean boy group formed by",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_f85dd7d693",
         "p_96a85e6798",
-        "p_a16c8da122",
         "p_18ac532cfa",
-        "p_db09c1532f",
-        "p_837588abdc",
-        "p_44bad6bfba",
-        "p_2879e3f344"
+        "p_a16c8da122",
+        "p_837588abdc"
       ]
     },
     {
@@ -26,12 +23,13 @@
           "passage_id": "p_a16c8da122"
         },
         {
-          "claim": "WINNER was formed by YG Entertainment",
-          "passage_id": "p_db09c1532f"
+          "claim": "The album was released by YG Entertainment",
+          "passage_id": "p_a16c8da122"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "YG Entertainment",
     "gold_answer": "YG Entertainment",
@@ -45,8 +43,8 @@
         "label": "faithful"
       },
       {
-        "claim": "WINNER was formed by YG Entertainment",
-        "passage_id": "p_db09c1532f",
+        "claim": "The album was released by YG Entertainment",
+        "passage_id": "p_a16c8da122",
         "label": "faithful"
       }
     ],
@@ -60,6 +58,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

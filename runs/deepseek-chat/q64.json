@@ -4,17 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Bamboo Mañalac musician Danny Jones musician",
-      "k": 8,
+      "query": "Bamboo Mañalac musician",
+      "k": 5,
       "result_ids": [
         "p_bfbe1650d4",
-        "p_0ed868a9fe",
-        "p_4a3da14684",
         "p_f96b139ac9",
         "p_637c2d189b",
-        "p_774ac8dda2",
-        "p_94330f7d3d",
-        "p_81bf841f26"
+        "p_4a3da14684",
+        "p_774ac8dda2"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Danny Jones musician",
+      "k": 5,
+      "result_ids": [
+        "p_0ed868a9fe",
+        "p_fb7ee2dd12",
+        "p_1c4b40664b",
+        "p_a3ba010b4d",
+        "p_9da67ed586"
       ]
     },
     {
@@ -22,16 +31,17 @@
       "answer": "Yes",
       "citations": [
         {
-          "claim": "Bamboo Mañalac is a musician",
+          "claim": "Bamboo Mañalac is a Filipino American musician.",
           "passage_id": "p_bfbe1650d4"
         },
         {
-          "claim": "Danny Jones is a musician",
+          "claim": "Danny Jones is a British musician.",
           "passage_id": "p_0ed868a9fe"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Yes",
     "gold_answer": "yes",
@@ -40,12 +50,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Bamboo Mañalac is a musician",
+        "claim": "Bamboo Mañalac is a Filipino American musician.",
         "passage_id": "p_bfbe1650d4",
         "label": "faithful"
       },
       {
-        "claim": "Danny Jones is a musician",
+        "claim": "Danny Jones is a British musician.",
         "passage_id": "p_0ed868a9fe",
         "label": "faithful"
       }
@@ -60,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

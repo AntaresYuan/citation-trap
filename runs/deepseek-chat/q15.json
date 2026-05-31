@@ -4,46 +4,59 @@
   "steps": [
     {
       "action": "search",
-      "query": "University of Kansas fight song",
+      "query": "University of Kansas fight song name",
       "k": 5,
       "result_ids": [
         "p_64936bb051",
         "p_c27f528002",
         "p_eebd6b68dc",
-        "p_041b19d50e",
-        "p_b2984790c0"
+        "p_9d6acb182e",
+        "p_75030ba865"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "University of Kansas fight song Kansas Song",
+      "k": 5,
+      "result_ids": [
+        "p_64936bb051",
+        "p_c27f528002",
+        "p_eebd6b68dc",
+        "p_4573ed0e7d",
+        "p_041b19d50e"
       ]
     },
     {
       "action": "submit",
-      "answer": "Kansas Song",
+      "answer": "Kansas Song (We’re From Kansas)",
       "citations": [
         {
-          "claim": "The fight song of the University of Kansas is Kansas Song (We’re From Kansas).",
-          "passage_id": "p_64936bb051"
+          "claim": "The University of Kansas has two branch campuses in the Kansas City metropolitan area: the Edwards Campus in Overland Park, and the university's medical school and hospital in Kansas City.",
+          "passage_id": "p_c27f528002"
         },
         {
-          "claim": "The University of Kansas's main campus is in Lawrence, Kansas, and branch campuses are in the Kansas City metropolitan area.",
-          "passage_id": "p_c27f528002"
+          "claim": "Kansas Song (We’re From Kansas) is a fight song of the University of Kansas.",
+          "passage_id": "p_64936bb051"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "Kansas Song",
+    "answer": "Kansas Song (We’re From Kansas)",
     "gold_answer": "Kansas Song",
     "answer_correct": true,
-    "em": 1,
-    "f1": 1.0,
+    "em": 0,
+    "f1": 0.5714,
     "citations": [
       {
-        "claim": "The fight song of the University of Kansas is Kansas Song (We’re From Kansas).",
-        "passage_id": "p_64936bb051",
+        "claim": "The University of Kansas has two branch campuses in the Kansas City metropolitan area: the Edwards Campus in Overland Park, and the university's medical school and hospital in Kansas City.",
+        "passage_id": "p_c27f528002",
         "label": "faithful"
       },
       {
-        "claim": "The University of Kansas's main campus is in Lawrence, Kansas, and branch campuses are in the Kansas City metropolitan area.",
-        "passage_id": "p_c27f528002",
+        "claim": "Kansas Song (We’re From Kansas) is a fight song of the University of Kansas.",
+        "passage_id": "p_64936bb051",
         "label": "faithful"
       }
     ],
@@ -57,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

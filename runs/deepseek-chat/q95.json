@@ -4,17 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "What Are Little Girls Made Of nursery rhyme Roud Folk Song Index",
-      "k": 8,
+      "query": "What Are Little Girls Made Of Roud Folk Song Index",
+      "k": 5,
       "result_ids": [
         "p_811d0d8716",
         "p_6722832b9b",
-        "p_704661039f",
         "p_51a225849d",
         "p_12c822cc83",
+        "p_704661039f"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "What Are Little Girls Made Of nursery rhyme Roud number",
+      "k": 5,
+      "result_ids": [
+        "p_811d0d8716",
+        "p_704661039f",
+        "p_6722832b9b",
         "p_2519668ea9",
-        "p_7080e7f286",
-        "p_7f3223b97c"
+        "p_7080e7f286"
       ]
     },
     {
@@ -22,16 +31,17 @@
       "answer": "821",
       "citations": [
         {
-          "claim": "What Are Little Girls Made Of? is adapted from the nursery rhyme 'What Are Little Boys Made Of?'",
-          "passage_id": "p_704661039f"
+          "claim": "The nursery rhyme 'What Are Little Boys Made Of?' has a Roud Folk Song Index number of 821.",
+          "passage_id": "p_811d0d8716"
         },
         {
-          "claim": "'What Are Little Boys Made Of?' has a Roud Folk Song Index number of 821",
-          "passage_id": "p_811d0d8716"
+          "claim": "The question asks about the rhyme inspiring 'What Are Little Girls Made Of?', which is a variant of that same nursery rhyme.",
+          "passage_id": "p_704661039f"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "821",
     "gold_answer": "821",
@@ -40,26 +50,25 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "What Are Little Girls Made Of? is adapted from the nursery rhyme 'What Are Little Boys Made Of?'",
-        "passage_id": "p_704661039f",
+        "claim": "The nursery rhyme 'What Are Little Boys Made Of?' has a Roud Folk Song Index number of 821.",
+        "passage_id": "p_811d0d8716",
         "label": "faithful"
       },
       {
-        "claim": "'What Are Little Boys Made Of?' has a Roud Folk Song Index number of 821",
-        "passage_id": "p_811d0d8716",
-        "label": "faithful"
+        "claim": "The question asks about the rhyme inspiring 'What Are Little Girls Made Of?', which is a variant of that same nursery rhyme.",
+        "passage_id": "p_704661039f",
+        "label": "misattributed"
       }
     ],
     "citation_counts": {
-      "faithful": 2,
-      "misattributed": 0,
+      "faithful": 1,
+      "misattributed": 1,
       "fabricated": 0,
       "unsupported": 0
     },
-    "faithfulness_score": 1.0,
-    "citation_trustworthy": true,
-    "quadrant": "ideal",
+    "faithfulness_score": 0.5,
+    "citation_trustworthy": false,
+    "quadrant": "correct_but_fabricated",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

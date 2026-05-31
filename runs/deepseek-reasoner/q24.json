@@ -4,17 +4,14 @@
   "steps": [
     {
       "action": "search",
-      "query": "Manchester Terrier ancestors Gordon Setter Irish Setter",
-      "k": 8,
+      "query": "Gordon Setter Irish Setter ancestors Manchester Terrier",
+      "k": 5,
       "result_ids": [
         "p_039e0c3e6d",
         "p_a90951dbab",
         "p_57b1dfeccb",
         "p_d140591b92",
-        "p_e468273cb6",
-        "p_58b83afc97",
-        "p_282236ec4a",
-        "p_af6a448f99"
+        "p_e468273cb6"
       ]
     },
     {
@@ -22,12 +19,13 @@
       "answer": "Scotch Collie",
       "citations": [
         {
-          "claim": "Ancestors of the Scotch Collie include Gordon and Irish Setters.",
+          "claim": "Other ancestors include the Gordon and Irish Setters",
           "passage_id": "p_e468273cb6"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Scotch Collie",
     "gold_answer": "Scotch Collie",
@@ -36,7 +34,7 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Ancestors of the Scotch Collie include Gordon and Irish Setters.",
+        "claim": "Other ancestors include the Gordon and Irish Setters",
         "passage_id": "p_e468273cb6",
         "label": "faithful"
       }
@@ -51,6 +49,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

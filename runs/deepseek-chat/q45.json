@@ -4,32 +4,14 @@
   "steps": [
     {
       "action": "search",
-      "query": "Poison Shut Up Make Love album release date",
-      "k": 8,
+      "query": "Poison album Shut Up Make Love release date",
+      "k": 5,
       "result_ids": [
         "p_45c863fd44",
         "p_f2022b5f98",
         "p_42ad93b84c",
         "p_a3ff081662",
-        "p_dd1b654056",
-        "p_2f12c18f7a",
-        "p_7dfa8ba665",
-        "p_34bf83304b"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "\"Shut Up, Make Love\" Poison song release year",
-      "k": 8,
-      "result_ids": [
-        "p_45c863fd44",
-        "p_f2022b5f98",
-        "p_2f12c18f7a",
-        "p_7dfa8ba665",
-        "p_dd1b654056",
-        "p_42ad93b84c",
-        "p_ef4edb8843",
-        "p_a3ff081662"
+        "p_dd1b654056"
       ]
     },
     {
@@ -37,12 +19,13 @@
       "answer": "2000",
       "citations": [
         {
-          "claim": "Shut Up, Make Love is a song by Poison released in 2000.",
+          "claim": "Shut Up, Make Love was released in 2000",
           "passage_id": "p_45c863fd44"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "2000",
     "gold_answer": "2000",
@@ -51,7 +34,7 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Shut Up, Make Love is a song by Poison released in 2000.",
+        "claim": "Shut Up, Make Love was released in 2000",
         "passage_id": "p_45c863fd44",
         "label": "faithful"
       }
@@ -66,6 +49,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

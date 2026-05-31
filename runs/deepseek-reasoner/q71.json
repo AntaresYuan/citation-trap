@@ -4,122 +4,98 @@
   "steps": [
     {
       "action": "search",
-      "query": "British first-generation jet-powered medium bomber South West Pacific theatre World War II",
-      "k": 8,
+      "query": "British first-generation jet-powered medium bomber South West Pacific World War II",
+      "k": 5,
       "result_ids": [
         "p_ae718b7790",
-        "p_950c0a8c94",
         "p_3a40401c5f",
-        "p_9f77aab1cf",
+        "p_950c0a8c94",
         "p_e139866507",
-        "p_74b9155d9b",
-        "p_8e3c3fb7e5",
-        "p_012c3d194d"
+        "p_9f77aab1cf"
       ]
     },
     {
       "action": "search",
       "query": "British jet bomber World War II South West Pacific",
-      "k": 8,
-      "result_ids": [
-        "p_950c0a8c94",
-        "p_9f77aab1cf",
-        "p_e139866507",
-        "p_ae718b7790",
-        "p_012c3d194d",
-        "p_74b9155d9b",
-        "p_8e3c3fb7e5",
-        "p_3a40401c5f"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "British jet bomber World War II Pacific",
-      "k": 8,
-      "result_ids": [
-        "p_ae718b7790",
-        "p_e139866507",
-        "p_950c0a8c94",
-        "p_9f77aab1cf",
-        "p_3a40401c5f",
-        "p_8e3c3fb7e5",
-        "p_012c3d194d",
-        "p_96e6b8d414"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "British jet bomber World War II Pacific theatre",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_950c0a8c94",
         "p_ae718b7790",
         "p_e139866507",
         "p_9f77aab1cf",
-        "p_74b9155d9b",
-        "p_8e3c3fb7e5",
-        "p_3a40401c5f",
         "p_012c3d194d"
       ]
     },
     {
       "action": "search",
-      "query": "British jet bomber World War II South West Pacific used",
-      "k": 8,
+      "query": "British jet bomber World War II Pacific",
+      "k": 5,
       "result_ids": [
-        "p_950c0a8c94",
-        "p_9f77aab1cf",
-        "p_e139866507",
         "p_ae718b7790",
-        "p_012c3d194d",
-        "p_74b9155d9b",
-        "p_8e3c3fb7e5",
-        "p_3a40401c5f"
+        "p_e139866507",
+        "p_3a40401c5f",
+        "p_950c0a8c94",
+        "p_9f77aab1cf"
       ]
     },
     {
       "action": "search",
-      "query": "British jet bomber World War II South West Pacific Canberra",
-      "k": 8,
+      "query": "British jet bomber used in World War II Pacific",
+      "k": 5,
       "result_ids": [
-        "p_950c0a8c94",
-        "p_9f77aab1cf",
+        "p_ae718b7790",
         "p_e139866507",
         "p_3a40401c5f",
-        "p_ae718b7790",
-        "p_012c3d194d",
-        "p_8c59240206",
-        "p_74b9155d9b"
+        "p_8e3c3fb7e5",
+        "p_9f77aab1cf"
       ]
     },
     {
       "action": "search",
-      "query": "World War II British jet bomber Pacific",
-      "k": 8,
+      "query": "British jet bomber World War II operational medium bomber",
+      "k": 5,
+      "result_ids": [
+        "p_ae718b7790",
+        "p_3a40401c5f",
+        "p_96e6b8d414",
+        "p_e139866507",
+        "p_8e3c3fb7e5"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "British jet bomber used in combat World War II",
+      "k": 5,
       "result_ids": [
         "p_ae718b7790",
         "p_e139866507",
-        "p_950c0a8c94",
-        "p_9f77aab1cf",
         "p_3a40401c5f",
         "p_8e3c3fb7e5",
-        "p_012c3d194d",
         "p_96e6b8d414"
       ]
     },
     {
       "action": "search",
-      "query": "British jet bomber World War II South West Pacific theatre",
-      "k": 8,
+      "query": "first British jet bomber World War II operational",
+      "k": 5,
       "result_ids": [
-        "p_950c0a8c94",
-        "p_9f77aab1cf",
+        "p_ae718b7790",
+        "p_3a40401c5f",
+        "p_96e6b8d414",
         "p_e139866507",
-        "p_74b9155d9b",
+        "p_60ca7e85ca"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Gloster Meteor bomber variant Pacific World War II",
+      "k": 5,
+      "result_ids": [
+        "p_e139866507",
+        "p_950c0a8c94",
         "p_ae718b7790",
         "p_8e3c3fb7e5",
-        "p_012c3d194d",
-        "p_8c59240206"
+        "p_96e6b8d414"
       ]
     },
     {
@@ -128,6 +104,7 @@
       "citations": []
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "",
     "gold_answer": "English Electric Canberra",
@@ -145,6 +122,5 @@
     "citation_trustworthy": false,
     "quadrant": "worst",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

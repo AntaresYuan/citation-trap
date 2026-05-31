@@ -4,43 +4,46 @@
   "steps": [
     {
       "action": "search",
-      "query": "Daryl Hall Gerry Marsden musicians",
-      "k": 3,
+      "query": "Daryl Hall musician Gerry Marsden musician",
+      "k": 5,
       "result_ids": [
         "p_10e677c75c",
         "p_1cb94a5c66",
-        "p_225bce32b7"
+        "p_1bba9281a1",
+        "p_225bce32b7",
+        "p_987cd9efcf"
       ]
     },
     {
       "action": "submit",
-      "answer": "Yes",
+      "answer": "yes",
       "citations": [
         {
-          "claim": "Daryl Hall is an American rock, R&B, and soul singer, keyboardist, guitarist, songwriter, and producer",
+          "claim": "Daryl Hall is a musician",
           "passage_id": "p_225bce32b7"
         },
         {
-          "claim": "Gerry Marsden is an English musician and television personality, best known for being leader of the British Merseybeat band Gerry and the Pacemakers",
+          "claim": "Gerry Marsden is a musician",
           "passage_id": "p_10e677c75c"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "Yes",
+    "answer": "yes",
     "gold_answer": "yes",
     "answer_correct": true,
     "em": 1,
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Daryl Hall is an American rock, R&B, and soul singer, keyboardist, guitarist, songwriter, and producer",
+        "claim": "Daryl Hall is a musician",
         "passage_id": "p_225bce32b7",
         "label": "faithful"
       },
       {
-        "claim": "Gerry Marsden is an English musician and television personality, best known for being leader of the British Merseybeat band Gerry and the Pacemakers",
+        "claim": "Gerry Marsden is a musician",
         "passage_id": "p_10e677c75c",
         "label": "faithful"
       }
@@ -55,6 +58,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

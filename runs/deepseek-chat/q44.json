@@ -4,40 +4,30 @@
   "steps": [
     {
       "action": "search",
-      "query": "Skin Yard band origin country",
-      "k": 8,
+      "query": "Skin Yard origin country",
+      "k": 3,
       "result_ids": [
         "p_b4feb99336",
         "p_217b6bf0d8",
-        "p_8d266a85bd",
-        "p_57f6b1881d",
-        "p_5c31c27b9c",
-        "p_88bb370635",
-        "p_92255b5ed8",
-        "p_bdb7c78c0a"
+        "p_8d266a85bd"
       ]
     },
     {
       "action": "search",
       "query": "Ostava band origin country",
-      "k": 8,
+      "k": 3,
       "result_ids": [
         "p_a956617594",
         "p_de2dc78698",
-        "p_d07d760f38",
-        "p_a56d25c568",
-        "p_b84077912b",
-        "p_838270cc79",
-        "p_d2d93e15fc",
-        "p_d2b89b81d1"
+        "p_a4f3e5bb57"
       ]
     },
     {
       "action": "submit",
-      "answer": "Skin Yard is from the U.S.; Ostava is from Bulgaria, so only Skin Yard is from the U.S.",
+      "answer": "No, only Skin Yard was from the U.S. Ostava is from Bulgaria.",
       "citations": [
         {
-          "claim": "Skin Yard was an American grunge band from Seattle, Washington",
+          "claim": "Skin Yard was an American grunge band",
           "passage_id": "p_217b6bf0d8"
         },
         {
@@ -47,15 +37,16 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "Skin Yard is from the U.S.; Ostava is from Bulgaria, so only Skin Yard is from the U.S.",
+    "answer": "No, only Skin Yard was from the U.S. Ostava is from Bulgaria.",
     "gold_answer": "no",
-    "answer_correct": false,
+    "answer_correct": true,
     "em": 0,
-    "f1": 0.0,
+    "f1": 0.1667,
     "citations": [
       {
-        "claim": "Skin Yard was an American grunge band from Seattle, Washington",
+        "claim": "Skin Yard was an American grunge band",
         "passage_id": "p_217b6bf0d8",
         "label": "faithful"
       },
@@ -73,8 +64,7 @@
     },
     "faithfulness_score": 1.0,
     "citation_trustworthy": true,
-    "quadrant": "honest_wrong",
+    "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

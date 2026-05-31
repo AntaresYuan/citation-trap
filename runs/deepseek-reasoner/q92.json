@@ -4,32 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Stenocereus tree like Pachypodium tree like plants",
-      "k": 8,
+      "query": "Stenocereus tree like growth form",
+      "k": 5,
       "result_ids": [
         "p_b692676f8b",
-        "p_d626422828",
+        "p_8d9b9513b3",
         "p_92f06872a6",
         "p_67c95c74cf",
-        "p_a043fc69cb",
-        "p_8d9b9513b3",
-        "p_100fef0164",
-        "p_7acb505bcc"
+        "p_c0bde3da65"
       ]
     },
     {
       "action": "search",
-      "query": "Pachypodium tree like",
-      "k": 8,
+      "query": "Pachypodium tree like growth form",
+      "k": 5,
       "result_ids": [
         "p_d626422828",
         "p_593df79565",
-        "p_92f06872a6",
-        "p_67c95c74cf",
         "p_8d9b9513b3",
-        "p_b692676f8b",
-        "p_100fef0164",
-        "p_7acb505bcc"
+        "p_92f06872a6",
+        "p_67c95c74cf"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "Yes",
       "citations": [
         {
-          "claim": "Stenocereus includes tree-like cacti",
+          "claim": "Stenocereus includes columnar or tree-like cacti",
           "passage_id": "p_b692676f8b"
         },
         {
-          "claim": "Pachypodium includes succulent spine-bearing trees",
+          "claim": "Pachypodium includes trees",
           "passage_id": "p_593df79565"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Yes",
     "gold_answer": "yes",
@@ -55,12 +50,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Stenocereus includes tree-like cacti",
+        "claim": "Stenocereus includes columnar or tree-like cacti",
         "passage_id": "p_b692676f8b",
         "label": "faithful"
       },
       {
-        "claim": "Pachypodium includes succulent spine-bearing trees",
+        "claim": "Pachypodium includes trees",
         "passage_id": "p_593df79565",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

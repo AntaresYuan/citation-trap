@@ -4,32 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "director of Big Stone Gap",
-      "k": 8,
+      "query": "director of the romantic comedy Big Stone Gap",
+      "k": 5,
       "result_ids": [
         "p_f4ef5ee3da",
         "p_011c8738a1",
-        "p_728bb8768a",
-        "p_5b5761d864",
-        "p_5721a6947a",
+        "p_a283417854",
         "p_b5f75a6605",
-        "p_a356498474",
-        "p_348c421342"
+        "p_b5ea729576"
       ]
     },
     {
       "action": "search",
-      "query": "Adriana Trigiani based in New York city",
-      "k": 8,
+      "query": "Adriana Trigiani based New York city",
+      "k": 5,
       "result_ids": [
         "p_6121371d11",
         "p_f4ef5ee3da",
-        "p_f9961d6294",
-        "p_341ba459fe",
-        "p_110dc5864f",
         "p_50a5ccc585",
-        "p_6ae4485be3",
-        "p_5b5761d864"
+        "p_86283ae917",
+        "p_f0ea220e80"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "New York City",
       "citations": [
         {
-          "claim": "The director of 'Big Stone Gap' is Adriana Trigiani.",
+          "claim": "The director of 'Big Stone Gap' is Adriana Trigiani",
           "passage_id": "p_f4ef5ee3da"
         },
         {
-          "claim": "Adriana Trigiani is based in Greenwich Village, New York City.",
+          "claim": "Adriana Trigiani is based in Greenwich Village, New York City",
           "passage_id": "p_6121371d11"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "New York City",
     "gold_answer": "Greenwich Village, New York City",
@@ -55,12 +50,12 @@
     "f1": 0.75,
     "citations": [
       {
-        "claim": "The director of 'Big Stone Gap' is Adriana Trigiani.",
+        "claim": "The director of 'Big Stone Gap' is Adriana Trigiani",
         "passage_id": "p_f4ef5ee3da",
         "label": "faithful"
       },
       {
-        "claim": "Adriana Trigiani is based in Greenwich Village, New York City.",
+        "claim": "Adriana Trigiani is based in Greenwich Village, New York City",
         "passage_id": "p_6121371d11",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

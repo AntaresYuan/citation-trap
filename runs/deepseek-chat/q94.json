@@ -4,32 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Sacred Planet release year",
-      "k": 8,
+      "query": "Sacred Planet release date",
+      "k": 5,
       "result_ids": [
         "p_a3bfd26bf3",
-        "p_ef4edb8843",
-        "p_58452204db",
-        "p_544e7bead0",
-        "p_42999eddc4",
-        "p_ab9850c154",
-        "p_cf1c1f91df",
-        "p_353a14f09a"
+        "p_ab4a36b24b",
+        "p_0e411f91ec",
+        "p_0d5c875fce",
+        "p_dc786cdd4e"
       ]
     },
     {
       "action": "search",
-      "query": "Oz the Great and Powerful release year",
-      "k": 8,
+      "query": "Oz the Great and Powerful release date",
+      "k": 5,
       "result_ids": [
         "p_7c112bb762",
         "p_ab9850c154",
+        "p_ee0842ca15",
         "p_4b8c44633c",
-        "p_ef4edb8843",
-        "p_5721a6947a",
-        "p_42999eddc4",
-        "p_8da4012255",
-        "p_544e7bead0"
+        "p_b9b8f20321"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "Sacred Planet",
       "citations": [
         {
-          "claim": "Sacred Planet is a 2004 documentary",
+          "claim": "Sacred Planet was released on April 22, 2004",
           "passage_id": "p_a3bfd26bf3"
         },
         {
-          "claim": "Oz the Great and Powerful is a 2013 American fantasy adventure film",
+          "claim": "Oz the Great and Powerful is a 2013 film",
           "passage_id": "p_7c112bb762"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Sacred Planet",
     "gold_answer": "Sacred Planet",
@@ -55,12 +50,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Sacred Planet is a 2004 documentary",
+        "claim": "Sacred Planet was released on April 22, 2004",
         "passage_id": "p_a3bfd26bf3",
         "label": "faithful"
       },
       {
-        "claim": "Oz the Great and Powerful is a 2013 American fantasy adventure film",
+        "claim": "Oz the Great and Powerful is a 2013 film",
         "passage_id": "p_7c112bb762",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

@@ -4,17 +4,14 @@
   "steps": [
     {
       "action": "search",
-      "query": "Giuseppe Arimondi died battle Ethiopia secured",
-      "k": 8,
+      "query": "Giuseppe Arimondi death battle Ethiopia result",
+      "k": 5,
       "result_ids": [
-        "p_8f2337817e",
-        "p_e5a206ebf5",
         "p_a6fb379579",
+        "p_8f2337817e",
         "p_ab87927b7f",
         "p_a9275b9232",
-        "p_9f08278082",
-        "p_0460a595d2",
-        "p_180a9b632a"
+        "p_e5a206ebf5"
       ]
     },
     {
@@ -22,7 +19,7 @@
       "answer": "Ethiopian sovereignty",
       "citations": [
         {
-          "claim": "The battle in which Giuseppe Arimondi lost his life was the Battle of Adwa",
+          "claim": "Giuseppe Arimondi died at the Battle of Adwa",
           "passage_id": "p_8f2337817e"
         },
         {
@@ -32,6 +29,7 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Ethiopian sovereignty",
     "gold_answer": "sovereignty",
@@ -40,7 +38,7 @@
     "f1": 0.6667,
     "citations": [
       {
-        "claim": "The battle in which Giuseppe Arimondi lost his life was the Battle of Adwa",
+        "claim": "Giuseppe Arimondi died at the Battle of Adwa",
         "passage_id": "p_8f2337817e",
         "label": "faithful"
       },
@@ -60,6 +58,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

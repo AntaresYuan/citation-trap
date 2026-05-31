@@ -5,28 +5,13 @@
     {
       "action": "search",
       "query": "University of Kansas fight song name",
-      "k": 8,
-      "result_ids": [
-        "p_64936bb051",
-        "p_c27f528002",
-        "p_eebd6b68dc",
-        "p_9d6acb182e",
-        "p_041b19d50e",
-        "p_b2984790c0",
-        "p_9a53406257",
-        "p_951dc4213a"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "University of Kansas fight song \"I'm a Jayhawk\" or \"Kansas Song\"",
       "k": 5,
       "result_ids": [
         "p_64936bb051",
         "p_c27f528002",
         "p_eebd6b68dc",
-        "p_b2984790c0",
-        "p_302b40a60c"
+        "p_9d6acb182e",
+        "p_75030ba865"
       ]
     },
     {
@@ -34,7 +19,7 @@
       "answer": "Kansas Song",
       "citations": [
         {
-          "claim": "University of Kansas main campus is in Lawrence, Kansas, and branch campuses are in the Kansas City metropolitan area.",
+          "claim": "The university's main campus is in Lawrence, Kansas and its branch campuses are in the Kansas City metropolitan area.",
           "passage_id": "p_c27f528002"
         },
         {
@@ -44,6 +29,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Kansas Song",
     "gold_answer": "Kansas Song",
@@ -52,7 +38,7 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "University of Kansas main campus is in Lawrence, Kansas, and branch campuses are in the Kansas City metropolitan area.",
+        "claim": "The university's main campus is in Lawrence, Kansas and its branch campuses are in the Kansas City metropolitan area.",
         "passage_id": "p_c27f528002",
         "label": "faithful"
       },
@@ -72,6 +58,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

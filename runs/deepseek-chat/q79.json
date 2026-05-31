@@ -5,31 +5,37 @@
     {
       "action": "search",
       "query": "Prince of tenors film based on opera Giacomo Puccini",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_e21c995941",
         "p_8da4012255",
         "p_291b4debed",
         "p_2ae4c5d6f8",
-        "p_ce0a5caf61",
-        "p_98b65e7a5f",
-        "p_8a237d026b",
-        "p_aa208081bb"
+        "p_f4d46966e3"
       ]
     },
     {
       "action": "search",
-      "query": "Franco Corelli film 1956 Tosca",
-      "k": 8,
+      "query": "\"Prince of tenors\" performer film Puccini",
+      "k": 5,
+      "result_ids": [
+        "p_e21c995941",
+        "p_291b4debed",
+        "p_8a237d026b",
+        "p_8da4012255",
+        "p_ce0a5caf61"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Franco Corelli film based on Puccini opera",
+      "k": 5,
       "result_ids": [
         "p_2ae4c5d6f8",
         "p_8a237d026b",
-        "p_4aeab25594",
-        "p_ab9850c154",
-        "p_e203813626",
-        "p_7c112bb762",
-        "p_cf0f0a32e5",
-        "p_122283c3bd"
+        "p_e21c995941",
+        "p_f4d46966e3",
+        "p_291b4debed"
       ]
     },
     {
@@ -37,16 +43,21 @@
       "answer": "Rome",
       "citations": [
         {
-          "claim": "Franco Corelli, dubbed the 'Prince of tenors', starred in the 1956 film 'Tosca'",
+          "claim": "The 'Prince of tenors' is Franco Corelli",
           "passage_id": "p_8a237d026b"
         },
         {
-          "claim": "The film 'Tosca' (1956) is based on Giacomo Puccini's opera 'Tosca' and was made at Cinecittà in Rome",
+          "claim": "Franco Corelli starred in the 1956 film 'Tosca', which is based on Puccini's opera",
+          "passage_id": "p_2ae4c5d6f8"
+        },
+        {
+          "claim": "The film 'Tosca' was made at Cinecittà in Rome",
           "passage_id": "p_2ae4c5d6f8"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Rome",
     "gold_answer": "Rome",
@@ -55,26 +66,30 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Franco Corelli, dubbed the 'Prince of tenors', starred in the 1956 film 'Tosca'",
+        "claim": "The 'Prince of tenors' is Franco Corelli",
         "passage_id": "p_8a237d026b",
-        "label": "misattributed"
+        "label": "faithful"
       },
       {
-        "claim": "The film 'Tosca' (1956) is based on Giacomo Puccini's opera 'Tosca' and was made at Cinecittà in Rome",
+        "claim": "Franco Corelli starred in the 1956 film 'Tosca', which is based on Puccini's opera",
+        "passage_id": "p_2ae4c5d6f8",
+        "label": "faithful"
+      },
+      {
+        "claim": "The film 'Tosca' was made at Cinecittà in Rome",
         "passage_id": "p_2ae4c5d6f8",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 1,
-      "misattributed": 1,
+      "faithful": 3,
+      "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
     },
-    "faithfulness_score": 0.5,
-    "citation_trustworthy": false,
-    "quadrant": "correct_but_fabricated",
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

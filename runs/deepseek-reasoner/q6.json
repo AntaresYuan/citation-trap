@@ -4,14 +4,14 @@
   "steps": [
     {
       "action": "search",
-      "query": "Local H origin United States",
+      "query": "Local H band origin United States",
       "k": 5,
       "result_ids": [
-        "p_a4ef41c611",
         "p_e6a07c0541",
-        "p_c2b5bb4efe",
         "p_0f112c3a2e",
-        "p_03e47d849a"
+        "p_34fd253d93",
+        "p_a4ef41c611",
+        "p_8301509eae"
       ]
     },
     {
@@ -20,10 +20,10 @@
       "k": 5,
       "result_ids": [
         "p_b932cee843",
-        "p_d2b89b81d1",
-        "p_34fd253d93",
-        "p_9b60539de2",
-        "p_0f112c3a2e"
+        "p_19e3f1d52b",
+        "p_ceb570cbdb",
+        "p_27f5c263b2",
+        "p_68fb09d534"
       ]
     },
     {
@@ -41,6 +41,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Yes",
     "gold_answer": "yes",
@@ -69,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

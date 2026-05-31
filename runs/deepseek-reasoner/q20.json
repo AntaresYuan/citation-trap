@@ -4,32 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Letters to Cleo band members",
-      "k": 8,
+      "query": "Letters to Cleo members",
+      "k": 5,
       "result_ids": [
         "p_f03266ee23",
-        "p_48759cddb7",
-        "p_1b7d7cbcd8",
-        "p_81bf841f26",
-        "p_7f29895e67",
-        "p_0ed868a9fe",
-        "p_1cb94a5c66",
-        "p_5821a19427"
+        "p_43dbff8838",
+        "p_568e97ee4d",
+        "p_2238a8fc5d",
+        "p_ad3104aa2d"
       ]
     },
     {
       "action": "search",
-      "query": "Screaming Trees band members",
-      "k": 8,
+      "query": "Screaming Trees members",
+      "k": 5,
       "result_ids": [
         "p_5821a19427",
         "p_0a07cfb344",
-        "p_1b7d7cbcd8",
-        "p_48759cddb7",
-        "p_f7a7fc5590",
         "p_95c860e5b7",
-        "p_217b6bf0d8",
-        "p_c3e0fccc45"
+        "p_c3e0fccc45",
+        "p_1b7d7cbcd8"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "Letters to Cleo",
       "citations": [
         {
-          "claim": "Letters to Cleo had six members: Kay Hanley, Greg McKenna, Michael Eisenstein, Stacy Jones, Scott Riebling, and later, Tom Polce.",
+          "claim": "Letters to Cleo's members: Kay Hanley, Greg McKenna, Michael Eisenstein, Stacy Jones, Scott Riebling, and later Tom Polce (6 members).",
           "passage_id": "p_f03266ee23"
         },
         {
-          "claim": "Screaming Trees had five distinct members: Mark Lanegan, Gary Lee Conner, Van Conner, Mark Pickerel, and Barrett Martin (who replaced Pickerel).",
+          "claim": "Screaming Trees' members: Mark Lanegan, Gary Lee Conner, Van Conner, Mark Pickerel, and later Barrett Martin (5 members).",
           "passage_id": "p_0a07cfb344"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Letters to Cleo",
     "gold_answer": "Letters to Cleo",
@@ -55,12 +50,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Letters to Cleo had six members: Kay Hanley, Greg McKenna, Michael Eisenstein, Stacy Jones, Scott Riebling, and later, Tom Polce.",
+        "claim": "Letters to Cleo's members: Kay Hanley, Greg McKenna, Michael Eisenstein, Stacy Jones, Scott Riebling, and later Tom Polce (6 members).",
         "passage_id": "p_f03266ee23",
         "label": "faithful"
       },
       {
-        "claim": "Screaming Trees had five distinct members: Mark Lanegan, Gary Lee Conner, Van Conner, Mark Pickerel, and Barrett Martin (who replaced Pickerel).",
+        "claim": "Screaming Trees' members: Mark Lanegan, Gary Lee Conner, Van Conner, Mark Pickerel, and later Barrett Martin (5 members).",
         "passage_id": "p_0a07cfb344",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

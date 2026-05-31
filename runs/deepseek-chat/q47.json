@@ -4,17 +4,14 @@
   "steps": [
     {
       "action": "search",
-      "query": "L'Oiseau Blanc French ace pilot",
-      "k": 8,
+      "query": "French ace pilot adventurer L'Oiseau Blanc",
+      "k": 5,
       "result_ids": [
         "p_18826bc31d",
         "p_41c8fe291a",
-        "p_4956aff01f",
-        "p_4756797afb",
-        "p_f6b4044c59",
         "p_e611d24d23",
-        "p_9b27650958",
-        "p_2901dde587"
+        "p_2901dde587",
+        "p_4956aff01f"
       ]
     },
     {
@@ -22,16 +19,17 @@
       "answer": "Charles Nungesser",
       "citations": [
         {
-          "claim": "Charles Nungesser was a French ace pilot and adventurer, and flew L'Oiseau Blanc",
+          "claim": "French ace pilot and adventurer",
           "passage_id": "p_e611d24d23"
         },
         {
-          "claim": "L'Oiseau Blanc was flown by Charles Nungesser and François Coli",
+          "claim": "flew L'Oiseau Blanc",
           "passage_id": "p_41c8fe291a"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Charles Nungesser",
     "gold_answer": "Charles Eugène",
@@ -40,12 +38,12 @@
     "f1": 0.5,
     "citations": [
       {
-        "claim": "Charles Nungesser was a French ace pilot and adventurer, and flew L'Oiseau Blanc",
+        "claim": "French ace pilot and adventurer",
         "passage_id": "p_e611d24d23",
         "label": "faithful"
       },
       {
-        "claim": "L'Oiseau Blanc was flown by Charles Nungesser and François Coli",
+        "claim": "flew L'Oiseau Blanc",
         "passage_id": "p_41c8fe291a",
         "label": "faithful"
       }
@@ -60,6 +58,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

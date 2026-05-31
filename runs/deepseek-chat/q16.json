@@ -5,16 +5,13 @@
     {
       "action": "search",
       "query": "Buck-Tick origin country",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_c6864ff6ef",
         "p_393cd92473",
         "p_c4bd2bf110",
         "p_e2c95bc01a",
-        "p_de2dc78698",
-        "p_b84077912b",
-        "p_838270cc79",
-        "p_d2d93e15fc"
+        "p_de2dc78698"
       ]
     },
     {
@@ -22,12 +19,13 @@
       "answer": "Japan",
       "citations": [
         {
-          "claim": "Buck-Tick is a Japanese rock band, formed in Fujioka, Gunma in 1983.",
+          "claim": "Buck-Tick is a Japanese rock band",
           "passage_id": "p_c6864ff6ef"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Japan",
     "gold_answer": "Fujioka, Gunma",
@@ -36,7 +34,7 @@
     "f1": 0.0,
     "citations": [
       {
-        "claim": "Buck-Tick is a Japanese rock band, formed in Fujioka, Gunma in 1983.",
+        "claim": "Buck-Tick is a Japanese rock band",
         "passage_id": "p_c6864ff6ef",
         "label": "faithful"
       }
@@ -51,6 +49,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

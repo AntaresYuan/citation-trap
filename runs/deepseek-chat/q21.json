@@ -4,17 +4,38 @@
   "steps": [
     {
       "action": "search",
-      "query": "David Beckham football manager Manchester United managed Manchester United timeframe",
-      "k": 8,
+      "query": "football manager who recruited David Beckham Manchester United timeframe",
+      "k": 5,
       "result_ids": [
-        "p_4a8b6fd5f7",
-        "p_bbd3cfb502",
-        "p_7f097ee02b",
-        "p_c6999108c8",
-        "p_ed4c10e568",
-        "p_8dcfe9cef7",
+        "p_200a2b118e",
         "p_34f25cef7b",
-        "p_a217c165e0"
+        "p_ed4c10e568",
+        "p_4a8b6fd5f7",
+        "p_7f097ee02b"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "manager who gave David Beckham his debut Manchester United",
+      "k": 5,
+      "result_ids": [
+        "p_ed4c10e568",
+        "p_34f25cef7b",
+        "p_200a2b118e",
+        "p_4a8b6fd5f7",
+        "p_bbd3cfb502"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Sir Alex Ferguson recruited David Beckham Manchester United tenure 1986 2013",
+      "k": 5,
+      "result_ids": [
+        "p_c6999108c8",
+        "p_bbd3cfb502",
+        "p_a217c165e0",
+        "p_ed4c10e568",
+        "p_200a2b118e"
       ]
     },
     {
@@ -22,20 +43,17 @@
       "answer": "1986 to 2013",
       "citations": [
         {
-          "claim": "Alex Ferguson managed Manchester United from 1986 to 2013",
-          "passage_id": "p_c6999108c8"
-        },
-        {
-          "claim": "David Beckham was part of the young players drafted in by Alex Ferguson in the 1995–96 season",
+          "claim": "The football manager who recruited David Beckham is Sir Alex Ferguson.",
           "passage_id": "p_a217c165e0"
         },
         {
-          "claim": "The Class of '92 includes David Beckham and details their careers starting in 1992, indicating Beckham was recruited under Alex Ferguson",
-          "passage_id": "p_ed4c10e568"
+          "claim": "Sir Alex Ferguson managed Manchester United from 1986 to 2013.",
+          "passage_id": "p_c6999108c8"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "1986 to 2013",
     "gold_answer": "from 1986 to 2013",
@@ -44,23 +62,18 @@
     "f1": 0.8571,
     "citations": [
       {
-        "claim": "Alex Ferguson managed Manchester United from 1986 to 2013",
-        "passage_id": "p_c6999108c8",
-        "label": "faithful"
-      },
-      {
-        "claim": "David Beckham was part of the young players drafted in by Alex Ferguson in the 1995–96 season",
+        "claim": "The football manager who recruited David Beckham is Sir Alex Ferguson.",
         "passage_id": "p_a217c165e0",
         "label": "faithful"
       },
       {
-        "claim": "The Class of '92 includes David Beckham and details their careers starting in 1992, indicating Beckham was recruited under Alex Ferguson",
-        "passage_id": "p_ed4c10e568",
+        "claim": "Sir Alex Ferguson managed Manchester United from 1986 to 2013.",
+        "passage_id": "p_c6999108c8",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 3,
+      "faithful": 2,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -69,6 +82,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

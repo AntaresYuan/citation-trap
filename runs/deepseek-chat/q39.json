@@ -23,6 +23,7 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "1838",
     "gold_answer": "1838",
@@ -46,6 +47,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

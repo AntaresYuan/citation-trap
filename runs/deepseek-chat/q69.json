@@ -4,17 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "former Soviet statesman initiated forum type",
-      "k": 8,
+      "query": "former Soviet statesman initiated forum",
+      "k": 5,
       "result_ids": [
         "p_634d632bd7",
-        "p_83beea267a",
         "p_ab1c8770e6",
         "p_d38e317fa6",
+        "p_83beea267a",
+        "p_c5dfba6186"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Mikhail Gorbachev initiated forum",
+      "k": 5,
+      "result_ids": [
+        "p_559e8dba28",
+        "p_634d632bd7",
+        "p_c34870f85d",
         "p_c5dfba6186",
-        "p_3a36094ed5",
-        "p_6cbf5b5547",
-        "p_559e8dba28"
+        "p_3908b6e54e"
       ]
     },
     {
@@ -22,12 +31,17 @@
       "answer": "World Summit of Nobel Peace Laureates",
       "citations": [
         {
-          "claim": "Mikhail Gorbachev initiated a forum called the World Summit of Nobel Peace Laureates",
+          "claim": "The World Summit of Nobel Peace Laureates was initiated by Mikhail Gorbachev",
           "passage_id": "p_559e8dba28"
+        },
+        {
+          "claim": "Mikhail Gorbachev is a former Soviet statesman",
+          "passage_id": "p_634d632bd7"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "World Summit of Nobel Peace Laureates",
     "gold_answer": "Organizations could come together to address global issues",
@@ -36,13 +50,18 @@
     "f1": 0.0,
     "citations": [
       {
-        "claim": "Mikhail Gorbachev initiated a forum called the World Summit of Nobel Peace Laureates",
+        "claim": "The World Summit of Nobel Peace Laureates was initiated by Mikhail Gorbachev",
         "passage_id": "p_559e8dba28",
+        "label": "faithful"
+      },
+      {
+        "claim": "Mikhail Gorbachev is a former Soviet statesman",
+        "passage_id": "p_634d632bd7",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 1,
+      "faithful": 2,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -51,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

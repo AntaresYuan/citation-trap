@@ -5,16 +5,19 @@
     {
       "action": "search",
       "query": "Dafeng District province",
-      "k": 8,
+      "k": 2,
       "result_ids": [
         "p_1f6327f165",
-        "p_2ff18b6b04",
-        "p_9e90b08e73",
-        "p_7db4cc118a",
-        "p_bd9438617a",
-        "p_fd8539ad58",
-        "p_69ef36f40f",
-        "p_47704aa592"
+        "p_2ff18b6b04"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Dazhou province",
+      "k": 2,
+      "result_ids": [
+        "p_0cdb6239fa",
+        "p_7db4cc118a"
       ]
     },
     {
@@ -26,12 +29,13 @@
           "passage_id": "p_1f6327f165"
         },
         {
-          "claim": "Dazhou is in Sichuan Province",
-          "passage_id": "p_7db4cc118a"
+          "claim": "Dazhou is in Sichuan province",
+          "passage_id": "p_0cdb6239fa"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "No",
     "gold_answer": "no",
@@ -45,8 +49,8 @@
         "label": "faithful"
       },
       {
-        "claim": "Dazhou is in Sichuan Province",
-        "passage_id": "p_7db4cc118a",
+        "claim": "Dazhou is in Sichuan province",
+        "passage_id": "p_0cdb6239fa",
         "label": "faithful"
       }
     ],
@@ -60,6 +64,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

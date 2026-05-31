@@ -4,32 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Corliss Archer Kiss and Tell film actress",
-      "k": 8,
+      "query": "Kiss and Tell film Corliss Archer actress government position",
+      "k": 5,
       "result_ids": [
         "p_93fa34e103",
         "p_a04c1f900a",
         "p_d68433ddb0",
         "p_4e8309573e",
-        "p_058f3692c5",
-        "p_aaa5ea5e64",
-        "p_166e49bf04",
-        "p_f9019fbea3"
+        "p_058f3692c5"
       ]
     },
     {
       "action": "search",
       "query": "Shirley Temple government position",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_342a97756e",
-        "p_a1f8072496",
         "p_93fa34e103",
-        "p_82efb0e4d2",
+        "p_a1f8072496",
         "p_a04c1f900a",
-        "p_3b7f1fe1a2",
-        "p_4b8c44633c",
-        "p_a24dd3bd04"
+        "p_82efb0e4d2"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "Chief of Protocol of the United States",
       "citations": [
         {
-          "claim": "Shirley Temple portrayed Corliss Archer in the film Kiss and Tell",
+          "claim": "Shirley Temple portrayed Corliss Archer in Kiss and Tell",
           "passage_id": "p_93fa34e103"
         },
         {
-          "claim": "Shirley Temple was named Chief of Protocol of the United States",
+          "claim": "Shirley Temple served as Chief of Protocol of the United States",
           "passage_id": "p_342a97756e"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Chief of Protocol of the United States",
     "gold_answer": "Chief of Protocol",
@@ -55,12 +50,12 @@
     "f1": 0.6667,
     "citations": [
       {
-        "claim": "Shirley Temple portrayed Corliss Archer in the film Kiss and Tell",
+        "claim": "Shirley Temple portrayed Corliss Archer in Kiss and Tell",
         "passage_id": "p_93fa34e103",
         "label": "faithful"
       },
       {
-        "claim": "Shirley Temple was named Chief of Protocol of the United States",
+        "claim": "Shirley Temple served as Chief of Protocol of the United States",
         "passage_id": "p_342a97756e",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

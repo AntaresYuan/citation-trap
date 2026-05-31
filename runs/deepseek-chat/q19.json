@@ -4,17 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Guns N Roses promo Arnold Schwarzenegger movie former New York Police detective",
-      "k": 8,
+      "query": "Guns N Roses promo movie Arnold Schwarzenegger former New York Police detective",
+      "k": 5,
       "result_ids": [
-        "p_8fae985ac9",
         "p_5be2d3bd19",
+        "p_8fae985ac9",
+        "p_4bce465878",
+        "p_83583e810c",
+        "p_de0002fe9b"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "End of Days promo Guns N Roses 1999",
+      "k": 5,
+      "result_ids": [
         "p_4bce465878",
         "p_83583e810c",
         "p_73ac1f584e",
-        "p_de0002fe9b",
-        "p_cd9cdd1873",
-        "p_e474bc40e3"
+        "p_23dad74952",
+        "p_8fae985ac9"
       ]
     },
     {
@@ -22,16 +31,17 @@
       "answer": "1999",
       "citations": [
         {
-          "claim": "Guns N' Roses performed a promo for the movie \"End of Days\"",
-          "passage_id": "p_4bce465878"
+          "claim": "Guns N Roses performed a promo for the movie 'End of Days', which stars Arnold Schwarzenegger as a former New York Police detective.",
+          "passage_id": "p_8fae985ac9"
         },
         {
-          "claim": "\"End of Days\" stars Arnold Schwarzenegger as a former New York Police Department detective",
-          "passage_id": "p_8fae985ac9"
+          "claim": "The promo was in 1999.",
+          "passage_id": "p_4bce465878"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "1999",
     "gold_answer": "1999",
@@ -40,26 +50,25 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Guns N' Roses performed a promo for the movie \"End of Days\"",
-        "passage_id": "p_4bce465878",
-        "label": "faithful"
+        "claim": "Guns N Roses performed a promo for the movie 'End of Days', which stars Arnold Schwarzenegger as a former New York Police detective.",
+        "passage_id": "p_8fae985ac9",
+        "label": "misattributed"
       },
       {
-        "claim": "\"End of Days\" stars Arnold Schwarzenegger as a former New York Police Department detective",
-        "passage_id": "p_8fae985ac9",
+        "claim": "The promo was in 1999.",
+        "passage_id": "p_4bce465878",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 2,
-      "misattributed": 0,
+      "faithful": 1,
+      "misattributed": 1,
       "fabricated": 0,
       "unsupported": 0
     },
-    "faithfulness_score": 1.0,
-    "citation_trustworthy": true,
-    "quadrant": "ideal",
+    "faithfulness_score": 0.5,
+    "citation_trustworthy": false,
+    "quadrant": "correct_but_fabricated",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

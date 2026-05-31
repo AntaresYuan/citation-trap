@@ -5,59 +5,51 @@
     {
       "action": "search",
       "query": "Jerry Goldsmith film score executive producer",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_f23fef51c7",
         "p_1aa02364af",
-        "p_a2e3502ecf",
-        "p_18c5e626a8",
-        "p_60228d0330",
-        "p_ae7b866896",
-        "p_979ce44f84",
-        "p_58452204db"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "Jerry Goldsmith film executive producer",
-      "k": 8,
-      "result_ids": [
-        "p_60228d0330",
-        "p_1aa02364af",
-        "p_f23fef51c7",
         "p_18c5e626a8",
         "p_a2e3502ecf",
-        "p_58452204db",
-        "p_ae7b866896",
-        "p_979ce44f84"
+        "p_60228d0330"
       ]
     },
     {
       "action": "submit",
-      "answer": "Steven Spielberg",
+      "answer": "Jack Schwartzman",
       "citations": [
         {
-          "claim": "The executive producer of Innerspace, a film with music by Jerry Goldsmith, is Steven Spielberg.",
-          "passage_id": "p_60228d0330"
+          "claim": "Jerry Goldsmith wrote the score for Lionheart (1987 film)",
+          "passage_id": "p_1aa02364af"
+        },
+        {
+          "claim": "The executive producer of Lionheart was Jack Schwartzman",
+          "passage_id": "p_1aa02364af"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "Steven Spielberg",
+    "answer": "Jack Schwartzman",
     "gold_answer": "Ronald Shusett",
     "answer_correct": false,
     "em": 0,
     "f1": 0.0,
     "citations": [
       {
-        "claim": "The executive producer of Innerspace, a film with music by Jerry Goldsmith, is Steven Spielberg.",
-        "passage_id": "p_60228d0330",
+        "claim": "Jerry Goldsmith wrote the score for Lionheart (1987 film)",
+        "passage_id": "p_1aa02364af",
+        "label": "faithful"
+      },
+      {
+        "claim": "The executive producer of Lionheart was Jack Schwartzman",
+        "passage_id": "p_1aa02364af",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 1,
+      "faithful": 2,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -66,6 +58,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

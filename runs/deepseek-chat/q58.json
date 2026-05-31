@@ -4,17 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Broughtonia Laeliocattleya orchids",
-      "k": 8,
+      "query": "Broughtonia orchid",
+      "k": 5,
       "result_ids": [
+        "p_e0ca403e21",
         "p_5c9af255e7",
         "p_27d8707396",
         "p_5ab5adb580",
-        "p_c1602ffe41",
+        "p_c1602ffe41"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Laeliocattleya orchid",
+      "k": 5,
+      "result_ids": [
         "p_96259976a3",
-        "p_e0ca403e21",
-        "p_61141b35a6",
-        "p_5cde530a44"
+        "p_5cde530a44",
+        "p_faa2eeda68",
+        "p_6732186a1e",
+        "p_96fd905f16"
       ]
     },
     {
@@ -22,16 +31,17 @@
       "answer": "Yes",
       "citations": [
         {
-          "claim": "Broughtonia is a genus of orchids",
+          "claim": "Broughtonia is a genus of orchids (family Orchidaceae)",
           "passage_id": "p_5c9af255e7"
         },
         {
-          "claim": "Laeliocattleya is a nothogenus of intergeneric orchid hybrids",
+          "claim": "Laeliocattleya is a nothogenus of intergeneric orchid hybrids descended from the parental genera Laelia and Cattleya",
           "passage_id": "p_96259976a3"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Yes",
     "gold_answer": "yes",
@@ -40,12 +50,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Broughtonia is a genus of orchids",
+        "claim": "Broughtonia is a genus of orchids (family Orchidaceae)",
         "passage_id": "p_5c9af255e7",
         "label": "faithful"
       },
       {
-        "claim": "Laeliocattleya is a nothogenus of intergeneric orchid hybrids",
+        "claim": "Laeliocattleya is a nothogenus of intergeneric orchid hybrids descended from the parental genera Laelia and Cattleya",
         "passage_id": "p_96259976a3",
         "label": "faithful"
       }
@@ -60,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

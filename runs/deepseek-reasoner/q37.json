@@ -4,32 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "writer of These Boots Are Made for Walkin' died 2007",
-      "k": 8,
+      "query": "These Boots Are Made for Walkin' songwriter",
+      "k": 5,
       "result_ids": [
         "p_c724482694",
-        "p_544e7bead0",
         "p_73bebd58be",
+        "p_544e7bead0",
         "p_10dcce254e",
-        "p_7a498f6c22",
-        "p_b9b03d5b84",
-        "p_7889465879",
-        "p_ea26d46359"
+        "p_b9b03d5b84"
       ]
     },
     {
       "action": "search",
-      "query": "Lee Hazlewood died 2007",
-      "k": 8,
+      "query": "Lee Hazlewood death 2007",
+      "k": 5,
       "result_ids": [
         "p_ac14aab49f",
         "p_c724482694",
         "p_10dcce254e",
-        "p_ea26d46359",
         "p_e24be8584a",
-        "p_d4aa8166a1",
-        "p_0307d29ed3",
-        "p_8dcfe9cef7"
+        "p_e8ee45adfb"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "Lee Hazlewood",
       "citations": [
         {
-          "claim": "These Boots Are Made for Walkin' was written by Lee Hazlewood",
+          "claim": "writer of These Boots Are Made for Walkin'",
           "passage_id": "p_c724482694"
         },
         {
-          "claim": "Lee Hazlewood died in 2007",
+          "claim": "died in 2007",
           "passage_id": "p_ac14aab49f"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Lee Hazlewood",
     "gold_answer": "Barton Lee Hazlewood",
@@ -55,12 +50,12 @@
     "f1": 0.8,
     "citations": [
       {
-        "claim": "These Boots Are Made for Walkin' was written by Lee Hazlewood",
+        "claim": "writer of These Boots Are Made for Walkin'",
         "passage_id": "p_c724482694",
         "label": "faithful"
       },
       {
-        "claim": "Lee Hazlewood died in 2007",
+        "claim": "died in 2007",
         "passage_id": "p_ac14aab49f",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

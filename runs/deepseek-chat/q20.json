@@ -5,31 +5,25 @@
     {
       "action": "search",
       "query": "Letters to Cleo members count",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_f03266ee23",
-        "p_0dcaf3482c",
-        "p_fc87c060e4",
-        "p_2c2b71ceba",
-        "p_041b19d50e",
-        "p_c845bd9f15",
-        "p_48759cddb7",
-        "p_6ae4485be3"
+        "p_956372b1f8",
+        "p_70af17f3b0",
+        "p_43dbff8838",
+        "p_87c5b262cc"
       ]
     },
     {
       "action": "search",
       "query": "Screaming Trees members count",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_5821a19427",
         "p_0a07cfb344",
         "p_95c860e5b7",
         "p_c3e0fccc45",
-        "p_1b7d7cbcd8",
-        "p_48759cddb7",
-        "p_f7a7fc5590",
-        "p_217b6bf0d8"
+        "p_1b7d7cbcd8"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "Letters to Cleo",
       "citations": [
         {
-          "claim": "Letters to Cleo had six members: Kay Hanley, Greg McKenna, Michael Eisenstein, Stacy Jones, Scott Riebling, and later Tom Polce.",
+          "claim": "Letters to Cleo has members Kay Hanley, Greg McKenna, Michael Eisenstein, Stacy Jones, Scott Riebling, and later Tom Polce — total of 6 members.",
           "passage_id": "p_f03266ee23"
         },
         {
-          "claim": "Screaming Trees had four initial members: Mark Lanegan, Gary Lee Conner, Van Conner, and Mark Pickerel (later replaced by Barrett Martin).",
+          "claim": "Screaming Trees had four founding members (Mark Lanegan, Gary Lee Conner, Van Conner, Mark Pickerel) and later replaced Pickerel with Barrett Martin, so the core lineup consisted of 4 members at a time.",
           "passage_id": "p_0a07cfb344"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Letters to Cleo",
     "gold_answer": "Letters to Cleo",
@@ -55,12 +50,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Letters to Cleo had six members: Kay Hanley, Greg McKenna, Michael Eisenstein, Stacy Jones, Scott Riebling, and later Tom Polce.",
+        "claim": "Letters to Cleo has members Kay Hanley, Greg McKenna, Michael Eisenstein, Stacy Jones, Scott Riebling, and later Tom Polce — total of 6 members.",
         "passage_id": "p_f03266ee23",
         "label": "faithful"
       },
       {
-        "claim": "Screaming Trees had four initial members: Mark Lanegan, Gary Lee Conner, Van Conner, and Mark Pickerel (later replaced by Barrett Martin).",
+        "claim": "Screaming Trees had four founding members (Mark Lanegan, Gary Lee Conner, Van Conner, Mark Pickerel) and later replaced Pickerel with Barrett Martin, so the core lineup consisted of 4 members at a time.",
         "passage_id": "p_0a07cfb344",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

@@ -4,17 +4,12 @@
   "steps": [
     {
       "action": "search",
-      "query": "Kaiser Ventures corporation founded by father of modern American shipbuilding",
-      "k": 8,
+      "query": "Kaiser Ventures corporation founder",
+      "k": 3,
       "result_ids": [
-        "p_1947113154",
-        "p_fbb22ba096",
         "p_8fa93c39d6",
-        "p_b9c348216a",
-        "p_31cf80a711",
-        "p_3b5fbc2e2c",
-        "p_012faa2799",
-        "p_423a14354a"
+        "p_1947113154",
+        "p_31cf80a711"
       ]
     },
     {
@@ -22,16 +17,13 @@
       "answer": "Henry J. Kaiser",
       "citations": [
         {
-          "claim": "Kaiser Ventures was founded by Henry J. Kaiser",
+          "claim": "It was founded by Henry J. Kaiser",
           "passage_id": "p_1947113154"
-        },
-        {
-          "claim": "Henry J. Kaiser became known as the father of modern American shipbuilding",
-          "passage_id": "p_fbb22ba096"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Henry J. Kaiser",
     "gold_answer": "Henry J. Kaiser",
@@ -40,18 +32,13 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Kaiser Ventures was founded by Henry J. Kaiser",
+        "claim": "It was founded by Henry J. Kaiser",
         "passage_id": "p_1947113154",
-        "label": "faithful"
-      },
-      {
-        "claim": "Henry J. Kaiser became known as the father of modern American shipbuilding",
-        "passage_id": "p_fbb22ba096",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 2,
+      "faithful": 1,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -60,6 +47,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

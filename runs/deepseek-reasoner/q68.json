@@ -4,22 +4,14 @@
   "steps": [
     {
       "action": "search",
-      "query": "Hot Rod magazine",
-      "k": 3,
-      "result_ids": [
-        "p_3ba378eb43",
-        "p_fb0c1a9fea",
-        "p_96524bd19a"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "'The Memory of Our People' magazine",
-      "k": 3,
+      "query": "Hot Rod magazine The Memory of Our People magazine",
+      "k": 5,
       "result_ids": [
         "p_f6e8fa10a1",
-        "p_4b3545cc43",
-        "p_c256d5eb92"
+        "p_3ba378eb43",
+        "p_fb0c1a9fea",
+        "p_dec2daa9d5",
+        "p_96524bd19a"
       ]
     },
     {
@@ -27,16 +19,17 @@
       "answer": "Yes",
       "citations": [
         {
-          "claim": "Hot Rod is a magazine",
+          "claim": "Hot Rod is a monthly American car magazine",
           "passage_id": "p_3ba378eb43"
         },
         {
-          "claim": "The Memory of Our People is a magazine",
+          "claim": "The Memory of Our People is a magazine published in the Argentine city of Rosario",
           "passage_id": "p_f6e8fa10a1"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Yes",
     "gold_answer": "yes",
@@ -45,12 +38,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Hot Rod is a magazine",
+        "claim": "Hot Rod is a monthly American car magazine",
         "passage_id": "p_3ba378eb43",
         "label": "faithful"
       },
       {
-        "claim": "The Memory of Our People is a magazine",
+        "claim": "The Memory of Our People is a magazine published in the Argentine city of Rosario",
         "passage_id": "p_f6e8fa10a1",
         "label": "faithful"
       }
@@ -65,6 +58,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

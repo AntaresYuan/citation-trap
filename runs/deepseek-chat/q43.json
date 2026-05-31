@@ -4,77 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Tunnels and Trolls adventure Ken St. Andre name",
-      "k": 8,
+      "query": "Tunnels and Trolls adventure name Ken St. Andre",
+      "k": 5,
       "result_ids": [
         "p_056712beb1",
         "p_cd2d2ddc48",
-        "p_a03ccd404f",
-        "p_271d0156af",
         "p_b2bd3b5836",
-        "p_18c574eb70",
-        "p_51ca404583",
+        "p_271d0156af",
+        "p_a03ccd404f"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Tunnels and Trolls first adventure name",
+      "k": 5,
+      "result_ids": [
+        "p_b2bd3b5836",
+        "p_271d0156af",
+        "p_056712beb1",
+        "p_cd2d2ddc48",
         "p_2f2688c402"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "\"Tunnels and Trolls\" adventure name \"Ken St. Andre\"",
-      "k": 8,
-      "result_ids": [
-        "p_056712beb1",
-        "p_cd2d2ddc48",
-        "p_a03ccd404f",
-        "p_271d0156af",
-        "p_b2bd3b5836",
-        "p_18c574eb70",
-        "p_51ca404583",
-        "p_2f2688c402"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "\"Buffalo Castle\" Tunnels and Trolls first adventure Ken St. Andre",
-      "k": 8,
-      "result_ids": [
-        "p_056712beb1",
-        "p_cd2d2ddc48",
-        "p_a03ccd404f",
-        "p_271d0156af",
-        "p_b2bd3b5836",
-        "p_2f2688c402",
-        "p_18c574eb70",
-        "p_51ca404583"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "\"Tunnels and Trolls\" \"adventure\" \"Ken St. Andre\"",
-      "k": 8,
-      "result_ids": [
-        "p_056712beb1",
-        "p_cd2d2ddc48",
-        "p_a03ccd404f",
-        "p_271d0156af",
-        "p_b2bd3b5836",
-        "p_18c574eb70",
-        "p_51ca404583",
-        "p_2f2688c402"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "\"Buffalo Castle\" Tunnels and Trolls",
-      "k": 8,
-      "result_ids": [
-        "p_b2bd3b5836",
-        "p_056712beb1",
-        "p_271d0156af",
-        "p_2f2688c402",
-        "p_cd2d2ddc48",
-        "p_b3cdece549",
-        "p_a03ccd404f",
-        "p_1df0aff659"
       ]
     },
     {
@@ -82,12 +31,13 @@
       "answer": "Arena of Khazan",
       "citations": [
         {
-          "claim": "Arena of Khazan is a 1979 role-playing game adventure for 'Tunnels & Trolls'.",
+          "claim": "Arena of Khazan is a 1979 role-playing game adventure for Tunnels & Trolls published by Flying Buffalo.",
           "passage_id": "p_271d0156af"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Arena of Khazan",
     "gold_answer": "Arena of Khazan",
@@ -96,7 +46,7 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Arena of Khazan is a 1979 role-playing game adventure for 'Tunnels & Trolls'.",
+        "claim": "Arena of Khazan is a 1979 role-playing game adventure for Tunnels & Trolls published by Flying Buffalo.",
         "passage_id": "p_271d0156af",
         "label": "faithful"
       }
@@ -111,6 +61,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

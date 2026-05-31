@@ -4,87 +4,86 @@
   "steps": [
     {
       "action": "search",
-      "query": "Brown State Fishing Lake population",
-      "k": 8,
+      "query": "Brown State Fishing Lake location country population",
+      "k": 5,
       "result_ids": [
         "p_eec5c44a18",
         "p_d0d48ef896",
         "p_cdc531557f",
-        "p_d2aea57c49",
-        "p_14428555b8",
         "p_951dc4213a",
-        "p_b3918c571e",
-        "p_747f41c3ff"
+        "p_d2aea57c49"
       ]
     },
     {
       "action": "search",
-      "query": "United States population 2024",
-      "k": 8,
+      "query": "United States population inhabitants",
+      "k": 3,
       "result_ids": [
-        "p_5b5761d864",
-        "p_2365e34270",
-        "p_0dcaf3482c",
-        "p_aa797b94f2",
-        "p_821d9ee7a8",
-        "p_ae378f4f6d",
-        "p_9d6acb182e",
-        "p_9b60539de2"
+        "p_be5c401904",
+        "p_fd9bba0032",
+        "p_69ef36f40f"
       ]
     },
     {
       "action": "search",
-      "query": "United States population 2024 estimate",
-      "k": 2,
+      "query": "United States population census 2020",
+      "k": 5,
       "result_ids": [
+        "p_19e63d2a73",
         "p_5b5761d864",
-        "p_2365e34270"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "United States population total 2020 census",
-      "k": 2,
-      "result_ids": [
-        "p_5b5761d864",
+        "p_6072258886",
+        "p_d2808597fc",
         "p_0dcaf3482c"
       ]
     },
     {
       "action": "search",
-      "query": "population of the United States",
+      "query": "United States population 331 million",
       "k": 3,
       "result_ids": [
-        "p_2365e34270",
-        "p_0dcaf3482c",
+        "p_2c2b71ceba",
+        "p_c179878c82",
+        "p_c44174e229"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "USA population 2024 331 million",
+      "k": 3,
+      "result_ids": [
+        "p_2c2b71ceba",
+        "p_c179878c82",
+        "p_c44174e229"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States 2020 census population",
+      "k": 3,
+      "result_ids": [
+        "p_19e63d2a73",
+        "p_5b5761d864",
+        "p_6072258886"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States Census Bureau population 331 million",
+      "k": 3,
+      "result_ids": [
+        "p_2c2b71ceba",
+        "p_8ec30d2baa",
         "p_5b5761d864"
       ]
     },
     {
       "action": "search",
-      "query": "United States population 331 million",
-      "k": 2,
+      "query": "population of the United States 331 million",
+      "k": 3,
       "result_ids": [
         "p_2c2b71ceba",
-        "p_fc87c060e4"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "population of the United States 2020 census 331",
-      "k": 2,
-      "result_ids": [
-        "p_0dcaf3482c",
-        "p_ae378f4f6d"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "United States population US Census Bureau 2020",
-      "k": 2,
-      "result_ids": [
-        "p_2c2b71ceba",
-        "p_5b5761d864"
+        "p_c179878c82",
+        "p_c44174e229"
       ]
     },
     {
@@ -93,6 +92,7 @@
       "citations": []
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "",
     "gold_answer": "9,984",
@@ -110,6 +110,5 @@
     "citation_trustworthy": false,
     "quadrant": "worst",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

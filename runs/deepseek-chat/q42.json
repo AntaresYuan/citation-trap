@@ -5,31 +5,21 @@
     {
       "action": "search",
       "query": "George Archainbaud death date",
-      "k": 8,
+      "k": 3,
       "result_ids": [
         "p_60c2d2154b",
-        "p_728bb8768a",
-        "p_ad17916fb8",
-        "p_80bfe2f49b",
-        "p_2b15090bba",
-        "p_922869560b",
-        "p_5121cb4665",
-        "p_14379d42a0"
+        "p_60e73a80c1",
+        "p_80bfe2f49b"
       ]
     },
     {
       "action": "search",
       "query": "Ralph Murphy death date",
-      "k": 8,
+      "k": 3,
       "result_ids": [
         "p_8228c2d1b8",
-        "p_a49a6081c2",
-        "p_02dea33cbd",
-        "p_8499da7d59",
-        "p_4a70a0fe1c",
-        "p_4a8b6fd5f7",
-        "p_b3cdece549",
-        "p_69295530b6"
+        "p_58905bc828",
+        "p_f46c411ee6"
       ]
     },
     {
@@ -47,6 +37,7 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "George Archainbaud",
     "gold_answer": "George Archainbaud",
@@ -75,6 +66,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

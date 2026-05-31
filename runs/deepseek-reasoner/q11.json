@@ -5,53 +5,42 @@
     {
       "action": "search",
       "query": "Lewiston Maineiacs home arena seating capacity",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_442ad9d966",
         "p_17ee57e25c",
-        "p_ff0f241577",
         "p_9288b10480",
-        "p_296ba1badb",
-        "p_a31dc81687",
-        "p_e00f895123",
-        "p_9aa8d31dbe"
+        "p_ff0f241577",
+        "p_296ba1badb"
       ]
     },
     {
       "action": "submit",
-      "answer": "3,677",
+      "answer": "4,000",
       "citations": [
         {
-          "claim": "Lewiston Maineiacs played home games at Androscoggin Bank Colisée",
-          "passage_id": "p_442ad9d966"
-        },
-        {
-          "claim": "Androscoggin Bank Colisée seats 3,677",
+          "claim": "The Androscoggin Bank Colisée has a capacity of 4,000 (3,677 seated).",
           "passage_id": "p_17ee57e25c"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
-    "answer": "3,677",
+    "answer": "4,000",
     "gold_answer": "3,677 seated",
     "answer_correct": false,
     "em": 0,
-    "f1": 0.6667,
+    "f1": 0.0,
     "citations": [
       {
-        "claim": "Lewiston Maineiacs played home games at Androscoggin Bank Colisée",
-        "passage_id": "p_442ad9d966",
-        "label": "faithful"
-      },
-      {
-        "claim": "Androscoggin Bank Colisée seats 3,677",
+        "claim": "The Androscoggin Bank Colisée has a capacity of 4,000 (3,677 seated).",
         "passage_id": "p_17ee57e25c",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 2,
+      "faithful": 1,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -60,6 +49,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

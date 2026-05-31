@@ -4,22 +4,31 @@
   "steps": [
     {
       "action": "search",
-      "query": "Chris Menges occupation Aram Avakian occupation",
-      "k": 8,
+      "query": "Chris Menges occupation",
+      "k": 5,
+      "result_ids": [
+        "p_e1cac0c796",
+        "p_5dea95139a",
+        "p_ead9126218",
+        "p_8bcb1e36f1",
+        "p_166e49bf04"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Aram Avakian occupation",
+      "k": 5,
       "result_ids": [
         "p_2fae067fac",
-        "p_e1cac0c796",
         "p_4e8bd3bc38",
         "p_57d5985229",
         "p_54cd3f7692",
-        "p_5dea95139a",
-        "p_ead9126218",
-        "p_e468273cb6"
+        "p_fe27758b01"
       ]
     },
     {
       "action": "submit",
-      "answer": "film director",
+      "answer": "Cinematographer and film director (Chris Menges); film editor and director (Aram Avakian). They share the occupation of film director.",
       "citations": [
         {
           "claim": "Chris Menges is an English cinematographer and film director",
@@ -32,12 +41,13 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "film director",
+    "answer": "Cinematographer and film director (Chris Menges); film editor and director (Aram Avakian). They share the occupation of film director.",
     "gold_answer": "director",
     "answer_correct": true,
     "em": 0,
-    "f1": 0.6667,
+    "f1": 0.1053,
     "citations": [
       {
         "claim": "Chris Menges is an English cinematographer and film director",
@@ -60,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

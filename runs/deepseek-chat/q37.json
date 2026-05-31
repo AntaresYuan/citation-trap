@@ -4,32 +4,24 @@
   "steps": [
     {
       "action": "search",
-      "query": "These Boots Are Made for Walkin' writer died 2007",
-      "k": 8,
+      "query": "writer of These Boots Are Made for Walkin'",
+      "k": 5,
       "result_ids": [
         "p_c724482694",
-        "p_73bebd58be",
         "p_544e7bead0",
+        "p_73bebd58be",
         "p_10dcce254e",
-        "p_b9b03d5b84",
-        "p_7a498f6c22",
-        "p_7889465879",
-        "p_ea26d46359"
+        "p_7a498f6c22"
       ]
     },
     {
       "action": "search",
       "query": "Lee Hazlewood death 2007",
-      "k": 8,
+      "k": 3,
       "result_ids": [
         "p_ac14aab49f",
         "p_c724482694",
-        "p_10dcce254e",
-        "p_ea26d46359",
-        "p_e24be8584a",
-        "p_69295530b6",
-        "p_2e2f61086b",
-        "p_0307d29ed3"
+        "p_10dcce254e"
       ]
     },
     {
@@ -41,12 +33,13 @@
           "passage_id": "p_c724482694"
         },
         {
-          "claim": "Lee Hazlewood died in 2007",
+          "claim": "Lee Hazlewood died on August 4, 2007",
           "passage_id": "p_ac14aab49f"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Lee Hazlewood",
     "gold_answer": "Barton Lee Hazlewood",
@@ -60,7 +53,7 @@
         "label": "faithful"
       },
       {
-        "claim": "Lee Hazlewood died in 2007",
+        "claim": "Lee Hazlewood died on August 4, 2007",
         "passage_id": "p_ac14aab49f",
         "label": "faithful"
       }
@@ -75,6 +68,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

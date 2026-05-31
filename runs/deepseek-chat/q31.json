@@ -4,56 +4,86 @@
   "steps": [
     {
       "action": "search",
-      "query": "A Rather Blustery Day singer voice hedgehog",
-      "k": 8,
+      "query": "Rather Blustery Day singer voiced hedgehog",
+      "k": 5,
       "result_ids": [
         "p_a70f23601c",
-        "p_e67df6a573",
         "p_1e786f4de4",
-        "p_78be011537",
         "p_553c68d9e3",
-        "p_11f95b982a",
-        "p_1474c9fd57",
-        "p_6fb7815044"
+        "p_e67df6a573",
+        "p_1474c9fd57"
       ]
     },
     {
       "action": "search",
       "query": "Jim Cummings voiced hedgehog character",
-      "k": 8,
-      "result_ids": [
-        "p_78be011537",
-        "p_a70f23601c",
-        "p_1e786f4de4",
-        "p_2abfbf036f",
-        "p_bc40bce00b",
-        "p_0e42f86a3f",
-        "p_d68433ddb0",
-        "p_215f6dde1b"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "hedgehog character voiced by Jim Cummings",
       "k": 5,
       "result_ids": [
         "p_78be011537",
         "p_a70f23601c",
+        "p_0f65d16ed6",
         "p_1e786f4de4",
-        "p_0e42f86a3f",
-        "p_215f6dde1b"
+        "p_b7fb7e7841"
       ]
     },
     {
       "action": "search",
-      "query": "Jim Cummings Sonic the Hedgehog character voice",
+      "query": "Sonic the Hedgehog character voiced by Jim Cummings",
       "k": 5,
       "result_ids": [
         "p_78be011537",
         "p_1e786f4de4",
         "p_a70f23601c",
-        "p_d68433ddb0",
-        "p_94330f7d3d"
+        "p_b7fb7e7841",
+        "p_0f65d16ed6"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Jim Cummings voiced a hedgehog character",
+      "k": 5,
+      "result_ids": [
+        "p_78be011537",
+        "p_a70f23601c",
+        "p_0f65d16ed6",
+        "p_b7fb7e7841",
+        "p_f302accc3e"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Jim Cummings voiced hedgehog",
+      "k": 5,
+      "result_ids": [
+        "p_78be011537",
+        "p_a70f23601c",
+        "p_1e786f4de4",
+        "p_0f65d16ed6",
+        "p_d13fae2eae"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Jim Cummings voiced Dr. Robotnik Sonic the Hedgehog",
+      "k": 5,
+      "result_ids": [
+        "p_78be011537",
+        "p_1e786f4de4",
+        "p_a70f23601c",
+        "p_5527fde7d5",
+        "p_e9f966ff90"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "\"Jim Cummings\" hedgehog",
+      "k": 5,
+      "result_ids": [
+        "p_78be011537",
+        "p_a70f23601c",
+        "p_8b1f2f9461",
+        "p_90931f2aa0",
+        "p_3cf2aeac8d"
       ]
     },
     {
@@ -71,6 +101,7 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Dr. Robotnik",
     "gold_answer": "Sonic",
@@ -99,6 +130,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

@@ -5,16 +5,13 @@
     {
       "action": "search",
       "query": "Seven Brief Lessons on Physics Italian physicist worked in France since year",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_460d34887a",
         "p_ed3b33ba32",
         "p_2ef76c70b8",
         "p_e88e665a21",
-        "p_d72e6edecc",
-        "p_f751dcd719",
-        "p_69295530b6",
-        "p_1cd164ee50"
+        "p_d72e6edecc"
       ]
     },
     {
@@ -28,6 +25,7 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "2000",
     "gold_answer": "2000",
@@ -51,6 +49,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

@@ -4,38 +4,21 @@
   "steps": [
     {
       "action": "search",
-      "query": "Evolution 2001 screenwriter",
-      "k": 5,
+      "query": "Evolution (2001) screenwriter",
+      "k": 3,
       "result_ids": [
         "p_5623036024",
         "p_4a3da14684",
-        "p_6e0ca27917",
-        "p_e40bc11a5b",
-        "p_99f5c064e8"
+        "p_863bc16eb7"
       ]
     },
     {
       "action": "search",
-      "query": "Evolution 2001 writers",
-      "k": 5,
-      "result_ids": [
-        "p_5623036024",
-        "p_4a3da14684",
-        "p_6e0ca27917",
-        "p_cd2d2ddc48",
-        "p_69ef36f40f"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "The Family Man Nicolas Cage Téa Leoni screenwriter",
-      "k": 5,
+      "query": "The Family Man 2000 Nicolas Cage Tea Leoni",
+      "k": 2,
       "result_ids": [
         "p_98bfa9a41d",
-        "p_5623036024",
-        "p_568445fd77",
-        "p_f45f8ec7ee",
-        "p_b3e0fac835"
+        "p_2735e3536b"
       ]
     },
     {
@@ -43,16 +26,17 @@
       "answer": "David Weissman",
       "citations": [
         {
-          "claim": "David Weissman co-wrote 'The Family Man' starring Nicolas Cage and Téa Leoni",
-          "passage_id": "p_98bfa9a41d"
+          "claim": "David Weissman is a screenwriter whose film credits include 'Evolution' and 'The Family Man'.",
+          "passage_id": "p_5623036024"
         },
         {
-          "claim": "David Weissman wrote 'Evolution'",
-          "passage_id": "p_5623036024"
+          "claim": "'The Family Man' (2000) stars Nicolas Cage and Téa Leoni and was written by David Diamond and David Weissman.",
+          "passage_id": "p_98bfa9a41d"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "David Weissman",
     "gold_answer": "David Weissman",
@@ -61,13 +45,13 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "David Weissman co-wrote 'The Family Man' starring Nicolas Cage and Téa Leoni",
-        "passage_id": "p_98bfa9a41d",
+        "claim": "David Weissman is a screenwriter whose film credits include 'Evolution' and 'The Family Man'.",
+        "passage_id": "p_5623036024",
         "label": "faithful"
       },
       {
-        "claim": "David Weissman wrote 'Evolution'",
-        "passage_id": "p_5623036024",
+        "claim": "'The Family Man' (2000) stars Nicolas Cage and Téa Leoni and was written by David Diamond and David Weissman.",
+        "passage_id": "p_98bfa9a41d",
         "label": "faithful"
       }
     ],
@@ -81,6 +65,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

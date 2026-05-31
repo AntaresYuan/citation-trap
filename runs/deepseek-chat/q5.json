@@ -4,47 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Big Stone Gap romantic comedy director New York city",
-      "k": 8,
+      "query": "director of Big Stone Gap romantic comedy",
+      "k": 5,
       "result_ids": [
         "p_f4ef5ee3da",
         "p_011c8738a1",
-        "p_cf1c1f91df",
-        "p_5b5761d864",
-        "p_341ba459fe",
-        "p_5721a6947a",
-        "p_f4874d7bf3",
+        "p_a283417854",
+        "p_b5ea729576",
         "p_b5f75a6605"
       ]
     },
     {
       "action": "search",
-      "query": "Adriana Trigiani New York city base",
-      "k": 8,
+      "query": "Adriana Trigiani home base New York",
+      "k": 5,
       "result_ids": [
         "p_6121371d11",
         "p_f4ef5ee3da",
+        "p_534a4dc6bd",
         "p_f58160a2e2",
-        "p_50a5ccc585",
-        "p_f9961d6294",
-        "p_341ba459fe",
-        "p_5b5761d864",
-        "p_5721a6947a"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "Adriana Trigiani home Greenwich Village",
-      "k": 8,
-      "result_ids": [
-        "p_6121371d11",
-        "p_f4ef5ee3da",
-        "p_82b4d11add",
-        "p_5d1c749274",
-        "p_05466a6059",
-        "p_f9c9647836",
-        "p_48ce6bb8da",
-        "p_d5a82a5449"
+        "p_50a5ccc585"
       ]
     },
     {
@@ -52,16 +31,17 @@
       "answer": "Greenwich Village",
       "citations": [
         {
-          "claim": "The director of 'Big Stone Gap' is Adriana Trigiani",
+          "claim": "The director of Big Stone Gap is Adriana Trigiani.",
           "passage_id": "p_f4ef5ee3da"
         },
         {
-          "claim": "Adriana Trigiani is based in Greenwich Village, New York City",
+          "claim": "Adriana Trigiani is based in Greenwich Village, New York City.",
           "passage_id": "p_6121371d11"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Greenwich Village",
     "gold_answer": "Greenwich Village, New York City",
@@ -70,12 +50,12 @@
     "f1": 0.5714,
     "citations": [
       {
-        "claim": "The director of 'Big Stone Gap' is Adriana Trigiani",
+        "claim": "The director of Big Stone Gap is Adriana Trigiani.",
         "passage_id": "p_f4ef5ee3da",
         "label": "faithful"
       },
       {
-        "claim": "Adriana Trigiani is based in Greenwich Village, New York City",
+        "claim": "Adriana Trigiani is based in Greenwich Village, New York City.",
         "passage_id": "p_6121371d11",
         "label": "faithful"
       }
@@ -90,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

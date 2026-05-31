@@ -4,47 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Skeptical Inquirer tabloid-style magazine",
-      "k": 8,
+      "query": "Skeptical Inquirer tabloid style magazine",
+      "k": 5,
       "result_ids": [
         "p_0729b822d8",
         "p_5f7629ad92",
         "p_6fb6f8479c",
         "p_36b31e6822",
-        "p_c1e047a70e",
-        "p_e649d31405",
-        "p_c69990487d",
-        "p_1fd3fe7148"
+        "p_c1e047a70e"
       ]
     },
     {
       "action": "search",
-      "query": "Skeptical Inquirer tabloid format",
-      "k": 8,
+      "query": "The Progressive Populist tabloid style magazine",
+      "k": 5,
       "result_ids": [
-        "p_0729b822d8",
-        "p_5f7629ad92",
         "p_e649d31405",
-        "p_c69990487d",
-        "p_36b31e6822",
-        "p_6fb6f8479c",
-        "p_c1e047a70e",
-        "p_1fd3fe7148"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "\"Skeptical Inquirer\" tabloid",
-      "k": 8,
-      "result_ids": [
-        "p_0729b822d8",
-        "p_5f7629ad92",
-        "p_c69990487d",
-        "p_36b31e6822",
-        "p_6fb6f8479c",
-        "p_c1e047a70e",
-        "p_1fd3fe7148",
-        "p_d2d93e15fc"
+        "p_dc396a1f76",
+        "p_b7b967da2a",
+        "p_33baa6b886",
+        "p_041b19d50e"
       ]
     },
     {
@@ -52,16 +31,17 @@
       "answer": "No",
       "citations": [
         {
-          "claim": "The Progressive Populist is a magazine in tabloid newspaper format",
-          "passage_id": "p_e649d31405"
+          "claim": "Skeptical Inquirer is a bimonthly American magazine, not described as tabloid-style.",
+          "passage_id": "p_0729b822d8"
         },
         {
-          "claim": "Skeptical Inquirer is a bimonthly American magazine",
-          "passage_id": "p_0729b822d8"
+          "claim": "The Progressive Populist is a magazine in tabloid newspaper format.",
+          "passage_id": "p_e649d31405"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "No",
     "gold_answer": "no",
@@ -70,13 +50,13 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "The Progressive Populist is a magazine in tabloid newspaper format",
-        "passage_id": "p_e649d31405",
+        "claim": "Skeptical Inquirer is a bimonthly American magazine, not described as tabloid-style.",
+        "passage_id": "p_0729b822d8",
         "label": "faithful"
       },
       {
-        "claim": "Skeptical Inquirer is a bimonthly American magazine",
-        "passage_id": "p_0729b822d8",
+        "claim": "The Progressive Populist is a magazine in tabloid newspaper format.",
+        "passage_id": "p_e649d31405",
         "label": "faithful"
       }
     ],
@@ -90,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

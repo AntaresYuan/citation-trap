@@ -5,31 +5,25 @@
     {
       "action": "search",
       "query": "Lev Yilmaz animation filmmaker",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_2cf433d8d7",
-        "p_5b2a1e76af",
         "p_b30f80c11f",
+        "p_5b2a1e76af",
         "p_980a37dffc",
-        "p_c21444d1cb",
-        "p_2a0c9bb697",
-        "p_d68433ddb0",
-        "p_2091110a30"
+        "p_43f274ad78"
       ]
     },
     {
       "action": "search",
-      "query": "Pamela B. Green animation filmmaker",
-      "k": 8,
+      "query": "Pamela B. Green filmmaker animation",
+      "k": 5,
       "result_ids": [
         "p_0ec48dd0c5",
         "p_d219a0160c",
         "p_b1488bab7f",
         "p_5b2a1e76af",
-        "p_c21444d1cb",
-        "p_2a0c9bb697",
-        "p_a308489335",
-        "p_441731da7b"
+        "p_43f274ad78"
       ]
     },
     {
@@ -37,12 +31,13 @@
       "answer": "Lev Yilmaz",
       "citations": [
         {
-          "claim": "Lev Yilmaz is best known for his “Tales of Mere Existence” animated comic series",
+          "claim": "Lev Yilmaz is best known for his animated comic series 'Tales of Mere Existence'",
           "passage_id": "p_2cf433d8d7"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Lev Yilmaz",
     "gold_answer": "Levni Yilmaz",
@@ -51,7 +46,7 @@
     "f1": 0.5,
     "citations": [
       {
-        "claim": "Lev Yilmaz is best known for his “Tales of Mere Existence” animated comic series",
+        "claim": "Lev Yilmaz is best known for his animated comic series 'Tales of Mere Existence'",
         "passage_id": "p_2cf433d8d7",
         "label": "faithful"
       }
@@ -66,6 +61,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

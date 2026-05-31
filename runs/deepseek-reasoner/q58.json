@@ -5,21 +5,25 @@
     {
       "action": "search",
       "query": "Broughtonia orchid genus",
-      "k": 3,
+      "k": 5,
       "result_ids": [
         "p_e0ca403e21",
         "p_5c9af255e7",
-        "p_5cde530a44"
+        "p_faa2eeda68",
+        "p_5cde530a44",
+        "p_61141b35a6"
       ]
     },
     {
       "action": "search",
       "query": "Laeliocattleya orchid",
-      "k": 3,
+      "k": 5,
       "result_ids": [
         "p_96259976a3",
         "p_5cde530a44",
-        "p_b56bdd9ee7"
+        "p_faa2eeda68",
+        "p_6732186a1e",
+        "p_96fd905f16"
       ]
     },
     {
@@ -37,6 +41,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Yes",
     "gold_answer": "yes",
@@ -65,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

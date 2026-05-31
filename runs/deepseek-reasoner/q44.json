@@ -4,63 +4,58 @@
   "steps": [
     {
       "action": "search",
-      "query": "Skin Yard band origin country",
-      "k": 8,
+      "query": "Skin Yard band origin United States Ostava band origin",
+      "k": 5,
       "result_ids": [
         "p_b4feb99336",
         "p_217b6bf0d8",
         "p_8d266a85bd",
-        "p_57f6b1881d",
-        "p_5c31c27b9c",
-        "p_88bb370635",
         "p_92255b5ed8",
-        "p_bdb7c78c0a"
+        "p_5c31c27b9c"
       ]
     },
     {
       "action": "search",
-      "query": "Ostava band origin",
-      "k": 8,
+      "query": "Ostava band origin country",
+      "k": 5,
       "result_ids": [
         "p_a956617594",
         "p_de2dc78698",
-        "p_b84077912b",
-        "p_d2d93e15fc",
-        "p_d2b89b81d1",
-        "p_0a07cfb344",
-        "p_f96b139ac9",
-        "p_c7cf1a6c94"
+        "p_a4f3e5bb57",
+        "p_13d887594d",
+        "p_f44c21f62f"
       ]
     },
     {
       "action": "submit",
-      "answer": "Skin Yard: yes; Ostava: no",
+      "answer": "No",
       "citations": [
         {
-          "claim": "Skin Yard was an American grunge band from Seattle, Washington",
+          "claim": "Skin Yard was an American grunge band from Seattle, Washington, United States.",
           "passage_id": "p_217b6bf0d8"
         },
         {
-          "claim": "Ostava are an alternative rock band from Bulgaria",
+          "claim": "Ostava are an alternative rock band from Bulgaria.",
           "passage_id": "p_a956617594"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
-    "answer": "Skin Yard: yes; Ostava: no",
+    "answer": "No",
     "gold_answer": "no",
     "answer_correct": true,
-    "em": 0,
-    "f1": 0.3333,
+    "em": 1,
+    "f1": 1.0,
     "citations": [
       {
-        "claim": "Skin Yard was an American grunge band from Seattle, Washington",
+        "claim": "Skin Yard was an American grunge band from Seattle, Washington, United States.",
         "passage_id": "p_217b6bf0d8",
         "label": "faithful"
       },
       {
-        "claim": "Ostava are an alternative rock band from Bulgaria",
+        "claim": "Ostava are an alternative rock band from Bulgaria.",
         "passage_id": "p_a956617594",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

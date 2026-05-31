@@ -4,17 +4,31 @@
   "steps": [
     {
       "action": "search",
-      "query": "screenwriter Evolution co-writer Nicolas Cage Téa Leoni film",
-      "k": 8,
+      "query": "screenwriter Evolution co-wrote film Nicolas Cage Téa Leoni",
+      "k": 5,
       "result_ids": [
         "p_98bfa9a41d",
         "p_568445fd77",
+        "p_a7c93e88ae",
+        "p_96cb948ca0",
+        "p_b3e0fac835"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "David Diamond David Weissman Evolution screenwriter",
+      "k": 10,
+      "result_ids": [
         "p_5623036024",
-        "p_b3e0fac835",
-        "p_f9a6d2cced",
-        "p_2735e3536b",
-        "p_47bed011cb",
-        "p_f45f8ec7ee"
+        "p_98bfa9a41d",
+        "p_8929e033b2",
+        "p_15b1851b19",
+        "p_2a0c9bb697",
+        "p_13fef399ab",
+        "p_200a2b118e",
+        "p_4e06efc009",
+        "p_a556d43dbb",
+        "p_a7dec45d65"
       ]
     },
     {
@@ -22,20 +36,17 @@
       "answer": "David Weissman",
       "citations": [
         {
-          "claim": "David Weissman co-wrote Evolution",
+          "claim": "David Weissman is a screenwriter with credits including 'Evolution'",
           "passage_id": "p_5623036024"
         },
         {
-          "claim": "David Weissman also wrote The Family Man, which stars Nicolas Cage and Téa Leoni",
-          "passage_id": "p_5623036024"
-        },
-        {
-          "claim": "The Family Man is a film starring Nicolas Cage and Téa Leoni",
+          "claim": "David Weissman co-wrote 'The Family Man' starring Nicolas Cage and Téa Leoni",
           "passage_id": "p_98bfa9a41d"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "David Weissman",
     "gold_answer": "David Weissman",
@@ -44,23 +55,18 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "David Weissman co-wrote Evolution",
+        "claim": "David Weissman is a screenwriter with credits including 'Evolution'",
         "passage_id": "p_5623036024",
         "label": "faithful"
       },
       {
-        "claim": "David Weissman also wrote The Family Man, which stars Nicolas Cage and Téa Leoni",
-        "passage_id": "p_5623036024",
-        "label": "faithful"
-      },
-      {
-        "claim": "The Family Man is a film starring Nicolas Cage and Téa Leoni",
+        "claim": "David Weissman co-wrote 'The Family Man' starring Nicolas Cage and Téa Leoni",
         "passage_id": "p_98bfa9a41d",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 3,
+      "faithful": 2,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -69,6 +75,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

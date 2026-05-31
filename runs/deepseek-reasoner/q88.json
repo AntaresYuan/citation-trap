@@ -4,14 +4,11 @@
   "steps": [
     {
       "action": "search",
-      "query": "Alain Resnais director career length years",
-      "k": 8,
+      "query": "Alain Resnais career span",
+      "k": 5,
       "result_ids": [
         "p_d96574d648",
         "p_546f7c2436",
-        "p_4dc9acdb6b",
-        "p_0858193d37",
-        "p_c2bec7eaeb",
         "p_c20693be11",
         "p_1db0b70c2b",
         "p_4aeab25594"
@@ -19,17 +16,14 @@
     },
     {
       "action": "search",
-      "query": "Scott Sidney director birth death career",
-      "k": 8,
+      "query": "Scott Sidney career span director",
+      "k": 5,
       "result_ids": [
         "p_25f9cb9b82",
-        "p_99f5c064e8",
-        "p_2e2f61086b",
-        "p_5be2d3bd19",
-        "p_afebceb5f2",
-        "p_e40bc11a5b",
-        "p_69295530b6",
-        "p_eb0bbc1084"
+        "p_58905bc828",
+        "p_1536afbef7",
+        "p_0f8bd42ff5",
+        "p_57f91dbde7"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "Alain Resnais",
       "citations": [
         {
-          "claim": "Alain Resnais's career extended over more than six decades, from the mid-1940s to 2014.",
+          "claim": "Alain Resnais's career extended over more than six decades, from the mid-1940s to 2014",
           "passage_id": "p_d96574d648"
         },
         {
-          "claim": "Scott Sidney directed films from 1913 to 1927, a span of 14 years.",
+          "claim": "Scott Sidney directed films only between 1913 and 1927, a span of about 14 years",
           "passage_id": "p_25f9cb9b82"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Alain Resnais",
     "gold_answer": "Scott Sidney",
@@ -55,12 +50,12 @@
     "f1": 0.0,
     "citations": [
       {
-        "claim": "Alain Resnais's career extended over more than six decades, from the mid-1940s to 2014.",
+        "claim": "Alain Resnais's career extended over more than six decades, from the mid-1940s to 2014",
         "passage_id": "p_d96574d648",
         "label": "faithful"
       },
       {
-        "claim": "Scott Sidney directed films from 1913 to 1927, a span of 14 years.",
+        "claim": "Scott Sidney directed films only between 1913 and 1927, a span of about 14 years",
         "passage_id": "p_25f9cb9b82",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

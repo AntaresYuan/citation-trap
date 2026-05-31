@@ -4,98 +4,98 @@
   "steps": [
     {
       "action": "search",
-      "query": "Tunnels and Trolls adventure name Ken St. Andre",
+      "query": "Tunnels and Trolls adventure name",
       "k": 5,
       "result_ids": [
+        "p_b2bd3b5836",
+        "p_271d0156af",
         "p_056712beb1",
         "p_cd2d2ddc48",
-        "p_a03ccd404f",
-        "p_271d0156af",
-        "p_b2bd3b5836"
+        "p_2f2688c402"
       ]
     },
     {
       "action": "search",
-      "query": "Tunnels and Trolls first adventure name",
-      "k": 5,
-      "result_ids": [
-        "p_271d0156af",
-        "p_b2bd3b5836",
-        "p_056712beb1",
-        "p_2f2688c402",
-        "p_cd2d2ddc48"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "Buffalo Castle Tunnels and Trolls adventure",
-      "k": 5,
-      "result_ids": [
-        "p_271d0156af",
-        "p_b2bd3b5836",
-        "p_056712beb1",
-        "p_2f2688c402",
-        "p_cd2d2ddc48"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "Buffalo Castle Tunnels and Trolls 1975",
-      "k": 5,
-      "result_ids": [
-        "p_056712beb1",
-        "p_b2bd3b5836",
-        "p_271d0156af",
-        "p_2f2688c402",
-        "p_cd2d2ddc48"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "\"Buffalo Castle\" Tunnels and Trolls",
+      "query": "\"Tunnels and Trolls\" adventure name",
       "k": 5,
       "result_ids": [
         "p_b2bd3b5836",
-        "p_056712beb1",
         "p_271d0156af",
-        "p_2f2688c402",
-        "p_cd2d2ddc48"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "Buffalo Castle Tunnels and Trolls first solo adventure",
-      "k": 5,
-      "result_ids": [
-        "p_271d0156af",
-        "p_b2bd3b5836",
-        "p_056712beb1",
-        "p_2f2688c402",
-        "p_cd2d2ddc48"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "Tunnels and Trolls adventure name solo dungeons",
-      "k": 5,
-      "result_ids": [
-        "p_056712beb1",
-        "p_271d0156af",
-        "p_b2bd3b5836",
-        "p_2f2688c402",
-        "p_cd2d2ddc48"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "\"Buffalo Castle\" Ken St. Andre",
-      "k": 5,
-      "result_ids": [
-        "p_a03ccd404f",
         "p_056712beb1",
         "p_cd2d2ddc48",
-        "p_18c574eb70",
-        "p_51ca404583"
+        "p_2f2688c402"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Tunnels and Trolls Buffalo Castle adventure",
+      "k": 5,
+      "result_ids": [
+        "p_271d0156af",
+        "p_b2bd3b5836",
+        "p_056712beb1",
+        "p_2f2688c402",
+        "p_cd2d2ddc48"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Buffalo Castle Tunnels and Trolls",
+      "k": 5,
+      "result_ids": [
+        "p_b2bd3b5836",
+        "p_056712beb1",
+        "p_271d0156af",
+        "p_2f2688c402",
+        "p_cd2d2ddc48"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "\"Buffalo Castle\" \"Tunnels and Trolls\"",
+      "k": 5,
+      "result_ids": [
+        "p_b2bd3b5836",
+        "p_056712beb1",
+        "p_271d0156af",
+        "p_2f2688c402",
+        "p_cd2d2ddc48"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "\"Buffalo Castle\" Tunnels and Trolls adventure",
+      "k": 5,
+      "result_ids": [
+        "p_271d0156af",
+        "p_b2bd3b5836",
+        "p_056712beb1",
+        "p_2f2688c402",
+        "p_cd2d2ddc48"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Buffalo Castle solitaire adventure Tunnels and Trolls",
+      "k": 5,
+      "result_ids": [
+        "p_056712beb1",
+        "p_271d0156af",
+        "p_b2bd3b5836",
+        "p_2f2688c402",
+        "p_cd2d2ddc48"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "\"Buffalo Castle\" first Tunnels and Trolls adventure",
+      "k": 5,
+      "result_ids": [
+        "p_271d0156af",
+        "p_b2bd3b5836",
+        "p_056712beb1",
+        "p_2f2688c402",
+        "p_cd2d2ddc48"
       ]
     },
     {
@@ -104,6 +104,7 @@
       "citations": []
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "",
     "gold_answer": "Arena of Khazan",
@@ -121,6 +122,5 @@
     "citation_trustworthy": false,
     "quadrant": "worst",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

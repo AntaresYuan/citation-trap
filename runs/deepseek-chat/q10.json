@@ -4,22 +4,20 @@
   "steps": [
     {
       "action": "search",
-      "query": "Giuseppe Verdi opera composer",
-      "k": 3,
+      "query": "Giuseppe Verdi occupation",
+      "k": 2,
       "result_ids": [
-        "p_a082561063",
         "p_180a9b632a",
-        "p_7a5e3368fe"
+        "p_a082561063"
       ]
     },
     {
       "action": "search",
-      "query": "Ambroise Thomas opera composer",
-      "k": 3,
+      "query": "Ambroise Thomas occupation",
+      "k": 2,
       "result_ids": [
         "p_2e2f61086b",
-        "p_d4aa8166a1",
-        "p_a082561063"
+        "p_d4aa8166a1"
       ]
     },
     {
@@ -27,16 +25,17 @@
       "answer": "Yes",
       "citations": [
         {
-          "claim": "Giuseppe Verdi was an Italian opera composer.",
+          "claim": "Giuseppe Verdi was an Italian opera composer",
           "passage_id": "p_a082561063"
         },
         {
-          "claim": "Ambroise Thomas was a French composer best known for his operas.",
+          "claim": "Ambroise Thomas was a French composer best known for his operas",
           "passage_id": "p_2e2f61086b"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Yes",
     "gold_answer": "yes",
@@ -45,12 +44,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Giuseppe Verdi was an Italian opera composer.",
+        "claim": "Giuseppe Verdi was an Italian opera composer",
         "passage_id": "p_a082561063",
         "label": "faithful"
       },
       {
-        "claim": "Ambroise Thomas was a French composer best known for his operas.",
+        "claim": "Ambroise Thomas was a French composer best known for his operas",
         "passage_id": "p_2e2f61086b",
         "label": "faithful"
       }
@@ -65,6 +64,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

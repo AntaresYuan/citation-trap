@@ -4,32 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Vermont Catamounts men's soccer conference",
-      "k": 8,
+      "query": "Vermont Catamounts men's soccer conference 1988 1996",
+      "k": 5,
       "result_ids": [
         "p_4a637e7dfb",
         "p_27caa971f0",
-        "p_de17c116a3",
+        "p_38cb85a6b2",
         "p_2e52d2107e",
-        "p_aadd74eaf7",
-        "p_b7829966fa",
-        "p_df8904efa7",
-        "p_9cb4386e9a"
+        "p_de17c116a3"
       ]
     },
     {
       "action": "search",
-      "query": "America East Conference former name 1988 to 1996",
-      "k": 8,
+      "query": "America East Conference former name 1988 1996",
+      "k": 5,
       "result_ids": [
         "p_c845bd9f15",
         "p_de17c116a3",
         "p_b7829966fa",
         "p_aadd74eaf7",
-        "p_df8904efa7",
-        "p_9cb4386e9a",
-        "p_27caa971f0",
-        "p_35ca13ae4f"
+        "p_4a637e7dfb"
       ]
     },
     {
@@ -37,12 +31,17 @@
       "answer": "North Atlantic Conference",
       "citations": [
         {
+          "claim": "The Vermont Catamounts men's soccer team competes in the America East Conference.",
+          "passage_id": "p_4a637e7dfb"
+        },
+        {
           "claim": "The America East Conference was known as the North Atlantic Conference from 1988 to 1996.",
           "passage_id": "p_c845bd9f15"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "North Atlantic Conference",
     "gold_answer": "the North Atlantic Conference",
@@ -51,13 +50,18 @@
     "f1": 1.0,
     "citations": [
       {
+        "claim": "The Vermont Catamounts men's soccer team competes in the America East Conference.",
+        "passage_id": "p_4a637e7dfb",
+        "label": "faithful"
+      },
+      {
         "claim": "The America East Conference was known as the North Atlantic Conference from 1988 to 1996.",
         "passage_id": "p_c845bd9f15",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 1,
+      "faithful": 2,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -66,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

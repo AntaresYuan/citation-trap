@@ -4,32 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Semyon Aranovich Gershgorin number of papers published",
-      "k": 8,
+      "query": "Semyon Aranovich Gershgorin number of papers written",
+      "k": 5,
       "result_ids": [
         "p_61d2d64eb2",
         "p_0af5bc383d",
         "p_598e532c1e",
         "p_a11bd40e60",
-        "p_5fec29ed43",
-        "p_e02f6ed917",
-        "p_ea7ef375ed",
-        "p_8499da7d59"
+        "p_5fec29ed43"
       ]
     },
     {
       "action": "search",
-      "query": "Pavel Alexandrov number of papers published",
-      "k": 8,
+      "query": "Pavel Alexandrov number of papers written",
+      "k": 5,
       "result_ids": [
         "p_f0b214c15e",
         "p_b84077912b",
         "p_a6a46397ca",
         "p_704d62c650",
-        "p_ea7ef375ed",
-        "p_8499da7d59",
-        "p_d767edebdb",
-        "p_8e17a76ee7"
+        "p_478d68d28b"
       ]
     },
     {
@@ -39,10 +33,15 @@
         {
           "claim": "Pavel Alexandrov wrote about three hundred papers",
           "passage_id": "p_f0b214c15e"
+        },
+        {
+          "claim": "Semyon Aranovich Gershgorin was a mathematician",
+          "passage_id": "p_61d2d64eb2"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Pavel Alexandrov",
     "gold_answer": "Pavel Sergeyevich Alexandrov",
@@ -54,10 +53,15 @@
         "claim": "Pavel Alexandrov wrote about three hundred papers",
         "passage_id": "p_f0b214c15e",
         "label": "faithful"
+      },
+      {
+        "claim": "Semyon Aranovich Gershgorin was a mathematician",
+        "passage_id": "p_61d2d64eb2",
+        "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 1,
+      "faithful": 2,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -66,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

@@ -5,26 +5,13 @@
     {
       "action": "search",
       "query": "Ralph Hefferline psychology professor university city",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_a49a6081c2",
         "p_26ce29dab5",
         "p_1b33d10b33",
         "p_8e17a76ee7",
-        "p_7033e19209",
-        "p_b2458a7340",
-        "p_0316c9e89e",
-        "p_05406fda74"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "Columbia University location",
-      "k": 3,
-      "result_ids": [
-        "p_f9961d6294",
-        "p_a49a6081c2",
-        "p_05406fda74"
+        "p_7033e19209"
       ]
     },
     {
@@ -32,16 +19,17 @@
       "answer": "New York City",
       "citations": [
         {
-          "claim": "Ralph Hefferline was a psychology professor at Columbia University",
+          "claim": "Ralph Franklin Hefferline was a psychology professor at Columbia University.",
           "passage_id": "p_a49a6081c2"
         },
         {
-          "claim": "Columbia University is located in New York City",
-          "passage_id": "p_f9961d6294"
+          "claim": "Columbia University is located in New York City.",
+          "passage_id": "p_a49a6081c2"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "New York City",
     "gold_answer": "New York City",
@@ -50,13 +38,13 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Ralph Hefferline was a psychology professor at Columbia University",
+        "claim": "Ralph Franklin Hefferline was a psychology professor at Columbia University.",
         "passage_id": "p_a49a6081c2",
         "label": "faithful"
       },
       {
-        "claim": "Columbia University is located in New York City",
-        "passage_id": "p_f9961d6294",
+        "claim": "Columbia University is located in New York City.",
+        "passage_id": "p_a49a6081c2",
         "label": "faithful"
       }
     ],
@@ -70,6 +58,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

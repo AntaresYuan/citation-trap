@@ -4,17 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Japanese manga series Ichitaka Seto written and illustrated by birth year",
-      "k": 8,
+      "query": "Japanese manga series 16 year old high school student Ichitaka Seto written and illustrated by",
+      "k": 5,
       "result_ids": [
         "p_1fc6f696bc",
-        "p_577a9c6ca8",
-        "p_600979a126",
+        "p_a1c7ed2539",
         "p_53be56f09e",
         "p_719c9cfbc8",
-        "p_a1c7ed2539",
-        "p_a47a44ef2f",
-        "p_1b0803d100"
+        "p_cbb5a8be86"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Masakazu Katsura birth year",
+      "k": 5,
+      "result_ids": [
+        "p_2abfbf036f",
+        "p_1fc6f696bc",
+        "p_ef4edb8843",
+        "p_a4f009e5c9",
+        "p_301244e5d6"
       ]
     },
     {
@@ -22,12 +31,17 @@
       "answer": "1962",
       "citations": [
         {
-          "claim": "The manga series is 'I\"s', written and illustrated by Masakazu Katsura.",
+          "claim": "Masakazu Katsura was born December 10, 1962",
+          "passage_id": "p_2abfbf036f"
+        },
+        {
+          "claim": "I\"s is written and illustrated by Masakazu Katsura",
           "passage_id": "p_1fc6f696bc"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "1962",
     "gold_answer": "1962",
@@ -36,13 +50,18 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "The manga series is 'I\"s', written and illustrated by Masakazu Katsura.",
+        "claim": "Masakazu Katsura was born December 10, 1962",
+        "passage_id": "p_2abfbf036f",
+        "label": "faithful"
+      },
+      {
+        "claim": "I\"s is written and illustrated by Masakazu Katsura",
         "passage_id": "p_1fc6f696bc",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 1,
+      "faithful": 2,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -51,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

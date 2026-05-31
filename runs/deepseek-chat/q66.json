@@ -5,31 +5,25 @@
     {
       "action": "search",
       "query": "The Importance of Being Icelandic film genre",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_d49d0fa428",
-        "p_31d5fc908f",
-        "p_de0002fe9b",
-        "p_a56d25c568",
-        "p_e203813626",
-        "p_3b9adb762a",
-        "p_4b8c44633c",
-        "p_47bed011cb"
+        "p_09cea3da95",
+        "p_01ad3ec11b",
+        "p_0937094ee2",
+        "p_6345db4443"
       ]
     },
     {
       "action": "search",
       "query": "The Five Obstructions film genre",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_2ce5e0d995",
+        "p_ff953eaa61",
         "p_31d5fc908f",
-        "p_de0002fe9b",
-        "p_a56d25c568",
-        "p_e203813626",
-        "p_3b9adb762a",
-        "p_6fb7815044",
-        "p_4bce465878"
+        "p_6345db4443",
+        "p_74b29448ae"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "Yes",
       "citations": [
         {
-          "claim": "The Importance of Being Icelandic is a documentary film",
+          "claim": "The Importance of Being Icelandic is a 1998 documentary film",
           "passage_id": "p_d49d0fa428"
         },
         {
-          "claim": "The Five Obstructions is a documentary film",
+          "claim": "The Five Obstructions is a 2003 Danish documentary film",
           "passage_id": "p_2ce5e0d995"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Yes",
     "gold_answer": "no",
@@ -55,12 +50,12 @@
     "f1": 0.0,
     "citations": [
       {
-        "claim": "The Importance of Being Icelandic is a documentary film",
+        "claim": "The Importance of Being Icelandic is a 1998 documentary film",
         "passage_id": "p_d49d0fa428",
         "label": "faithful"
       },
       {
-        "claim": "The Five Obstructions is a documentary film",
+        "claim": "The Five Obstructions is a 2003 Danish documentary film",
         "passage_id": "p_2ce5e0d995",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

@@ -5,21 +5,25 @@
     {
       "action": "search",
       "query": "712 Fifth Avenue height",
-      "k": 3,
+      "k": 5,
       "result_ids": [
         "p_f58160a2e2",
+        "p_63ec465139",
         "p_1807014579",
-        "p_05466a6059"
+        "p_2664a651ab",
+        "p_58c51772e6"
       ]
     },
     {
       "action": "search",
       "query": "Manhattan Life Insurance Building height",
-      "k": 3,
+      "k": 5,
       "result_ids": [
         "p_50a5ccc585",
         "p_9c7e4aa773",
-        "p_d080cd1cc8"
+        "p_d080cd1cc8",
+        "p_43110775da",
+        "p_6340530fe9"
       ]
     },
     {
@@ -27,16 +31,17 @@
       "answer": "712 Fifth Avenue",
       "citations": [
         {
-          "claim": "712 Fifth Avenue is 650 ft tall.",
+          "claim": "712 Fifth Avenue is 650 ft tall",
           "passage_id": "p_f58160a2e2"
         },
         {
-          "claim": "Manhattan Life Insurance Building is 348 ft tall.",
+          "claim": "Manhattan Life Insurance Building is 348 ft tall",
           "passage_id": "p_9c7e4aa773"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "712 Fifth Avenue",
     "gold_answer": "712 5th Avenue",
@@ -45,12 +50,12 @@
     "f1": 0.6667,
     "citations": [
       {
-        "claim": "712 Fifth Avenue is 650 ft tall.",
+        "claim": "712 Fifth Avenue is 650 ft tall",
         "passage_id": "p_f58160a2e2",
         "label": "faithful"
       },
       {
-        "claim": "Manhattan Life Insurance Building is 348 ft tall.",
+        "claim": "Manhattan Life Insurance Building is 348 ft tall",
         "passage_id": "p_9c7e4aa773",
         "label": "faithful"
       }
@@ -65,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

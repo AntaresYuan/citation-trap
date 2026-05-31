@@ -14,25 +14,37 @@
     {
       "action": "search",
       "query": "Arthur Conan Doyle born",
-      "k": 5,
+      "k": 2,
       "result_ids": [
         "p_d47f816a4c",
-        "p_497c6716d4",
-        "p_35bc6df012",
-        "p_9a86a87ac6",
-        "p_ba2e2d3699"
+        "p_497c6716d4"
       ]
     },
     {
       "action": "search",
-      "query": "Penelope Lively born",
-      "k": 5,
+      "query": "Sir Arthur Conan Doyle birth date",
+      "k": 2,
+      "result_ids": [
+        "p_d47f816a4c",
+        "p_497c6716d4"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Arthur Conan Doyle born 1859",
+      "k": 2,
+      "result_ids": [
+        "p_35bc6df012",
+        "p_d47f816a4c"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Penelope Lively birth date",
+      "k": 2,
       "result_ids": [
         "p_7c27d69035",
-        "p_d68433ddb0",
-        "p_60de919375",
-        "p_ea5fcab6f4",
-        "p_60c2d2154b"
+        "p_301244e5d6"
       ]
     },
     {
@@ -50,6 +62,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Arthur Conan Doyle",
     "gold_answer": "Arthur Ignatius Conan Doyle",
@@ -78,6 +91,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

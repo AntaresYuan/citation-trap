@@ -16,39 +16,31 @@
     },
     {
       "action": "submit",
-      "answer": "IFFHS World's Best Goalkeeper",
+      "answer": "World's Best Goalkeeper",
       "citations": [
         {
-          "claim": "Peter Schmeichel was voted the IFFHS World's Best Goalkeeper in 1992.",
+          "claim": "Peter Schmeichel was voted the IFFHS World's Best Goalkeeper in 1992",
           "passage_id": "p_d2c37f0b5d"
-        },
-        {
-          "claim": "Kasper Schmeichel is the son of Peter Schmeichel.",
-          "passage_id": "p_bdb2bf3f03"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "IFFHS World's Best Goalkeeper",
+    "answer": "World's Best Goalkeeper",
     "gold_answer": "World's Best Goalkeeper",
     "answer_correct": true,
-    "em": 0,
-    "f1": 0.8571,
+    "em": 1,
+    "f1": 1.0,
     "citations": [
       {
-        "claim": "Peter Schmeichel was voted the IFFHS World's Best Goalkeeper in 1992.",
+        "claim": "Peter Schmeichel was voted the IFFHS World's Best Goalkeeper in 1992",
         "passage_id": "p_d2c37f0b5d",
-        "label": "faithful"
-      },
-      {
-        "claim": "Kasper Schmeichel is the son of Peter Schmeichel.",
-        "passage_id": "p_bdb2bf3f03",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 2,
+      "faithful": 1,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -57,6 +49,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

@@ -5,31 +5,37 @@
     {
       "action": "search",
       "query": "Pirate's Cove board game publication year",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_f4d12373cf",
         "p_0e29d3c800",
+        "p_ab8a78d8dc",
         "p_d38fa3739c",
-        "p_72f8274d24",
-        "p_52b183a9f2",
+        "p_03a00b8b3e"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Catan board game publication year",
+      "k": 5,
+      "result_ids": [
+        "p_d38fa3739c",
         "p_f3e0d73880",
-        "p_62b75ea555",
-        "p_1df0cbb6b2"
+        "p_52b183a9f2",
+        "p_1df0cbb6b2",
+        "p_62b75ea555"
       ]
     },
     {
       "action": "search",
       "query": "Settlers of Catan publication year",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_1df0cbb6b2",
         "p_a124850b1f",
         "p_52b183a9f2",
         "p_d767edebdb",
-        "p_adc0a73ba7",
-        "p_f3e0d73880",
-        "p_d38fa3739c",
-        "p_62b75ea555"
+        "p_adc0a73ba7"
       ]
     },
     {
@@ -41,12 +47,13 @@
           "passage_id": "p_f4d12373cf"
         },
         {
-          "claim": "The Settlers of Catan (Catan) was first published in 1995",
+          "claim": "Catan was first published in 1995",
           "passage_id": "p_d767edebdb"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Pirate's Cove",
     "gold_answer": "Pirate's Cove",
@@ -60,7 +67,7 @@
         "label": "faithful"
       },
       {
-        "claim": "The Settlers of Catan (Catan) was first published in 1995",
+        "claim": "Catan was first published in 1995",
         "passage_id": "p_d767edebdb",
         "label": "faithful"
       }
@@ -75,6 +82,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

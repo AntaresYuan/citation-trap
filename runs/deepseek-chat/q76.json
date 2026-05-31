@@ -5,31 +5,25 @@
     {
       "action": "search",
       "query": "Dafeng District province",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_1f6327f165",
         "p_2ff18b6b04",
         "p_9e90b08e73",
-        "p_7db4cc118a",
-        "p_bd9438617a",
-        "p_fd8539ad58",
-        "p_69ef36f40f",
-        "p_47704aa592"
+        "p_0d293059ad",
+        "p_866a1e3d34"
       ]
     },
     {
       "action": "search",
       "query": "Dazhou province",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_0cdb6239fa",
         "p_7db4cc118a",
         "p_69ef36f40f",
-        "p_47704aa592",
-        "p_1f6327f165",
-        "p_fce2383d46",
-        "p_a1e0b4783f",
-        "p_a28094f91c"
+        "p_74a2f88d8a",
+        "p_47704aa592"
       ]
     },
     {
@@ -47,6 +41,7 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "No",
     "gold_answer": "no",
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

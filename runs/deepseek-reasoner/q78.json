@@ -4,32 +4,22 @@
   "steps": [
     {
       "action": "search",
-      "query": "Marsilea number of species genus",
-      "k": 8,
+      "query": "Marsilea number of species",
+      "k": 3,
       "result_ids": [
         "p_15b039b497",
         "p_16081179fe",
-        "p_8c0d09fb20",
-        "p_50bb9f40ed",
-        "p_5cde530a44",
-        "p_74448bb453",
-        "p_a50d33fc64",
-        "p_b9c85384c8"
+        "p_8c0d09fb20"
       ]
     },
     {
       "action": "search",
-      "query": "Brabejum number of species genus",
-      "k": 8,
+      "query": "Brabejum number of species",
+      "k": 3,
       "result_ids": [
         "p_f577ef9c48",
-        "p_50bb9f40ed",
-        "p_5cde530a44",
-        "p_74448bb453",
-        "p_a50d33fc64",
-        "p_b9c85384c8",
-        "p_15b039b497",
-        "p_502f90b27b"
+        "p_c932a113af",
+        "p_fa7d032638"
       ]
     },
     {
@@ -47,6 +37,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Marsilea",
     "gold_answer": "Marsilea",
@@ -75,6 +66,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

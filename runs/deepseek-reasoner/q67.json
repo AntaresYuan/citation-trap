@@ -4,17 +4,14 @@
   "steps": [
     {
       "action": "search",
-      "query": "Back to Mono first track inspired by words on a tombstone writer",
-      "k": 8,
+      "query": "song inspired by words on a tombstone first track Back to Mono",
+      "k": 5,
       "result_ids": [
         "p_cf20ea110f",
         "p_b8fee7cdba",
         "p_353a14f09a",
-        "p_b3c7b56a95",
-        "p_839fcfc176",
-        "p_50bb9f40ed",
-        "p_6e2354a4e2",
-        "p_b3e0fac835"
+        "p_771d9bdbc8",
+        "p_c789b87660"
       ]
     },
     {
@@ -22,7 +19,7 @@
       "answer": "Phil Spector",
       "citations": [
         {
-          "claim": "The first track of Back to Mono is 'To Know Him Is to Love Him'",
+          "claim": "The first track on Back to Mono is 'To Know Him Is to Love Him'",
           "passage_id": "p_cf20ea110f"
         },
         {
@@ -32,6 +29,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Phil Spector",
     "gold_answer": "Phil Spector",
@@ -40,7 +38,7 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "The first track of Back to Mono is 'To Know Him Is to Love Him'",
+        "claim": "The first track on Back to Mono is 'To Know Him Is to Love Him'",
         "passage_id": "p_cf20ea110f",
         "label": "faithful"
       },
@@ -60,6 +58,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

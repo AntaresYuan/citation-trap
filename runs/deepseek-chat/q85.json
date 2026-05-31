@@ -4,32 +4,38 @@
   "steps": [
     {
       "action": "search",
-      "query": "D1NZ oversteering technique",
-      "k": 8,
+      "query": "D1NZ series based on oversteering technique",
+      "k": 5,
       "result_ids": [
         "p_95aba4b7fd",
         "p_da2e0fcdd4",
-        "p_d2138ee37f",
         "p_6c05485af8",
-        "p_058f3692c5",
-        "p_342a97756e",
-        "p_d68433ddb0",
-        "p_4e8309573e"
+        "p_6d0628382e",
+        "p_bbf87885b4"
       ]
     },
     {
       "action": "search",
-      "query": "D1NZ drifting series",
-      "k": 8,
+      "query": "D1NZ drifting oversteering technique",
+      "k": 5,
       "result_ids": [
         "p_95aba4b7fd",
         "p_d2138ee37f",
-        "p_6031a4780c",
-        "p_6d0628382e",
-        "p_0a760c4287",
-        "p_34c5403a42",
-        "p_84e3773246",
-        "p_47132ec611"
+        "p_df9e1a2720",
+        "p_754329e289",
+        "p_526c14e002"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "D1NZ drifting series oversteer technique name",
+      "k": 5,
+      "result_ids": [
+        "p_95aba4b7fd",
+        "p_d2138ee37f",
+        "p_da2e0fcdd4",
+        "p_754329e289",
+        "p_bbf87885b4"
       ]
     },
     {
@@ -37,16 +43,17 @@
       "answer": "drifting",
       "citations": [
         {
-          "claim": "D1NZ is a production car drifting series",
+          "claim": "D1NZ is a production car drifting series in New Zealand",
           "passage_id": "p_95aba4b7fd"
         },
         {
-          "claim": "Drifting is a driving technique where the driver intentionally oversteers",
+          "claim": "drifting is a driving technique where the driver intentionally oversteers",
           "passage_id": "p_d2138ee37f"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "drifting",
     "gold_answer": "Drifting",
@@ -55,12 +62,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "D1NZ is a production car drifting series",
+        "claim": "D1NZ is a production car drifting series in New Zealand",
         "passage_id": "p_95aba4b7fd",
         "label": "faithful"
       },
       {
-        "claim": "Drifting is a driving technique where the driver intentionally oversteers",
+        "claim": "drifting is a driving technique where the driver intentionally oversteers",
         "passage_id": "p_d2138ee37f",
         "label": "faithful"
       }
@@ -75,6 +82,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

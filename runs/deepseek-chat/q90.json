@@ -4,32 +4,74 @@
   "steps": [
     {
       "action": "search",
-      "query": "Asante Traditional Buildings size area",
-      "k": 8,
+      "query": "Asante Traditional Buildings size Gulangyu area comparison",
+      "k": 5,
+      "result_ids": [
+        "p_cade420caa",
+        "p_722ade8839",
+        "p_6d0afe1342",
+        "p_c2812fc549",
+        "p_99894dc149"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Asante Traditional Buildings area size in square kilometers",
+      "k": 5,
+      "result_ids": [
+        "p_cade420caa",
+        "p_6b9c9a108c",
+        "p_c2812fc549",
+        "p_8718bc27b3",
+        "p_99894dc149"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Asante Traditional Buildings UNESCO World Heritage area size",
+      "k": 5,
+      "result_ids": [
+        "p_cade420caa",
+        "p_dff3617c1b",
+        "p_bf88215adc",
+        "p_6d0afe1342",
+        "p_722ade8839"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Asante Traditional Buildings square kilometers site area",
+      "k": 5,
+      "result_ids": [
+        "p_cade420caa",
+        "p_6b9c9a108c",
+        "p_ce577e3a83",
+        "p_6d0afe1342",
+        "p_c2812fc549"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "\"Asante Traditional Buildings\" area site size",
+      "k": 5,
       "result_ids": [
         "p_cade420caa",
         "p_6d0afe1342",
         "p_c2812fc549",
         "p_99894dc149",
-        "p_8718bc27b3",
-        "p_9a674506a6",
-        "p_6b9c9a108c",
-        "p_82b4d11add"
+        "p_8718bc27b3"
       ]
     },
     {
       "action": "search",
-      "query": "Gulangyu island area size",
-      "k": 8,
+      "query": "Asante Traditional Buildings UNESCO site area hectares",
+      "k": 5,
       "result_ids": [
-        "p_722ade8839",
-        "p_ac6a9f18cd",
-        "p_fc39ba8ee1",
-        "p_d28a3eaae6",
-        "p_b2984790c0",
-        "p_eec5c44a18",
-        "p_012c3d194d",
-        "p_bf82064f6d"
+        "p_cade420caa",
+        "p_6d0afe1342",
+        "p_c2812fc549",
+        "p_3ce170581b",
+        "p_99894dc149"
       ]
     },
     {
@@ -37,12 +79,17 @@
       "answer": "Gulangyu",
       "citations": [
         {
-          "claim": "Gulangyu is about 2 km² in area",
+          "claim": "Gulangyu island is about 2 km2 in area",
           "passage_id": "p_722ade8839"
+        },
+        {
+          "claim": "Asante Traditional Buildings is a collection of 13 traditionally built buildings",
+          "passage_id": "p_cade420caa"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Gulangyu",
     "gold_answer": "Gulangyu",
@@ -51,13 +98,18 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Gulangyu is about 2 km² in area",
+        "claim": "Gulangyu island is about 2 km2 in area",
         "passage_id": "p_722ade8839",
+        "label": "faithful"
+      },
+      {
+        "claim": "Asante Traditional Buildings is a collection of 13 traditionally built buildings",
+        "passage_id": "p_cade420caa",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 1,
+      "faithful": 2,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -66,6 +118,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

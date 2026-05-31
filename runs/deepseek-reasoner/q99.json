@@ -5,16 +5,11 @@
     {
       "action": "search",
       "query": "Rose McGowan WB supernatural drama series",
-      "k": 8,
+      "k": 3,
       "result_ids": [
         "p_60de919375",
         "p_16436233ea",
-        "p_cc1be8e02e",
-        "p_3045a7ae4a",
-        "p_264bcb74c1",
-        "p_ca3d23a564",
-        "p_4b494fa8d6",
-        "p_bfa54de21d"
+        "p_cc1be8e02e"
       ]
     },
     {
@@ -22,12 +17,13 @@
       "answer": "Charmed",
       "citations": [
         {
-          "claim": "Rose McGowan is best known to television audiences for having played Paige Matthews in The WB supernatural drama series Charmed",
+          "claim": "Rose McGowan is best known for playing Paige Matthews in The WB supernatural drama series Charmed",
           "passage_id": "p_60de919375"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Charmed",
     "gold_answer": "Charmed",
@@ -36,7 +32,7 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Rose McGowan is best known to television audiences for having played Paige Matthews in The WB supernatural drama series Charmed",
+        "claim": "Rose McGowan is best known for playing Paige Matthews in The WB supernatural drama series Charmed",
         "passage_id": "p_60de919375",
         "label": "faithful"
       }
@@ -51,6 +47,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

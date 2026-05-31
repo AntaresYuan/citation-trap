@@ -4,17 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "\"What Are Little Girls Made Of\" Roud Folk Song Index",
-      "k": 8,
+      "query": "Roud Folk Song Index What Are Little Boys Made Of number",
+      "k": 5,
       "result_ids": [
         "p_811d0d8716",
         "p_6722832b9b",
-        "p_704661039f",
-        "p_12c822cc83",
         "p_51a225849d",
-        "p_7f3223b97c",
-        "p_8499da7d59",
-        "p_7080e7f286"
+        "p_12c822cc83",
+        "p_8499da7d59"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Roud Folk Song Index What Are Little Girls Made Of",
+      "k": 5,
+      "result_ids": [
+        "p_811d0d8716",
+        "p_6722832b9b",
+        "p_51a225849d",
+        "p_12c822cc83",
+        "p_704661039f"
       ]
     },
     {
@@ -22,16 +31,13 @@
       "answer": "821",
       "citations": [
         {
-          "claim": "The nursery rhyme inspiring 'What Are Little Girls Made Of?' is 'What Are Little Boys Made Of?'",
-          "passage_id": "p_704661039f"
-        },
-        {
-          "claim": "'What Are Little Boys Made Of?' has a Roud Folk Song Index number of 821",
+          "claim": "The nursery rhyme inspiring What Are Little Girls Made Of is 'What Are Little Boys Made Of?'",
           "passage_id": "p_811d0d8716"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "821",
     "gold_answer": "821",
@@ -40,26 +46,20 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "The nursery rhyme inspiring 'What Are Little Girls Made Of?' is 'What Are Little Boys Made Of?'",
-        "passage_id": "p_704661039f",
-        "label": "faithful"
-      },
-      {
-        "claim": "'What Are Little Boys Made Of?' has a Roud Folk Song Index number of 821",
+        "claim": "The nursery rhyme inspiring What Are Little Girls Made Of is 'What Are Little Boys Made Of?'",
         "passage_id": "p_811d0d8716",
-        "label": "faithful"
+        "label": "misattributed"
       }
     ],
     "citation_counts": {
-      "faithful": 2,
-      "misattributed": 0,
+      "faithful": 0,
+      "misattributed": 1,
       "fabricated": 0,
       "unsupported": 0
     },
-    "faithfulness_score": 1.0,
-    "citation_trustworthy": true,
-    "quadrant": "ideal",
+    "faithfulness_score": 0.0,
+    "citation_trustworthy": false,
+    "quadrant": "correct_but_fabricated",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

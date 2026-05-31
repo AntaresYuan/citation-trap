@@ -4,22 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Gibson cocktail ingredients gin",
-      "k": 3,
+      "query": "Gibson cocktail ingredients",
+      "k": 5,
       "result_ids": [
         "p_de6059d7f8",
-        "p_f85048d669",
-        "p_b35496a93f"
+        "p_97909ca700",
+        "p_cd6b6abb67",
+        "p_d09442c9e5",
+        "p_b437ac8ee7"
       ]
     },
     {
       "action": "search",
-      "query": "Zurracapote cocktail ingredients",
-      "k": 3,
+      "query": "Zurracapote ingredients gin",
+      "k": 5,
       "result_ids": [
+        "p_f85048d669",
         "p_dab99599d3",
-        "p_de6059d7f8",
-        "p_a3ff081662"
+        "p_b35496a93f",
+        "p_4be27812a2",
+        "p_de6059d7f8"
       ]
     },
     {
@@ -31,12 +35,13 @@
           "passage_id": "p_de6059d7f8"
         },
         {
-          "claim": "Zurracapote consists of red wine mixed with fruit, sugar, and cinnamon.",
+          "claim": "Zurracapote consists of red wine mixed with fruit such as peaches and lemons, sugar, and cinnamon.",
           "passage_id": "p_dab99599d3"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "No",
     "gold_answer": "no",
@@ -50,7 +55,7 @@
         "label": "faithful"
       },
       {
-        "claim": "Zurracapote consists of red wine mixed with fruit, sugar, and cinnamon.",
+        "claim": "Zurracapote consists of red wine mixed with fruit such as peaches and lemons, sugar, and cinnamon.",
         "passage_id": "p_dab99599d3",
         "label": "faithful"
       }
@@ -65,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

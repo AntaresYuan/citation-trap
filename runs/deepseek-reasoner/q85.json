@@ -4,17 +4,14 @@
   "steps": [
     {
       "action": "search",
-      "query": "D1NZ oversteering technique",
-      "k": 8,
+      "query": "D1NZ series oversteering technique",
+      "k": 5,
       "result_ids": [
         "p_95aba4b7fd",
         "p_da2e0fcdd4",
-        "p_d2138ee37f",
         "p_6c05485af8",
-        "p_058f3692c5",
-        "p_342a97756e",
-        "p_d68433ddb0",
-        "p_4e8309573e"
+        "p_df9e1a2720",
+        "p_754329e289"
       ]
     },
     {
@@ -24,14 +21,11 @@
         {
           "claim": "D1NZ is a production car drifting series",
           "passage_id": "p_95aba4b7fd"
-        },
-        {
-          "claim": "Drifting is a driving technique where the driver intentionally oversteers",
-          "passage_id": "p_d2138ee37f"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "drifting",
     "gold_answer": "Drifting",
@@ -43,15 +37,10 @@
         "claim": "D1NZ is a production car drifting series",
         "passage_id": "p_95aba4b7fd",
         "label": "faithful"
-      },
-      {
-        "claim": "Drifting is a driving technique where the driver intentionally oversteers",
-        "passage_id": "p_d2138ee37f",
-        "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 2,
+      "faithful": 1,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -60,6 +49,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

@@ -18,8 +18,8 @@
       "k": 3,
       "result_ids": [
         "p_7c27d69035",
-        "p_d68433ddb0",
-        "p_341ba459fe"
+        "p_301244e5d6",
+        "p_fa691c2af1"
       ]
     },
     {
@@ -37,6 +37,7 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Arthur Conan Doyle",
     "gold_answer": "Arthur Ignatius Conan Doyle",
@@ -65,6 +66,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

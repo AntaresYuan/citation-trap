@@ -5,31 +5,41 @@
     {
       "action": "search",
       "query": "Semyon Aranovich Gershgorin number of papers",
-      "k": 8,
+      "k": 3,
       "result_ids": [
         "p_61d2d64eb2",
         "p_0af5bc383d",
-        "p_598e532c1e",
-        "p_a11bd40e60",
-        "p_5fec29ed43",
-        "p_e02f6ed917",
-        "p_ea7ef375ed",
-        "p_f0b214c15e"
+        "p_598e532c1e"
       ]
     },
     {
       "action": "search",
-      "query": "Semyon Aranovich Gershgorin papers published",
-      "k": 8,
+      "query": "Pavel Alexandrov number of papers",
+      "k": 3,
       "result_ids": [
-        "p_61d2d64eb2",
+        "p_f0b214c15e",
+        "p_b84077912b",
+        "p_a6a46397ca"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Semyon Gershgorin published papers count",
+      "k": 3,
+      "result_ids": [
         "p_0af5bc383d",
-        "p_598e532c1e",
-        "p_5fec29ed43",
-        "p_e02f6ed917",
-        "p_a11bd40e60",
-        "p_ea7ef375ed",
-        "p_f0b214c15e"
+        "p_61d2d64eb2",
+        "p_598e532c1e"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Pavel Alexandrov more than 300 papers",
+      "k": 3,
+      "result_ids": [
+        "p_f0b214c15e",
+        "p_b84077912b",
+        "p_a6a46397ca"
       ]
     },
     {
@@ -37,12 +47,13 @@
       "answer": "Pavel Alexandrov",
       "citations": [
         {
-          "claim": "Pavel Alexandrov wrote about three hundred papers",
+          "claim": "wrote about three hundred papers",
           "passage_id": "p_f0b214c15e"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Pavel Alexandrov",
     "gold_answer": "Pavel Sergeyevich Alexandrov",
@@ -51,7 +62,7 @@
     "f1": 0.8,
     "citations": [
       {
-        "claim": "Pavel Alexandrov wrote about three hundred papers",
+        "claim": "wrote about three hundred papers",
         "passage_id": "p_f0b214c15e",
         "label": "faithful"
       }
@@ -66,6 +77,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

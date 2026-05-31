@@ -25,16 +25,17 @@
       "answer": "Yes",
       "citations": [
         {
-          "claim": "Daryl Hall is an American rock, R&B, and soul singer; keyboardist, guitarist, songwriter, and producer.",
+          "claim": "Daryl Hall is a musician",
           "passage_id": "p_225bce32b7"
         },
         {
-          "claim": "Gerry Marsden is an English musician, best known for being leader of the British Merseybeat band Gerry and the Pacemakers.",
+          "claim": "Gerry Marsden is a musician",
           "passage_id": "p_10e677c75c"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Yes",
     "gold_answer": "yes",
@@ -43,12 +44,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Daryl Hall is an American rock, R&B, and soul singer; keyboardist, guitarist, songwriter, and producer.",
+        "claim": "Daryl Hall is a musician",
         "passage_id": "p_225bce32b7",
         "label": "faithful"
       },
       {
-        "claim": "Gerry Marsden is an English musician, best known for being leader of the British Merseybeat band Gerry and the Pacemakers.",
+        "claim": "Gerry Marsden is a musician",
         "passage_id": "p_10e677c75c",
         "label": "faithful"
       }
@@ -63,6 +64,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

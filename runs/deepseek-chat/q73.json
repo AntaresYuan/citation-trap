@@ -4,17 +4,31 @@
   "steps": [
     {
       "action": "search",
-      "query": "Colorado Buffaloes 2-6 conference record 14th season NCAA Division conference",
-      "k": 8,
+      "query": "Colorado Buffaloes 14th season conference 2-6 conference record",
+      "k": 10,
       "result_ids": [
         "p_0169deab28",
         "p_a4e8b7f549",
-        "p_921c7c3967",
         "p_3dd2e01a2b",
+        "p_921c7c3967",
         "p_c1602981d3",
-        "p_a356498474",
         "p_f18a96ddff",
-        "p_4eaabfaca2"
+        "p_2c41cf806d",
+        "p_4eaabfaca2",
+        "p_d88796eb1c",
+        "p_a356498474"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "14th season Big 12 conference NCAA Division I FBS",
+      "k": 5,
+      "result_ids": [
+        "p_a356498474",
+        "p_15ff6077af",
+        "p_370fcb109c",
+        "p_bfadf806ce",
+        "p_afbf453720"
       ]
     },
     {
@@ -22,16 +36,17 @@
       "answer": "2009, Big 12 Conference",
       "citations": [
         {
-          "claim": "The 2009 Big 12 Conference football season was the 14th season for the Big 12",
-          "passage_id": "p_a356498474"
+          "claim": "2009 Colorado Buffaloes football team had a 2-6 record in Big 12 play",
+          "passage_id": "p_0169deab28"
         },
         {
-          "claim": "The 2009 Colorado Buffaloes football team finished with a record of 2–6 in Big 12 play",
-          "passage_id": "p_0169deab28"
+          "claim": "2009 Big 12 Conference football season was the 14th season for the Big 12, as part of the 2009 NCAA Division I FBS football season",
+          "passage_id": "p_a356498474"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "2009, Big 12 Conference",
     "gold_answer": "2009 Big 12 Conference",
@@ -40,13 +55,13 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "The 2009 Big 12 Conference football season was the 14th season for the Big 12",
-        "passage_id": "p_a356498474",
+        "claim": "2009 Colorado Buffaloes football team had a 2-6 record in Big 12 play",
+        "passage_id": "p_0169deab28",
         "label": "faithful"
       },
       {
-        "claim": "The 2009 Colorado Buffaloes football team finished with a record of 2–6 in Big 12 play",
-        "passage_id": "p_0169deab28",
+        "claim": "2009 Big 12 Conference football season was the 14th season for the Big 12, as part of the 2009 NCAA Division I FBS football season",
+        "passage_id": "p_a356498474",
         "label": "faithful"
       }
     ],
@@ -60,6 +75,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

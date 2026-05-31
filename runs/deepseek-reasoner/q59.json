@@ -4,26 +4,14 @@
   "steps": [
     {
       "action": "search",
-      "query": "Ichitaka Seto manga",
-      "k": 5,
-      "result_ids": [
-        "p_1fc6f696bc",
-        "p_600979a126",
-        "p_577a9c6ca8",
-        "p_a47a44ef2f",
-        "p_53be56f09e"
-      ]
-    },
-    {
-      "action": "search",
       "query": "Masakazu Katsura birth year",
       "k": 5,
       "result_ids": [
         "p_2abfbf036f",
         "p_1fc6f696bc",
         "p_ef4edb8843",
-        "p_341ba459fe",
-        "p_0981ca4e18"
+        "p_a4f009e5c9",
+        "p_301244e5d6"
       ]
     },
     {
@@ -31,16 +19,17 @@
       "answer": "1962",
       "citations": [
         {
-          "claim": "The manga series with Ichitaka Seto is I\"s, written and illustrated by Masakazu Katsura.",
+          "claim": "The manga 'I's' with protagonist Ichitaka Seto is written and illustrated by Masakazu Katsura",
           "passage_id": "p_1fc6f696bc"
         },
         {
-          "claim": "Masakazu Katsura was born December 10, 1962.",
+          "claim": "Masakazu Katsura was born on December 10, 1962",
           "passage_id": "p_2abfbf036f"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "1962",
     "gold_answer": "1962",
@@ -49,12 +38,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "The manga series with Ichitaka Seto is I\"s, written and illustrated by Masakazu Katsura.",
+        "claim": "The manga 'I's' with protagonist Ichitaka Seto is written and illustrated by Masakazu Katsura",
         "passage_id": "p_1fc6f696bc",
         "label": "faithful"
       },
       {
-        "claim": "Masakazu Katsura was born December 10, 1962.",
+        "claim": "Masakazu Katsura was born on December 10, 1962",
         "passage_id": "p_2abfbf036f",
         "label": "faithful"
       }
@@ -69,6 +58,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

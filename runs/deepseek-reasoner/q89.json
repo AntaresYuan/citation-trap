@@ -5,31 +5,25 @@
     {
       "action": "search",
       "query": "Kirton End location",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_6e18f62a00",
         "p_111b78a127",
         "p_ae378f4f6d",
-        "p_552cd4eace",
-        "p_48ce6bb8da",
-        "p_6ae4485be3",
-        "p_4e8bd3bc38",
-        "p_17ee57e25c"
+        "p_4d4f0ee655",
+        "p_48ce6bb8da"
       ]
     },
     {
       "action": "search",
       "query": "Boston Lincolnshire 2001 census population",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_5d1c749274",
         "p_48ce6bb8da",
         "p_2c2b71ceba",
         "p_69ef36f40f",
-        "p_ae378f4f6d",
-        "p_fd8539ad58",
-        "p_0dcaf3482c",
-        "p_6e18f62a00"
+        "p_be5c401904"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "35,124",
       "citations": [
         {
-          "claim": "Kirton End is a hamlet in the civil parish of Kirton in the Boston district of Lincolnshire, England",
+          "claim": "Kirton End is in the Boston district of Lincolnshire, whose main town is Boston",
           "passage_id": "p_6e18f62a00"
         },
         {
-          "claim": "Boston town itself had a population of 35,124 at the 2001 census",
+          "claim": "Boston town had a population of 35,124 at the 2001 census",
           "passage_id": "p_5d1c749274"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "35,124",
     "gold_answer": "35,124",
@@ -55,12 +50,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Kirton End is a hamlet in the civil parish of Kirton in the Boston district of Lincolnshire, England",
+        "claim": "Kirton End is in the Boston district of Lincolnshire, whose main town is Boston",
         "passage_id": "p_6e18f62a00",
         "label": "faithful"
       },
       {
-        "claim": "Boston town itself had a population of 35,124 at the 2001 census",
+        "claim": "Boston town had a population of 35,124 at the 2001 census",
         "passage_id": "p_5d1c749274",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

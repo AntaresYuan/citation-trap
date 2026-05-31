@@ -4,43 +4,74 @@
   "steps": [
     {
       "action": "search",
-      "query": "Alain Resnais career length start year",
-      "k": 8,
+      "query": "Alain Resnais career start year",
+      "k": 5,
       "result_ids": [
         "p_d96574d648",
         "p_546f7c2436",
         "p_c20693be11",
         "p_1db0b70c2b",
-        "p_4aeab25594",
-        "p_4dc9acdb6b",
-        "p_0858193d37",
-        "p_c2bec7eaeb"
+        "p_4aeab25594"
       ]
     },
     {
       "action": "search",
-      "query": "Scott Sidney film director career start year",
-      "k": 8,
+      "query": "Scott Sidney career start year film director",
+      "k": 5,
       "result_ids": [
         "p_25f9cb9b82",
-        "p_93fa34e103",
-        "p_afebceb5f2",
+        "p_58905bc828",
+        "p_1f5c178dc0",
+        "p_57f91dbde7",
+        "p_1536afbef7"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Scott Sidney film director first film 1913",
+      "k": 5,
+      "result_ids": [
+        "p_25f9cb9b82",
+        "p_58905bc828",
+        "p_51025ef699",
+        "p_c79cb8e6fe",
+        "p_a556d43dbb"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Scott Sidney birth year 1872 first film 1913",
+      "k": 5,
+      "result_ids": [
+        "p_25f9cb9b82",
+        "p_58905bc828",
+        "p_51025ef699",
+        "p_c79cb8e6fe",
+        "p_1f5c178dc0"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Alain Resnais first short film 1940s career start year",
+      "k": 5,
+      "result_ids": [
         "p_d96574d648",
-        "p_99f5c064e8",
-        "p_6121371d11",
-        "p_0e66fb0f66",
-        "p_e203813626"
+        "p_546f7c2436",
+        "p_c20693be11",
+        "p_c2bec7eaeb",
+        "p_1db0b70c2b"
       ]
     },
     {
       "action": "search",
-      "query": "Scott Sidney birth year 1872 death year 1928",
-      "k": 4,
+      "query": "Scott Sidney last film 1927",
+      "k": 5,
       "result_ids": [
         "p_25f9cb9b82",
-        "p_ef4edb8843",
-        "p_f751dcd719",
-        "p_546f7c2436"
+        "p_58905bc828",
+        "p_4c834be09c",
+        "p_4dfce0d6f5",
+        "p_76d8b6d97c"
       ]
     },
     {
@@ -48,8 +79,12 @@
       "answer": "Alain Resnais",
       "citations": [
         {
-          "claim": "Alain Resnais’s career extended over more than six decades, starting in the mid-1940s and ending in 2014.",
+          "claim": "Alain Resnais' career extended over more than six decades, starting as a film editor in the mid-1940s and ending with his final film in 2014.",
           "passage_id": "p_d96574d648"
+        },
+        {
+          "claim": "Alain Resnais' final feature film was Life of Riley in 2014.",
+          "passage_id": "p_c20693be11"
         },
         {
           "claim": "Scott Sidney directed films between 1913 and 1927.",
@@ -58,6 +93,7 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Alain Resnais",
     "gold_answer": "Scott Sidney",
@@ -66,8 +102,13 @@
     "f1": 0.0,
     "citations": [
       {
-        "claim": "Alain Resnais’s career extended over more than six decades, starting in the mid-1940s and ending in 2014.",
+        "claim": "Alain Resnais' career extended over more than six decades, starting as a film editor in the mid-1940s and ending with his final film in 2014.",
         "passage_id": "p_d96574d648",
+        "label": "faithful"
+      },
+      {
+        "claim": "Alain Resnais' final feature film was Life of Riley in 2014.",
+        "passage_id": "p_c20693be11",
         "label": "faithful"
       },
       {
@@ -77,7 +118,7 @@
       }
     ],
     "citation_counts": {
-      "faithful": 2,
+      "faithful": 3,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -86,6 +127,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

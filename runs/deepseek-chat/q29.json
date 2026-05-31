@@ -4,32 +4,36 @@
   "steps": [
     {
       "action": "search",
-      "query": "Mexican Formula One driver podium Force India born 1990",
-      "k": 8,
+      "query": "Mexican Formula One driver born in 1990 Force India podium",
+      "k": 5,
       "result_ids": [
         "p_eca509fe2f",
         "p_15b7d8b065",
         "p_c48dc10d9b",
         "p_988c7f44d1",
-        "p_47132ec611",
-        "p_2536acd44a",
-        "p_ea5fcab6f4",
-        "p_69d2218f0e"
+        "p_47132ec611"
       ]
     },
     {
       "action": "search",
       "query": "Mexican Formula One driver podium other than Sergio Pérez",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_eca509fe2f",
         "p_15b7d8b065",
         "p_988c7f44d1",
-        "p_47132ec611",
         "p_2536acd44a",
-        "p_ea5fcab6f4",
-        "p_c48dc10d9b",
-        "p_69d2218f0e"
+        "p_47132ec611"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Pedro Rodríguez Formula One podium",
+      "k": 3,
+      "result_ids": [
+        "p_eca509fe2f",
+        "p_2536acd44a",
+        "p_988c7f44d1"
       ]
     },
     {
@@ -37,20 +41,13 @@
       "answer": "Pedro Rodríguez",
       "citations": [
         {
-          "claim": "Pedro Rodríguez is the most successful Mexican driver being the only one to have won a grand prix.",
+          "claim": "Sergio Pérez is the only other Mexican besides Pedro Rodríguez to finish on the podium",
           "passage_id": "p_eca509fe2f"
-        },
-        {
-          "claim": "Sergio Pérez, the only other Mexican to finish on the podium, currently races with Sahara Force India F1 Team.",
-          "passage_id": "p_eca509fe2f"
-        },
-        {
-          "claim": "Sergio Pérez was born 26 January 1990 and drives for Force India.",
-          "passage_id": "p_15b7d8b065"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Pedro Rodríguez",
     "gold_answer": "Pedro Rodríguez",
@@ -59,23 +56,13 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Pedro Rodríguez is the most successful Mexican driver being the only one to have won a grand prix.",
+        "claim": "Sergio Pérez is the only other Mexican besides Pedro Rodríguez to finish on the podium",
         "passage_id": "p_eca509fe2f",
-        "label": "faithful"
-      },
-      {
-        "claim": "Sergio Pérez, the only other Mexican to finish on the podium, currently races with Sahara Force India F1 Team.",
-        "passage_id": "p_eca509fe2f",
-        "label": "faithful"
-      },
-      {
-        "claim": "Sergio Pérez was born 26 January 1990 and drives for Force India.",
-        "passage_id": "p_15b7d8b065",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 3,
+      "faithful": 1,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -84,6 +71,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

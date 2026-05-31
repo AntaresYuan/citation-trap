@@ -5,31 +5,25 @@
     {
       "action": "search",
       "query": "Keith Bostic birth date",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_0808871e8a",
         "p_093d8a36ca",
-        "p_5dea95139a",
-        "p_a81acdb521",
-        "p_341ba459fe",
-        "p_4a8b6fd5f7",
-        "p_b3cdece549",
-        "p_5be2d3bd19"
+        "p_301244e5d6",
+        "p_9904e2f618",
+        "p_fa691c2af1"
       ]
     },
     {
       "action": "search",
       "query": "Jerry Glanville birth date",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_c96d2a4b86",
         "p_e2206d6e2c",
         "p_b9b3f332e4",
-        "p_093d8a36ca",
-        "p_d07d760f38",
-        "p_d0813fd6e4",
-        "p_d6b7fa4b3c",
-        "p_12e7e5555e"
+        "p_301244e5d6",
+        "p_093d8a36ca"
       ]
     },
     {
@@ -47,6 +41,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Keith Bostic",
     "gold_answer": "Keith Bostic",
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

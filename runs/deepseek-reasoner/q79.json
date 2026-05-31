@@ -4,17 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Prince of tenors film based on opera Giacomo Puccini city",
-      "k": 8,
+      "query": "Prince of tenors film based on opera by Giacomo Puccini",
+      "k": 5,
       "result_ids": [
         "p_e21c995941",
-        "p_8da4012255",
-        "p_291b4debed",
         "p_2ae4c5d6f8",
+        "p_f4d46966e3",
+        "p_8da4012255",
+        "p_291b4debed"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "'Prince of tenors' nickname",
+      "k": 5,
+      "result_ids": [
         "p_8a237d026b",
-        "p_ce0a5caf61",
-        "p_98b65e7a5f",
-        "p_aa208081bb"
+        "p_382d386722",
+        "p_c62e94cdd4",
+        "p_2a13896807",
+        "p_a47a44ef2f"
       ]
     },
     {
@@ -22,16 +31,21 @@
       "answer": "Rome",
       "citations": [
         {
-          "claim": "Franco Corelli is dubbed the 'Prince of tenors'",
+          "claim": "The 'Prince of tenors' is Franco Corelli.",
           "passage_id": "p_8a237d026b"
         },
         {
-          "claim": "Franco Corelli starred in the 1956 film 'Tosca' based on Puccini's opera, made at Cinecittà in Rome",
+          "claim": "Franco Corelli starred in the 1956 film 'Tosca' based on Puccini's opera.",
+          "passage_id": "p_2ae4c5d6f8"
+        },
+        {
+          "claim": "The film was made at Cinecittà in Rome.",
           "passage_id": "p_2ae4c5d6f8"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Rome",
     "gold_answer": "Rome",
@@ -40,18 +54,23 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Franco Corelli is dubbed the 'Prince of tenors'",
+        "claim": "The 'Prince of tenors' is Franco Corelli.",
         "passage_id": "p_8a237d026b",
         "label": "faithful"
       },
       {
-        "claim": "Franco Corelli starred in the 1956 film 'Tosca' based on Puccini's opera, made at Cinecittà in Rome",
+        "claim": "Franco Corelli starred in the 1956 film 'Tosca' based on Puccini's opera.",
+        "passage_id": "p_2ae4c5d6f8",
+        "label": "faithful"
+      },
+      {
+        "claim": "The film was made at Cinecittà in Rome.",
         "passage_id": "p_2ae4c5d6f8",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 2,
+      "faithful": 3,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -60,6 +79,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

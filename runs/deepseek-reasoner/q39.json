@@ -5,31 +5,11 @@
     {
       "action": "search",
       "query": "Virginia Commonwealth University founded year",
-      "k": 8,
+      "k": 3,
       "result_ids": [
         "p_b608ad3c0a",
         "p_d8343c5527",
-        "p_906e4fd62d",
-        "p_6a6465472f",
-        "p_1e163f6c09",
-        "p_24c151ac68",
-        "p_297fde5c28",
-        "p_436eeab31d"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "Virginia Commonwealth University founding year 1838 or 1968",
-      "k": 8,
-      "result_ids": [
-        "p_b608ad3c0a",
-        "p_d8343c5527",
-        "p_906e4fd62d",
-        "p_6a6465472f",
-        "p_1e163f6c09",
-        "p_24c151ac68",
-        "p_297fde5c28",
-        "p_436eeab31d"
+        "p_906e4fd62d"
       ]
     },
     {
@@ -37,12 +17,13 @@
       "answer": "1838",
       "citations": [
         {
-          "claim": "VCU was founded in 1838",
+          "claim": "Virginia Commonwealth University was founded in 1838",
           "passage_id": "p_b608ad3c0a"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "1838",
     "gold_answer": "1838",
@@ -51,7 +32,7 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "VCU was founded in 1838",
+        "claim": "Virginia Commonwealth University was founded in 1838",
         "passage_id": "p_b608ad3c0a",
         "label": "faithful"
       }
@@ -66,6 +47,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

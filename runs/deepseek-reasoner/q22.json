@@ -5,31 +5,25 @@
     {
       "action": "search",
       "query": "Elko Regional Airport location",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_2f000490be",
+        "p_409686ce7f",
         "p_764157a276",
         "p_e24be8584a",
-        "p_59cc69d1dd",
-        "p_128a860aa0",
-        "p_627ea6063d",
-        "p_6d2810666d",
-        "p_bd9438617a"
+        "p_59cc69d1dd"
       ]
     },
     {
       "action": "search",
       "query": "Gerald R. Ford International Airport location",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_8ff928c241",
         "p_9001a94050",
         "p_6c1a42baf9",
         "p_0d13d12124",
-        "p_764157a276",
-        "p_59cc69d1dd",
-        "p_128a860aa0",
-        "p_6d2810666d"
+        "p_409686ce7f"
       ]
     },
     {
@@ -47,6 +41,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "No",
     "gold_answer": "no",
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

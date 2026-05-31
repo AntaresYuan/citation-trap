@@ -4,32 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Euromarché bought 1991",
-      "k": 8,
+      "query": "Euromarché bought 1991 chain",
+      "k": 5,
       "result_ids": [
         "p_555a3035db",
-        "p_fd087714b0",
         "p_b35f2c58d5",
-        "p_634d632bd7",
-        "p_18fc62388f",
-        "p_a956617594",
-        "p_ead9126218",
+        "p_fd087714b0",
+        "p_502421f9fe",
         "p_a20dd2f007"
       ]
     },
     {
       "action": "search",
-      "query": "Carrefour number of hypermarkets 2016",
-      "k": 8,
+      "query": "Carrefour hypermarkets 2016 number",
+      "k": 5,
       "result_ids": [
         "p_8cbb13b8b1",
-        "p_ccc3a4683c",
-        "p_c6858d51ea",
-        "p_0aa8f3ed7e",
         "p_555a3035db",
-        "p_5b2a1e76af",
-        "p_a487038f4d",
-        "p_2519668ea9"
+        "p_09bcd2c2db",
+        "p_ccc3a4683c",
+        "p_c6858d51ea"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "1,462",
       "citations": [
         {
-          "claim": "Euromarché was bought by Carrefour in June 1991",
+          "claim": "Euromarché was bought by Carrefour in 1991",
           "passage_id": "p_555a3035db"
         },
         {
-          "claim": "Carrefour had 1,462 hypermarkets at the end of 2016",
+          "claim": "Carrefour operated 1,462 hypermarkets at the end of 2016",
           "passage_id": "p_8cbb13b8b1"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "1,462",
     "gold_answer": "1,462",
@@ -55,12 +50,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Euromarché was bought by Carrefour in June 1991",
+        "claim": "Euromarché was bought by Carrefour in 1991",
         "passage_id": "p_555a3035db",
         "label": "faithful"
       },
       {
-        "claim": "Carrefour had 1,462 hypermarkets at the end of 2016",
+        "claim": "Carrefour operated 1,462 hypermarkets at the end of 2016",
         "passage_id": "p_8cbb13b8b1",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

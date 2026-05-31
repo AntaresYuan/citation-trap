@@ -4,40 +4,46 @@
   "steps": [
     {
       "action": "search",
-      "query": "Teide National Park Garajonay National Park location",
-      "k": 8,
+      "query": "Teide National Park location",
+      "k": 3,
       "result_ids": [
         "p_92ec1e4650",
+        "p_515fe0f49d",
+        "p_fc39ba8ee1"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Garajonay National Park location",
+      "k": 3,
+      "result_ids": [
         "p_ac6a9f18cd",
-        "p_54183ff4bc",
-        "p_942ef180f4",
-        "p_44c454b748",
-        "p_d5bf6955df",
-        "p_fc39ba8ee1",
-        "p_ebe621dca7"
+        "p_5add87a06f",
+        "p_515fe0f49d"
       ]
     },
     {
       "action": "submit",
-      "answer": "The Canary Islands, Spain",
+      "answer": "Canary Islands, Spain. Specifically, Teide National Park is in Tenerife, and Garajonay National Park is in La Gomera.",
       "citations": [
         {
           "claim": "Teide National Park is located in Tenerife (Canary Islands, Spain)",
           "passage_id": "p_92ec1e4650"
         },
         {
-          "claim": "Garajonay National Park is located on La Gomera, one of the Canary Islands (Spain)",
+          "claim": "Garajonay National Park is located on the island of La Gomera, one of the Canary Islands (Spain)",
           "passage_id": "p_ac6a9f18cd"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "The Canary Islands, Spain",
+    "answer": "Canary Islands, Spain. Specifically, Teide National Park is in Tenerife, and Garajonay National Park is in La Gomera.",
     "gold_answer": "Canary Islands, Spain",
     "answer_correct": true,
-    "em": 1,
-    "f1": 1.0,
+    "em": 0,
+    "f1": 0.2857,
     "citations": [
       {
         "claim": "Teide National Park is located in Tenerife (Canary Islands, Spain)",
@@ -45,7 +51,7 @@
         "label": "faithful"
       },
       {
-        "claim": "Garajonay National Park is located on La Gomera, one of the Canary Islands (Spain)",
+        "claim": "Garajonay National Park is located on the island of La Gomera, one of the Canary Islands (Spain)",
         "passage_id": "p_ac6a9f18cd",
         "label": "faithful"
       }
@@ -60,6 +66,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

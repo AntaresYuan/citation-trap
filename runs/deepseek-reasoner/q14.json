@@ -4,101 +4,123 @@
   "steps": [
     {
       "action": "search",
-      "query": "Badly Drawn Boy band members instruments number of musicians",
-      "k": 8,
+      "query": "Badly Drawn Boy performance band members instruments",
+      "k": 5,
       "result_ids": [
         "p_a61a293c7b",
-        "p_f7cc14bf33",
-        "p_703f7dc34d",
         "p_e9406cf54f",
+        "p_f7cc14bf33",
         "p_b76bbbd4be",
-        "p_8228ce3c06",
-        "p_d53169993e",
         "p_b2c8ce021f"
       ]
     },
     {
       "action": "search",
-      "query": "Wolf Alice band members instruments live performance number of musicians",
-      "k": 8,
+      "query": "Wolf Alice band members instruments performance",
+      "k": 5,
       "result_ids": [
         "p_7f29895e67",
-        "p_48759cddb7",
         "p_f03266ee23",
-        "p_83583e810c",
-        "p_2353c2dea1",
-        "p_d85dd95c0c",
-        "p_a61a293c7b",
-        "p_581be00144"
+        "p_48759cddb7",
+        "p_e36a900ac7",
+        "p_6a5818e51d"
       ]
     },
     {
       "action": "search",
-      "query": "Badly Drawn Boy multi-instrumentalist live performance band",
-      "k": 8,
+      "query": "Badly Drawn Boy live performance band members instruments",
+      "k": 5,
+      "result_ids": [
+        "p_a61a293c7b",
+        "p_e9406cf54f",
+        "p_f7cc14bf33",
+        "p_b76bbbd4be",
+        "p_b2c8ce021f"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Badly Drawn Boy live band members",
+      "k": 5,
       "result_ids": [
         "p_e9406cf54f",
         "p_f7cc14bf33",
         "p_b76bbbd4be",
-        "p_b2c8ce021f",
-        "p_703f7dc34d",
-        "p_d53169993e",
         "p_a61a293c7b",
+        "p_703f7dc34d"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Badly Drawn Boy live performance one man band instruments",
+      "k": 5,
+      "result_ids": [
+        "p_e9406cf54f",
+        "p_a61a293c7b",
+        "p_f7cc14bf33",
+        "p_b76bbbd4be",
+        "p_b2c8ce021f"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Badly Drawn Boy touring band members",
+      "k": 5,
+      "result_ids": [
+        "p_e9406cf54f",
+        "p_f7cc14bf33",
+        "p_b76bbbd4be",
+        "p_a61a293c7b",
+        "p_703f7dc34d"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Badly Drawn Boy live solo or band",
+      "k": 5,
+      "result_ids": [
+        "p_e9406cf54f",
+        "p_f7cc14bf33",
+        "p_b76bbbd4be",
+        "p_703f7dc34d",
         "p_8228ce3c06"
       ]
     },
     {
-      "action": "submit",
-      "answer": "Badly Drawn Boy",
-      "citations": [
-        {
-          "claim": "Damon Gough is a multi-instrumentalist and played several instruments on his album",
-          "passage_id": "p_e9406cf54f"
-        },
-        {
-          "claim": "Damon Gough played several instruments on The Hour of Bewilderbeast",
-          "passage_id": "p_a61a293c7b"
-        },
-        {
-          "claim": "Wolf Alice is a four-piece band with each member playing one primary instrument",
-          "passage_id": "p_7f29895e67"
-        }
+      "action": "search",
+      "query": "Badly Drawn Boy live multi-instrumentalist instruments played",
+      "k": 5,
+      "result_ids": [
+        "p_e9406cf54f",
+        "p_a61a293c7b",
+        "p_f7cc14bf33",
+        "p_b76bbbd4be",
+        "p_703f7dc34d"
       ]
+    },
+    {
+      "action": "submit",
+      "answer": "",
+      "citations": []
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
-    "answer": "Badly Drawn Boy",
+    "answer": "",
     "gold_answer": "Badly Drawn Boy",
-    "answer_correct": true,
-    "em": 1,
-    "f1": 1.0,
-    "citations": [
-      {
-        "claim": "Damon Gough is a multi-instrumentalist and played several instruments on his album",
-        "passage_id": "p_e9406cf54f",
-        "label": "faithful"
-      },
-      {
-        "claim": "Damon Gough played several instruments on The Hour of Bewilderbeast",
-        "passage_id": "p_a61a293c7b",
-        "label": "faithful"
-      },
-      {
-        "claim": "Wolf Alice is a four-piece band with each member playing one primary instrument",
-        "passage_id": "p_7f29895e67",
-        "label": "faithful"
-      }
-    ],
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [],
     "citation_counts": {
-      "faithful": 3,
+      "faithful": 0,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
     },
-    "faithfulness_score": 1.0,
-    "citation_trustworthy": true,
-    "quadrant": "ideal",
+    "faithfulness_score": 0.0,
+    "citation_trustworthy": false,
+    "quadrant": "worst",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

@@ -4,32 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Roger O. Egeberg Assistant Secretary for Health and Scientific Affairs president administration",
-      "k": 8,
+      "query": "Roger O. Egeberg Assistant Secretary for Health and Scientific Affairs administration president",
+      "k": 5,
       "result_ids": [
         "p_f5faaa0c35",
         "p_a94825b3c8",
         "p_f19449cce1",
         "p_2365e34270",
-        "p_d3ad5b2f52",
-        "p_01d2705894",
-        "p_920f42643a",
-        "p_90fb6699ed"
+        "p_d3ad5b2f52"
       ]
     },
     {
       "action": "search",
-      "query": "Nixon administration years served as president",
-      "k": 8,
+      "query": "Nixon administration years president served",
+      "k": 5,
       "result_ids": [
         "p_a37b021a5e",
         "p_6485b51f8d",
         "p_f19449cce1",
-        "p_012faa2799",
-        "p_8e76d2f99a",
-        "p_b998a011ed",
-        "p_f29367f04d",
-        "p_920f42643a"
+        "p_2b490b8628",
+        "p_82301096ab"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "1969–1974",
       "citations": [
         {
-          "claim": "Roger O. Egeberg served as Assistant Secretary for Health and Scientific Affairs during the Nixon administration",
+          "claim": "Roger O. Egeberg was Assistant Secretary for Health and Scientific Affairs during the Nixon administration",
           "passage_id": "p_f5faaa0c35"
         },
         {
-          "claim": "Nixon was President from 1969 until 1974",
+          "claim": "Richard Nixon was President from 1969 until 1974",
           "passage_id": "p_a37b021a5e"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "1969–1974",
     "gold_answer": "1969 until 1974",
@@ -55,12 +50,12 @@
     "f1": 0.0,
     "citations": [
       {
-        "claim": "Roger O. Egeberg served as Assistant Secretary for Health and Scientific Affairs during the Nixon administration",
+        "claim": "Roger O. Egeberg was Assistant Secretary for Health and Scientific Affairs during the Nixon administration",
         "passage_id": "p_f5faaa0c35",
         "label": "faithful"
       },
       {
-        "claim": "Nixon was President from 1969 until 1974",
+        "claim": "Richard Nixon was President from 1969 until 1974",
         "passage_id": "p_a37b021a5e",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

@@ -5,31 +5,25 @@
     {
       "action": "search",
       "query": "David Yates occupation",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_2a0c9bb697",
-        "p_5623036024",
-        "p_e468273cb6",
-        "p_200a2b118e",
-        "p_98bfa9a41d",
-        "p_e8d00662d8",
-        "p_8df3c577de",
-        "p_7a05b21c92"
+        "p_fe27758b01",
+        "p_93a3fb7e03",
+        "p_0677c56052",
+        "p_9794fb46e7"
       ]
     },
     {
       "action": "search",
       "query": "Pietro Germi occupation",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_e40bc11a5b",
         "p_8bec75014b",
         "p_c9eae83360",
         "p_a60c232e99",
-        "p_83e0c97978",
-        "p_b66f2190ea",
-        "p_e203813626",
-        "p_215f6dde1b"
+        "p_83e0c97978"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "director",
       "citations": [
         {
-          "claim": "David Yates is a filmmaker who has directed feature films, short films, and television productions.",
+          "claim": "David Yates is an English filmmaker who has directed feature films",
           "passage_id": "p_2a0c9bb697"
         },
         {
-          "claim": "Pietro Germi was an Italian actor, screenwriter, and director.",
+          "claim": "Pietro Germi was an Italian actor, screenwriter, and director",
           "passage_id": "p_e40bc11a5b"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "director",
     "gold_answer": "director",
@@ -55,12 +50,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "David Yates is a filmmaker who has directed feature films, short films, and television productions.",
+        "claim": "David Yates is an English filmmaker who has directed feature films",
         "passage_id": "p_2a0c9bb697",
         "label": "faithful"
       },
       {
-        "claim": "Pietro Germi was an Italian actor, screenwriter, and director.",
+        "claim": "Pietro Germi was an Italian actor, screenwriter, and director",
         "passage_id": "p_e40bc11a5b",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

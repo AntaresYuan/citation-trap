@@ -4,44 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Alfred Balk Committee on the Employment of Minority Groups in the News Media secretary Vice President",
-      "k": 8,
-      "result_ids": [
-        "p_9c25839f17",
-        "p_d2b89b81d1",
-        "p_a24dd3bd04",
-        "p_b998a011ed",
-        "p_8e76d2f99a",
-        "p_6485b51f8d",
-        "p_0bbc47b089",
-        "p_a94825b3c8"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "Nelson Rockefeller Committee on the Employment of Minority Groups in the News Media",
-      "k": 8,
-      "result_ids": [
-        "p_9c25839f17",
-        "p_90fb6699ed",
-        "p_d2b89b81d1",
-        "p_a47a44ef2f",
-        "p_a24dd3bd04",
-        "p_6cb0aab098",
-        "p_36b31e6822",
-        "p_0729b822d8"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "Nelson Rockefeller Vice President United States",
+      "query": "Alfred Balk secretary Committee on the Employment of Minority Groups in the News Media vice president",
       "k": 5,
       "result_ids": [
-        "p_90fb6699ed",
-        "p_0bbc47b089",
+        "p_9c25839f17",
+        "p_d2b89b81d1",
+        "p_a24dd3bd04",
         "p_b998a011ed",
-        "p_6485b51f8d",
-        "p_a37b021a5e"
+        "p_d6fd20f19d"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Nelson Rockefeller vice president Alfred Balk secretary Committee Employment Minority Groups News Media",
+      "k": 5,
+      "result_ids": [
+        "p_9c25839f17",
+        "p_90fb6699ed",
+        "p_d2b89b81d1",
+        "p_a24dd3bd04",
+        "p_b998a011ed"
       ]
     },
     {
@@ -59,6 +41,7 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Nelson Rockefeller",
     "gold_answer": "Nelson Rockefeller",
@@ -87,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

@@ -4,48 +4,56 @@
   "steps": [
     {
       "action": "search",
-      "query": "Lewiston Maineiacs home arena capacity",
-      "k": 8,
+      "query": "Lewiston Maineiacs home arena seating capacity",
+      "k": 5,
       "result_ids": [
         "p_442ad9d966",
         "p_17ee57e25c",
-        "p_ff0f241577",
         "p_9288b10480",
-        "p_296ba1badb",
-        "p_a31dc81687",
-        "p_e00f895123",
-        "p_9aa8d31dbe"
+        "p_ff0f241577",
+        "p_296ba1badb"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Androscoggin Bank Colisée seating capacity",
+      "k": 3,
+      "result_ids": [
+        "p_17ee57e25c",
+        "p_442ad9d966",
+        "p_1cf6a921fc"
       ]
     },
     {
       "action": "submit",
-      "answer": "3,677 seated (4,000 capacity total)",
+      "answer": "3,677 seated (4,000 total)",
       "citations": [
         {
-          "claim": "The arena where the Lewiston Maineiacs played their home games is the Androscoggin Bank Colisée.",
+          "claim": "The Lewiston Maineiacs played their home games at the Androscoggin Bank Colisée.",
           "passage_id": "p_442ad9d966"
         },
         {
-          "claim": "The Androscoggin Bank Colisée is a 4,000 capacity (3,677 seated) multi-purpose arena.",
+          "claim": "The Androscoggin Bank Colisée has a capacity of 4,000 (3,677 seated).",
           "passage_id": "p_17ee57e25c"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "3,677 seated (4,000 capacity total)",
+    "answer": "3,677 seated (4,000 total)",
     "gold_answer": "3,677 seated",
     "answer_correct": true,
     "em": 0,
-    "f1": 0.5714,
+    "f1": 0.6667,
     "citations": [
       {
-        "claim": "The arena where the Lewiston Maineiacs played their home games is the Androscoggin Bank Colisée.",
+        "claim": "The Lewiston Maineiacs played their home games at the Androscoggin Bank Colisée.",
         "passage_id": "p_442ad9d966",
         "label": "faithful"
       },
       {
-        "claim": "The Androscoggin Bank Colisée is a 4,000 capacity (3,677 seated) multi-purpose arena.",
+        "claim": "The Androscoggin Bank Colisée has a capacity of 4,000 (3,677 seated).",
         "passage_id": "p_17ee57e25c",
         "label": "faithful"
       }
@@ -60,6 +68,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

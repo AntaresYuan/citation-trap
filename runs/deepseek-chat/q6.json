@@ -4,32 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Local H band origin United States",
-      "k": 8,
+      "query": "Local H band origin country",
+      "k": 5,
       "result_ids": [
         "p_e6a07c0541",
-        "p_0f112c3a2e",
         "p_34fd253d93",
+        "p_0f112c3a2e",
         "p_a4ef41c611",
-        "p_8301509eae",
-        "p_c2b5bb4efe",
-        "p_03e47d849a",
-        "p_5437551400"
+        "p_de2dc78698"
       ]
     },
     {
       "action": "search",
-      "query": "For Against band origin United States",
-      "k": 8,
+      "query": "For Against band origin country United States",
+      "k": 5,
       "result_ids": [
         "p_b932cee843",
-        "p_d2b89b81d1",
-        "p_34fd253d93",
-        "p_9b60539de2",
-        "p_0f112c3a2e",
-        "p_821d9ee7a8",
-        "p_92255b5ed8",
-        "p_c7cf1a6c94"
+        "p_19e3f1d52b",
+        "p_e54c1f22b5",
+        "p_0385c03e07",
+        "p_13d887594d"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "Yes",
       "citations": [
         {
-          "claim": "Local H is an American rock band from Zion, Illinois, United States.",
+          "claim": "Local H is an American rock band",
           "passage_id": "p_e6a07c0541"
         },
         {
-          "claim": "For Against is a United States post-punk/dream pop band from Lincoln, Nebraska.",
+          "claim": "For Against is a United States band",
           "passage_id": "p_b932cee843"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Yes",
     "gold_answer": "yes",
@@ -55,12 +50,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Local H is an American rock band from Zion, Illinois, United States.",
+        "claim": "Local H is an American rock band",
         "passage_id": "p_e6a07c0541",
         "label": "faithful"
       },
       {
-        "claim": "For Against is a United States post-punk/dream pop band from Lincoln, Nebraska.",
+        "claim": "For Against is a United States band",
         "passage_id": "p_b932cee843",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

@@ -4,63 +4,58 @@
   "steps": [
     {
       "action": "search",
-      "query": "Alexander Kerensky defeated by Bolsheviks civil war ended when",
-      "k": 8,
+      "query": "Russian Civil War end date Bolsheviks defeat Alexander Kerensky",
+      "k": 5,
       "result_ids": [
-        "p_a85faccd63",
-        "p_0ba2f35758",
-        "p_e670cbcc91",
         "p_0b091d84ae",
-        "p_51bf59e4d3",
-        "p_2da8870c3c",
-        "p_0f8e01de83",
-        "p_75974d8c85"
+        "p_a85faccd63",
+        "p_e670cbcc91",
+        "p_0ba2f35758",
+        "p_ef5f300880"
       ]
     },
     {
       "action": "search",
-      "query": "Russian Civil War ended in what year",
-      "k": 8,
+      "query": "Russian Civil War end date",
+      "k": 5,
       "result_ids": [
-        "p_2da8870c3c",
         "p_ef5f300880",
-        "p_78fd51c060",
+        "p_2da8870c3c",
         "p_0b091d84ae",
-        "p_0ba2f35758",
         "p_51bf59e4d3",
-        "p_0f8e01de83",
-        "p_a9275b9232"
+        "p_0f8e01de83"
       ]
     },
     {
       "action": "submit",
-      "answer": "1923",
+      "answer": "1922 (or 1923 for final pacification)",
       "citations": [
         {
-          "claim": "The Russian Civil War ended in 1923",
+          "claim": "The Russian Civil War lasted from November 1917 to October 1922",
           "passage_id": "p_2da8870c3c"
         },
         {
-          "claim": "The anti-Bolshevik faction of the Socialist Revolutionary Party loyal to Alexander Kerensky was defeated and destroyed by the Bolsheviks in the course of the Russian Civil War",
+          "claim": "Kerensky's faction was defeated and destroyed by the Bolsheviks in the course of the Russian Civil War",
           "passage_id": "p_0ba2f35758"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "1923",
+    "answer": "1922 (or 1923 for final pacification)",
     "gold_answer": "October 1922",
     "answer_correct": false,
     "em": 0,
-    "f1": 0.0,
+    "f1": 0.25,
     "citations": [
       {
-        "claim": "The Russian Civil War ended in 1923",
+        "claim": "The Russian Civil War lasted from November 1917 to October 1922",
         "passage_id": "p_2da8870c3c",
         "label": "faithful"
       },
       {
-        "claim": "The anti-Bolshevik faction of the Socialist Revolutionary Party loyal to Alexander Kerensky was defeated and destroyed by the Bolsheviks in the course of the Russian Civil War",
+        "claim": "Kerensky's faction was defeated and destroyed by the Bolsheviks in the course of the Russian Civil War",
         "passage_id": "p_0ba2f35758",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

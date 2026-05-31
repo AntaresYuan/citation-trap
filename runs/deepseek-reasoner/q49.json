@@ -4,17 +4,38 @@
   "steps": [
     {
       "action": "search",
-      "query": "Russian Civil War end date",
-      "k": 8,
+      "query": "Alexander Kerensky defeated Bolsheviks civil war ended",
+      "k": 5,
       "result_ids": [
-        "p_ef5f300880",
-        "p_2da8870c3c",
-        "p_0b091d84ae",
-        "p_51bf59e4d3",
-        "p_0f8e01de83",
+        "p_a85faccd63",
         "p_0ba2f35758",
-        "p_6e18f62a00",
-        "p_78fd51c060"
+        "p_0b091d84ae",
+        "p_e670cbcc91",
+        "p_51bf59e4d3"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Russian Civil War ended when",
+      "k": 5,
+      "result_ids": [
+        "p_2da8870c3c",
+        "p_ef5f300880",
+        "p_0b091d84ae",
+        "p_78fd51c060",
+        "p_51bf59e4d3"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Russian Civil War end date October 1922",
+      "k": 5,
+      "result_ids": [
+        "p_2da8870c3c",
+        "p_78fd51c060",
+        "p_ef5f300880",
+        "p_0f8e01de83",
+        "p_51bf59e4d3"
       ]
     },
     {
@@ -22,12 +43,17 @@
       "answer": "October 1922",
       "citations": [
         {
+          "claim": "Alexander Kerensky was defeated and destroyed by the Bolsheviks in the course of the Russian Civil War",
+          "passage_id": "p_0ba2f35758"
+        },
+        {
           "claim": "The Russian Civil War ended in October 1922",
           "passage_id": "p_2da8870c3c"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "October 1922",
     "gold_answer": "October 1922",
@@ -36,13 +62,18 @@
     "f1": 1.0,
     "citations": [
       {
+        "claim": "Alexander Kerensky was defeated and destroyed by the Bolsheviks in the course of the Russian Civil War",
+        "passage_id": "p_0ba2f35758",
+        "label": "faithful"
+      },
+      {
         "claim": "The Russian Civil War ended in October 1922",
         "passage_id": "p_2da8870c3c",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 1,
+      "faithful": 2,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -51,6 +82,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

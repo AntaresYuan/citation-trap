@@ -4,22 +4,43 @@
   "steps": [
     {
       "action": "search",
-      "query": "David Yates occupation Pietro Germi occupation",
-      "k": 8,
+      "query": "David Yates occupation",
+      "k": 5,
       "result_ids": [
         "p_2a0c9bb697",
+        "p_fe27758b01",
+        "p_93a3fb7e03",
+        "p_0677c56052",
+        "p_9794fb46e7"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Pietro Germi occupation",
+      "k": 5,
+      "result_ids": [
         "p_e40bc11a5b",
         "p_8bec75014b",
         "p_c9eae83360",
-        "p_e468273cb6",
         "p_a60c232e99",
-        "p_83e0c97978",
-        "p_b66f2190ea"
+        "p_83e0c97978"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "David Yates English filmmaker",
+      "k": 5,
+      "result_ids": [
+        "p_2a0c9bb697",
+        "p_b6a4b65f3e",
+        "p_c8e1bd859a",
+        "p_3c8387b71b",
+        "p_c21444d1cb"
       ]
     },
     {
       "action": "submit",
-      "answer": "Filmmaker",
+      "answer": "filmmaker",
       "citations": [
         {
           "claim": "David Yates is an English filmmaker",
@@ -32,8 +53,9 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "Filmmaker",
+    "answer": "filmmaker",
     "gold_answer": "director",
     "answer_correct": false,
     "em": 0,
@@ -60,6 +82,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

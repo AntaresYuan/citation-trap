@@ -19,16 +19,17 @@
       "answer": "Henry J. Kaiser",
       "citations": [
         {
-          "claim": "Henry John Kaiser was an American industrialist who became known as the father of modern American shipbuilding",
+          "claim": "Henry J. Kaiser became known as the father of modern American shipbuilding",
           "passage_id": "p_fbb22ba096"
         },
         {
-          "claim": "Kaiser Ventures was founded by Henry J. Kaiser",
+          "claim": "Kaiser Ventures corporation was founded by Henry J. Kaiser",
           "passage_id": "p_1947113154"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Henry J. Kaiser",
     "gold_answer": "Henry J. Kaiser",
@@ -37,12 +38,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Henry John Kaiser was an American industrialist who became known as the father of modern American shipbuilding",
+        "claim": "Henry J. Kaiser became known as the father of modern American shipbuilding",
         "passage_id": "p_fbb22ba096",
         "label": "faithful"
       },
       {
-        "claim": "Kaiser Ventures was founded by Henry J. Kaiser",
+        "claim": "Kaiser Ventures corporation was founded by Henry J. Kaiser",
         "passage_id": "p_1947113154",
         "label": "faithful"
       }
@@ -57,6 +58,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

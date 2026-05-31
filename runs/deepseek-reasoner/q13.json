@@ -5,31 +5,25 @@
     {
       "action": "search",
       "query": "Annie Morton birth date",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_86d4257cec",
+        "p_301244e5d6",
         "p_96e15c90f2",
-        "p_6fefe478f0",
-        "p_341ba459fe",
-        "p_4a8b6fd5f7",
-        "p_b3cdece549",
-        "p_5be2d3bd19",
-        "p_82efb0e4d2"
+        "p_b18a9e6420",
+        "p_6fefe478f0"
       ]
     },
     {
       "action": "search",
       "query": "Terry Richardson birth date",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_4e710aa863",
         "p_70fc4d433d",
         "p_4f0a90bf27",
-        "p_2cb18bddfd",
-        "p_86d4257cec",
-        "p_2c5e236434",
-        "p_8ee2e87301",
-        "p_110dc5864f"
+        "p_301244e5d6",
+        "p_2cb18bddfd"
       ]
     },
     {
@@ -47,6 +41,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Terry Richardson",
     "gold_answer": "Terry Richardson",
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

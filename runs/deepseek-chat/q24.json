@@ -4,17 +4,14 @@
   "steps": [
     {
       "action": "search",
-      "query": "dog ancestors include Gordon and Irish Setters Manchester Terrier Scotch Collie",
-      "k": 8,
+      "query": "dog ancestors Gordon Setter Irish Setter Manchester Terrier Scotch Collie",
+      "k": 5,
       "result_ids": [
         "p_e468273cb6",
         "p_039e0c3e6d",
-        "p_a90951dbab",
         "p_57b1dfeccb",
-        "p_58b83afc97",
-        "p_d140591b92",
-        "p_282236ec4a",
-        "p_afaa06cf60"
+        "p_a90951dbab",
+        "p_d140591b92"
       ]
     },
     {
@@ -28,6 +25,7 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Scotch Collie",
     "gold_answer": "Scotch Collie",
@@ -51,6 +49,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

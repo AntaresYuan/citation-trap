@@ -5,31 +5,25 @@
     {
       "action": "search",
       "query": "Chris Menges occupation",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_e1cac0c796",
         "p_5dea95139a",
         "p_ead9126218",
         "p_8bcb1e36f1",
-        "p_166e49bf04",
-        "p_0981ca4e18",
-        "p_0858193d37",
-        "p_e468273cb6"
+        "p_166e49bf04"
       ]
     },
     {
       "action": "search",
       "query": "Aram Avakian occupation",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_2fae067fac",
         "p_4e8bd3bc38",
         "p_57d5985229",
         "p_54cd3f7692",
-        "p_e468273cb6",
-        "p_7a05b21c92",
-        "p_a2e3502ecf",
-        "p_058f3692c5"
+        "p_fe27758b01"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "film director",
       "citations": [
         {
-          "claim": "Chris Menges is an English cinematographer and film director",
+          "claim": "Chris Menges is a film director",
           "passage_id": "p_e1cac0c796"
         },
         {
-          "claim": "Aram Avakian was an Armenian-American film editor and director",
+          "claim": "Aram Avakian is a film director",
           "passage_id": "p_2fae067fac"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "film director",
     "gold_answer": "director",
@@ -55,12 +50,12 @@
     "f1": 0.6667,
     "citations": [
       {
-        "claim": "Chris Menges is an English cinematographer and film director",
+        "claim": "Chris Menges is a film director",
         "passage_id": "p_e1cac0c796",
         "label": "faithful"
       },
       {
-        "claim": "Aram Avakian was an Armenian-American film editor and director",
+        "claim": "Aram Avakian is a film director",
         "passage_id": "p_2fae067fac",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

@@ -5,16 +5,25 @@
     {
       "action": "search",
       "query": "Chrysalis magazine women's magazine",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_ebcb47549e",
-        "p_84f0f7c091",
+        "p_cf2deb542f",
+        "p_1cf793f051",
+        "p_da963c74de",
+        "p_84f0f7c091"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Look magazine women's magazine",
+      "k": 5,
+      "result_ids": [
         "p_dc396a1f76",
-        "p_0519a0bbf7",
-        "p_177797d6b4",
-        "p_3ba378eb43",
+        "p_cf2deb542f",
+        "p_1cf793f051",
         "p_b219a318e2",
-        "p_f6e8fa10a1"
+        "p_da963c74de"
       ]
     },
     {
@@ -22,16 +31,17 @@
       "answer": "Yes",
       "citations": [
         {
-          "claim": "Chrysalis is a women's magazine",
+          "claim": "Chrysalis is a magazine of women's culture, a feminist publication",
           "passage_id": "p_ebcb47549e"
         },
         {
-          "claim": "Look is a women's magazine",
+          "claim": "Look is a glossy high street fashion and celebrity weekly magazine for young women",
           "passage_id": "p_dc396a1f76"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Yes",
     "gold_answer": "yes",
@@ -40,12 +50,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Chrysalis is a women's magazine",
+        "claim": "Chrysalis is a magazine of women's culture, a feminist publication",
         "passage_id": "p_ebcb47549e",
         "label": "faithful"
       },
       {
-        "claim": "Look is a women's magazine",
+        "claim": "Look is a glossy high street fashion and celebrity weekly magazine for young women",
         "passage_id": "p_dc396a1f76",
         "label": "faithful"
       }
@@ -60,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

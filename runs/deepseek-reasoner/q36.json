@@ -5,31 +5,21 @@
     {
       "action": "search",
       "query": "Gibson cocktail ingredients gin",
-      "k": 8,
+      "k": 3,
       "result_ids": [
         "p_de6059d7f8",
-        "p_f85048d669",
-        "p_b35496a93f",
-        "p_a3ff081662",
-        "p_c796d4b8f5",
-        "p_4ddaa9ce98",
-        "p_de2dc78698",
-        "p_155ca00e6b"
+        "p_97909ca700",
+        "p_cd6b6abb67"
       ]
     },
     {
       "action": "search",
       "query": "Zurracapote ingredients gin",
-      "k": 8,
+      "k": 3,
       "result_ids": [
         "p_f85048d669",
         "p_dab99599d3",
-        "p_b35496a93f",
-        "p_de6059d7f8",
-        "p_c796d4b8f5",
-        "p_4ddaa9ce98",
-        "p_de2dc78698",
-        "p_155ca00e6b"
+        "p_b35496a93f"
       ]
     },
     {
@@ -37,16 +27,17 @@
       "answer": "No",
       "citations": [
         {
-          "claim": "The Gibson is a mixed drink made with gin and vermouth.",
+          "claim": "Gibson is a mixed drink made with gin and vermouth",
           "passage_id": "p_de6059d7f8"
         },
         {
-          "claim": "Zurracapote consists of red wine mixed with fruit, sugar, and cinnamon, without gin.",
+          "claim": "Zurracapote is a Spanish mixed drink made with red wine, fruit, sugar, and cinnamon, not gin",
           "passage_id": "p_dab99599d3"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "No",
     "gold_answer": "no",
@@ -55,12 +46,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "The Gibson is a mixed drink made with gin and vermouth.",
+        "claim": "Gibson is a mixed drink made with gin and vermouth",
         "passage_id": "p_de6059d7f8",
         "label": "faithful"
       },
       {
-        "claim": "Zurracapote consists of red wine mixed with fruit, sugar, and cinnamon, without gin.",
+        "claim": "Zurracapote is a Spanish mixed drink made with red wine, fruit, sugar, and cinnamon, not gin",
         "passage_id": "p_dab99599d3",
         "label": "faithful"
       }
@@ -75,6 +66,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

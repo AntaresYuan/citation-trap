@@ -34,24 +34,26 @@ real judge-scored deepseek-chat run; live runs replace it.)*
 
 ![Model leaderboard](ui/leaderboard.png)
 
-Same 100 questions, same corpus, same retrieval — only the model changes
+Same 500 questions, same corpus, same retrieval — only the model changes
 (entailment judge on). `ui/compare.html` ranks them:
 
 | model | faithfulness | accuracy | correct-but-fabricated |
 |-------|-------------:|---------:|-----------------------:|
-| deepseek-chat     | **96%** | 74% | 2 |
-| deepseek-reasoner | 91% | **80%** | 3 |
+| deepseek-chat     | **93.3%** | 72% | 15 |
+| deepseek-reasoner | 92.7% | **77%** | 6 |
 
-The interesting finding: the **reasoner answers more accurately (80% vs 74%) but
-cites *less* faithfully** (91% vs 96%, and more fabrication). Higher capability
-didn't buy more honest sourcing — exactly the gap the benchmark exists to
-measure. Add a model by dropping a row into the `MODELS` registry
-(`gpt-4o-mini`, `ollama-llama3.2` slots are already there).
+Both models are **about equally faithful (~93%)**; the reasoner trades a little
+of that for higher accuracy (77% vs 72%). Note: an earlier 100-question run
+suggested the reasoner cited *less* faithfully — scaling to 500 showed that gap
+was small-sample noise. That correction is itself the point: a citation
+benchmark only earns trust at scale. Add a model by dropping a row into the
+`MODELS` registry (`gpt-4o-mini`, `ollama-llama3.2` slots are already there).
 
-The headline cell, when it fires, is genuine: e.g. an agent answers "1999"
-correctly but cites a **non-existent passage id** for the date it used; or
-answers correctly while citing a real passage the judge confirms **does not
-support** the claim (a misattribution the gold-set proxy can't catch).
+The headline cell, when it fires, is genuine. Example (q53): asked which war the
+Livesey Hall memorial commemorates, the agent answers **"World War II"**
+correctly — then pads with "World War II had over 60 million casualties" and
+cites a **passage id that doesn't exist** in the corpus. Right answer,
+fabricated source.
 
 ### How faithfulness is scored
 

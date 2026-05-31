@@ -5,31 +5,25 @@
     {
       "action": "search",
       "query": "LaLee's Kin: The Legacy of Cotton Oscar nomination",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_28adee78a3",
-        "p_7c112bb762",
-        "p_1599f19299",
-        "p_544fc00af3",
-        "p_cb3fc6cbd6",
-        "p_52bf84b437",
-        "p_f1b2e83f47",
-        "p_edd74ff6d5"
+        "p_ed37dbf3ac",
+        "p_c54bf28515",
+        "p_01aa6218d3",
+        "p_a7813ddecd"
       ]
     },
     {
       "action": "search",
       "query": "Gimme Shelter 1970 Rolling Stones documentary Oscar nomination",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_eb374266cc",
         "p_5057df5faf",
-        "p_a56d25c568",
         "p_81fcf402af",
-        "p_544fc00af3",
-        "p_d85dd95c0c",
-        "p_4b32768305",
-        "p_a81acdb521"
+        "p_a56d25c568",
+        "p_d85dd95c0c"
       ]
     },
     {
@@ -43,6 +37,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "LaLee's Kin: The Legacy of Cotton",
     "gold_answer": "LaLee's Kin: The Legacy of Cotton",
@@ -66,6 +61,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

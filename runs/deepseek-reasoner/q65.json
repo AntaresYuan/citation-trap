@@ -4,39 +4,37 @@
   "steps": [
     {
       "action": "search",
-      "query": "Dirleton Castle borders south side coastal area",
-      "k": 8,
+      "query": "Dirleton Castle south side coastal area",
+      "k": 5,
       "result_ids": [
         "p_7d458c65a2",
         "p_b3cdece549",
-        "p_afb775b692",
-        "p_bcd22d8ac6",
         "p_4d8ae59351",
         "p_f9c9647836",
-        "p_3715833268",
-        "p_05466a6059"
+        "p_3715833268"
       ]
     },
     {
       "action": "submit",
-      "answer": "Yellowcraig",
+      "answer": "Yellowcraigs (Broad Sands Bay)",
       "citations": [
         {
-          "claim": "Yellowcraig is bordered to the south by Dirleton Castle",
+          "claim": "Yellowcraig is bordered to the south by Dirleton and Dirleton Castle",
           "passage_id": "p_7d458c65a2"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
-    "answer": "Yellowcraig",
+    "answer": "Yellowcraigs (Broad Sands Bay)",
     "gold_answer": "Yellowcraig",
     "answer_correct": true,
-    "em": 1,
-    "f1": 1.0,
+    "em": 0,
+    "f1": 0.0,
     "citations": [
       {
-        "claim": "Yellowcraig is bordered to the south by Dirleton Castle",
+        "claim": "Yellowcraig is bordered to the south by Dirleton and Dirleton Castle",
         "passage_id": "p_7d458c65a2",
         "label": "faithful"
       }
@@ -51,6 +49,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

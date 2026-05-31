@@ -4,17 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Apple Remote originally designed to interact with program Front Row other devices control",
-      "k": 8,
+      "query": "Apple Remote originally designed to interact with program",
+      "k": 5,
+      "result_ids": [
+        "p_5c799c977d",
+        "p_296a866512",
+        "p_0b9a530524",
+        "p_d666276798",
+        "p_d96b0c75d9"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Front Row media program control other device remote",
+      "k": 5,
       "result_ids": [
         "p_5c799c977d",
         "p_d96b0c75d9",
         "p_cb2edb0e1d",
-        "p_296a866512",
-        "p_d666276798",
         "p_957f69e692",
-        "p_0642eefa0e",
-        "p_0b9a530524"
+        "p_296a866512"
       ]
     },
     {
@@ -28,6 +37,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "keyboard function keys",
     "gold_answer": "keyboard function keys",
@@ -51,6 +61,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

@@ -4,17 +4,14 @@
   "steps": [
     {
       "action": "search",
-      "query": "song inspired by words on a tombstone first track on Back to Mono",
-      "k": 8,
+      "query": "Back to Mono first track tombstone inspired writer",
+      "k": 5,
       "result_ids": [
         "p_cf20ea110f",
-        "p_b8fee7cdba",
         "p_353a14f09a",
-        "p_b3c7b56a95",
-        "p_d57fd57776",
-        "p_69bce25239",
-        "p_d85dd95c0c",
-        "p_4bce465878"
+        "p_b8fee7cdba",
+        "p_954d9393a5",
+        "p_95d8d79846"
       ]
     },
     {
@@ -22,16 +19,17 @@
       "answer": "Phil Spector",
       "citations": [
         {
-          "claim": "The first track on Back to Mono is 'To Know Him Is to Love Him'.",
+          "claim": "The first track on the box set Back to Mono is 'To Know Him Is to Love Him'.",
           "passage_id": "p_cf20ea110f"
         },
         {
-          "claim": "'To Know Him Is to Love Him' was written by Phil Spector and inspired by words on his father's tombstone.",
+          "claim": "'To Know Him Is to Love Him' was written by Phil Spector, inspired by words on his father's tombstone.",
           "passage_id": "p_b8fee7cdba"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Phil Spector",
     "gold_answer": "Phil Spector",
@@ -40,12 +38,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "The first track on Back to Mono is 'To Know Him Is to Love Him'.",
+        "claim": "The first track on the box set Back to Mono is 'To Know Him Is to Love Him'.",
         "passage_id": "p_cf20ea110f",
         "label": "faithful"
       },
       {
-        "claim": "'To Know Him Is to Love Him' was written by Phil Spector and inspired by words on his father's tombstone.",
+        "claim": "'To Know Him Is to Love Him' was written by Phil Spector, inspired by words on his father's tombstone.",
         "passage_id": "p_b8fee7cdba",
         "label": "faithful"
       }
@@ -60,6 +58,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

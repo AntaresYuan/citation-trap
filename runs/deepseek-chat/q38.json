@@ -4,47 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Lev Yilmaz animation filmmaker",
-      "k": 8,
+      "query": "Lev Yilmaz filmmaker animation",
+      "k": 5,
       "result_ids": [
         "p_2cf433d8d7",
-        "p_5b2a1e76af",
         "p_b30f80c11f",
+        "p_5b2a1e76af",
         "p_980a37dffc",
-        "p_c21444d1cb",
-        "p_2a0c9bb697",
-        "p_d68433ddb0",
-        "p_2091110a30"
+        "p_43f274ad78"
       ]
     },
     {
       "action": "search",
       "query": "Pamela B. Green filmmaker animation",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_0ec48dd0c5",
         "p_d219a0160c",
         "p_b1488bab7f",
         "p_5b2a1e76af",
-        "p_c21444d1cb",
-        "p_2a0c9bb697",
-        "p_a308489335",
-        "p_441731da7b"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "Pamela B. Green animation",
-      "k": 8,
-      "result_ids": [
-        "p_0ec48dd0c5",
-        "p_d219a0160c",
-        "p_b1488bab7f",
-        "p_5b2a1e76af",
-        "p_a308489335",
-        "p_441731da7b",
-        "p_23651a64a6",
-        "p_d68433ddb0"
+        "p_43f274ad78"
       ]
     },
     {
@@ -56,12 +35,13 @@
           "passage_id": "p_2cf433d8d7"
         },
         {
-          "claim": "Pamela B. Green is known for her work in feature film titles and motion graphics, and directed the documentary 'Be Natural: The Untold Story of Alice Guy-Blache' — no mention of animation.",
+          "claim": "Pamela B. Green is known for her work in feature film titles and motion graphics, and directed the documentary 'Be Natural: The Untold Story of Alice Guy-Blaché'.",
           "passage_id": "p_0ec48dd0c5"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Lev Yilmaz",
     "gold_answer": "Levni Yilmaz",
@@ -75,7 +55,7 @@
         "label": "faithful"
       },
       {
-        "claim": "Pamela B. Green is known for her work in feature film titles and motion graphics, and directed the documentary 'Be Natural: The Untold Story of Alice Guy-Blache' — no mention of animation.",
+        "claim": "Pamela B. Green is known for her work in feature film titles and motion graphics, and directed the documentary 'Be Natural: The Untold Story of Alice Guy-Blaché'.",
         "passage_id": "p_0ec48dd0c5",
         "label": "faithful"
       }
@@ -90,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

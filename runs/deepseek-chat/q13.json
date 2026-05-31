@@ -4,48 +4,58 @@
   "steps": [
     {
       "action": "search",
-      "query": "Annie Morton birth date Terry Richardson birth date",
-      "k": 8,
+      "query": "Annie Morton birth date",
+      "k": 5,
       "result_ids": [
         "p_86d4257cec",
+        "p_301244e5d6",
+        "p_96e15c90f2",
+        "p_b18a9e6420",
+        "p_6fefe478f0"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Terry Richardson birth date",
+      "k": 5,
+      "result_ids": [
         "p_4e710aa863",
         "p_70fc4d433d",
         "p_4f0a90bf27",
-        "p_6fefe478f0",
-        "p_341ba459fe",
-        "p_4a8b6fd5f7",
+        "p_301244e5d6",
         "p_2cb18bddfd"
       ]
     },
     {
       "action": "submit",
-      "answer": "Annie Morton is older.",
+      "answer": "Annie Morton",
       "citations": [
         {
-          "claim": "Annie Morton was born October 8, 1970",
+          "claim": "Annie Morton was born on October 8, 1970",
           "passage_id": "p_86d4257cec"
         },
         {
-          "claim": "Terry Richardson was born August 14, 1965",
+          "claim": "Terry Richardson was born on August 14, 1965",
           "passage_id": "p_4f0a90bf27"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "Annie Morton is older.",
+    "answer": "Annie Morton",
     "gold_answer": "Terry Richardson",
     "answer_correct": false,
     "em": 0,
     "f1": 0.0,
     "citations": [
       {
-        "claim": "Annie Morton was born October 8, 1970",
+        "claim": "Annie Morton was born on October 8, 1970",
         "passage_id": "p_86d4257cec",
         "label": "faithful"
       },
       {
-        "claim": "Terry Richardson was born August 14, 1965",
+        "claim": "Terry Richardson was born on August 14, 1965",
         "passage_id": "p_4f0a90bf27",
         "label": "faithful"
       }
@@ -60,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

@@ -4,45 +4,62 @@
   "steps": [
     {
       "action": "search",
-      "query": "Colorado Buffaloes football 2-6 conference record",
-      "k": 8,
+      "query": "Colorado Buffaloes 2-6 conference record",
+      "k": 5,
       "result_ids": [
         "p_0169deab28",
         "p_a4e8b7f549",
         "p_3dd2e01a2b",
         "p_921c7c3967",
-        "p_c1602981d3",
-        "p_f18a96ddff",
-        "p_2c41cf806d",
-        "p_4eaabfaca2"
+        "p_c1602981d3"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "2009 Big 12 14th season",
+      "k": 3,
+      "result_ids": [
+        "p_a356498474",
+        "p_0169deab28",
+        "p_e4ee101d17"
       ]
     },
     {
       "action": "submit",
-      "answer": "2009, Big 12 Conference",
+      "answer": "2009 Big 12",
       "citations": [
         {
-          "claim": "Colorado Buffaloes had a 2-6 conference record in Big 12 play in 2009",
+          "claim": "2009 Big 12 Conference football season was the 14th season for the Big 12",
+          "passage_id": "p_a356498474"
+        },
+        {
+          "claim": "Colorado Buffaloes finished with a record of 2-6 in Big 12 play",
           "passage_id": "p_0169deab28"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
-    "answer": "2009, Big 12 Conference",
+    "answer": "2009 Big 12",
     "gold_answer": "2009 Big 12 Conference",
     "answer_correct": true,
-    "em": 1,
-    "f1": 1.0,
+    "em": 0,
+    "f1": 0.8571,
     "citations": [
       {
-        "claim": "Colorado Buffaloes had a 2-6 conference record in Big 12 play in 2009",
+        "claim": "2009 Big 12 Conference football season was the 14th season for the Big 12",
+        "passage_id": "p_a356498474",
+        "label": "faithful"
+      },
+      {
+        "claim": "Colorado Buffaloes finished with a record of 2-6 in Big 12 play",
         "passage_id": "p_0169deab28",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 1,
+      "faithful": 2,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -51,6 +68,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

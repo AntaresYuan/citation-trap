@@ -11,87 +11,91 @@
         "p_d0d48ef896",
         "p_cdc531557f",
         "p_d2aea57c49",
-        "p_951dc4213a"
+        "p_14428555b8"
       ]
     },
     {
       "action": "search",
-      "query": "United States population",
+      "query": "United States population inhabitants",
+      "k": 5,
+      "result_ids": [
+        "p_be5c401904",
+        "p_fd9bba0032",
+        "p_69ef36f40f",
+        "p_38ef6723e9",
+        "p_ebde2f0218"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States population 2024",
       "k": 5,
       "result_ids": [
         "p_5b5761d864",
-        "p_2365e34270",
-        "p_0dcaf3482c",
-        "p_aa797b94f2",
-        "p_821d9ee7a8"
+        "p_d2808597fc",
+        "p_88f21efd66",
+        "p_38d8d34fcc",
+        "p_2365e34270"
       ]
     },
     {
       "action": "search",
-      "query": "United States population 2020 census",
+      "query": "United States population 2023 total",
       "k": 5,
       "result_ids": [
+        "p_70bacbe86e",
+        "p_286ae755c6",
         "p_5b5761d864",
-        "p_0dcaf3482c",
-        "p_ae378f4f6d",
-        "p_2c2b71ceba",
-        "p_aa797b94f2"
+        "p_83b6893bbb",
+        "p_e47c2bd1ca"
       ]
     },
     {
       "action": "search",
-      "query": "United States population 2020 census number",
+      "query": "United States population 2024 estimate",
       "k": 5,
       "result_ids": [
-        "p_2c2b71ceba",
+        "p_4b6964342b",
         "p_5b5761d864",
-        "p_0dcaf3482c",
-        "p_ae378f4f6d",
-        "p_aa797b94f2"
+        "p_d2808597fc",
+        "p_88f21efd66",
+        "p_38d8d34fcc"
       ]
     },
     {
       "action": "search",
-      "query": "United States population 2020 331 million",
+      "query": "United States population total 2024 Census",
       "k": 5,
       "result_ids": [
-        "p_2c2b71ceba",
-        "p_fc87c060e4",
+        "p_70bacbe86e",
         "p_5b5761d864",
-        "p_2365e34270",
-        "p_0dcaf3482c"
+        "p_6072258886",
+        "p_286ae755c6",
+        "p_d2808597fc"
       ]
     },
     {
       "action": "search",
-      "query": "United States population 2020 census 331 million",
-      "k": 3,
-      "result_ids": [
-        "p_2c2b71ceba",
-        "p_5b5761d864",
-        "p_0dcaf3482c"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "United States Census Bureau population 2020",
+      "query": "United States population 2024 estimate 330 million",
       "k": 5,
       "result_ids": [
+        "p_4b6964342b",
+        "p_48ce6bb8da",
         "p_2c2b71ceba",
-        "p_5b5761d864",
-        "p_0dcaf3482c",
-        "p_ae378f4f6d",
-        "p_aa797b94f2"
+        "p_c179878c82",
+        "p_c44174e229"
       ]
     },
     {
       "action": "search",
-      "query": "United States population 2020 census result",
-      "k": 3,
+      "query": "United States population 2024 335 million estimate",
+      "k": 5,
       "result_ids": [
-        "p_5b5761d864",
-        "p_0dcaf3482c",
-        "p_ae378f4f6d"
+        "p_4b6964342b",
+        "p_2c2b71ceba",
+        "p_c179878c82",
+        "p_c44174e229",
+        "p_5b5761d864"
       ]
     },
     {
@@ -100,6 +104,7 @@
       "citations": []
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "",
     "gold_answer": "9,984",
@@ -117,6 +122,5 @@
     "citation_trustworthy": false,
     "quadrant": "worst",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

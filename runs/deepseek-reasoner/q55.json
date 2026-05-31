@@ -5,31 +5,23 @@
     {
       "action": "search",
       "query": "Ralph Hefferline psychology professor university",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_a49a6081c2",
         "p_26ce29dab5",
         "p_1b33d10b33",
         "p_8e17a76ee7",
-        "p_7033e19209",
-        "p_b2458a7340",
-        "p_0316c9e89e",
-        "p_05406fda74"
+        "p_7033e19209"
       ]
     },
     {
       "action": "search",
       "query": "Columbia University location city",
-      "k": 8,
+      "k": 3,
       "result_ids": [
         "p_f9961d6294",
         "p_a49a6081c2",
-        "p_552cd4eace",
-        "p_05406fda74",
-        "p_6ae4485be3",
-        "p_eebd6b68dc",
-        "p_0316c9e89e",
-        "p_c27f528002"
+        "p_552cd4eace"
       ]
     },
     {
@@ -47,6 +39,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "New York City",
     "gold_answer": "New York City",
@@ -75,6 +68,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

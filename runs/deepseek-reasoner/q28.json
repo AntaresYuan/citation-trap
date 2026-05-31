@@ -4,32 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Is Cypress a genus",
-      "k": 8,
+      "query": "Cypress genus scientific name",
+      "k": 5,
       "result_ids": [
-        "p_a50d33fc64",
         "p_1db72a5e72",
-        "p_1960536f71",
-        "p_9c92592928",
-        "p_15d2b7ba14",
+        "p_a50d33fc64",
         "p_d4964ca1c8",
-        "p_e0ca403e21",
-        "p_50bb9f40ed"
+        "p_c762f29a5d",
+        "p_d626422828"
       ]
     },
     {
       "action": "search",
-      "query": "Is Ajuga a genus",
-      "k": 8,
+      "query": "Ajuga genus",
+      "k": 5,
       "result_ids": [
         "p_5d1fb96b29",
         "p_0c094e7912",
-        "p_e0ca403e21",
-        "p_50bb9f40ed",
-        "p_5c9af255e7",
-        "p_a50d33fc64",
-        "p_74448bb453",
-        "p_502f90b27b"
+        "p_42f06717f4",
+        "p_6c4f7b9673",
+        "p_c86a8a6bc4"
       ]
     },
     {
@@ -37,16 +31,17 @@
       "answer": "No",
       "citations": [
         {
-          "claim": "Ajuga is a genus",
-          "passage_id": "p_5d1fb96b29"
+          "claim": "Cypress is a common name, not a genus name; the genus is Cupressus",
+          "passage_id": "p_1db72a5e72"
         },
         {
-          "claim": "Cypress is a common name, not a genus (the genus is Cupressus)",
-          "passage_id": "p_1db72a5e72"
+          "claim": "Ajuga is a genus of flowering plants",
+          "passage_id": "p_5d1fb96b29"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "No",
     "gold_answer": "no",
@@ -55,13 +50,13 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Ajuga is a genus",
-        "passage_id": "p_5d1fb96b29",
+        "claim": "Cypress is a common name, not a genus name; the genus is Cupressus",
+        "passage_id": "p_1db72a5e72",
         "label": "faithful"
       },
       {
-        "claim": "Cypress is a common name, not a genus (the genus is Cupressus)",
-        "passage_id": "p_1db72a5e72",
+        "claim": "Ajuga is a genus of flowering plants",
+        "passage_id": "p_5d1fb96b29",
         "label": "faithful"
       }
     ],
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

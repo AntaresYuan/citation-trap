@@ -4,32 +4,50 @@
   "steps": [
     {
       "action": "search",
-      "query": "Kirton End location city 2001 census population",
-      "k": 8,
+      "query": "Kirton End 2001 census population",
+      "k": 5,
       "result_ids": [
         "p_ae378f4f6d",
         "p_48ce6bb8da",
-        "p_69ef36f40f",
-        "p_2c2b71ceba",
         "p_111b78a127",
-        "p_951dc4213a",
-        "p_6e18f62a00",
-        "p_b7c4599980"
+        "p_2c2b71ceba",
+        "p_6e18f62a00"
       ]
     },
     {
       "action": "search",
-      "query": "2001 census population of Boston Lincolnshire",
-      "k": 8,
+      "query": "population of Kirton Lincolnshire 2001 census",
+      "k": 5,
+      "result_ids": [
+        "p_48ce6bb8da",
+        "p_ae378f4f6d",
+        "p_5d1c749274",
+        "p_6e18f62a00",
+        "p_111b78a127"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Kirton civil parish Lincolnshire 2001 census population",
+      "k": 5,
+      "result_ids": [
+        "p_48ce6bb8da",
+        "p_6e18f62a00",
+        "p_111b78a127",
+        "p_ae378f4f6d",
+        "p_5d1c749274"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Kirton Boston Lincolnshire 2001 census population",
+      "k": 5,
       "result_ids": [
         "p_5d1c749274",
         "p_48ce6bb8da",
-        "p_2c2b71ceba",
-        "p_69ef36f40f",
+        "p_6e18f62a00",
         "p_ae378f4f6d",
-        "p_fd8539ad58",
-        "p_0dcaf3482c",
-        "p_6e18f62a00"
+        "p_111b78a127"
       ]
     },
     {
@@ -37,16 +55,17 @@
       "answer": "35,124",
       "citations": [
         {
-          "claim": "Kirton End is located in Boston, Lincolnshire",
+          "claim": "Kirton End is a hamlet in the civil parish of Kirton in the Boston district of Lincolnshire, England.",
           "passage_id": "p_6e18f62a00"
         },
         {
-          "claim": "Boston had a 2001 census population of 35,124",
+          "claim": "Boston town had a population of 35,124 at the 2001 census.",
           "passage_id": "p_5d1c749274"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "35,124",
     "gold_answer": "35,124",
@@ -55,12 +74,12 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Kirton End is located in Boston, Lincolnshire",
+        "claim": "Kirton End is a hamlet in the civil parish of Kirton in the Boston district of Lincolnshire, England.",
         "passage_id": "p_6e18f62a00",
         "label": "faithful"
       },
       {
-        "claim": "Boston had a 2001 census population of 35,124",
+        "claim": "Boston town had a population of 35,124 at the 2001 census.",
         "passage_id": "p_5d1c749274",
         "label": "faithful"
       }
@@ -75,6 +94,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

@@ -4,51 +4,34 @@
   "steps": [
     {
       "action": "search",
-      "query": "Scott Derrickson nationality",
-      "k": 8,
+      "query": "Scott Derrickson nationality Ed Wood nationality",
+      "k": 5,
       "result_ids": [
-        "p_99f5c064e8",
-        "p_f39b8e2f51",
-        "p_afebceb5f2",
-        "p_eb0bbc1084",
-        "p_4a70a0fe1c",
-        "p_c8c67fa9bb",
-        "p_0e66fb0f66",
-        "p_25f9cb9b82"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "Ed Wood nationality",
-      "k": 8,
-      "result_ids": [
+        "p_d58095dbd3",
         "p_2f9f9de539",
+        "p_99f5c064e8",
         "p_c21444d1cb",
-        "p_aa797b94f2",
-        "p_3c4b3ad73e",
-        "p_f569d14086",
-        "p_2519668ea9",
-        "p_d2d93e15fc",
-        "p_1c07db46d2"
+        "p_aa797b94f2"
       ]
     },
     {
       "action": "submit",
-      "answer": "yes",
+      "answer": "Yes",
       "citations": [
         {
           "claim": "Scott Derrickson is American",
           "passage_id": "p_99f5c064e8"
         },
         {
-          "claim": "Ed Wood was American",
-          "passage_id": "p_c21444d1cb"
+          "claim": "Ed Wood is American",
+          "passage_id": "p_c21444c1cb"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "yes",
+    "answer": "Yes",
     "gold_answer": "yes",
     "answer_correct": true,
     "em": 1,
@@ -60,21 +43,20 @@
         "label": "faithful"
       },
       {
-        "claim": "Ed Wood was American",
-        "passage_id": "p_c21444d1cb",
-        "label": "faithful"
+        "claim": "Ed Wood is American",
+        "passage_id": "p_c21444c1cb",
+        "label": "fabricated"
       }
     ],
     "citation_counts": {
-      "faithful": 2,
+      "faithful": 1,
       "misattributed": 0,
-      "fabricated": 0,
+      "fabricated": 1,
       "unsupported": 0
     },
-    "faithfulness_score": 1.0,
-    "citation_trustworthy": true,
-    "quadrant": "ideal",
+    "faithfulness_score": 0.5,
+    "citation_trustworthy": false,
+    "quadrant": "correct_but_fabricated",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

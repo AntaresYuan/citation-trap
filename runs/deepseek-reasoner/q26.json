@@ -4,17 +4,20 @@
   "steps": [
     {
       "action": "search",
-      "query": "Ferocactus plant type",
-      "k": 8,
+      "query": "Ferocactus plant",
+      "k": 2,
       "result_ids": [
         "p_502f90b27b",
-        "p_57b1dfeccb",
-        "p_afaa06cf60",
-        "p_3a40401c5f",
-        "p_d7d1088dda",
-        "p_f96bd5c521",
-        "p_e0ca403e21",
-        "p_d93164bfc9"
+        "p_d5294d1cb8"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Silene plant",
+      "k": 2,
+      "result_ids": [
+        "p_a34f5a8d4f",
+        "p_d7d1088dda"
       ]
     },
     {
@@ -22,16 +25,21 @@
       "answer": "Yes",
       "citations": [
         {
-          "claim": "Ferocactus is a genus of cacti, a type of plant",
+          "claim": "Ferocactus is a genus of large barrel-shaped cacti",
           "passage_id": "p_502f90b27b"
         },
         {
-          "claim": "Silene is a genus of flowering plants",
-          "passage_id": "p_f96bd5c521"
+          "claim": "Silene tomentosa is a very rare flowering plant",
+          "passage_id": "p_a34f5a8d4f"
+        },
+        {
+          "claim": "Silene latifolia is a flowering plant",
+          "passage_id": "p_d7d1088dda"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Yes",
     "gold_answer": "yes",
@@ -40,18 +48,23 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Ferocactus is a genus of cacti, a type of plant",
+        "claim": "Ferocactus is a genus of large barrel-shaped cacti",
         "passage_id": "p_502f90b27b",
         "label": "faithful"
       },
       {
-        "claim": "Silene is a genus of flowering plants",
-        "passage_id": "p_f96bd5c521",
+        "claim": "Silene tomentosa is a very rare flowering plant",
+        "passage_id": "p_a34f5a8d4f",
+        "label": "faithful"
+      },
+      {
+        "claim": "Silene latifolia is a flowering plant",
+        "passage_id": "p_d7d1088dda",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 2,
+      "faithful": 3,
       "misattributed": 0,
       "fabricated": 0,
       "unsupported": 0
@@ -60,6 +73,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

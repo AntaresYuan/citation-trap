@@ -4,37 +4,43 @@
   "steps": [
     {
       "action": "search",
-      "query": "Pirate's Cove board game publication year",
-      "k": 8,
+      "query": "Pirate's Cove board game publication date",
+      "k": 5,
       "result_ids": [
         "p_f4d12373cf",
         "p_0e29d3c800",
+        "p_ab8a78d8dc",
         "p_d38fa3739c",
-        "p_72f8274d24",
-        "p_52b183a9f2",
-        "p_f3e0d73880",
-        "p_62b75ea555",
-        "p_1df0cbb6b2"
+        "p_03a00b8b3e"
       ]
     },
     {
       "action": "search",
-      "query": "Catan original board game publication year",
-      "k": 8,
+      "query": "Catan board game original publication date",
+      "k": 5,
       "result_ids": [
         "p_1df0cbb6b2",
         "p_d38fa3739c",
         "p_f3e0d73880",
         "p_52b183a9f2",
-        "p_62b75ea555",
-        "p_0e29d3c800",
+        "p_62b75ea555"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Settlers of Catan original publication year",
+      "k": 5,
+      "result_ids": [
+        "p_1df0cbb6b2",
+        "p_a124850b1f",
+        "p_52b183a9f2",
         "p_d767edebdb",
-        "p_a124850b1f"
+        "p_adc0a73ba7"
       ]
     },
     {
       "action": "submit",
-      "answer": "Pirate's Cove",
+      "answer": "Catan",
       "citations": [
         {
           "claim": "Pirate's Cove was originally published in 2002",
@@ -47,12 +53,13 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "Pirate's Cove",
+    "answer": "Catan",
     "gold_answer": "Pirate's Cove",
-    "answer_correct": true,
-    "em": 1,
-    "f1": 1.0,
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
     "citations": [
       {
         "claim": "Pirate's Cove was originally published in 2002",
@@ -73,8 +80,7 @@
     },
     "faithfulness_score": 1.0,
     "citation_trustworthy": true,
-    "quadrant": "ideal",
+    "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

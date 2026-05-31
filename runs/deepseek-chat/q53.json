@@ -4,17 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Livesey Hal War Memorial",
-      "k": 8,
+      "query": "Livesey Hal War Memorial casualties",
+      "k": 5,
       "result_ids": [
         "p_c5eddd4702",
-        "p_80877f3e62",
-        "p_1f779163b0",
         "p_9a72be5829",
-        "p_59d430a507",
-        "p_e634c155b4",
-        "p_8a4c499176",
-        "p_4bc9b524f1"
+        "p_1f779163b0",
+        "p_80877f3e62",
+        "p_894cf83a0e"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "World War I casualties 60 million",
+      "k": 5,
+      "result_ids": [
+        "p_fc87c060e4",
+        "p_9a72be5829",
+        "p_1f779163b0",
+        "p_f0e0a49a39",
+        "p_c5eddd4702"
       ]
     },
     {
@@ -24,10 +33,15 @@
         {
           "claim": "The Livesey Hall War Memorial commemorates the fallen of World War I and World War II",
           "passage_id": "p_c5eddd4702"
+        },
+        {
+          "claim": "World War II had over 60 million casualties",
+          "passage_id": "p_fc87e060e4"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "World War II",
     "gold_answer": "World War II",
@@ -39,18 +53,22 @@
         "claim": "The Livesey Hall War Memorial commemorates the fallen of World War I and World War II",
         "passage_id": "p_c5eddd4702",
         "label": "faithful"
+      },
+      {
+        "claim": "World War II had over 60 million casualties",
+        "passage_id": "p_fc87e060e4",
+        "label": "fabricated"
       }
     ],
     "citation_counts": {
       "faithful": 1,
       "misattributed": 0,
-      "fabricated": 0,
+      "fabricated": 1,
       "unsupported": 0
     },
-    "faithfulness_score": 1.0,
-    "citation_trustworthy": true,
-    "quadrant": "ideal",
+    "faithfulness_score": 0.5,
+    "citation_trustworthy": false,
+    "quadrant": "correct_but_fabricated",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

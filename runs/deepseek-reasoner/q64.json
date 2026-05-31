@@ -5,23 +5,21 @@
     {
       "action": "search",
       "query": "Bamboo Mañalac musician",
-      "k": 4,
+      "k": 3,
       "result_ids": [
         "p_bfbe1650d4",
         "p_f96b139ac9",
-        "p_637c2d189b",
-        "p_4a3da14684"
+        "p_637c2d189b"
       ]
     },
     {
       "action": "search",
       "query": "Danny Jones musician",
-      "k": 4,
+      "k": 3,
       "result_ids": [
         "p_0ed868a9fe",
-        "p_e2c95bc01a",
-        "p_4e8bd3bc38",
-        "p_ae7b866896"
+        "p_fb7ee2dd12",
+        "p_1c4b40664b"
       ]
     },
     {
@@ -39,6 +37,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Yes",
     "gold_answer": "yes",
@@ -67,6 +66,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

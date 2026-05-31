@@ -5,36 +5,30 @@
     {
       "action": "search",
       "query": "Emma Bull birth date",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_7e3f81f4d8",
-        "p_341ba459fe",
-        "p_4a8b6fd5f7",
-        "p_b3cdece549",
-        "p_8943bd4566",
-        "p_5be2d3bd19",
-        "p_82efb0e4d2",
-        "p_058f3692c5"
+        "p_301244e5d6",
+        "p_6b9404c513",
+        "p_fa691c2af1",
+        "p_65dce6d715"
       ]
     },
     {
       "action": "search",
       "query": "Virginia Woolf birth date",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_66a5ac84c7",
         "p_229de86dfc",
         "p_c29300ea25",
         "p_365dea3739",
-        "p_ea7ef375ed",
-        "p_3bf9f73eb5",
-        "p_c256d5eb92",
-        "p_1a7464f167"
+        "p_ea7ef375ed"
       ]
     },
     {
       "action": "submit",
-      "answer": "Emma Bull",
+      "answer": "Virginia Woolf",
       "citations": [
         {
           "claim": "Emma Bull was born on December 13, 1954",
@@ -47,12 +41,13 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "Emma Bull",
+    "answer": "Virginia Woolf",
     "gold_answer": "Adeline Virginia Woolf",
-    "answer_correct": false,
+    "answer_correct": true,
     "em": 0,
-    "f1": 0.0,
+    "f1": 0.8,
     "citations": [
       {
         "claim": "Emma Bull was born on December 13, 1954",
@@ -73,8 +68,7 @@
     },
     "faithfulness_score": 1.0,
     "citation_trustworthy": true,
-    "quadrant": "honest_wrong",
+    "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

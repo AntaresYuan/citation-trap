@@ -4,17 +4,32 @@
   "steps": [
     {
       "action": "search",
-      "query": "Random House Tower 888 7th Avenue real estate",
-      "k": 8,
+      "query": "Random House Tower 1745 Broadway real estate",
+      "k": 3,
       "result_ids": [
         "p_2646f51b7d",
-        "p_85aacdff46",
-        "p_7d20eb5672",
-        "p_fb07709a6f",
         "p_5e874f068e",
-        "p_ac61251ec2",
-        "p_3bfa0e5438",
-        "p_05466a6059"
+        "p_85aacdff46"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "888 7th Avenue New York real estate use",
+      "k": 3,
+      "result_ids": [
+        "p_7d20eb5672",
+        "p_5513c3fae0",
+        "p_fb07709a6f"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Random House Tower real estate company",
+      "k": 3,
+      "result_ids": [
+        "p_2646f51b7d",
+        "p_5e874f068e",
+        "p_85aacdff46"
       ]
     },
     {
@@ -22,16 +37,17 @@
       "answer": "Yes",
       "citations": [
         {
-          "claim": "Random House Tower is a mixed-use tower used as a luxury apartment complex and headquarters, indicating real estate use.",
+          "claim": "Random House Tower is a mixed-use tower used as a luxury apartment complex, which is a real estate use.",
           "passage_id": "p_2646f51b7d"
         },
         {
-          "claim": "888 7th Avenue is an office skyscraper housing Vornado Realty Trust corporate headquarters, indicating real estate use.",
+          "claim": "888 7th Avenue is an office skyscraper that houses Vornado Realty Trust, a real estate company.",
           "passage_id": "p_fb07709a6f"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Yes",
     "gold_answer": "no",
@@ -40,12 +56,12 @@
     "f1": 0.0,
     "citations": [
       {
-        "claim": "Random House Tower is a mixed-use tower used as a luxury apartment complex and headquarters, indicating real estate use.",
+        "claim": "Random House Tower is a mixed-use tower used as a luxury apartment complex, which is a real estate use.",
         "passage_id": "p_2646f51b7d",
         "label": "faithful"
       },
       {
-        "claim": "888 7th Avenue is an office skyscraper housing Vornado Realty Trust corporate headquarters, indicating real estate use.",
+        "claim": "888 7th Avenue is an office skyscraper that houses Vornado Realty Trust, a real estate company.",
         "passage_id": "p_fb07709a6f",
         "label": "faithful"
       }
@@ -60,6 +76,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

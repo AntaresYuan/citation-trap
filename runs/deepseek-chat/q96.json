@@ -4,7 +4,7 @@
   "steps": [
     {
       "action": "search",
-      "query": "Ferdi Taygan birth date",
+      "query": "Ferdi Taygan date of birth",
       "k": 5,
       "result_ids": [
         "p_cf0f0a32e5",
@@ -16,14 +16,14 @@
     },
     {
       "action": "search",
-      "query": "Mahesh Bhupathi birth date",
+      "query": "Mahesh Bhupathi date of birth",
       "k": 5,
       "result_ids": [
         "p_e886981cba",
-        "p_1563927d66",
         "p_68072908dc",
-        "p_341ba459fe",
-        "p_4a8b6fd5f7"
+        "p_1563927d66",
+        "p_301244e5d6",
+        "p_fa691c2af1"
       ]
     },
     {
@@ -41,6 +41,7 @@
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Ferdi Taygan",
     "gold_answer": "Ferdi Taygan",
@@ -69,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

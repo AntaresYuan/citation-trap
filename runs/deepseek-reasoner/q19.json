@@ -4,17 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Guns N Roses promo Arnold Schwarzenegger former New York Police detective movie",
-      "k": 8,
+      "query": "Arnold Schwarzenegger former New York Police detective movie",
+      "k": 5,
       "result_ids": [
         "p_8fae985ac9",
+        "p_de0002fe9b",
+        "p_cd9cdd1873",
         "p_5be2d3bd19",
+        "p_e474bc40e3"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Guns N Roses End of Days promo",
+      "k": 5,
+      "result_ids": [
         "p_4bce465878",
         "p_83583e810c",
         "p_73ac1f584e",
-        "p_de0002fe9b",
-        "p_cd9cdd1873",
-        "p_e474bc40e3"
+        "p_23dad74952",
+        "p_5be2d3bd19"
       ]
     },
     {
@@ -22,16 +31,17 @@
       "answer": "1999",
       "citations": [
         {
-          "claim": "Guns N' Roses performed a promo (\"Oh My God\") for the film \"End of Days\", which stars Arnold Schwarzenegger as a former New York Police detective.",
-          "passage_id": "p_4bce878465"
+          "claim": "End of Days features Arnold Schwarzenegger as a former New York Police detective",
+          "passage_id": "p_8fae985ac9"
         },
         {
-          "claim": "\"End of Days\" features Arnold Schwarzenegger as former New York Police Department detective Jericho Cane.",
-          "passage_id": "p_8fae985ac9"
+          "claim": "Guns N' Roses released 'Oh My God' in 1999 as a promo for the End of Days soundtrack",
+          "passage_id": "p_4bce465878"
         }
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "1999",
     "gold_answer": "1999",
@@ -40,26 +50,25 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "Guns N' Roses performed a promo (\"Oh My God\") for the film \"End of Days\", which stars Arnold Schwarzenegger as a former New York Police detective.",
-        "passage_id": "p_4bce878465",
-        "label": "fabricated"
+        "claim": "End of Days features Arnold Schwarzenegger as a former New York Police detective",
+        "passage_id": "p_8fae985ac9",
+        "label": "faithful"
       },
       {
-        "claim": "\"End of Days\" features Arnold Schwarzenegger as former New York Police Department detective Jericho Cane.",
-        "passage_id": "p_8fae985ac9",
+        "claim": "Guns N' Roses released 'Oh My God' in 1999 as a promo for the End of Days soundtrack",
+        "passage_id": "p_4bce465878",
         "label": "faithful"
       }
     ],
     "citation_counts": {
-      "faithful": 1,
+      "faithful": 2,
       "misattributed": 0,
-      "fabricated": 1,
+      "fabricated": 0,
       "unsupported": 0
     },
-    "faithfulness_score": 0.5,
-    "citation_trustworthy": false,
-    "quadrant": "correct_but_fabricated",
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

@@ -5,62 +5,57 @@
     {
       "action": "search",
       "query": "Seven Days Battles date",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_a661299645",
         "p_e8cb456d65",
         "p_7d65aafea3",
         "p_8943bd4566",
-        "p_9f4f5217a9",
-        "p_b4f635d1aa",
-        "p_89f333bd21",
-        "p_3a5adb65e6"
+        "p_9f4f5217a9"
       ]
     },
     {
       "action": "search",
       "query": "Battle of Manila date",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_7a05b21c92",
-        "p_e8cb456d65",
-        "p_7d65aafea3",
-        "p_e5a206ebf5",
-        "p_89f333bd21",
-        "p_ab87927b7f",
-        "p_3a5adb65e6",
-        "p_dd8abafdf6"
+        "p_fd690a979b",
+        "p_5e5096f086",
+        "p_7e811c9256",
+        "p_b1126fe88c"
       ]
     },
     {
       "action": "submit",
-      "answer": "the Seven Days Battles",
+      "answer": "Seven Days Battles",
       "citations": [
         {
-          "claim": "The Seven Days Battles were fought from June 25 to July 1, 1862",
+          "claim": "Seven Days Battles occurred from June 25 to July 1, 1862",
           "passage_id": "p_a661299645"
         },
         {
-          "claim": "The Battle of Manila was fought from February 3, 1945 to March 3, 1945",
+          "claim": "Battle of Manila (1945) occurred from February 3 to March 3, 1945",
           "passage_id": "p_7a05b21c92"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
-    "answer": "the Seven Days Battles",
+    "answer": "Seven Days Battles",
     "gold_answer": "The Seven Days Battles",
     "answer_correct": true,
     "em": 1,
     "f1": 1.0,
     "citations": [
       {
-        "claim": "The Seven Days Battles were fought from June 25 to July 1, 1862",
+        "claim": "Seven Days Battles occurred from June 25 to July 1, 1862",
         "passage_id": "p_a661299645",
         "label": "faithful"
       },
       {
-        "claim": "The Battle of Manila was fought from February 3, 1945 to March 3, 1945",
+        "claim": "Battle of Manila (1945) occurred from February 3 to March 3, 1945",
         "passage_id": "p_7a05b21c92",
         "label": "faithful"
       }
@@ -75,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

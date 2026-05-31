@@ -5,16 +5,49 @@
     {
       "action": "search",
       "query": "British first-generation jet-powered medium bomber South West Pacific theatre World War II",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_ae718b7790",
-        "p_950c0a8c94",
         "p_3a40401c5f",
+        "p_950c0a8c94",
         "p_9f77aab1cf",
+        "p_e139866507"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "British jet-powered medium bomber World War II South West Pacific",
+      "k": 5,
+      "result_ids": [
+        "p_ae718b7790",
+        "p_3a40401c5f",
+        "p_950c0a8c94",
         "p_e139866507",
-        "p_74b9155d9b",
-        "p_8e3c3fb7e5",
-        "p_012c3d194d"
+        "p_9f77aab1cf"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "British jet bomber World War II service",
+      "k": 5,
+      "result_ids": [
+        "p_ae718b7790",
+        "p_3a40401c5f",
+        "p_e139866507",
+        "p_96e6b8d414",
+        "p_9c9c2ed445"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "British first jet bomber World War II",
+      "k": 5,
+      "result_ids": [
+        "p_ae718b7790",
+        "p_3a40401c5f",
+        "p_96e6b8d414",
+        "p_e139866507",
+        "p_60ca7e85ca"
       ]
     },
     {
@@ -22,12 +55,13 @@
       "answer": "English Electric Canberra",
       "citations": [
         {
-          "claim": "The English Electric Canberra is a British first-generation jet-powered medium bomber that was manufactured during the 1950s. It became the RAF's first jet-powered bomber aircraft, introduced in May 1951.",
+          "claim": "The English Electric Canberra is a British first-generation jet-powered medium bomber.",
           "passage_id": "p_3a40401c5f"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "English Electric Canberra",
     "gold_answer": "English Electric Canberra",
@@ -36,7 +70,7 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "The English Electric Canberra is a British first-generation jet-powered medium bomber that was manufactured during the 1950s. It became the RAF's first jet-powered bomber aircraft, introduced in May 1951.",
+        "claim": "The English Electric Canberra is a British first-generation jet-powered medium bomber.",
         "passage_id": "p_3a40401c5f",
         "label": "faithful"
       }
@@ -51,6 +85,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }

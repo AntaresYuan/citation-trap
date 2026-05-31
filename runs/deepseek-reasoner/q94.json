@@ -5,46 +5,25 @@
     {
       "action": "search",
       "query": "Sacred Planet release date",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_a3bfd26bf3",
-        "p_a308489335",
-        "p_58452204db",
-        "p_ab9850c154",
-        "p_4a8b6fd5f7",
-        "p_b3cdece549",
-        "p_cf1c1f91df",
-        "p_353a14f09a"
+        "p_ab4a36b24b",
+        "p_0e411f91ec",
+        "p_0d5c875fce",
+        "p_dc786cdd4e"
       ]
     },
     {
       "action": "search",
       "query": "Oz the Great and Powerful release date",
-      "k": 8,
+      "k": 5,
       "result_ids": [
         "p_7c112bb762",
         "p_ab9850c154",
+        "p_ee0842ca15",
         "p_4b8c44633c",
-        "p_5721a6947a",
-        "p_a308489335",
-        "p_8da4012255",
-        "p_b3cdece549",
-        "p_cf1c1f91df"
-      ]
-    },
-    {
-      "action": "search",
-      "query": "Oz the Great and Powerful release date 2013",
-      "k": 8,
-      "result_ids": [
-        "p_7c112bb762",
-        "p_ab9850c154",
-        "p_4b8c44633c",
-        "p_5721a6947a",
-        "p_a736a1a72e",
-        "p_a308489335",
-        "p_8da4012255",
-        "p_b3cdece549"
+        "p_b9b8f20321"
       ]
     },
     {
@@ -62,6 +41,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Sacred Planet",
     "gold_answer": "Sacred Planet",
@@ -90,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

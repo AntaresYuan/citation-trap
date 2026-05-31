@@ -4,32 +4,22 @@
   "steps": [
     {
       "action": "search",
-      "query": "Nusretiye Clock Tower city",
-      "k": 8,
+      "query": "Nusretiye Clock Tower location city",
+      "k": 3,
       "result_ids": [
         "p_089ccb4916",
-        "p_05bd628fff",
-        "p_852cd67ce5",
-        "p_7335d50495",
-        "p_887cdcad34",
-        "p_6916d87da4",
-        "p_f9edd40623",
-        "p_9f28c78e0e"
+        "p_db84866dcc",
+        "p_05bd628fff"
       ]
     },
     {
       "action": "search",
-      "query": "Eski Imaret Mosque city",
-      "k": 8,
+      "query": "Eski Imaret Mosque location city",
+      "k": 3,
       "result_ids": [
         "p_2b4bda530b",
         "p_678f02dbf8",
-        "p_6916d87da4",
-        "p_fe4bd75cbe",
-        "p_39d74cf5b6",
-        "p_348c421342",
-        "p_fcb6233c7a",
-        "p_f9edd40623"
+        "p_6916d87da4"
       ]
     },
     {
@@ -37,7 +27,7 @@
       "answer": "Istanbul",
       "citations": [
         {
-          "claim": "Nusretiye Clock Tower is situated in Istanbul, Turkey",
+          "claim": "Nusretiye Clock Tower is in Istanbul",
           "passage_id": "p_089ccb4916"
         },
         {
@@ -47,6 +37,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "Istanbul",
     "gold_answer": "Istanbul, Turkey",
@@ -55,7 +46,7 @@
     "f1": 0.6667,
     "citations": [
       {
-        "claim": "Nusretiye Clock Tower is situated in Istanbul, Turkey",
+        "claim": "Nusretiye Clock Tower is in Istanbul",
         "passage_id": "p_089ccb4916",
         "label": "faithful"
       },
@@ -75,6 +66,5 @@
     "citation_trustworthy": true,
     "quadrant": "honest_wrong",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

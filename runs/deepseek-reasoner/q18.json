@@ -4,24 +4,26 @@
   "steps": [
     {
       "action": "search",
-      "query": "Freakonomics documentary American",
-      "k": 3,
+      "query": "Freakonomics documentary American origin",
+      "k": 5,
       "result_ids": [
         "p_42999eddc4",
         "p_5981953b49",
-        "p_973952a5af"
+        "p_973952a5af",
+        "p_b7a5c95224",
+        "p_dffce6beda"
       ]
     },
     {
       "action": "search",
-      "query": "In the Realm of the Hackers documentary",
+      "query": "In the Realm of the Hackers documentary origin",
       "k": 5,
       "result_ids": [
         "p_3b22cae235",
-        "p_7aca89f6ca",
         "p_f569d14086",
+        "p_7aca89f6ca",
         "p_dece535211",
-        "p_d49d0fa428"
+        "p_ee0bc17b26"
       ]
     },
     {
@@ -39,6 +41,7 @@
       ]
     }
   ],
+  "agent": "deepseek-reasoner",
   "score": {
     "answer": "No",
     "gold_answer": "no",
@@ -67,6 +70,5 @@
     "citation_trustworthy": true,
     "quadrant": "ideal",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-reasoner"
+  }
 }

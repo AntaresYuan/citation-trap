@@ -4,32 +4,34 @@
   "steps": [
     {
       "action": "search",
-      "query": "midwest race track 500 mile race every May",
-      "k": 8,
+      "query": "500 mile race every May midwest race track",
+      "k": 5,
       "result_ids": [
         "p_551a902b42",
         "p_0d4f5518bc",
         "p_bc40bce00b",
         "p_4835a3a369",
-        "p_92feb04575",
-        "p_c4d8b0dc73",
-        "p_e4c797b8cc",
-        "p_c3aeb3c065"
+        "p_92feb04575"
       ]
     },
     {
       "action": "search",
-      "query": "Indianapolis Motor Speedway May 500 mile race",
-      "k": 8,
+      "query": "midwest race track 500 mile May Indianapolis",
+      "k": 5,
       "result_ids": [
         "p_92feb04575",
         "p_bc40bce00b",
-        "p_7ba984bb3c",
-        "p_0d4f5518bc",
-        "p_e4e4e6182e",
-        "p_551a902b42",
         "p_c4d8b0dc73",
-        "p_c3aeb3c065"
+        "p_551a902b42",
+        "p_e4e4e6182e"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Indianapolis 500 held every May",
+      "k": 1,
+      "result_ids": [
+        "p_92feb04575"
       ]
     },
     {
@@ -37,24 +39,17 @@
       "answer": "Indianapolis Motor Speedway",
       "citations": [
         {
-          "claim": "The Indianapolis Motor Speedway is the home of the Indianapolis 500 mile race.",
-          "passage_id": "p_7ba984bb3c"
+          "claim": "Indianapolis Motor Speedway hosts a 500 mile race (Indianapolis 500) in May",
+          "passage_id": "bc40bce00b"
         },
         {
-          "claim": "In 1911, Allison's new track held the first Indianapolis 500 mile race.",
-          "passage_id": "p_bc40bce00b"
-        },
-        {
-          "claim": "The track is located in Speedway, Indiana, which is in the midwest.",
-          "passage_id": "p_7ba984bb3c"
-        },
-        {
-          "claim": "The 1957 Indianapolis 500 was held on May 30.",
-          "passage_id": "p_92feb04575"
+          "claim": "The Indianapolis 500 was first held in 1911 and occurs in May (e.g., May 30, 1957)",
+          "passage_id": "92feb04575"
         }
       ]
     }
   ],
+  "agent": "deepseek-chat",
   "score": {
     "answer": "Indianapolis Motor Speedway",
     "gold_answer": "Indianapolis Motor Speedway",
@@ -63,36 +58,25 @@
     "f1": 1.0,
     "citations": [
       {
-        "claim": "The Indianapolis Motor Speedway is the home of the Indianapolis 500 mile race.",
-        "passage_id": "p_7ba984bb3c",
-        "label": "faithful"
+        "claim": "Indianapolis Motor Speedway hosts a 500 mile race (Indianapolis 500) in May",
+        "passage_id": "bc40bce00b",
+        "label": "fabricated"
       },
       {
-        "claim": "In 1911, Allison's new track held the first Indianapolis 500 mile race.",
-        "passage_id": "p_bc40bce00b",
-        "label": "faithful"
-      },
-      {
-        "claim": "The track is located in Speedway, Indiana, which is in the midwest.",
-        "passage_id": "p_7ba984bb3c",
-        "label": "faithful"
-      },
-      {
-        "claim": "The 1957 Indianapolis 500 was held on May 30.",
-        "passage_id": "p_92feb04575",
-        "label": "faithful"
+        "claim": "The Indianapolis 500 was first held in 1911 and occurs in May (e.g., May 30, 1957)",
+        "passage_id": "92feb04575",
+        "label": "fabricated"
       }
     ],
     "citation_counts": {
-      "faithful": 4,
+      "faithful": 0,
       "misattributed": 0,
-      "fabricated": 0,
+      "fabricated": 2,
       "unsupported": 0
     },
-    "faithfulness_score": 1.0,
-    "citation_trustworthy": true,
-    "quadrant": "ideal",
+    "faithfulness_score": 0.0,
+    "citation_trustworthy": false,
+    "quadrant": "correct_but_fabricated",
     "scored_by": "entailment_judge"
-  },
-  "agent": "deepseek-chat"
+  }
 }
