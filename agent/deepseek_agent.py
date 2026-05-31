@@ -37,7 +37,7 @@ MODELS = {
 SYSTEM = (
     "You are a research analyst. Answer the question using ONLY passages you "
     "retrieve. Respond with EXACTLY ONE JSON object per turn, no prose:\n"
-    '  to search: {"type":"search","query":"...","k":8}\n'
+    '  to search: {"type":"search","query":"...","k":5}\n'
     '  to finish: {"type":"submit","answer":"...",'
     '"citations":[{"claim":"...","passage_id":"..."}]}\n'
     "Do at least one search before submitting.\n"

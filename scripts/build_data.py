@@ -36,8 +36,8 @@ ROWS_API = "https://datasets-server.huggingface.co/rows"
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(os.path.dirname(HERE), "data")
 
-N_QUESTIONS = 100        # target count
-FETCH_POOL = 600         # pull a big pool; quality gates drop a large fraction
+N_QUESTIONS = 500        # target count
+FETCH_POOL = 2500        # pull a big pool; quality gates drop a large fraction
 MAX_YESNO_FRAC = 0.5     # cap yes/no answers at half of the final set
 
 
