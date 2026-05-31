@@ -1,0 +1,65 @@
+{
+  "qid": "q11",
+  "question": "The arena where the Lewiston Maineiacs played their home games can seat how many people?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Lewiston Maineiacs home arena seating capacity",
+      "k": 8,
+      "result_ids": [
+        "p_442ad9d966",
+        "p_17ee57e25c",
+        "p_ff0f241577",
+        "p_9288b10480",
+        "p_296ba1badb",
+        "p_a31dc81687",
+        "p_e00f895123",
+        "p_9aa8d31dbe"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "3,677",
+      "citations": [
+        {
+          "claim": "Lewiston Maineiacs played home games at Androscoggin Bank Colisée",
+          "passage_id": "p_442ad9d966"
+        },
+        {
+          "claim": "Androscoggin Bank Colisée seats 3,677",
+          "passage_id": "p_17ee57e25c"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "3,677",
+    "gold_answer": "3,677 seated",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.6667,
+    "citations": [
+      {
+        "claim": "Lewiston Maineiacs played home games at Androscoggin Bank Colisée",
+        "passage_id": "p_442ad9d966",
+        "label": "faithful"
+      },
+      {
+        "claim": "Androscoggin Bank Colisée seats 3,677",
+        "passage_id": "p_17ee57e25c",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "honest_wrong",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

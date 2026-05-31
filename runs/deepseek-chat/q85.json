@@ -1,0 +1,80 @@
+{
+  "qid": "q85",
+  "question": "D1NZ is a series based on what oversteering technique?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "D1NZ oversteering technique",
+      "k": 8,
+      "result_ids": [
+        "p_95aba4b7fd",
+        "p_da2e0fcdd4",
+        "p_d2138ee37f",
+        "p_6c05485af8",
+        "p_058f3692c5",
+        "p_342a97756e",
+        "p_d68433ddb0",
+        "p_4e8309573e"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "D1NZ drifting series",
+      "k": 8,
+      "result_ids": [
+        "p_95aba4b7fd",
+        "p_d2138ee37f",
+        "p_6031a4780c",
+        "p_6d0628382e",
+        "p_0a760c4287",
+        "p_34c5403a42",
+        "p_84e3773246",
+        "p_47132ec611"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "drifting",
+      "citations": [
+        {
+          "claim": "D1NZ is a production car drifting series",
+          "passage_id": "p_95aba4b7fd"
+        },
+        {
+          "claim": "Drifting is a driving technique where the driver intentionally oversteers",
+          "passage_id": "p_d2138ee37f"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "drifting",
+    "gold_answer": "Drifting",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "D1NZ is a production car drifting series",
+        "passage_id": "p_95aba4b7fd",
+        "label": "faithful"
+      },
+      {
+        "claim": "Drifting is a driving technique where the driver intentionally oversteers",
+        "passage_id": "p_d2138ee37f",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

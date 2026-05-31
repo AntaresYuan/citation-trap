@@ -1,0 +1,70 @@
+{
+  "qid": "q36",
+  "question": "Do the drinks Gibson and Zurracapote both contain gin?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Gibson cocktail ingredients gin",
+      "k": 3,
+      "result_ids": [
+        "p_de6059d7f8",
+        "p_f85048d669",
+        "p_b35496a93f"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Zurracapote cocktail ingredients",
+      "k": 3,
+      "result_ids": [
+        "p_dab99599d3",
+        "p_de6059d7f8",
+        "p_a3ff081662"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "No",
+      "citations": [
+        {
+          "claim": "The Gibson is a mixed drink made with gin and vermouth.",
+          "passage_id": "p_de6059d7f8"
+        },
+        {
+          "claim": "Zurracapote consists of red wine mixed with fruit, sugar, and cinnamon.",
+          "passage_id": "p_dab99599d3"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "No",
+    "gold_answer": "no",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "The Gibson is a mixed drink made with gin and vermouth.",
+        "passage_id": "p_de6059d7f8",
+        "label": "faithful"
+      },
+      {
+        "claim": "Zurracapote consists of red wine mixed with fruit, sugar, and cinnamon.",
+        "passage_id": "p_dab99599d3",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

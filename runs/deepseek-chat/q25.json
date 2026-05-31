@@ -1,0 +1,80 @@
+{
+  "qid": "q25",
+  "question": "The Vermont Catamounts men's soccer team currently competes in a conference that was formerly known as what from 1988 to 1996?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Vermont Catamounts men's soccer conference 1988 1996",
+      "k": 8,
+      "result_ids": [
+        "p_4a637e7dfb",
+        "p_27caa971f0",
+        "p_38cb85a6b2",
+        "p_de17c116a3",
+        "p_2e52d2107e",
+        "p_aadd74eaf7",
+        "p_b7829966fa",
+        "p_df8904efa7"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "America East Conference formerly known as 1988 1996",
+      "k": 8,
+      "result_ids": [
+        "p_c845bd9f15",
+        "p_de17c116a3",
+        "p_b7829966fa",
+        "p_aadd74eaf7",
+        "p_4a637e7dfb",
+        "p_df8904efa7",
+        "p_9cb4386e9a",
+        "p_27caa971f0"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "North Atlantic Conference",
+      "citations": [
+        {
+          "claim": "The Vermont Catamounts men's soccer team competes in the America East Conference.",
+          "passage_id": "p_4a637e7dfb"
+        },
+        {
+          "claim": "The America East Conference was known as the North Atlantic Conference from 1988 to 1996.",
+          "passage_id": "p_c845bd9f15"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "North Atlantic Conference",
+    "gold_answer": "the North Atlantic Conference",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "The Vermont Catamounts men's soccer team competes in the America East Conference.",
+        "passage_id": "p_4a637e7dfb",
+        "label": "faithful"
+      },
+      {
+        "claim": "The America East Conference was known as the North Atlantic Conference from 1988 to 1996.",
+        "passage_id": "p_c845bd9f15",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

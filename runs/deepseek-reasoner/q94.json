@@ -1,0 +1,95 @@
+{
+  "qid": "q94",
+  "question": "Which film was released first: Sacred Planet or Oz the Great and Powerful?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Sacred Planet release date",
+      "k": 8,
+      "result_ids": [
+        "p_a3bfd26bf3",
+        "p_a308489335",
+        "p_58452204db",
+        "p_ab9850c154",
+        "p_4a8b6fd5f7",
+        "p_b3cdece549",
+        "p_cf1c1f91df",
+        "p_353a14f09a"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Oz the Great and Powerful release date",
+      "k": 8,
+      "result_ids": [
+        "p_7c112bb762",
+        "p_ab9850c154",
+        "p_4b8c44633c",
+        "p_5721a6947a",
+        "p_a308489335",
+        "p_8da4012255",
+        "p_b3cdece549",
+        "p_cf1c1f91df"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Oz the Great and Powerful release date 2013",
+      "k": 8,
+      "result_ids": [
+        "p_7c112bb762",
+        "p_ab9850c154",
+        "p_4b8c44633c",
+        "p_5721a6947a",
+        "p_a736a1a72e",
+        "p_a308489335",
+        "p_8da4012255",
+        "p_b3cdece549"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Sacred Planet",
+      "citations": [
+        {
+          "claim": "Sacred Planet was released on April 22, 2004",
+          "passage_id": "p_a3bfd26bf3"
+        },
+        {
+          "claim": "Oz the Great and Powerful is a 2013 film",
+          "passage_id": "p_7c112bb762"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Sacred Planet",
+    "gold_answer": "Sacred Planet",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Sacred Planet was released on April 22, 2004",
+        "passage_id": "p_a3bfd26bf3",
+        "label": "faithful"
+      },
+      {
+        "claim": "Oz the Great and Powerful is a 2013 film",
+        "passage_id": "p_7c112bb762",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

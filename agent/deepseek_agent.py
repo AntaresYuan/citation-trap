@@ -17,9 +17,22 @@ import json
 import os
 import urllib.request
 
-API_URL = "https://api.deepseek.com/chat/completions"
-DEFAULT_MODEL = "deepseek-chat"
 MAX_STEPS = 8
+
+# Model registry — every entry speaks the OpenAI chat-completions format, so
+# DeepSeek, OpenAI, and local Ollama all work through one client. Add a row to
+# benchmark another model (give the matching key env var). `name` is the label
+# shown in the leaderboard.
+MODELS = {
+    "deepseek-chat":     {"base_url": "https://api.deepseek.com/chat/completions",
+                          "model": "deepseek-chat", "key_env": "DEEPSEEK_API_KEY"},
+    "deepseek-reasoner": {"base_url": "https://api.deepseek.com/chat/completions",
+                          "model": "deepseek-reasoner", "key_env": "DEEPSEEK_API_KEY"},
+    "gpt-4o-mini":       {"base_url": "https://api.openai.com/v1/chat/completions",
+                          "model": "gpt-4o-mini", "key_env": "OPENAI_API_KEY"},
+    "ollama-llama3.2":   {"base_url": "http://localhost:11434/v1/chat/completions",
+                          "model": "llama3.2", "key_env": None},
+}
 
 SYSTEM = (
     "You are a research analyst. Answer the question using ONLY passages you "
@@ -53,24 +66,30 @@ def _extract_json(text):
     raise ValueError(f"unbalanced JSON in reply: {text[:200]!r}")
 
 
-class DeepSeekAgent:
-    name = "deepseek-chat"
+class OpenAICompatAgent:
+    """ReAct agent over any OpenAI-compatible chat endpoint."""
 
-    def __init__(self, api_key=None, model=DEFAULT_MODEL, temperature=1.1):
-        self.api_key = api_key or os.environ.get("DEEPSEEK_API_KEY")
-        if not self.api_key:
-            raise RuntimeError("DEEPSEEK_API_KEY not set")
-        self.model = model
+    def __init__(self, name="deepseek-chat", base_url=None, model=None,
+                 key_env="DEEPSEEK_API_KEY", temperature=1.1):
+        spec = MODELS.get(name, {})
+        self.name = name
+        self.base_url = base_url or spec.get("base_url")
+        self.model = model or spec.get("model", name)
+        key_env = spec.get("key_env", key_env) if name in MODELS else key_env
+        self.api_key = os.environ.get(key_env) if key_env else None
+        if key_env and not self.api_key:
+            raise RuntimeError(f"{key_env} not set (needed for {name})")
         self.temperature = float(os.environ.get("CT_TEMPERATURE", temperature))
 
     def _chat(self, messages):
         body = json.dumps({"model": self.model, "messages": messages,
                            "temperature": self.temperature}).encode()
-        req = urllib.request.Request(
-            API_URL, data=body, method="POST",
-            headers={"Authorization": f"Bearer {self.api_key}",
-                     "Content-Type": "application/json"})
-        resp = json.load(urllib.request.urlopen(req, timeout=60))
+        headers = {"Content-Type": "application/json"}
+        if self.api_key:
+            headers["Authorization"] = f"Bearer {self.api_key}"
+        req = urllib.request.Request(self.base_url, data=body, method="POST",
+                                     headers=headers)
+        resp = json.load(urllib.request.urlopen(req, timeout=120))
         return resp["choices"][0]["message"]["content"]
 
     def run(self, obs, search, index=0):
@@ -101,3 +120,17 @@ class DeepSeekAgent:
                 messages.append({"role": "user",
                                  "content": "Unknown action. Use search or submit."})
         return last  # budget exhausted without a submit
+
+
+def make_model_agent(name, temperature=1.1):
+    """Build an agent for a registered model name (see MODELS)."""
+    if name not in MODELS:
+        raise ValueError(f"unknown model {name!r}; known: {', '.join(MODELS)}")
+    return OpenAICompatAgent(name=name, temperature=temperature)
+
+
+class DeepSeekAgent(OpenAICompatAgent):
+    """Back-compat: defaults to deepseek-chat."""
+    def __init__(self, model="deepseek-chat", temperature=1.1):
+        super().__init__(name=model if model in MODELS else "deepseek-chat",
+                         temperature=temperature)

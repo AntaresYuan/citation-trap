@@ -1,0 +1,65 @@
+{
+  "qid": "q21",
+  "question": "The football manager who recruited David Beckham managed Manchester United during what timeframe?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "David Beckham recruited by Manchester United manager",
+      "k": 8,
+      "result_ids": [
+        "p_200a2b118e",
+        "p_ed4c10e568",
+        "p_a217c165e0",
+        "p_e8d00662d8",
+        "p_34f25cef7b",
+        "p_bbd3cfb502",
+        "p_c6999108c8",
+        "p_4a8b6fd5f7"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "1986 to 2013",
+      "citations": [
+        {
+          "claim": "Alex Ferguson managed Manchester United from 1986 to 2013",
+          "passage_id": "p_c6999108c8"
+        },
+        {
+          "claim": "Alex Ferguson drafted in David Beckham for the first team",
+          "passage_id": "p_a217c165e0"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "1986 to 2013",
+    "gold_answer": "from 1986 to 2013",
+    "answer_correct": true,
+    "em": 0,
+    "f1": 0.8571,
+    "citations": [
+      {
+        "claim": "Alex Ferguson managed Manchester United from 1986 to 2013",
+        "passage_id": "p_c6999108c8",
+        "label": "faithful"
+      },
+      {
+        "claim": "Alex Ferguson drafted in David Beckham for the first team",
+        "passage_id": "p_a217c165e0",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

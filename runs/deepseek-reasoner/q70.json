@@ -1,0 +1,71 @@
+{
+  "qid": "q70",
+  "question": "Who has written more than 300 papers, Semyon Aranovich Gershgorin or Pavel Alexandrov?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Semyon Aranovich Gershgorin number of papers",
+      "k": 8,
+      "result_ids": [
+        "p_61d2d64eb2",
+        "p_0af5bc383d",
+        "p_598e532c1e",
+        "p_a11bd40e60",
+        "p_5fec29ed43",
+        "p_e02f6ed917",
+        "p_ea7ef375ed",
+        "p_f0b214c15e"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Semyon Aranovich Gershgorin papers published",
+      "k": 8,
+      "result_ids": [
+        "p_61d2d64eb2",
+        "p_0af5bc383d",
+        "p_598e532c1e",
+        "p_5fec29ed43",
+        "p_e02f6ed917",
+        "p_a11bd40e60",
+        "p_ea7ef375ed",
+        "p_f0b214c15e"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Pavel Alexandrov",
+      "citations": [
+        {
+          "claim": "Pavel Alexandrov wrote about three hundred papers",
+          "passage_id": "p_f0b214c15e"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Pavel Alexandrov",
+    "gold_answer": "Pavel Sergeyevich Alexandrov",
+    "answer_correct": true,
+    "em": 0,
+    "f1": 0.8,
+    "citations": [
+      {
+        "claim": "Pavel Alexandrov wrote about three hundred papers",
+        "passage_id": "p_f0b214c15e",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

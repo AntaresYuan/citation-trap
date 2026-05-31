@@ -1,0 +1,150 @@
+{
+  "qid": "q90",
+  "question": "which is larger Asante Traditional Buildings or Gulangyu?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Asante Traditional Buildings size area",
+      "k": 8,
+      "result_ids": [
+        "p_cade420caa",
+        "p_6d0afe1342",
+        "p_c2812fc549",
+        "p_99894dc149",
+        "p_8718bc27b3",
+        "p_9a674506a6",
+        "p_6b9c9a108c",
+        "p_82b4d11add"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Gulangyu area size square kilometers",
+      "k": 8,
+      "result_ids": [
+        "p_722ade8839",
+        "p_7b278dbd3d",
+        "p_7d20eb5672",
+        "p_6b9c9a108c",
+        "p_d28a3eaae6",
+        "p_b2984790c0",
+        "p_eec5c44a18",
+        "p_50a5ccc585"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Asante Traditional Buildings site area hectares",
+      "k": 8,
+      "result_ids": [
+        "p_cade420caa",
+        "p_6d0afe1342",
+        "p_c2812fc549",
+        "p_99894dc149",
+        "p_8718bc27b3",
+        "p_9a674506a6",
+        "p_6b9c9a108c",
+        "p_82b4d11add"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Asante Traditional Buildings size area hectares UNESCO",
+      "k": 8,
+      "result_ids": [
+        "p_cade420caa",
+        "p_6d0afe1342",
+        "p_c2812fc549",
+        "p_99894dc149",
+        "p_8718bc27b3",
+        "p_9a674506a6",
+        "p_6b9c9a108c",
+        "p_82b4d11add"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Asante Traditional Buildings UNESCO area",
+      "k": 8,
+      "result_ids": [
+        "p_cade420caa",
+        "p_6d0afe1342",
+        "p_c2812fc549",
+        "p_99894dc149",
+        "p_8718bc27b3",
+        "p_9a674506a6",
+        "p_6b9c9a108c",
+        "p_82b4d11add"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Asante Traditional Buildings site size",
+      "k": 8,
+      "result_ids": [
+        "p_cade420caa",
+        "p_6d0afe1342",
+        "p_c2812fc549",
+        "p_99894dc149",
+        "p_8718bc27b3",
+        "p_9a674506a6",
+        "p_6b9c9a108c",
+        "p_82b4d11add"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Asante Traditional Buildings hectares",
+      "k": 8,
+      "result_ids": [
+        "p_cade420caa",
+        "p_6d0afe1342",
+        "p_c2812fc549",
+        "p_99894dc149",
+        "p_8718bc27b3",
+        "p_9a674506a6",
+        "p_6b9c9a108c",
+        "p_82b4d11add"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Asante Traditional Buildings area km2",
+      "k": 8,
+      "result_ids": [
+        "p_cade420caa",
+        "p_6d0afe1342",
+        "p_111b78a127",
+        "p_c2812fc549",
+        "p_99894dc149",
+        "p_8718bc27b3",
+        "p_9a674506a6",
+        "p_6b9c9a108c"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "",
+      "citations": []
+    }
+  ],
+  "score": {
+    "answer": "",
+    "gold_answer": "Gulangyu",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [],
+    "citation_counts": {
+      "faithful": 0,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 0.0,
+    "citation_trustworthy": false,
+    "quadrant": "worst",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

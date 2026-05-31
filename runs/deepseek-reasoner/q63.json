@@ -1,0 +1,71 @@
+{
+  "qid": "q63",
+  "question": "Alfred Balk served as the secretary of the Committee on the Employment of Minority Groups in the News Media under which United States Vice President?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Alfred Balk secretary Committee on the Employment of Minority Groups in the News Media Vice President",
+      "k": 8,
+      "result_ids": [
+        "p_9c25839f17",
+        "p_d2b89b81d1",
+        "p_a24dd3bd04",
+        "p_b998a011ed",
+        "p_8e76d2f99a",
+        "p_6485b51f8d",
+        "p_0bbc47b089",
+        "p_a94825b3c8"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Committee on the Employment of Minority Groups in the News Media secretary Alfred Balk",
+      "k": 8,
+      "result_ids": [
+        "p_9c25839f17",
+        "p_d2b89b81d1",
+        "p_a24dd3bd04",
+        "p_6cbf5b5547",
+        "p_a47a44ef2f",
+        "p_82efb0e4d2",
+        "p_c20693be11",
+        "p_920f42643a"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Nelson Rockefeller",
+      "citations": [
+        {
+          "claim": "Alfred Balk served as secretary of New York Governor Nelson Rockefeller's Committee on the Employment of Minority Groups in the News Media",
+          "passage_id": "p_9c25839f17"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Nelson Rockefeller",
+    "gold_answer": "Nelson Rockefeller",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Alfred Balk served as secretary of New York Governor Nelson Rockefeller's Committee on the Employment of Minority Groups in the News Media",
+        "passage_id": "p_9c25839f17",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

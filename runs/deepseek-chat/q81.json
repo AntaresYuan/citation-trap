@@ -1,0 +1,150 @@
+{
+  "qid": "q81",
+  "question": "Ellie Goulding worked with what other writers on her third studio album, Delirium?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Ellie Goulding Delirium writers third studio album",
+      "k": 8,
+      "result_ids": [
+        "p_398f925a85",
+        "p_2acb9234b9",
+        "p_7ac4ccff5d",
+        "p_b12d78e62b",
+        "p_f381c8da52",
+        "p_0aa8f3ed7e",
+        "p_d57fd57776",
+        "p_b5c40766ae"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Delirium Ellie Goulding writers list credits",
+      "k": 8,
+      "result_ids": [
+        "p_398f925a85",
+        "p_2acb9234b9",
+        "p_3b89f81077",
+        "p_b12d78e62b",
+        "p_f381c8da52",
+        "p_7ac4ccff5d",
+        "p_d57fd57776",
+        "p_0aa8f3ed7e"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Delirium album songwriters production credits",
+      "k": 8,
+      "result_ids": [
+        "p_2acb9234b9",
+        "p_b12d78e62b",
+        "p_398f925a85",
+        "p_7ac4ccff5d",
+        "p_0aa8f3ed7e",
+        "p_5623036024",
+        "p_3b89f81077",
+        "p_d57fd57776"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Ellie Goulding Delirium collaborators writing credits production",
+      "k": 8,
+      "result_ids": [
+        "p_2acb9234b9",
+        "p_398f925a85",
+        "p_b5c40766ae",
+        "p_3b89f81077",
+        "p_b12d78e62b",
+        "p_f381c8da52",
+        "p_7ac4ccff5d",
+        "p_d57fd57776"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Delirium Ellie Goulding co-writers album credits",
+      "k": 8,
+      "result_ids": [
+        "p_398f925a85",
+        "p_2acb9234b9",
+        "p_3b89f81077",
+        "p_7ac4ccff5d",
+        "p_f381c8da52",
+        "p_b12d78e62b",
+        "p_d57fd57776",
+        "p_0aa8f3ed7e"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Ellie Goulding Delirium Wikipedia songwriters",
+      "k": 8,
+      "result_ids": [
+        "p_398f925a85",
+        "p_2acb9234b9",
+        "p_b12d78e62b",
+        "p_f381c8da52",
+        "p_7ac4ccff5d",
+        "p_d57fd57776",
+        "p_0aa8f3ed7e",
+        "p_b5c40766ae"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "en.wikipedia.org Delirium Ellie Goulding track listing",
+      "k": 8,
+      "result_ids": [
+        "p_398f925a85",
+        "p_d57fd57776",
+        "p_2acb9234b9",
+        "p_b12d78e62b",
+        "p_f381c8da52",
+        "p_7ac4ccff5d",
+        "p_0aa8f3ed7e",
+        "p_b5c40766ae"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "\"Delirium\" credits Ellie Goulding writers Max Martin",
+      "k": 8,
+      "result_ids": [
+        "p_d57fd57776",
+        "p_f381c8da52",
+        "p_398f925a85",
+        "p_2acb9234b9",
+        "p_b12d78e62b",
+        "p_7ac4ccff5d",
+        "p_3b89f81077",
+        "p_0aa8f3ed7e"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "",
+      "citations": []
+    }
+  ],
+  "score": {
+    "answer": "",
+    "gold_answer": "Max Martin, Savan Kotecha and Ilya Salmanzadeh",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [],
+    "citation_counts": {
+      "faithful": 0,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 0.0,
+    "citation_trustworthy": false,
+    "quadrant": "worst",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

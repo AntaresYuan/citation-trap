@@ -1,0 +1,71 @@
+{
+  "qid": "q48",
+  "question": "Which film was Oscar nominated, LaLee's Kin: The Legacy of Cotton or Gimme Shelter, the 1970 Rolling Stones documentary?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "LaLee's Kin: The Legacy of Cotton Oscar nomination",
+      "k": 8,
+      "result_ids": [
+        "p_28adee78a3",
+        "p_7c112bb762",
+        "p_1599f19299",
+        "p_544fc00af3",
+        "p_cb3fc6cbd6",
+        "p_52bf84b437",
+        "p_f1b2e83f47",
+        "p_edd74ff6d5"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Gimme Shelter 1970 Rolling Stones documentary Oscar nomination",
+      "k": 8,
+      "result_ids": [
+        "p_eb374266cc",
+        "p_5057df5faf",
+        "p_a56d25c568",
+        "p_81fcf402af",
+        "p_544fc00af3",
+        "p_d85dd95c0c",
+        "p_4b32768305",
+        "p_a81acdb521"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "LaLee's Kin: The Legacy of Cotton",
+      "citations": [
+        {
+          "claim": "LaLee's Kin: The Legacy of Cotton was nominated for Best Documentary Feature at the 74th Academy Awards.",
+          "passage_id": "p_28adee78a3"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "LaLee's Kin: The Legacy of Cotton",
+    "gold_answer": "LaLee's Kin: The Legacy of Cotton",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "LaLee's Kin: The Legacy of Cotton was nominated for Best Documentary Feature at the 74th Academy Awards.",
+        "passage_id": "p_28adee78a3",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

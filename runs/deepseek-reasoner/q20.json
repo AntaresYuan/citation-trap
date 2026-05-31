@@ -1,0 +1,80 @@
+{
+  "qid": "q20",
+  "question": "Which band, Letters to Cleo or Screaming Trees, had more members?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Letters to Cleo band members",
+      "k": 8,
+      "result_ids": [
+        "p_f03266ee23",
+        "p_48759cddb7",
+        "p_1b7d7cbcd8",
+        "p_81bf841f26",
+        "p_7f29895e67",
+        "p_0ed868a9fe",
+        "p_1cb94a5c66",
+        "p_5821a19427"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Screaming Trees band members",
+      "k": 8,
+      "result_ids": [
+        "p_5821a19427",
+        "p_0a07cfb344",
+        "p_1b7d7cbcd8",
+        "p_48759cddb7",
+        "p_f7a7fc5590",
+        "p_95c860e5b7",
+        "p_217b6bf0d8",
+        "p_c3e0fccc45"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Letters to Cleo",
+      "citations": [
+        {
+          "claim": "Letters to Cleo had six members: Kay Hanley, Greg McKenna, Michael Eisenstein, Stacy Jones, Scott Riebling, and later, Tom Polce.",
+          "passage_id": "p_f03266ee23"
+        },
+        {
+          "claim": "Screaming Trees had five distinct members: Mark Lanegan, Gary Lee Conner, Van Conner, Mark Pickerel, and Barrett Martin (who replaced Pickerel).",
+          "passage_id": "p_0a07cfb344"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Letters to Cleo",
+    "gold_answer": "Letters to Cleo",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Letters to Cleo had six members: Kay Hanley, Greg McKenna, Michael Eisenstein, Stacy Jones, Scott Riebling, and later, Tom Polce.",
+        "passage_id": "p_f03266ee23",
+        "label": "faithful"
+      },
+      {
+        "claim": "Screaming Trees had five distinct members: Mark Lanegan, Gary Lee Conner, Van Conner, Mark Pickerel, and Barrett Martin (who replaced Pickerel).",
+        "passage_id": "p_0a07cfb344",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

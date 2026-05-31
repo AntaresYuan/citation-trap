@@ -1,0 +1,98 @@
+{
+  "qid": "q77",
+  "question": "What race track in the midwest hosts a 500 mile race eavery May?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "midwest race track 500 mile race every May",
+      "k": 8,
+      "result_ids": [
+        "p_551a902b42",
+        "p_0d4f5518bc",
+        "p_bc40bce00b",
+        "p_4835a3a369",
+        "p_92feb04575",
+        "p_c4d8b0dc73",
+        "p_e4c797b8cc",
+        "p_c3aeb3c065"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Indianapolis Motor Speedway May 500 mile race",
+      "k": 8,
+      "result_ids": [
+        "p_92feb04575",
+        "p_bc40bce00b",
+        "p_7ba984bb3c",
+        "p_0d4f5518bc",
+        "p_e4e4e6182e",
+        "p_551a902b42",
+        "p_c4d8b0dc73",
+        "p_c3aeb3c065"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Indianapolis Motor Speedway",
+      "citations": [
+        {
+          "claim": "The Indianapolis Motor Speedway is the home of the Indianapolis 500 mile race.",
+          "passage_id": "p_7ba984bb3c"
+        },
+        {
+          "claim": "In 1911, Allison's new track held the first Indianapolis 500 mile race.",
+          "passage_id": "p_bc40bce00b"
+        },
+        {
+          "claim": "The track is located in Speedway, Indiana, which is in the midwest.",
+          "passage_id": "p_7ba984bb3c"
+        },
+        {
+          "claim": "The 1957 Indianapolis 500 was held on May 30.",
+          "passage_id": "p_92feb04575"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Indianapolis Motor Speedway",
+    "gold_answer": "Indianapolis Motor Speedway",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "The Indianapolis Motor Speedway is the home of the Indianapolis 500 mile race.",
+        "passage_id": "p_7ba984bb3c",
+        "label": "faithful"
+      },
+      {
+        "claim": "In 1911, Allison's new track held the first Indianapolis 500 mile race.",
+        "passage_id": "p_bc40bce00b",
+        "label": "faithful"
+      },
+      {
+        "claim": "The track is located in Speedway, Indiana, which is in the midwest.",
+        "passage_id": "p_7ba984bb3c",
+        "label": "faithful"
+      },
+      {
+        "claim": "The 1957 Indianapolis 500 was held on May 30.",
+        "passage_id": "p_92feb04575",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 4,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

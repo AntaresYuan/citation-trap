@@ -1,0 +1,80 @@
+{
+  "qid": "q4",
+  "question": "Are the Laleli Mosque and Esma Sultan Mansion located in the same neighborhood?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Laleli Mosque neighborhood",
+      "k": 8,
+      "result_ids": [
+        "p_fe4bd75cbe",
+        "p_6916d87da4",
+        "p_089ccb4916",
+        "p_39d74cf5b6",
+        "p_348c421342",
+        "p_678f02dbf8",
+        "p_fcb6233c7a",
+        "p_f9edd40623"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Esma Sultan Mansion neighborhood",
+      "k": 8,
+      "result_ids": [
+        "p_d98361504e",
+        "p_d4c18d6847",
+        "p_71620020ab",
+        "p_3ccba8d1e7",
+        "p_f1e520f355",
+        "p_554b5ee61c",
+        "p_089ccb4916",
+        "p_c12e171108"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "No",
+      "citations": [
+        {
+          "claim": "Laleli Mosque is located in Laleli, Fatih, Istanbul, Turkey",
+          "passage_id": "p_fe4bd75cbe"
+        },
+        {
+          "claim": "Esma Sultan Mansion is located in Ortaköy neighborhood of Istanbul, Turkey",
+          "passage_id": "p_d98361504e"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "No",
+    "gold_answer": "no",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Laleli Mosque is located in Laleli, Fatih, Istanbul, Turkey",
+        "passage_id": "p_fe4bd75cbe",
+        "label": "faithful"
+      },
+      {
+        "claim": "Esma Sultan Mansion is located in Ortaköy neighborhood of Istanbul, Turkey",
+        "passage_id": "p_d98361504e",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

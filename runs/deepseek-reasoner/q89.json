@@ -1,0 +1,80 @@
+{
+  "qid": "q89",
+  "question": "According to the 2001 census, what was the population of the city in which Kirton End is located?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Kirton End location",
+      "k": 8,
+      "result_ids": [
+        "p_6e18f62a00",
+        "p_111b78a127",
+        "p_ae378f4f6d",
+        "p_552cd4eace",
+        "p_48ce6bb8da",
+        "p_6ae4485be3",
+        "p_4e8bd3bc38",
+        "p_17ee57e25c"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Boston Lincolnshire 2001 census population",
+      "k": 8,
+      "result_ids": [
+        "p_5d1c749274",
+        "p_48ce6bb8da",
+        "p_2c2b71ceba",
+        "p_69ef36f40f",
+        "p_ae378f4f6d",
+        "p_fd8539ad58",
+        "p_0dcaf3482c",
+        "p_6e18f62a00"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "35,124",
+      "citations": [
+        {
+          "claim": "Kirton End is a hamlet in the civil parish of Kirton in the Boston district of Lincolnshire, England",
+          "passage_id": "p_6e18f62a00"
+        },
+        {
+          "claim": "Boston town itself had a population of 35,124 at the 2001 census",
+          "passage_id": "p_5d1c749274"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "35,124",
+    "gold_answer": "35,124",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Kirton End is a hamlet in the civil parish of Kirton in the Boston district of Lincolnshire, England",
+        "passage_id": "p_6e18f62a00",
+        "label": "faithful"
+      },
+      {
+        "claim": "Boston town itself had a population of 35,124 at the 2001 census",
+        "passage_id": "p_5d1c749274",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

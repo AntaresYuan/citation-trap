@@ -1,0 +1,75 @@
+{
+  "qid": "q57",
+  "question": "Where is the company that Sachin Warrier worked for as a software engineer headquartered? ",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Sachin Warrier software engineer company headquarters",
+      "k": 8,
+      "result_ids": [
+        "p_8b4ba42732",
+        "p_fa2a8ea377",
+        "p_613951d767",
+        "p_0808871e8a",
+        "p_ae4c8b179d",
+        "p_26bb940e85",
+        "p_b4b26cf26c",
+        "p_fc5c00a45c"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Tata Consultancy Services headquarters",
+      "k": 3,
+      "result_ids": [
+        "p_2c6104f69f",
+        "p_8b4ba42732",
+        "p_50a5ccc585"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Mumbai",
+      "citations": [
+        {
+          "claim": "Sachin Warrier worked as a software engineer in Tata Consultancy Services in Kochi",
+          "passage_id": "p_8b4ba42732"
+        },
+        {
+          "claim": "Tata Consultancy Services is headquartered in Mumbai, Maharashtra",
+          "passage_id": "p_2c6104f69f"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Mumbai",
+    "gold_answer": "Mumbai",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Sachin Warrier worked as a software engineer in Tata Consultancy Services in Kochi",
+        "passage_id": "p_8b4ba42732",
+        "label": "faithful"
+      },
+      {
+        "claim": "Tata Consultancy Services is headquartered in Mumbai, Maharashtra",
+        "passage_id": "p_2c6104f69f",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

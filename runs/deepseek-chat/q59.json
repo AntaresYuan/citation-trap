@@ -1,0 +1,56 @@
+{
+  "qid": "q59",
+  "question": "A Japanese manga series based on a 16 year old high school student Ichitaka Seto, is written and illustrated by someone born in what year?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Japanese manga series Ichitaka Seto written and illustrated by birth year",
+      "k": 8,
+      "result_ids": [
+        "p_1fc6f696bc",
+        "p_577a9c6ca8",
+        "p_600979a126",
+        "p_53be56f09e",
+        "p_719c9cfbc8",
+        "p_a1c7ed2539",
+        "p_a47a44ef2f",
+        "p_1b0803d100"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "1962",
+      "citations": [
+        {
+          "claim": "The manga series is 'I\"s', written and illustrated by Masakazu Katsura.",
+          "passage_id": "p_1fc6f696bc"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "1962",
+    "gold_answer": "1962",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "The manga series is 'I\"s', written and illustrated by Masakazu Katsura.",
+        "passage_id": "p_1fc6f696bc",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

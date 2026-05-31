@@ -1,0 +1,80 @@
+{
+  "qid": "q13",
+  "question": "Who is older, Annie Morton or Terry Richardson?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Annie Morton birth date",
+      "k": 8,
+      "result_ids": [
+        "p_86d4257cec",
+        "p_96e15c90f2",
+        "p_6fefe478f0",
+        "p_341ba459fe",
+        "p_4a8b6fd5f7",
+        "p_b3cdece549",
+        "p_5be2d3bd19",
+        "p_82efb0e4d2"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Terry Richardson birth date",
+      "k": 8,
+      "result_ids": [
+        "p_4e710aa863",
+        "p_70fc4d433d",
+        "p_4f0a90bf27",
+        "p_2cb18bddfd",
+        "p_86d4257cec",
+        "p_2c5e236434",
+        "p_8ee2e87301",
+        "p_110dc5864f"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Terry Richardson",
+      "citations": [
+        {
+          "claim": "Annie Morton was born October 8, 1970",
+          "passage_id": "p_86d4257cec"
+        },
+        {
+          "claim": "Terry Richardson was born August 14, 1965",
+          "passage_id": "p_4f0a90bf27"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Terry Richardson",
+    "gold_answer": "Terry Richardson",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Annie Morton was born October 8, 1970",
+        "passage_id": "p_86d4257cec",
+        "label": "faithful"
+      },
+      {
+        "claim": "Terry Richardson was born August 14, 1965",
+        "passage_id": "p_4f0a90bf27",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

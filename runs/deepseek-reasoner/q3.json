@@ -1,0 +1,65 @@
+{
+  "qid": "q3",
+  "question": "What science fantasy young adult series, told in first person, has a set of companion books narrating the stories of enslaved worlds and alien species?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "science fantasy young adult series first person companion books narrated stories enslaved worlds alien species",
+      "k": 8,
+      "result_ids": [
+        "p_4b9edbfeb8",
+        "p_1599f19299",
+        "p_d3d77c1d85",
+        "p_7b278dbd3d",
+        "p_4fff350197",
+        "p_177797d6b4",
+        "p_e249b058a6",
+        "p_6d0628382e"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Animorphs",
+      "citations": [
+        {
+          "claim": "Animorphs is a science fantasy young adult series told in first person",
+          "passage_id": "p_4b9edbfeb8"
+        },
+        {
+          "claim": "The Hork-Bajir Chronicles is a companion book narrating the story of how the Yeerks enslaved the Hork-Bajir, an alien species",
+          "passage_id": "p_e249b058a6"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Animorphs",
+    "gold_answer": "Animorphs",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Animorphs is a science fantasy young adult series told in first person",
+        "passage_id": "p_4b9edbfeb8",
+        "label": "faithful"
+      },
+      {
+        "claim": "The Hork-Bajir Chronicles is a companion book narrating the story of how the Yeerks enslaved the Hork-Bajir, an alien species",
+        "passage_id": "p_e249b058a6",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

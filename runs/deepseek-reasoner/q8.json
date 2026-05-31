@@ -1,0 +1,65 @@
+{
+  "qid": "q8",
+  "question": "Are Random House Tower and 888 7th Avenue both used for real estate?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Random House Tower 888 7th Avenue real estate",
+      "k": 8,
+      "result_ids": [
+        "p_2646f51b7d",
+        "p_85aacdff46",
+        "p_7d20eb5672",
+        "p_fb07709a6f",
+        "p_5e874f068e",
+        "p_ac61251ec2",
+        "p_3bfa0e5438",
+        "p_05466a6059"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Yes",
+      "citations": [
+        {
+          "claim": "Random House Tower is a mixed-use tower used as a luxury apartment complex and headquarters, indicating real estate use.",
+          "passage_id": "p_2646f51b7d"
+        },
+        {
+          "claim": "888 7th Avenue is an office skyscraper housing Vornado Realty Trust corporate headquarters, indicating real estate use.",
+          "passage_id": "p_fb07709a6f"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Yes",
+    "gold_answer": "no",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [
+      {
+        "claim": "Random House Tower is a mixed-use tower used as a luxury apartment complex and headquarters, indicating real estate use.",
+        "passage_id": "p_2646f51b7d",
+        "label": "faithful"
+      },
+      {
+        "claim": "888 7th Avenue is an office skyscraper housing Vornado Realty Trust corporate headquarters, indicating real estate use.",
+        "passage_id": "p_fb07709a6f",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "honest_wrong",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

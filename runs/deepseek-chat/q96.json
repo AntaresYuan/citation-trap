@@ -1,0 +1,74 @@
+{
+  "qid": "q96",
+  "question": "Who is older, Ferdi Taygan or Mahesh Bhupathi?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Ferdi Taygan birth date",
+      "k": 5,
+      "result_ids": [
+        "p_cf0f0a32e5",
+        "p_87f120b90a",
+        "p_8c7eb41369",
+        "p_f37a03892c",
+        "p_09e9334ed9"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Mahesh Bhupathi birth date",
+      "k": 5,
+      "result_ids": [
+        "p_e886981cba",
+        "p_1563927d66",
+        "p_68072908dc",
+        "p_341ba459fe",
+        "p_4a8b6fd5f7"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Ferdi Taygan",
+      "citations": [
+        {
+          "claim": "Ferdi Taygan was born December 5, 1956",
+          "passage_id": "p_cf0f0a32e5"
+        },
+        {
+          "claim": "Mahesh Bhupathi was born 7 June 1974",
+          "passage_id": "p_68072908dc"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Ferdi Taygan",
+    "gold_answer": "Ferdi Taygan",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Ferdi Taygan was born December 5, 1956",
+        "passage_id": "p_cf0f0a32e5",
+        "label": "faithful"
+      },
+      {
+        "claim": "Mahesh Bhupathi was born 7 June 1974",
+        "passage_id": "p_68072908dc",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

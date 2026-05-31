@@ -1,0 +1,80 @@
+{
+  "qid": "q84",
+  "question": "Which author has won more Pulitzer Prizes, Thomas Friedman or Henri Bergson?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Thomas Friedman Pulitzer Prizes",
+      "k": 8,
+      "result_ids": [
+        "p_a3bc0efcc1",
+        "p_a9f087a743",
+        "p_4d71938b0e",
+        "p_2e2f61086b",
+        "p_d0e3c07ff5",
+        "p_7c27d69035",
+        "p_fc5c00a45c",
+        "p_57f6b1881d"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Henri Bergson Pulitzer Prize",
+      "k": 8,
+      "result_ids": [
+        "p_7f06d23378",
+        "p_a9f087a743",
+        "p_56bf6bda24",
+        "p_a3bc0efcc1",
+        "p_c3e4c46071",
+        "p_2231ba4f1c",
+        "p_6e0ca27917",
+        "p_7592f2466a"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Thomas Friedman",
+      "citations": [
+        {
+          "claim": "Thomas Friedman is a three time Pulitzer Prize winner",
+          "passage_id": "p_a3bc0efcc1"
+        },
+        {
+          "claim": "Henri Bergson is a French philosopher",
+          "passage_id": "p_7f06d23378"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Thomas Friedman",
+    "gold_answer": "Thomas Loren Friedman",
+    "answer_correct": true,
+    "em": 0,
+    "f1": 0.8,
+    "citations": [
+      {
+        "claim": "Thomas Friedman is a three time Pulitzer Prize winner",
+        "passage_id": "p_a3bc0efcc1",
+        "label": "faithful"
+      },
+      {
+        "claim": "Henri Bergson is a French philosopher",
+        "passage_id": "p_7f06d23378",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

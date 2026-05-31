@@ -1,0 +1,65 @@
+{
+  "qid": "q26",
+  "question": "Are Ferocactus and Silene both types of plant?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Ferocactus Silene plant classification",
+      "k": 8,
+      "result_ids": [
+        "p_d7d1088dda",
+        "p_a34f5a8d4f",
+        "p_f96bd5c521",
+        "p_efc31a02f5",
+        "p_ce630bcddf",
+        "p_2626fad8c0",
+        "p_502f90b27b",
+        "p_677f3d99ec"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Yes",
+      "citations": [
+        {
+          "claim": "Ferocactus is a genus of large barrel-shaped cacti.",
+          "passage_id": "p_502f90b27b"
+        },
+        {
+          "claim": "Silene is a flowering plant.",
+          "passage_id": "p_2626fad8c0"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Yes",
+    "gold_answer": "yes",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Ferocactus is a genus of large barrel-shaped cacti.",
+        "passage_id": "p_502f90b27b",
+        "label": "faithful"
+      },
+      {
+        "claim": "Silene is a flowering plant.",
+        "passage_id": "p_2626fad8c0",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

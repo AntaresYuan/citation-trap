@@ -1,0 +1,91 @@
+{
+  "qid": "q88",
+  "question": "Which director had the longest career, Alain Resnais or Scott Sidney?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Alain Resnais career length start year",
+      "k": 8,
+      "result_ids": [
+        "p_d96574d648",
+        "p_546f7c2436",
+        "p_c20693be11",
+        "p_1db0b70c2b",
+        "p_4aeab25594",
+        "p_4dc9acdb6b",
+        "p_0858193d37",
+        "p_c2bec7eaeb"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Scott Sidney film director career start year",
+      "k": 8,
+      "result_ids": [
+        "p_25f9cb9b82",
+        "p_93fa34e103",
+        "p_afebceb5f2",
+        "p_d96574d648",
+        "p_99f5c064e8",
+        "p_6121371d11",
+        "p_0e66fb0f66",
+        "p_e203813626"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Scott Sidney birth year 1872 death year 1928",
+      "k": 4,
+      "result_ids": [
+        "p_25f9cb9b82",
+        "p_ef4edb8843",
+        "p_f751dcd719",
+        "p_546f7c2436"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Alain Resnais",
+      "citations": [
+        {
+          "claim": "Alain Resnais’s career extended over more than six decades, starting in the mid-1940s and ending in 2014.",
+          "passage_id": "p_d96574d648"
+        },
+        {
+          "claim": "Scott Sidney directed films between 1913 and 1927.",
+          "passage_id": "p_25f9cb9b82"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Alain Resnais",
+    "gold_answer": "Scott Sidney",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [
+      {
+        "claim": "Alain Resnais’s career extended over more than six decades, starting in the mid-1940s and ending in 2014.",
+        "passage_id": "p_d96574d648",
+        "label": "faithful"
+      },
+      {
+        "claim": "Scott Sidney directed films between 1913 and 1927.",
+        "passage_id": "p_25f9cb9b82",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "honest_wrong",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

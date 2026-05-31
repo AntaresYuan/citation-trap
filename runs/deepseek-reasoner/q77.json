@@ -1,0 +1,77 @@
+{
+  "qid": "q77",
+  "question": "What race track in the midwest hosts a 500 mile race eavery May?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "500 mile race May midwest track",
+      "k": 8,
+      "result_ids": [
+        "p_551a902b42",
+        "p_bc40bce00b",
+        "p_0d4f5518bc",
+        "p_92feb04575",
+        "p_c4d8b0dc73",
+        "p_e4c797b8cc",
+        "p_c3aeb3c065",
+        "p_e4e4e6182e"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Indianapolis 500 May race track midwest",
+      "k": 5,
+      "result_ids": [
+        "p_bc40bce00b",
+        "p_92feb04575",
+        "p_c4d8b0dc73",
+        "p_551a902b42",
+        "p_e4e4e6182e"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Indianapolis Motor Speedway",
+      "citations": [
+        {
+          "claim": "Indianapolis Motor Speedway hosts a 500 mile race in May (the Indianapolis 500).",
+          "passage_id": "p_bc40bce00b"
+        },
+        {
+          "claim": "The Indianapolis 500 is held in May.",
+          "passage_id": "p_92feb04575"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Indianapolis Motor Speedway",
+    "gold_answer": "Indianapolis Motor Speedway",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Indianapolis Motor Speedway hosts a 500 mile race in May (the Indianapolis 500).",
+        "passage_id": "p_bc40bce00b",
+        "label": "faithful"
+      },
+      {
+        "claim": "The Indianapolis 500 is held in May.",
+        "passage_id": "p_92feb04575",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

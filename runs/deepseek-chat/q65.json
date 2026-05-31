@@ -1,0 +1,56 @@
+{
+  "qid": "q65",
+  "question": "A medieval fortress in Dirleton, East Lothian, Scotland borders on the south side of what coastal area?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Dirleton East Lothian Scotland medieval fortress south side coastal area",
+      "k": 8,
+      "result_ids": [
+        "p_b3cdece549",
+        "p_7d458c65a2",
+        "p_f9c9647836",
+        "p_afb775b692",
+        "p_3715833268",
+        "p_bcd22d8ac6",
+        "p_4d8ae59351",
+        "p_9745bb1c41"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Yellowcraigs (Broad Sands Bay)",
+      "citations": [
+        {
+          "claim": "Dirleton Castle borders to the south the coastal area of Yellowcraig (Broad Sands Bay).",
+          "passage_id": "p_7d458c65a2"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Yellowcraigs (Broad Sands Bay)",
+    "gold_answer": "Yellowcraig",
+    "answer_correct": true,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [
+      {
+        "claim": "Dirleton Castle borders to the south the coastal area of Yellowcraig (Broad Sands Bay).",
+        "passage_id": "p_7d458c65a2",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

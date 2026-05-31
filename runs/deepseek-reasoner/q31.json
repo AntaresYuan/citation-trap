@@ -1,0 +1,150 @@
+{
+  "qid": "q31",
+  "question": "This singer of A Rather Blustery Day also voiced what hedgehog?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "'A Rather Blustery Day' singer also voiced hedgehog",
+      "k": 8,
+      "result_ids": [
+        "p_a70f23601c",
+        "p_1e786f4de4",
+        "p_553c68d9e3",
+        "p_1474c9fd57",
+        "p_e67df6a573",
+        "p_11f95b982a",
+        "p_353b4cba00",
+        "p_6fb7815044"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Jim Cummings voiced hedgehog character",
+      "k": 8,
+      "result_ids": [
+        "p_78be011537",
+        "p_a70f23601c",
+        "p_1e786f4de4",
+        "p_2abfbf036f",
+        "p_bc40bce00b",
+        "p_0e42f86a3f",
+        "p_d68433ddb0",
+        "p_215f6dde1b"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "'A Rather Blustery Day' original singer Sterling Holloway",
+      "k": 8,
+      "result_ids": [
+        "p_a70f23601c",
+        "p_e67df6a573",
+        "p_553c68d9e3",
+        "p_11f95b982a",
+        "p_1474c9fd57",
+        "p_6fb7815044",
+        "p_353b4cba00",
+        "p_bfbe1650d4"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Jim Cummings hedgehog voice",
+      "k": 8,
+      "result_ids": [
+        "p_78be011537",
+        "p_a70f23601c",
+        "p_1e786f4de4",
+        "p_94330f7d3d",
+        "p_3d319dd936",
+        "p_2679456b2a",
+        "p_d68433ddb0",
+        "p_bc40bce00b"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Sterling Holloway voiced hedgehog",
+      "k": 8,
+      "result_ids": [
+        "p_1e786f4de4",
+        "p_e67df6a573",
+        "p_78be011537",
+        "p_058f3692c5",
+        "p_342a97756e",
+        "p_d68433ddb0",
+        "p_4e8309573e",
+        "p_a1f8072496"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Jim Cummings voices hedgehog character name",
+      "k": 8,
+      "result_ids": [
+        "p_78be011537",
+        "p_a70f23601c",
+        "p_1e786f4de4",
+        "p_afebceb5f2",
+        "p_2abfbf036f",
+        "p_bc40bce00b",
+        "p_0e42f86a3f",
+        "p_d68433ddb0"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Sterling Holloway 'A Rather Blustery Day'",
+      "k": 8,
+      "result_ids": [
+        "p_a70f23601c",
+        "p_e67df6a573",
+        "p_553c68d9e3",
+        "p_11f95b982a",
+        "p_1474c9fd57",
+        "p_6fb7815044",
+        "p_353b4cba00",
+        "p_ef4edb8843"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Jim Cummings voiced hedgehog character Sonic",
+      "k": 8,
+      "result_ids": [
+        "p_78be011537",
+        "p_1e786f4de4",
+        "p_a70f23601c",
+        "p_2abfbf036f",
+        "p_bc40bce00b",
+        "p_0e42f86a3f",
+        "p_d68433ddb0",
+        "p_215f6dde1b"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "",
+      "citations": []
+    }
+  ],
+  "score": {
+    "answer": "",
+    "gold_answer": "Sonic",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [],
+    "citation_counts": {
+      "faithful": 0,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 0.0,
+    "citation_trustworthy": false,
+    "quadrant": "worst",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

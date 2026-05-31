@@ -1,0 +1,80 @@
+{
+  "qid": "q62",
+  "question": "Which came out first, Dinosaur or McFarland, USA",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Dinosaur 2000 film release date",
+      "k": 8,
+      "result_ids": [
+        "p_2091110a30",
+        "p_0458107817",
+        "p_2735e3536b",
+        "p_cf1c1f91df",
+        "p_0674da612f",
+        "p_5623036024",
+        "p_69c56cceb5",
+        "p_42999eddc4"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "McFarland USA 2015 release date",
+      "k": 8,
+      "result_ids": [
+        "p_127e25a08e",
+        "p_96ed9f38fa",
+        "p_70ccce41fe",
+        "p_a308489335",
+        "p_551a902b42",
+        "p_d0d48ef896",
+        "p_e8d00662d8",
+        "p_44bad6bfba"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Dinosaur",
+      "citations": [
+        {
+          "claim": "Dinosaur is a 2000 film",
+          "passage_id": "p_2091110a30"
+        },
+        {
+          "claim": "McFarland, USA is a 2015 film",
+          "passage_id": "p_127e25a08e"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Dinosaur",
+    "gold_answer": "Dinosaur",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Dinosaur is a 2000 film",
+        "passage_id": "p_2091110a30",
+        "label": "faithful"
+      },
+      {
+        "claim": "McFarland, USA is a 2015 film",
+        "passage_id": "p_127e25a08e",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

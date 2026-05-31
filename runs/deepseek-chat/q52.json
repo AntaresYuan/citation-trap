@@ -1,0 +1,65 @@
+{
+  "qid": "q52",
+  "question": "Who had the best singles ranking, Roberta Vinci or Jorge Lozano?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Roberta Vinci WTA singles ranking",
+      "k": 8,
+      "result_ids": [
+        "p_bd6f4b1e46",
+        "p_4695a8a6e2",
+        "p_82b95f1e11",
+        "p_1ddf7b8021",
+        "p_c360c2dd20",
+        "p_2e823740d2",
+        "p_b5eac08bc3",
+        "p_e611d24d23"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Roberta Vinci",
+      "citations": [
+        {
+          "claim": "Roberta Vinci's highest singles ranking was World No. 7",
+          "passage_id": "p_4695a8a6e2"
+        },
+        {
+          "claim": "Jorge Lozano's highest singles ranking was World No. 51",
+          "passage_id": "p_b5eac08bc3"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Roberta Vinci",
+    "gold_answer": "Roberta Vinci",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Roberta Vinci's highest singles ranking was World No. 7",
+        "passage_id": "p_4695a8a6e2",
+        "label": "faithful"
+      },
+      {
+        "claim": "Jorge Lozano's highest singles ranking was World No. 51",
+        "passage_id": "p_b5eac08bc3",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

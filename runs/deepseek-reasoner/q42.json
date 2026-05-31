@@ -1,0 +1,80 @@
+{
+  "qid": "q42",
+  "question": "Who died first, George Archainbaud or Ralph Murphy?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "George Archainbaud death date",
+      "k": 8,
+      "result_ids": [
+        "p_60c2d2154b",
+        "p_728bb8768a",
+        "p_ad17916fb8",
+        "p_80bfe2f49b",
+        "p_2b15090bba",
+        "p_922869560b",
+        "p_5121cb4665",
+        "p_14379d42a0"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Ralph Murphy death date",
+      "k": 8,
+      "result_ids": [
+        "p_8228c2d1b8",
+        "p_a49a6081c2",
+        "p_02dea33cbd",
+        "p_8499da7d59",
+        "p_4a70a0fe1c",
+        "p_4a8b6fd5f7",
+        "p_b3cdece549",
+        "p_69295530b6"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "George Archainbaud",
+      "citations": [
+        {
+          "claim": "George Archainbaud died on February 20, 1959",
+          "passage_id": "p_60c2d2154b"
+        },
+        {
+          "claim": "Ralph Murphy died on February 10, 1967",
+          "passage_id": "p_8228c2d1b8"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "George Archainbaud",
+    "gold_answer": "George Archainbaud",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "George Archainbaud died on February 20, 1959",
+        "passage_id": "p_60c2d2154b",
+        "label": "faithful"
+      },
+      {
+        "claim": "Ralph Murphy died on February 10, 1967",
+        "passage_id": "p_8228c2d1b8",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

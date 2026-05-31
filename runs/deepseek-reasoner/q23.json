@@ -1,0 +1,122 @@
+{
+  "qid": "q23",
+  "question": "Brown State Fishing Lake is in a country that has a population of how many inhabitants ?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Brown State Fishing Lake location",
+      "k": 5,
+      "result_ids": [
+        "p_eec5c44a18",
+        "p_d0d48ef896",
+        "p_cdc531557f",
+        "p_d2aea57c49",
+        "p_951dc4213a"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States population",
+      "k": 5,
+      "result_ids": [
+        "p_5b5761d864",
+        "p_2365e34270",
+        "p_0dcaf3482c",
+        "p_aa797b94f2",
+        "p_821d9ee7a8"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States population 2020 census",
+      "k": 5,
+      "result_ids": [
+        "p_5b5761d864",
+        "p_0dcaf3482c",
+        "p_ae378f4f6d",
+        "p_2c2b71ceba",
+        "p_aa797b94f2"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States population 2020 census number",
+      "k": 5,
+      "result_ids": [
+        "p_2c2b71ceba",
+        "p_5b5761d864",
+        "p_0dcaf3482c",
+        "p_ae378f4f6d",
+        "p_aa797b94f2"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States population 2020 331 million",
+      "k": 5,
+      "result_ids": [
+        "p_2c2b71ceba",
+        "p_fc87c060e4",
+        "p_5b5761d864",
+        "p_2365e34270",
+        "p_0dcaf3482c"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States population 2020 census 331 million",
+      "k": 3,
+      "result_ids": [
+        "p_2c2b71ceba",
+        "p_5b5761d864",
+        "p_0dcaf3482c"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States Census Bureau population 2020",
+      "k": 5,
+      "result_ids": [
+        "p_2c2b71ceba",
+        "p_5b5761d864",
+        "p_0dcaf3482c",
+        "p_ae378f4f6d",
+        "p_aa797b94f2"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States population 2020 census result",
+      "k": 3,
+      "result_ids": [
+        "p_5b5761d864",
+        "p_0dcaf3482c",
+        "p_ae378f4f6d"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "",
+      "citations": []
+    }
+  ],
+  "score": {
+    "answer": "",
+    "gold_answer": "9,984",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [],
+    "citation_counts": {
+      "faithful": 0,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 0.0,
+    "citation_trustworthy": false,
+    "quadrant": "worst",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

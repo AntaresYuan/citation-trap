@@ -1,0 +1,89 @@
+{
+  "qid": "q54",
+  "question": "Josey Scott and Ian Watkins were both promising musicians. Which of these talented men was incarcerated, impacting his career with a rock band?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Josey Scott incarceration",
+      "k": 8,
+      "result_ids": [
+        "p_0e66fb0f66",
+        "p_ddc258ad6e",
+        "p_bdb7c78c0a",
+        "p_69bce25239",
+        "p_7f54f5dff8",
+        "p_25f9cb9b82",
+        "p_99f5c064e8",
+        "p_684eb88ba2"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Ian Watkins incarceration",
+      "k": 8,
+      "result_ids": [
+        "p_292bd4fc3b",
+        "p_40ba9c48cb",
+        "p_52abd25d44",
+        "p_25392f6711",
+        "p_7737a7948a",
+        "p_e5ab12822f",
+        "p_9a53406257",
+        "p_5ca8b3c172"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Ian Watkins",
+      "citations": [
+        {
+          "claim": "Ian Watkins is a convicted sex offender who was jailed for 29 years",
+          "passage_id": "p_292bd4fc3b"
+        },
+        {
+          "claim": "Ian Watkins was the lead vocalist of Lostprophets, a rock band",
+          "passage_id": "p_292bd4fc3b"
+        },
+        {
+          "claim": "Josey Scott was the lead vocalist of the rock band Saliva",
+          "passage_id": "p_0e66fb0f66"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Ian Watkins",
+    "gold_answer": "Lostprophets disbanded in 2013 after Watkins was charged with sexual offences in late 2012.",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.125,
+    "citations": [
+      {
+        "claim": "Ian Watkins is a convicted sex offender who was jailed for 29 years",
+        "passage_id": "p_292bd4fc3b",
+        "label": "faithful"
+      },
+      {
+        "claim": "Ian Watkins was the lead vocalist of Lostprophets, a rock band",
+        "passage_id": "p_292bd4fc3b",
+        "label": "faithful"
+      },
+      {
+        "claim": "Josey Scott was the lead vocalist of the rock band Saliva",
+        "passage_id": "p_0e66fb0f66",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 3,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "honest_wrong",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

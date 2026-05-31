@@ -1,0 +1,80 @@
+{
+  "qid": "q55",
+  "question": "Ralph Hefferline was a psychology professor at a university that is located in what city?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Ralph Hefferline psychology professor university",
+      "k": 8,
+      "result_ids": [
+        "p_a49a6081c2",
+        "p_26ce29dab5",
+        "p_1b33d10b33",
+        "p_8e17a76ee7",
+        "p_7033e19209",
+        "p_b2458a7340",
+        "p_0316c9e89e",
+        "p_05406fda74"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Columbia University location city",
+      "k": 8,
+      "result_ids": [
+        "p_f9961d6294",
+        "p_a49a6081c2",
+        "p_552cd4eace",
+        "p_05406fda74",
+        "p_6ae4485be3",
+        "p_eebd6b68dc",
+        "p_0316c9e89e",
+        "p_c27f528002"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "New York City",
+      "citations": [
+        {
+          "claim": "Ralph Hefferline was a psychology professor at Columbia University",
+          "passage_id": "p_a49a6081c2"
+        },
+        {
+          "claim": "Columbia University is located in New York City",
+          "passage_id": "p_f9961d6294"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "New York City",
+    "gold_answer": "New York City",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Ralph Hefferline was a psychology professor at Columbia University",
+        "passage_id": "p_a49a6081c2",
+        "label": "faithful"
+      },
+      {
+        "claim": "Columbia University is located in New York City",
+        "passage_id": "p_f9961d6294",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

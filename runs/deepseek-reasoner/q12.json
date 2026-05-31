@@ -1,0 +1,89 @@
+{
+  "qid": "q12",
+  "question": "Which writer was from England, Henry Roth or Robert Erskine Childers?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Henry Roth writer nationality England",
+      "k": 8,
+      "result_ids": [
+        "p_89a174d3b4",
+        "p_1b7d7cbcd8",
+        "p_fbb22ba096",
+        "p_f569d14086",
+        "p_fd8539ad58",
+        "p_9fd672510f",
+        "p_7a3e63983e",
+        "p_ae378f4f6d"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Robert Erskine Childers nationality England",
+      "k": 8,
+      "result_ids": [
+        "p_5be74413cf",
+        "p_bd2932ebf1",
+        "p_24a1be2597",
+        "p_7a3e63983e",
+        "p_6ad1e9acf3",
+        "p_59116f3fc5",
+        "p_076807cc0f",
+        "p_f34cf9272e"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Robert Erskine Childers",
+      "citations": [
+        {
+          "claim": "Henry Roth was an American novelist",
+          "passage_id": "p_89a174d3b4"
+        },
+        {
+          "claim": "Robert Erskine Childers was a British writer",
+          "passage_id": "p_5be74413cf"
+        },
+        {
+          "claim": "Erskine Childers was English-born",
+          "passage_id": "p_076807cc0f"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Robert Erskine Childers",
+    "gold_answer": "Robert Erskine Childers DSC",
+    "answer_correct": true,
+    "em": 0,
+    "f1": 0.8571,
+    "citations": [
+      {
+        "claim": "Henry Roth was an American novelist",
+        "passage_id": "p_89a174d3b4",
+        "label": "faithful"
+      },
+      {
+        "claim": "Robert Erskine Childers was a British writer",
+        "passage_id": "p_5be74413cf",
+        "label": "faithful"
+      },
+      {
+        "claim": "Erskine Childers was English-born",
+        "passage_id": "p_076807cc0f",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 3,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

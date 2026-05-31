@@ -1,0 +1,150 @@
+{
+  "qid": "q71",
+  "question": "Which British first-generation jet-powered medium bomber was used in the South West Pacific theatre of World War II?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "British first-generation jet-powered medium bomber South West Pacific theatre World War II",
+      "k": 8,
+      "result_ids": [
+        "p_ae718b7790",
+        "p_950c0a8c94",
+        "p_3a40401c5f",
+        "p_9f77aab1cf",
+        "p_e139866507",
+        "p_74b9155d9b",
+        "p_8e3c3fb7e5",
+        "p_012c3d194d"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "British jet bomber World War II South West Pacific",
+      "k": 8,
+      "result_ids": [
+        "p_950c0a8c94",
+        "p_9f77aab1cf",
+        "p_e139866507",
+        "p_ae718b7790",
+        "p_012c3d194d",
+        "p_74b9155d9b",
+        "p_8e3c3fb7e5",
+        "p_3a40401c5f"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "British jet bomber World War II Pacific",
+      "k": 8,
+      "result_ids": [
+        "p_ae718b7790",
+        "p_e139866507",
+        "p_950c0a8c94",
+        "p_9f77aab1cf",
+        "p_3a40401c5f",
+        "p_8e3c3fb7e5",
+        "p_012c3d194d",
+        "p_96e6b8d414"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "British jet bomber World War II Pacific theatre",
+      "k": 8,
+      "result_ids": [
+        "p_950c0a8c94",
+        "p_ae718b7790",
+        "p_e139866507",
+        "p_9f77aab1cf",
+        "p_74b9155d9b",
+        "p_8e3c3fb7e5",
+        "p_3a40401c5f",
+        "p_012c3d194d"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "British jet bomber World War II South West Pacific used",
+      "k": 8,
+      "result_ids": [
+        "p_950c0a8c94",
+        "p_9f77aab1cf",
+        "p_e139866507",
+        "p_ae718b7790",
+        "p_012c3d194d",
+        "p_74b9155d9b",
+        "p_8e3c3fb7e5",
+        "p_3a40401c5f"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "British jet bomber World War II South West Pacific Canberra",
+      "k": 8,
+      "result_ids": [
+        "p_950c0a8c94",
+        "p_9f77aab1cf",
+        "p_e139866507",
+        "p_3a40401c5f",
+        "p_ae718b7790",
+        "p_012c3d194d",
+        "p_8c59240206",
+        "p_74b9155d9b"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "World War II British jet bomber Pacific",
+      "k": 8,
+      "result_ids": [
+        "p_ae718b7790",
+        "p_e139866507",
+        "p_950c0a8c94",
+        "p_9f77aab1cf",
+        "p_3a40401c5f",
+        "p_8e3c3fb7e5",
+        "p_012c3d194d",
+        "p_96e6b8d414"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "British jet bomber World War II South West Pacific theatre",
+      "k": 8,
+      "result_ids": [
+        "p_950c0a8c94",
+        "p_9f77aab1cf",
+        "p_e139866507",
+        "p_74b9155d9b",
+        "p_ae718b7790",
+        "p_8e3c3fb7e5",
+        "p_012c3d194d",
+        "p_8c59240206"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "",
+      "citations": []
+    }
+  ],
+  "score": {
+    "answer": "",
+    "gold_answer": "English Electric Canberra",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [],
+    "citation_counts": {
+      "faithful": 0,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 0.0,
+    "citation_trustworthy": false,
+    "quadrant": "worst",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

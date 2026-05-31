@@ -1,0 +1,65 @@
+{
+  "qid": "q73",
+  "question": "Which year and which conference was the 14th season for this conference as part of the NCAA Division that the Colorado Buffaloes played in with a record of 2-6 in conference play?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Colorado Buffaloes 2-6 conference record 14th season NCAA Division conference",
+      "k": 8,
+      "result_ids": [
+        "p_0169deab28",
+        "p_a4e8b7f549",
+        "p_921c7c3967",
+        "p_3dd2e01a2b",
+        "p_c1602981d3",
+        "p_a356498474",
+        "p_f18a96ddff",
+        "p_4eaabfaca2"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "2009, Big 12 Conference",
+      "citations": [
+        {
+          "claim": "The 2009 Big 12 Conference football season was the 14th season for the Big 12",
+          "passage_id": "p_a356498474"
+        },
+        {
+          "claim": "The 2009 Colorado Buffaloes football team finished with a record of 2–6 in Big 12 play",
+          "passage_id": "p_0169deab28"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "2009, Big 12 Conference",
+    "gold_answer": "2009 Big 12 Conference",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "The 2009 Big 12 Conference football season was the 14th season for the Big 12",
+        "passage_id": "p_a356498474",
+        "label": "faithful"
+      },
+      {
+        "claim": "The 2009 Colorado Buffaloes football team finished with a record of 2–6 in Big 12 play",
+        "passage_id": "p_0169deab28",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

@@ -1,0 +1,56 @@
+{
+  "qid": "q33",
+  "question": "Aside from the Apple Remote, what other device can control the program Apple Remote was originally designed to interact with?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Apple Remote originally designed to interact with program Front Row other devices control",
+      "k": 8,
+      "result_ids": [
+        "p_5c799c977d",
+        "p_d96b0c75d9",
+        "p_cb2edb0e1d",
+        "p_296a866512",
+        "p_d666276798",
+        "p_957f69e692",
+        "p_0642eefa0e",
+        "p_0b9a530524"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "keyboard function keys",
+      "citations": [
+        {
+          "claim": "Front Row is controlled by an Apple Remote or the keyboard function keys",
+          "passage_id": "p_cb2edb0e1d"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "keyboard function keys",
+    "gold_answer": "keyboard function keys",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Front Row is controlled by an Apple Remote or the keyboard function keys",
+        "passage_id": "p_cb2edb0e1d",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

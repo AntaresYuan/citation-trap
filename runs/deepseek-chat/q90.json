@@ -1,0 +1,71 @@
+{
+  "qid": "q90",
+  "question": "which is larger Asante Traditional Buildings or Gulangyu?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Asante Traditional Buildings size area",
+      "k": 8,
+      "result_ids": [
+        "p_cade420caa",
+        "p_6d0afe1342",
+        "p_c2812fc549",
+        "p_99894dc149",
+        "p_8718bc27b3",
+        "p_9a674506a6",
+        "p_6b9c9a108c",
+        "p_82b4d11add"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Gulangyu island area size",
+      "k": 8,
+      "result_ids": [
+        "p_722ade8839",
+        "p_ac6a9f18cd",
+        "p_fc39ba8ee1",
+        "p_d28a3eaae6",
+        "p_b2984790c0",
+        "p_eec5c44a18",
+        "p_012c3d194d",
+        "p_bf82064f6d"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Gulangyu",
+      "citations": [
+        {
+          "claim": "Gulangyu is about 2 km² in area",
+          "passage_id": "p_722ade8839"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Gulangyu",
+    "gold_answer": "Gulangyu",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Gulangyu is about 2 km² in area",
+        "passage_id": "p_722ade8839",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

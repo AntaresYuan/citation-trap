@@ -1,0 +1,65 @@
+{
+  "qid": "q82",
+  "question": "Are  Chrysalis and Look both women's magazines?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Chrysalis magazine women's magazine",
+      "k": 8,
+      "result_ids": [
+        "p_ebcb47549e",
+        "p_84f0f7c091",
+        "p_dc396a1f76",
+        "p_0519a0bbf7",
+        "p_177797d6b4",
+        "p_3ba378eb43",
+        "p_b219a318e2",
+        "p_f6e8fa10a1"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Yes",
+      "citations": [
+        {
+          "claim": "Chrysalis is a women's magazine",
+          "passage_id": "p_ebcb47549e"
+        },
+        {
+          "claim": "Look is a women's magazine",
+          "passage_id": "p_dc396a1f76"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Yes",
+    "gold_answer": "yes",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Chrysalis is a women's magazine",
+        "passage_id": "p_ebcb47549e",
+        "label": "faithful"
+      },
+      {
+        "claim": "Look is a women's magazine",
+        "passage_id": "p_dc396a1f76",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

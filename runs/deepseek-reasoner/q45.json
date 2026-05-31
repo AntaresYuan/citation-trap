@@ -1,0 +1,104 @@
+{
+  "qid": "q45",
+  "question": "When was Poison's album \"Shut Up, Make Love\" released?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Poison Shut Up Make Love release date",
+      "k": 8,
+      "result_ids": [
+        "p_45c863fd44",
+        "p_f2022b5f98",
+        "p_42ad93b84c",
+        "p_a3ff081662",
+        "p_2f12c18f7a",
+        "p_7dfa8ba665",
+        "p_dd1b654056",
+        "p_34bf83304b"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "\"Shut Up, Make Love\" album Poison",
+      "k": 5,
+      "result_ids": [
+        "p_45c863fd44",
+        "p_f2022b5f98",
+        "p_a3ff081662",
+        "p_42ad93b84c",
+        "p_dd1b654056"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Poison \"Shut Up, Make Love\" album",
+      "k": 5,
+      "result_ids": [
+        "p_45c863fd44",
+        "p_f2022b5f98",
+        "p_a3ff081662",
+        "p_42ad93b84c",
+        "p_dd1b654056"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "\"Shut Up Make Love\" Poison album",
+      "k": 5,
+      "result_ids": [
+        "p_45c863fd44",
+        "p_f2022b5f98",
+        "p_a3ff081662",
+        "p_42ad93b84c",
+        "p_dd1b654056"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Poison \"Shut Up, Make Love\" album release",
+      "k": 5,
+      "result_ids": [
+        "p_45c863fd44",
+        "p_f2022b5f98",
+        "p_42ad93b84c",
+        "p_a3ff081662",
+        "p_dd1b654056"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "2000",
+      "citations": [
+        {
+          "claim": "Shut Up, Make Love was released in 2000",
+          "passage_id": "p_45c863fd44"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "2000",
+    "gold_answer": "2000",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Shut Up, Make Love was released in 2000",
+        "passage_id": "p_45c863fd44",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

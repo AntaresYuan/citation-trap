@@ -1,0 +1,74 @@
+{
+  "qid": "q6",
+  "question": "Are Local H and For Against both from the United States?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Local H origin United States",
+      "k": 5,
+      "result_ids": [
+        "p_a4ef41c611",
+        "p_e6a07c0541",
+        "p_c2b5bb4efe",
+        "p_0f112c3a2e",
+        "p_03e47d849a"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "For Against band origin United States",
+      "k": 5,
+      "result_ids": [
+        "p_b932cee843",
+        "p_d2b89b81d1",
+        "p_34fd253d93",
+        "p_9b60539de2",
+        "p_0f112c3a2e"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Yes",
+      "citations": [
+        {
+          "claim": "Local H is an American rock band",
+          "passage_id": "p_e6a07c0541"
+        },
+        {
+          "claim": "For Against is a United States band",
+          "passage_id": "p_b932cee843"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Yes",
+    "gold_answer": "yes",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Local H is an American rock band",
+        "passage_id": "p_e6a07c0541",
+        "label": "faithful"
+      },
+      {
+        "claim": "For Against is a United States band",
+        "passage_id": "p_b932cee843",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

@@ -1,0 +1,80 @@
+{
+  "qid": "q80",
+  "question": "Which case came first, Craig v. Boren or United States v. Paramount Pictures, Inc.?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Craig v. Boren year",
+      "k": 8,
+      "result_ids": [
+        "p_b6bbd7dd34",
+        "p_821d9ee7a8",
+        "p_9734bcfad7",
+        "p_3d1d558774",
+        "p_9b60539de2",
+        "p_8e89bdea9d",
+        "p_23651a64a6",
+        "p_9c2afd3932"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States v. Paramount Pictures, Inc. year",
+      "k": 8,
+      "result_ids": [
+        "p_02e5d2c81e",
+        "p_b0c3ed4c94",
+        "p_821d9ee7a8",
+        "p_9734bcfad7",
+        "p_9b60539de2",
+        "p_9c2afd3932",
+        "p_b6bbd7dd34",
+        "p_ba2e2d3699"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "United States v. Paramount Pictures, Inc.",
+      "citations": [
+        {
+          "claim": "Craig v. Boren was decided in 1976",
+          "passage_id": "p_b6bbd7dd34"
+        },
+        {
+          "claim": "United States v. Paramount Pictures, Inc. was decided in 1948",
+          "passage_id": "p_02e5d2c81e"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "United States v. Paramount Pictures, Inc.",
+    "gold_answer": "Craig v. Boren",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.2222,
+    "citations": [
+      {
+        "claim": "Craig v. Boren was decided in 1976",
+        "passage_id": "p_b6bbd7dd34",
+        "label": "faithful"
+      },
+      {
+        "claim": "United States v. Paramount Pictures, Inc. was decided in 1948",
+        "passage_id": "p_02e5d2c81e",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "honest_wrong",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

@@ -1,0 +1,80 @@
+{
+  "qid": "q30",
+  "question": "Who was born earlier, Emma Bull or Virginia Woolf?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Emma Bull birth date",
+      "k": 8,
+      "result_ids": [
+        "p_7e3f81f4d8",
+        "p_341ba459fe",
+        "p_4a8b6fd5f7",
+        "p_b3cdece549",
+        "p_8943bd4566",
+        "p_5be2d3bd19",
+        "p_82efb0e4d2",
+        "p_058f3692c5"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Virginia Woolf birth date",
+      "k": 8,
+      "result_ids": [
+        "p_66a5ac84c7",
+        "p_229de86dfc",
+        "p_c29300ea25",
+        "p_365dea3739",
+        "p_ea7ef375ed",
+        "p_3bf9f73eb5",
+        "p_c256d5eb92",
+        "p_1a7464f167"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Virginia Woolf",
+      "citations": [
+        {
+          "claim": "Emma Bull was born December 13, 1954",
+          "passage_id": "p_7e3f81f4d8"
+        },
+        {
+          "claim": "Virginia Woolf was born 25 January 1882",
+          "passage_id": "p_365dea3739"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Virginia Woolf",
+    "gold_answer": "Adeline Virginia Woolf",
+    "answer_correct": true,
+    "em": 0,
+    "f1": 0.8,
+    "citations": [
+      {
+        "claim": "Emma Bull was born December 13, 1954",
+        "passage_id": "p_7e3f81f4d8",
+        "label": "faithful"
+      },
+      {
+        "claim": "Virginia Woolf was born 25 January 1882",
+        "passage_id": "p_365dea3739",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

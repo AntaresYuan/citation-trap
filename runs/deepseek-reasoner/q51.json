@@ -1,0 +1,53 @@
+{
+  "qid": "q51",
+  "question": "Seven Brief Lessons on Physics was written by an Italian physicist that has worked in France since what year?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Carlo Rovelli worked in France since year",
+      "k": 5,
+      "result_ids": [
+        "p_ed3b33ba32",
+        "p_460d34887a",
+        "p_543b96064c",
+        "p_6121371d11",
+        "p_cb2407f433"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "2000",
+      "citations": [
+        {
+          "claim": "Carlo Rovelli has worked in France since 2000",
+          "passage_id": "p_ed3b33ba32"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "2000",
+    "gold_answer": "2000",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Carlo Rovelli has worked in France since 2000",
+        "passage_id": "p_ed3b33ba32",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

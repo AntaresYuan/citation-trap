@@ -1,0 +1,155 @@
+{
+  "qid": "q3",
+  "question": "What science fantasy young adult series, told in first person, has a set of companion books narrating the stories of enslaved worlds and alien species?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "science fantasy young adult series first person companion books enslaved worlds alien species",
+      "k": 8,
+      "result_ids": [
+        "p_4b9edbfeb8",
+        "p_1599f19299",
+        "p_d3d77c1d85",
+        "p_7b278dbd3d",
+        "p_4fff350197",
+        "p_6d0628382e",
+        "p_68fff9a18d",
+        "p_839fcfc176"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Animorphs companion books enslaved worlds alien species",
+      "k": 8,
+      "result_ids": [
+        "p_e249b058a6",
+        "p_7b278dbd3d",
+        "p_4b9edbfeb8",
+        "p_1599f19299",
+        "p_4fff350197",
+        "p_18c5e626a8",
+        "p_5ca8b3c172",
+        "p_177797d6b4"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Animorphs companion books list enslaved worlds stories",
+      "k": 8,
+      "result_ids": [
+        "p_7b278dbd3d",
+        "p_e249b058a6",
+        "p_4b9edbfeb8",
+        "p_d5e04d787d",
+        "p_1599f19299",
+        "p_4fff350197",
+        "p_c29300ea25",
+        "p_577a9c6ca8"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Animorphs companion books list all chronicles",
+      "k": 8,
+      "result_ids": [
+        "p_e249b058a6",
+        "p_4b9edbfeb8",
+        "p_7b278dbd3d",
+        "p_1599f19299",
+        "p_da2e0fcdd4",
+        "p_a736a1a72e",
+        "p_af6a448f99",
+        "p_bfa54de21d"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Animorphs Ellimist Chronicles Visser Chronicles",
+      "k": 8,
+      "result_ids": [
+        "p_e249b058a6",
+        "p_26432b93a1",
+        "p_4b9edbfeb8",
+        "p_058f3692c5",
+        "p_342a97756e",
+        "p_d68433ddb0",
+        "p_4e8309573e",
+        "p_a1f8072496"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Animorphs Chronicles series companion books enslaved species worlds",
+      "k": 8,
+      "result_ids": [
+        "p_e249b058a6",
+        "p_7b278dbd3d",
+        "p_4b9edbfeb8",
+        "p_1599f19299",
+        "p_4fff350197",
+        "p_6d0628382e",
+        "p_84e3773246",
+        "p_577a9c6ca8"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Animorphs Andalite Chronicles companion book",
+      "k": 8,
+      "result_ids": [
+        "p_e249b058a6",
+        "p_4b9edbfeb8",
+        "p_1599f19299",
+        "p_7b278dbd3d",
+        "p_460d34887a",
+        "p_4e710aa863",
+        "p_2646f51b7d",
+        "p_577a9c6ca8"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Animorphs",
+      "citations": [
+        {
+          "claim": "Animorphs is a science fantasy series of young adult books ... told in first person",
+          "passage_id": "p_4b9edbfeb8"
+        },
+        {
+          "claim": "The Hork-Bajir Chronicles is the second companion book to the Animorphs series ... tells the story of how the Yeerks enslaved the Hork-Bajir",
+          "passage_id": "p_e249b058a6"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Animorphs",
+    "gold_answer": "Animorphs",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Animorphs is a science fantasy series of young adult books ... told in first person",
+        "passage_id": "p_4b9edbfeb8",
+        "label": "faithful"
+      },
+      {
+        "claim": "The Hork-Bajir Chronicles is the second companion book to the Animorphs series ... tells the story of how the Yeerks enslaved the Hork-Bajir",
+        "passage_id": "p_e249b058a6",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

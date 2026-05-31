@@ -1,0 +1,56 @@
+{
+  "qid": "q93",
+  "question": "What is the name of the executive producer of the film that has a score composed by Jerry Goldsmith?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Jerry Goldsmith film executive producer",
+      "k": 8,
+      "result_ids": [
+        "p_60228d0330",
+        "p_1aa02364af",
+        "p_f23fef51c7",
+        "p_18c5e626a8",
+        "p_a2e3502ecf",
+        "p_58452204db",
+        "p_ae7b866896",
+        "p_979ce44f84"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Steven Spielberg",
+      "citations": [
+        {
+          "claim": "Steven Spielberg served as executive producer of Innerspace, a film with music composed by Jerry Goldsmith.",
+          "passage_id": "p_60228d0330"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Steven Spielberg",
+    "gold_answer": "Ronald Shusett",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [
+      {
+        "claim": "Steven Spielberg served as executive producer of Innerspace, a film with music composed by Jerry Goldsmith.",
+        "passage_id": "p_60228d0330",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "honest_wrong",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

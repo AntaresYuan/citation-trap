@@ -1,0 +1,56 @@
+{
+  "qid": "q49",
+  "question": "Alexander Kerensky was defeated and destroyed by the Bolsheviks in the course of a civil war that ended when ?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Russian Civil War end date",
+      "k": 8,
+      "result_ids": [
+        "p_ef5f300880",
+        "p_2da8870c3c",
+        "p_0b091d84ae",
+        "p_51bf59e4d3",
+        "p_0f8e01de83",
+        "p_0ba2f35758",
+        "p_6e18f62a00",
+        "p_78fd51c060"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "October 1922",
+      "citations": [
+        {
+          "claim": "The Russian Civil War ended in October 1922",
+          "passage_id": "p_2da8870c3c"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "October 1922",
+    "gold_answer": "October 1922",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "The Russian Civil War ended in October 1922",
+        "passage_id": "p_2da8870c3c",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

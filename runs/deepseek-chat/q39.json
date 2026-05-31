@@ -1,0 +1,51 @@
+{
+  "qid": "q39",
+  "question": "The 2011–12 VCU Rams men's basketball team, led by third year head coach Shaka Smart, represented Virginia Commonwealth University which was founded in what year?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Virginia Commonwealth University founded year",
+      "k": 3,
+      "result_ids": [
+        "p_b608ad3c0a",
+        "p_d8343c5527",
+        "p_906e4fd62d"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "1838",
+      "citations": [
+        {
+          "claim": "Virginia Commonwealth University was founded in 1838",
+          "passage_id": "p_b608ad3c0a"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "1838",
+    "gold_answer": "1838",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Virginia Commonwealth University was founded in 1838",
+        "passage_id": "p_b608ad3c0a",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

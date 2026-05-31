@@ -1,0 +1,80 @@
+{
+  "qid": "q40",
+  "question": "Are Yingkou and Fuding the same level of city?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Yingkou city administrative level",
+      "k": 8,
+      "result_ids": [
+        "p_552cd4eace",
+        "p_e4bb0f4b73",
+        "p_b790b66a99",
+        "p_a1e0b4783f",
+        "p_bd9438617a",
+        "p_47704aa592",
+        "p_bcd22d8ac6",
+        "p_0cdb6239fa"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Fuding city administrative level",
+      "k": 8,
+      "result_ids": [
+        "p_47704aa592",
+        "p_fce2383d46",
+        "p_5cb604e468",
+        "p_a28094f91c",
+        "p_d178df1d67",
+        "p_bcd22d8ac6",
+        "p_552cd4eace",
+        "p_0cdb6239fa"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "No",
+      "citations": [
+        {
+          "claim": "Yingkou is a prefecture-level city",
+          "passage_id": "p_552cd4eace"
+        },
+        {
+          "claim": "Fuding is a county-level city",
+          "passage_id": "p_47704aa592"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "No",
+    "gold_answer": "no",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Yingkou is a prefecture-level city",
+        "passage_id": "p_552cd4eace",
+        "label": "faithful"
+      },
+      {
+        "claim": "Fuding is a county-level city",
+        "passage_id": "p_47704aa592",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

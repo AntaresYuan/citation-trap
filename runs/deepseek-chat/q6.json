@@ -1,0 +1,80 @@
+{
+  "qid": "q6",
+  "question": "Are Local H and For Against both from the United States?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Local H band origin United States",
+      "k": 8,
+      "result_ids": [
+        "p_e6a07c0541",
+        "p_0f112c3a2e",
+        "p_34fd253d93",
+        "p_a4ef41c611",
+        "p_8301509eae",
+        "p_c2b5bb4efe",
+        "p_03e47d849a",
+        "p_5437551400"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "For Against band origin United States",
+      "k": 8,
+      "result_ids": [
+        "p_b932cee843",
+        "p_d2b89b81d1",
+        "p_34fd253d93",
+        "p_9b60539de2",
+        "p_0f112c3a2e",
+        "p_821d9ee7a8",
+        "p_92255b5ed8",
+        "p_c7cf1a6c94"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Yes",
+      "citations": [
+        {
+          "claim": "Local H is an American rock band from Zion, Illinois, United States.",
+          "passage_id": "p_e6a07c0541"
+        },
+        {
+          "claim": "For Against is a United States post-punk/dream pop band from Lincoln, Nebraska.",
+          "passage_id": "p_b932cee843"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Yes",
+    "gold_answer": "yes",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Local H is an American rock band from Zion, Illinois, United States.",
+        "passage_id": "p_e6a07c0541",
+        "label": "faithful"
+      },
+      {
+        "claim": "For Against is a United States post-punk/dream pop band from Lincoln, Nebraska.",
+        "passage_id": "p_b932cee843",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

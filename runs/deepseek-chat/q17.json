@@ -1,0 +1,74 @@
+{
+  "qid": "q17",
+  "question": "What screenwriter with credits for \"Evolution\" co-wrote a film starring Nicolas Cage and Téa Leoni?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "screenwriter Evolution co-writer Nicolas Cage Téa Leoni film",
+      "k": 8,
+      "result_ids": [
+        "p_98bfa9a41d",
+        "p_568445fd77",
+        "p_5623036024",
+        "p_b3e0fac835",
+        "p_f9a6d2cced",
+        "p_2735e3536b",
+        "p_47bed011cb",
+        "p_f45f8ec7ee"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "David Weissman",
+      "citations": [
+        {
+          "claim": "David Weissman co-wrote Evolution",
+          "passage_id": "p_5623036024"
+        },
+        {
+          "claim": "David Weissman also wrote The Family Man, which stars Nicolas Cage and Téa Leoni",
+          "passage_id": "p_5623036024"
+        },
+        {
+          "claim": "The Family Man is a film starring Nicolas Cage and Téa Leoni",
+          "passage_id": "p_98bfa9a41d"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "David Weissman",
+    "gold_answer": "David Weissman",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "David Weissman co-wrote Evolution",
+        "passage_id": "p_5623036024",
+        "label": "faithful"
+      },
+      {
+        "claim": "David Weissman also wrote The Family Man, which stars Nicolas Cage and Téa Leoni",
+        "passage_id": "p_5623036024",
+        "label": "faithful"
+      },
+      {
+        "claim": "The Family Man is a film starring Nicolas Cage and Téa Leoni",
+        "passage_id": "p_98bfa9a41d",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 3,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

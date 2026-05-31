@@ -1,0 +1,74 @@
+{
+  "qid": "q1",
+  "question": "What government position was held by the woman who portrayed Corliss Archer in the film Kiss and Tell?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Kiss and Tell 1945 film Corliss Archer actress",
+      "k": 5,
+      "result_ids": [
+        "p_93fa34e103",
+        "p_a04c1f900a",
+        "p_d68433ddb0",
+        "p_4e8309573e",
+        "p_058f3692c5"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Shirley Temple government position",
+      "k": 5,
+      "result_ids": [
+        "p_342a97756e",
+        "p_a1f8072496",
+        "p_93fa34e103",
+        "p_82efb0e4d2",
+        "p_a04c1f900a"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Chief of Protocol of the United States",
+      "citations": [
+        {
+          "claim": "Shirley Temple portrayed Corliss Archer in Kiss and Tell",
+          "passage_id": "p_93fa34e103"
+        },
+        {
+          "claim": "Shirley Temple Black served as Chief of Protocol of the United States",
+          "passage_id": "p_342a97756e"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Chief of Protocol of the United States",
+    "gold_answer": "Chief of Protocol",
+    "answer_correct": true,
+    "em": 0,
+    "f1": 0.6667,
+    "citations": [
+      {
+        "claim": "Shirley Temple portrayed Corliss Archer in Kiss and Tell",
+        "passage_id": "p_93fa34e103",
+        "label": "faithful"
+      },
+      {
+        "claim": "Shirley Temple Black served as Chief of Protocol of the United States",
+        "passage_id": "p_342a97756e",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

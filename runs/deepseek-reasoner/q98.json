@@ -1,0 +1,65 @@
+{
+  "qid": "q98",
+  "question": "Which came to market first, \"Hey Pa! There's a Goat on the Roof\" or \"Poleconomy\"",
+  "steps": [
+    {
+      "action": "search",
+      "query": "\"Hey Pa! There's a Goat on the Roof\" release date board game",
+      "k": 8,
+      "result_ids": [
+        "p_72f8274d24",
+        "p_5d859f4fb3",
+        "p_2b26e8a732",
+        "p_d38fa3739c",
+        "p_9838ab85bc",
+        "p_ede3e7a623",
+        "p_1df0cbb6b2",
+        "p_62b75ea555"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Hey Pa! There's a Goat on the Roof",
+      "citations": [
+        {
+          "claim": "Hey Pa! There's a Goat on the Roof was a children's board game issued by Parker Brothers in 1966.",
+          "passage_id": "p_72f8274d24"
+        },
+        {
+          "claim": "Poleconomy is a board game first published in 1980.",
+          "passage_id": "p_9838ab85bc"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Hey Pa! There's a Goat on the Roof",
+    "gold_answer": "Hey Pa! There's a Goat on the Roof",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Hey Pa! There's a Goat on the Roof was a children's board game issued by Parker Brothers in 1966.",
+        "passage_id": "p_72f8274d24",
+        "label": "faithful"
+      },
+      {
+        "claim": "Poleconomy is a board game first published in 1980.",
+        "passage_id": "p_9838ab85bc",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

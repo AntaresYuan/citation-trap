@@ -1,0 +1,56 @@
+{
+  "qid": "q71",
+  "question": "Which British first-generation jet-powered medium bomber was used in the South West Pacific theatre of World War II?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "British first-generation jet-powered medium bomber South West Pacific theatre World War II",
+      "k": 8,
+      "result_ids": [
+        "p_ae718b7790",
+        "p_950c0a8c94",
+        "p_3a40401c5f",
+        "p_9f77aab1cf",
+        "p_e139866507",
+        "p_74b9155d9b",
+        "p_8e3c3fb7e5",
+        "p_012c3d194d"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "English Electric Canberra",
+      "citations": [
+        {
+          "claim": "The English Electric Canberra is a British first-generation jet-powered medium bomber that was manufactured during the 1950s. It became the RAF's first jet-powered bomber aircraft, introduced in May 1951.",
+          "passage_id": "p_3a40401c5f"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "English Electric Canberra",
+    "gold_answer": "English Electric Canberra",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "The English Electric Canberra is a British first-generation jet-powered medium bomber that was manufactured during the 1950s. It became the RAF's first jet-powered bomber aircraft, introduced in May 1951.",
+        "passage_id": "p_3a40401c5f",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

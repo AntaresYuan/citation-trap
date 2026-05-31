@@ -1,0 +1,74 @@
+{
+  "qid": "q9",
+  "question": "Who was known by his stage name Aladin and helped organizations improve their performance as a consultant?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Aladin stage name consultant performance improvement",
+      "k": 8,
+      "result_ids": [
+        "p_6a194c55bb",
+        "p_cd8138103d",
+        "p_a903a2dd7d",
+        "p_581be00144",
+        "p_c7404da9c7",
+        "p_94fa23c28f",
+        "p_cb2407f433",
+        "p_e9406cf54f"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Eenasul Fateh",
+      "citations": [
+        {
+          "claim": "Eenasul Fateh is also known by his stage name Aladin",
+          "passage_id": "p_6a194c55bb"
+        },
+        {
+          "claim": "Eenasul Fateh is a former international management consultant",
+          "passage_id": "p_6a194c55bb"
+        },
+        {
+          "claim": "Management consulting is the practice of helping organizations to improve their performance",
+          "passage_id": "p_581be00144"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Eenasul Fateh",
+    "gold_answer": "Eenasul Fateh",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Eenasul Fateh is also known by his stage name Aladin",
+        "passage_id": "p_6a194c55bb",
+        "label": "faithful"
+      },
+      {
+        "claim": "Eenasul Fateh is a former international management consultant",
+        "passage_id": "p_6a194c55bb",
+        "label": "faithful"
+      },
+      {
+        "claim": "Management consulting is the practice of helping organizations to improve their performance",
+        "passage_id": "p_581be00144",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 3,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

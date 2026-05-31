@@ -1,0 +1,56 @@
+{
+  "qid": "q99",
+  "question": "What WB supernatrual drama series was Jawbreaker star Rose Mcgowan best known for being in?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Rose McGowan supernatural drama series WB Jawbreaker",
+      "k": 8,
+      "result_ids": [
+        "p_60de919375",
+        "p_16436233ea",
+        "p_cc1be8e02e",
+        "p_353dc2156e",
+        "p_3045a7ae4a",
+        "p_264bcb74c1",
+        "p_ca3d23a564",
+        "p_4b494fa8d6"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Charmed",
+      "citations": [
+        {
+          "claim": "Rose McGowan is best known to television audiences for having played Paige Matthews in The WB supernatural drama series 'Charmed'",
+          "passage_id": "p_60de919375"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Charmed",
+    "gold_answer": "Charmed",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Rose McGowan is best known to television audiences for having played Paige Matthews in The WB supernatural drama series 'Charmed'",
+        "passage_id": "p_60de919375",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

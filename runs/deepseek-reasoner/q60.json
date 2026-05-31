@@ -1,0 +1,110 @@
+{
+  "qid": "q60",
+  "question": "Which was fought earlier in our nation's history, the Seven Days Battles or the Battle of Manila?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Seven Days Battles date 1862",
+      "k": 3,
+      "result_ids": [
+        "p_a661299645",
+        "p_e8cb456d65",
+        "p_7d65aafea3"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Battle of Manila date 1899 Philippine-American War",
+      "k": 3,
+      "result_ids": [
+        "p_7a05b21c92",
+        "p_e8cb456d65",
+        "p_7d65aafea3"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Battle of Manila 1898",
+      "k": 3,
+      "result_ids": [
+        "p_7a05b21c92",
+        "p_e8cb456d65",
+        "p_7d65aafea3"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Battle of Manila 1898 date",
+      "k": 3,
+      "result_ids": [
+        "p_7a05b21c92",
+        "p_e8cb456d65",
+        "p_7d65aafea3"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Battle of Manila 1898 Spanish-American War",
+      "k": 3,
+      "result_ids": [
+        "p_7a05b21c92",
+        "p_e8cb456d65",
+        "p_7d65aafea3"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Battle of Manila August 13 1898",
+      "k": 3,
+      "result_ids": [
+        "p_7a05b21c92",
+        "p_b84077912b",
+        "p_3ccba8d1e7"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Battle of Manila 1898 Spanish American War August 13",
+      "k": 3,
+      "result_ids": [
+        "p_7a05b21c92",
+        "p_e8cb456d65",
+        "p_7d65aafea3"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Battle of Manila 1898 Spanish American War date August 13",
+      "k": 3,
+      "result_ids": [
+        "p_7a05b21c92",
+        "p_e8cb456d65",
+        "p_7d65aafea3"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "",
+      "citations": []
+    }
+  ],
+  "score": {
+    "answer": "",
+    "gold_answer": "The Seven Days Battles",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [],
+    "citation_counts": {
+      "faithful": 0,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 0.0,
+    "citation_trustworthy": false,
+    "quadrant": "worst",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

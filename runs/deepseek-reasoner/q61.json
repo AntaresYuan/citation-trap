@@ -1,0 +1,80 @@
+{
+  "qid": "q61",
+  "question": "The battle in which Giuseppe Arimondi lost his life secured what for Ethiopia?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Giuseppe Arimondi death battle",
+      "k": 8,
+      "result_ids": [
+        "p_8f2337817e",
+        "p_ab87927b7f",
+        "p_7a05b21c92",
+        "p_180a9b632a",
+        "p_a082561063",
+        "p_627ea6063d",
+        "p_7a5e3368fe",
+        "p_d581f28a1d"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Battle of Adwa secured Ethiopian independence",
+      "k": 8,
+      "result_ids": [
+        "p_e5a206ebf5",
+        "p_a9275b9232",
+        "p_9f08278082",
+        "p_8f2337817e",
+        "p_a6fb379579",
+        "p_0460a595d2",
+        "p_e8cb456d65",
+        "p_7d65aafea3"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "sovereignty",
+      "citations": [
+        {
+          "claim": "Giuseppe Arimondi died at Adwa",
+          "passage_id": "p_8f2337817e"
+        },
+        {
+          "claim": "The Battle of Adwa secured Ethiopian sovereignty",
+          "passage_id": "p_e5a206ebf5"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "sovereignty",
+    "gold_answer": "sovereignty",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Giuseppe Arimondi died at Adwa",
+        "passage_id": "p_8f2337817e",
+        "label": "faithful"
+      },
+      {
+        "claim": "The Battle of Adwa secured Ethiopian sovereignty",
+        "passage_id": "p_e5a206ebf5",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

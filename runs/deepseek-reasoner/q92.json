@@ -1,0 +1,80 @@
+{
+  "qid": "q92",
+  "question": "Can Stenocereus and Pachypodium both include tree like plants?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Stenocereus tree like Pachypodium tree like plants",
+      "k": 8,
+      "result_ids": [
+        "p_b692676f8b",
+        "p_d626422828",
+        "p_92f06872a6",
+        "p_67c95c74cf",
+        "p_a043fc69cb",
+        "p_8d9b9513b3",
+        "p_100fef0164",
+        "p_7acb505bcc"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Pachypodium tree like",
+      "k": 8,
+      "result_ids": [
+        "p_d626422828",
+        "p_593df79565",
+        "p_92f06872a6",
+        "p_67c95c74cf",
+        "p_8d9b9513b3",
+        "p_b692676f8b",
+        "p_100fef0164",
+        "p_7acb505bcc"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Yes",
+      "citations": [
+        {
+          "claim": "Stenocereus includes tree-like cacti",
+          "passage_id": "p_b692676f8b"
+        },
+        {
+          "claim": "Pachypodium includes succulent spine-bearing trees",
+          "passage_id": "p_593df79565"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Yes",
+    "gold_answer": "yes",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Stenocereus includes tree-like cacti",
+        "passage_id": "p_b692676f8b",
+        "label": "faithful"
+      },
+      {
+        "claim": "Pachypodium includes succulent spine-bearing trees",
+        "passage_id": "p_593df79565",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

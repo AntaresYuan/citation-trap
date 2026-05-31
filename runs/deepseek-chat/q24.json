@@ -1,0 +1,56 @@
+{
+  "qid": "q24",
+  "question": "Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "dog ancestors include Gordon and Irish Setters Manchester Terrier Scotch Collie",
+      "k": 8,
+      "result_ids": [
+        "p_e468273cb6",
+        "p_039e0c3e6d",
+        "p_a90951dbab",
+        "p_57b1dfeccb",
+        "p_58b83afc97",
+        "p_d140591b92",
+        "p_282236ec4a",
+        "p_afaa06cf60"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Scotch Collie",
+      "citations": [
+        {
+          "claim": "Other ancestors include the Gordon and Irish Setters.",
+          "passage_id": "p_e468273cb6"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Scotch Collie",
+    "gold_answer": "Scotch Collie",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Other ancestors include the Gordon and Irish Setters.",
+        "passage_id": "p_e468273cb6",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

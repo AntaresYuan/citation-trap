@@ -1,0 +1,115 @@
+{
+  "qid": "q23",
+  "question": "Brown State Fishing Lake is in a country that has a population of how many inhabitants ?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Brown State Fishing Lake population",
+      "k": 8,
+      "result_ids": [
+        "p_eec5c44a18",
+        "p_d0d48ef896",
+        "p_cdc531557f",
+        "p_d2aea57c49",
+        "p_14428555b8",
+        "p_951dc4213a",
+        "p_b3918c571e",
+        "p_747f41c3ff"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States population 2024",
+      "k": 8,
+      "result_ids": [
+        "p_5b5761d864",
+        "p_2365e34270",
+        "p_0dcaf3482c",
+        "p_aa797b94f2",
+        "p_821d9ee7a8",
+        "p_ae378f4f6d",
+        "p_9d6acb182e",
+        "p_9b60539de2"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States population 2024 estimate",
+      "k": 2,
+      "result_ids": [
+        "p_5b5761d864",
+        "p_2365e34270"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States population total 2020 census",
+      "k": 2,
+      "result_ids": [
+        "p_5b5761d864",
+        "p_0dcaf3482c"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "population of the United States",
+      "k": 3,
+      "result_ids": [
+        "p_2365e34270",
+        "p_0dcaf3482c",
+        "p_5b5761d864"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States population 331 million",
+      "k": 2,
+      "result_ids": [
+        "p_2c2b71ceba",
+        "p_fc87c060e4"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "population of the United States 2020 census 331",
+      "k": 2,
+      "result_ids": [
+        "p_0dcaf3482c",
+        "p_ae378f4f6d"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "United States population US Census Bureau 2020",
+      "k": 2,
+      "result_ids": [
+        "p_2c2b71ceba",
+        "p_5b5761d864"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "",
+      "citations": []
+    }
+  ],
+  "score": {
+    "answer": "",
+    "gold_answer": "9,984",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [],
+    "citation_counts": {
+      "faithful": 0,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 0.0,
+    "citation_trustworthy": false,
+    "quadrant": "worst",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

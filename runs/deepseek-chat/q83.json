@@ -1,0 +1,65 @@
+{
+  "qid": "q83",
+  "question": "Which Australian city founded in 1838 contains a boarding school opened by a Prime Minister of Australia and named after a school in London of the same name.",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Australian city founded 1838 boarding school opened by Prime Minister named after school in London",
+      "k": 8,
+      "result_ids": [
+        "p_3b2ab9826c",
+        "p_3c6fea0285",
+        "p_966938af0d",
+        "p_df9c6bef1f",
+        "p_1ce69a8e6e",
+        "p_b4e866458e",
+        "p_ed7b82be86",
+        "p_200a2b118e"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Adelaide",
+      "citations": [
+        {
+          "claim": "Adelaide was founded in 1838",
+          "passage_id": ""
+        },
+        {
+          "claim": "Westminster School, Adelaide is a boarding school opened by Prime Minister Robert Menzies in 1961 and named after Westminster School in London",
+          "passage_id": "p_3b2ab9826c"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Adelaide",
+    "gold_answer": "Marion, South Australia",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [
+      {
+        "claim": "Adelaide was founded in 1838",
+        "passage_id": "",
+        "label": "unsupported"
+      },
+      {
+        "claim": "Westminster School, Adelaide is a boarding school opened by Prime Minister Robert Menzies in 1961 and named after Westminster School in London",
+        "passage_id": "p_3b2ab9826c",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 1
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "honest_wrong",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

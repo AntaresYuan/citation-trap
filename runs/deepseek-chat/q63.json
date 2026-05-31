@@ -1,0 +1,92 @@
+{
+  "qid": "q63",
+  "question": "Alfred Balk served as the secretary of the Committee on the Employment of Minority Groups in the News Media under which United States Vice President?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Alfred Balk Committee on the Employment of Minority Groups in the News Media secretary Vice President",
+      "k": 8,
+      "result_ids": [
+        "p_9c25839f17",
+        "p_d2b89b81d1",
+        "p_a24dd3bd04",
+        "p_b998a011ed",
+        "p_8e76d2f99a",
+        "p_6485b51f8d",
+        "p_0bbc47b089",
+        "p_a94825b3c8"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Nelson Rockefeller Committee on the Employment of Minority Groups in the News Media",
+      "k": 8,
+      "result_ids": [
+        "p_9c25839f17",
+        "p_90fb6699ed",
+        "p_d2b89b81d1",
+        "p_a47a44ef2f",
+        "p_a24dd3bd04",
+        "p_6cb0aab098",
+        "p_36b31e6822",
+        "p_0729b822d8"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Nelson Rockefeller Vice President United States",
+      "k": 5,
+      "result_ids": [
+        "p_90fb6699ed",
+        "p_0bbc47b089",
+        "p_b998a011ed",
+        "p_6485b51f8d",
+        "p_a37b021a5e"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Nelson Rockefeller",
+      "citations": [
+        {
+          "claim": "Alfred Balk served as secretary of New York Governor Nelson Rockefeller's Committee on the Employment of Minority Groups in the News Media",
+          "passage_id": "p_9c25839f17"
+        },
+        {
+          "claim": "Nelson Rockefeller served as the 41st Vice President of the United States from 1974 to 1977",
+          "passage_id": "p_90fb6699ed"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Nelson Rockefeller",
+    "gold_answer": "Nelson Rockefeller",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Alfred Balk served as secretary of New York Governor Nelson Rockefeller's Committee on the Employment of Minority Groups in the News Media",
+        "passage_id": "p_9c25839f17",
+        "label": "faithful"
+      },
+      {
+        "claim": "Nelson Rockefeller served as the 41st Vice President of the United States from 1974 to 1977",
+        "passage_id": "p_90fb6699ed",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

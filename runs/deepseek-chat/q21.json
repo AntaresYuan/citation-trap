@@ -1,0 +1,74 @@
+{
+  "qid": "q21",
+  "question": "The football manager who recruited David Beckham managed Manchester United during what timeframe?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "David Beckham football manager Manchester United managed Manchester United timeframe",
+      "k": 8,
+      "result_ids": [
+        "p_4a8b6fd5f7",
+        "p_bbd3cfb502",
+        "p_7f097ee02b",
+        "p_c6999108c8",
+        "p_ed4c10e568",
+        "p_8dcfe9cef7",
+        "p_34f25cef7b",
+        "p_a217c165e0"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "1986 to 2013",
+      "citations": [
+        {
+          "claim": "Alex Ferguson managed Manchester United from 1986 to 2013",
+          "passage_id": "p_c6999108c8"
+        },
+        {
+          "claim": "David Beckham was part of the young players drafted in by Alex Ferguson in the 1995–96 season",
+          "passage_id": "p_a217c165e0"
+        },
+        {
+          "claim": "The Class of '92 includes David Beckham and details their careers starting in 1992, indicating Beckham was recruited under Alex Ferguson",
+          "passage_id": "p_ed4c10e568"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "1986 to 2013",
+    "gold_answer": "from 1986 to 2013",
+    "answer_correct": true,
+    "em": 0,
+    "f1": 0.8571,
+    "citations": [
+      {
+        "claim": "Alex Ferguson managed Manchester United from 1986 to 2013",
+        "passage_id": "p_c6999108c8",
+        "label": "faithful"
+      },
+      {
+        "claim": "David Beckham was part of the young players drafted in by Alex Ferguson in the 1995–96 season",
+        "passage_id": "p_a217c165e0",
+        "label": "faithful"
+      },
+      {
+        "claim": "The Class of '92 includes David Beckham and details their careers starting in 1992, indicating Beckham was recruited under Alex Ferguson",
+        "passage_id": "p_ed4c10e568",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 3,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

@@ -1,0 +1,56 @@
+{
+  "qid": "q9",
+  "question": "Who was known by his stage name Aladin and helped organizations improve their performance as a consultant?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "stage name Aladin consultant help organizations improve performance",
+      "k": 8,
+      "result_ids": [
+        "p_6a194c55bb",
+        "p_581be00144",
+        "p_cd8138103d",
+        "p_a903a2dd7d",
+        "p_c7404da9c7",
+        "p_94fa23c28f",
+        "p_cb2407f433",
+        "p_c4d8b0dc73"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Eenasul Fateh",
+      "citations": [
+        {
+          "claim": "known by stage name Aladin and was a consultant",
+          "passage_id": "p_6a194c55bb"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Eenasul Fateh",
+    "gold_answer": "Eenasul Fateh",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "known by stage name Aladin and was a consultant",
+        "passage_id": "p_6a194c55bb",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

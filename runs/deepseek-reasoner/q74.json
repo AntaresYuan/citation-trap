@@ -1,0 +1,83 @@
+{
+  "qid": "q74",
+  "question": "Who was born first, Arthur Conan Doyle or Penelope Lively?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Arthur Conan Doyle birth date",
+      "k": 2,
+      "result_ids": [
+        "p_d47f816a4c",
+        "p_497c6716d4"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Arthur Conan Doyle born",
+      "k": 5,
+      "result_ids": [
+        "p_d47f816a4c",
+        "p_497c6716d4",
+        "p_35bc6df012",
+        "p_9a86a87ac6",
+        "p_ba2e2d3699"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Penelope Lively born",
+      "k": 5,
+      "result_ids": [
+        "p_7c27d69035",
+        "p_d68433ddb0",
+        "p_60de919375",
+        "p_ea5fcab6f4",
+        "p_60c2d2154b"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Arthur Conan Doyle",
+      "citations": [
+        {
+          "claim": "Arthur Conan Doyle was born on 22 May 1859",
+          "passage_id": "p_35bc6df012"
+        },
+        {
+          "claim": "Penelope Lively was born on 17 March 1933",
+          "passage_id": "p_7c27d69035"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Arthur Conan Doyle",
+    "gold_answer": "Arthur Ignatius Conan Doyle",
+    "answer_correct": true,
+    "em": 0,
+    "f1": 0.8571,
+    "citations": [
+      {
+        "claim": "Arthur Conan Doyle was born on 22 May 1859",
+        "passage_id": "p_35bc6df012",
+        "label": "faithful"
+      },
+      {
+        "claim": "Penelope Lively was born on 17 March 1933",
+        "passage_id": "p_7c27d69035",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

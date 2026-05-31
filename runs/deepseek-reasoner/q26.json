@@ -1,0 +1,65 @@
+{
+  "qid": "q26",
+  "question": "Are Ferocactus and Silene both types of plant?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Ferocactus plant type",
+      "k": 8,
+      "result_ids": [
+        "p_502f90b27b",
+        "p_57b1dfeccb",
+        "p_afaa06cf60",
+        "p_3a40401c5f",
+        "p_d7d1088dda",
+        "p_f96bd5c521",
+        "p_e0ca403e21",
+        "p_d93164bfc9"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Yes",
+      "citations": [
+        {
+          "claim": "Ferocactus is a genus of cacti, a type of plant",
+          "passage_id": "p_502f90b27b"
+        },
+        {
+          "claim": "Silene is a genus of flowering plants",
+          "passage_id": "p_f96bd5c521"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Yes",
+    "gold_answer": "yes",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Ferocactus is a genus of cacti, a type of plant",
+        "passage_id": "p_502f90b27b",
+        "label": "faithful"
+      },
+      {
+        "claim": "Silene is a genus of flowering plants",
+        "passage_id": "p_f96bd5c521",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

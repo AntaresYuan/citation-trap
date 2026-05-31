@@ -1,0 +1,62 @@
+{
+  "qid": "q35",
+  "question": "What was the father of Kasper Schmeichel voted to be by the IFFHS in 1992?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Kasper Schmeichel father voted IFFHS 1992",
+      "k": 5,
+      "result_ids": [
+        "p_d2c37f0b5d",
+        "p_bdb2bf3f03",
+        "p_65954307d3",
+        "p_f86b8e4f46",
+        "p_543b96064c"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "IFFHS World's Best Goalkeeper",
+      "citations": [
+        {
+          "claim": "Peter Schmeichel was voted the IFFHS World's Best Goalkeeper in 1992.",
+          "passage_id": "p_d2c37f0b5d"
+        },
+        {
+          "claim": "Kasper Schmeichel is the son of Peter Schmeichel.",
+          "passage_id": "p_bdb2bf3f03"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "IFFHS World's Best Goalkeeper",
+    "gold_answer": "World's Best Goalkeeper",
+    "answer_correct": true,
+    "em": 0,
+    "f1": 0.8571,
+    "citations": [
+      {
+        "claim": "Peter Schmeichel was voted the IFFHS World's Best Goalkeeper in 1992.",
+        "passage_id": "p_d2c37f0b5d",
+        "label": "faithful"
+      },
+      {
+        "claim": "Kasper Schmeichel is the son of Peter Schmeichel.",
+        "passage_id": "p_bdb2bf3f03",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

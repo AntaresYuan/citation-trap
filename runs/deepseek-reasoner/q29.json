@@ -1,0 +1,56 @@
+{
+  "qid": "q29",
+  "question": "Which other Mexican Formula One race car driver has held the podium besides the Force India driver born in 1990?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Mexican Formula One drivers podium finishers besides Sergio Pérez",
+      "k": 8,
+      "result_ids": [
+        "p_eca509fe2f",
+        "p_15b7d8b065",
+        "p_988c7f44d1",
+        "p_47132ec611",
+        "p_2536acd44a",
+        "p_ea5fcab6f4",
+        "p_c48dc10d9b",
+        "p_50e5d4b7f0"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Pedro Rodríguez",
+      "citations": [
+        {
+          "claim": "Pedro Rodríguez is the only other Mexican Formula One driver besides Sergio Pérez to finish on the podium.",
+          "passage_id": "p_eca509fe2f"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Pedro Rodríguez",
+    "gold_answer": "Pedro Rodríguez",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Pedro Rodríguez is the only other Mexican Formula One driver besides Sergio Pérez to finish on the podium.",
+        "passage_id": "p_eca509fe2f",
+        "label": "misattributed"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 0,
+      "misattributed": 1,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 0.0,
+    "citation_trustworthy": false,
+    "quadrant": "correct_but_fabricated",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

@@ -1,0 +1,150 @@
+{
+  "qid": "q14",
+  "question": "Which performance act has a higher instrument to person ratio, Badly Drawn Boy or Wolf Alice? ",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Badly Drawn Boy band members instruments number",
+      "k": 8,
+      "result_ids": [
+        "p_a61a293c7b",
+        "p_f7cc14bf33",
+        "p_703f7dc34d",
+        "p_e9406cf54f",
+        "p_b76bbbd4be",
+        "p_d53169993e",
+        "p_8228ce3c06",
+        "p_b2c8ce021f"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Wolf Alice band members instruments number",
+      "k": 8,
+      "result_ids": [
+        "p_7f29895e67",
+        "p_f03266ee23",
+        "p_48759cddb7",
+        "p_a61a293c7b",
+        "p_81bf841f26",
+        "p_7080e7f286",
+        "p_0ed868a9fe",
+        "p_1b7d7cbcd8"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Badly Drawn Boy live performance instruments used",
+      "k": 8,
+      "result_ids": [
+        "p_a61a293c7b",
+        "p_e9406cf54f",
+        "p_f7cc14bf33",
+        "p_b76bbbd4be",
+        "p_b2c8ce021f",
+        "p_703f7dc34d",
+        "p_d53169993e",
+        "p_8228ce3c06"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Badly Drawn Boy concert band members touring",
+      "k": 8,
+      "result_ids": [
+        "p_e9406cf54f",
+        "p_f7cc14bf33",
+        "p_a61a293c7b",
+        "p_b76bbbd4be",
+        "p_703f7dc34d",
+        "p_d53169993e",
+        "p_8228ce3c06",
+        "p_b2c8ce021f"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Badly Drawn Boy live band how many musicians",
+      "k": 8,
+      "result_ids": [
+        "p_e9406cf54f",
+        "p_f7cc14bf33",
+        "p_b76bbbd4be",
+        "p_703f7dc34d",
+        "p_d53169993e",
+        "p_a61a293c7b",
+        "p_8228ce3c06",
+        "p_b2c8ce021f"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Wolf Alice number of band members",
+      "k": 8,
+      "result_ids": [
+        "p_7f29895e67",
+        "p_48759cddb7",
+        "p_f03266ee23",
+        "p_81bf841f26",
+        "p_1b7d7cbcd8",
+        "p_0ed868a9fe",
+        "p_5821a19427",
+        "p_7080e7f286"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Badly Drawn Boy solo performer multi-instrumentalist live show one person",
+      "k": 8,
+      "result_ids": [
+        "p_e9406cf54f",
+        "p_b76bbbd4be",
+        "p_f7cc14bf33",
+        "p_703f7dc34d",
+        "p_d53169993e",
+        "p_a61a293c7b",
+        "p_b2c8ce021f",
+        "p_8228ce3c06"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Badly Drawn Boy live band size members",
+      "k": 8,
+      "result_ids": [
+        "p_e9406cf54f",
+        "p_f7cc14bf33",
+        "p_a61a293c7b",
+        "p_b76bbbd4be",
+        "p_703f7dc34d",
+        "p_d53169993e",
+        "p_8228ce3c06",
+        "p_b2c8ce021f"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "",
+      "citations": []
+    }
+  ],
+  "score": {
+    "answer": "",
+    "gold_answer": "Badly Drawn Boy",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [],
+    "citation_counts": {
+      "faithful": 0,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 0.0,
+    "citation_trustworthy": false,
+    "quadrant": "worst",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

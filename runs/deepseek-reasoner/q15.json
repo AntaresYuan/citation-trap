@@ -1,0 +1,77 @@
+{
+  "qid": "q15",
+  "question": "What is the name of the fight song of the university whose main campus is in Lawrence, Kansas and whose branch campuses are in the Kansas City metropolitan area?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "University of Kansas fight song name",
+      "k": 8,
+      "result_ids": [
+        "p_64936bb051",
+        "p_c27f528002",
+        "p_eebd6b68dc",
+        "p_9d6acb182e",
+        "p_041b19d50e",
+        "p_b2984790c0",
+        "p_9a53406257",
+        "p_951dc4213a"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "University of Kansas fight song \"I'm a Jayhawk\" or \"Kansas Song\"",
+      "k": 5,
+      "result_ids": [
+        "p_64936bb051",
+        "p_c27f528002",
+        "p_eebd6b68dc",
+        "p_b2984790c0",
+        "p_302b40a60c"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Kansas Song",
+      "citations": [
+        {
+          "claim": "University of Kansas main campus is in Lawrence, Kansas, and branch campuses are in the Kansas City metropolitan area.",
+          "passage_id": "p_c27f528002"
+        },
+        {
+          "claim": "Kansas Song (We’re From Kansas) is a fight song of the University of Kansas.",
+          "passage_id": "p_64936bb051"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Kansas Song",
+    "gold_answer": "Kansas Song",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "University of Kansas main campus is in Lawrence, Kansas, and branch campuses are in the Kansas City metropolitan area.",
+        "passage_id": "p_c27f528002",
+        "label": "faithful"
+      },
+      {
+        "claim": "Kansas Song (We’re From Kansas) is a fight song of the University of Kansas.",
+        "passage_id": "p_64936bb051",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

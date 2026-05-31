@@ -1,0 +1,70 @@
+{
+  "qid": "q58",
+  "question": "Are Broughtonia and Laeliocattleya both orchids?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Broughtonia orchid genus",
+      "k": 3,
+      "result_ids": [
+        "p_e0ca403e21",
+        "p_5c9af255e7",
+        "p_5cde530a44"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Laeliocattleya orchid",
+      "k": 3,
+      "result_ids": [
+        "p_96259976a3",
+        "p_5cde530a44",
+        "p_b56bdd9ee7"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Yes",
+      "citations": [
+        {
+          "claim": "Broughtonia is a genus of orchids",
+          "passage_id": "p_5c9af255e7"
+        },
+        {
+          "claim": "Laeliocattleya is a nothogenus of intergeneric orchid hybrids",
+          "passage_id": "p_96259976a3"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Yes",
+    "gold_answer": "yes",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Broughtonia is a genus of orchids",
+        "passage_id": "p_5c9af255e7",
+        "label": "faithful"
+      },
+      {
+        "claim": "Laeliocattleya is a nothogenus of intergeneric orchid hybrids",
+        "passage_id": "p_96259976a3",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

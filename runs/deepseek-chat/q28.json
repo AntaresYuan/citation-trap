@@ -1,0 +1,65 @@
+{
+  "qid": "q28",
+  "question": "Are both Cypress and Ajuga genera?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Cypress genus classification Ajuga genus classification",
+      "k": 8,
+      "result_ids": [
+        "p_a50d33fc64",
+        "p_5d1fb96b29",
+        "p_1db72a5e72",
+        "p_9c92592928",
+        "p_50bb9f40ed",
+        "p_74448bb453",
+        "p_5c9af255e7",
+        "p_1960536f71"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "No",
+      "citations": [
+        {
+          "claim": "Cypress is not a single genus; it is a common name for several genera in Cupressaceae, such as Cupressus, Fokienia, etc.",
+          "passage_id": "p_a50d33fc64"
+        },
+        {
+          "claim": "Ajuga is a genus of plants in the family Lamiaceae.",
+          "passage_id": "p_5d1fb96b29"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "No",
+    "gold_answer": "no",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Cypress is not a single genus; it is a common name for several genera in Cupressaceae, such as Cupressus, Fokienia, etc.",
+        "passage_id": "p_a50d33fc64",
+        "label": "misattributed"
+      },
+      {
+        "claim": "Ajuga is a genus of plants in the family Lamiaceae.",
+        "passage_id": "p_5d1fb96b29",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 1,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 0.5,
+    "citation_trustworthy": false,
+    "quadrant": "correct_but_fabricated",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

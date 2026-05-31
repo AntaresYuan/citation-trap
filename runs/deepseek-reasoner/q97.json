@@ -1,0 +1,65 @@
+{
+  "qid": "q97",
+  "question": "Scott Parkin has been a vocal critic of Exxonmobil and another corporation that has operations in how many countries ?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Scott Parkin critic Exxonmobil another corporation operations countries",
+      "k": 8,
+      "result_ids": [
+        "p_684eb88ba2",
+        "p_fc9eccf62f",
+        "p_687c1d21e8",
+        "p_e7c7bcd8a5",
+        "p_c4cf667eee",
+        "p_0f3e5bc247",
+        "p_423a14354a",
+        "p_cdde362d3b"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "more than 70",
+      "citations": [
+        {
+          "claim": "Scott Parkin is a vocal critic of Halliburton",
+          "passage_id": "p_684eb88ba2"
+        },
+        {
+          "claim": "Halliburton has operations in more than 70 countries",
+          "passage_id": "p_e7c7bcd8a5"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "more than 70",
+    "gold_answer": "more than 70 countries",
+    "answer_correct": true,
+    "em": 0,
+    "f1": 0.8571,
+    "citations": [
+      {
+        "claim": "Scott Parkin is a vocal critic of Halliburton",
+        "passage_id": "p_684eb88ba2",
+        "label": "faithful"
+      },
+      {
+        "claim": "Halliburton has operations in more than 70 countries",
+        "passage_id": "p_e7c7bcd8a5",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

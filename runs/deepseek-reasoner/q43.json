@@ -1,0 +1,126 @@
+{
+  "qid": "q43",
+  "question": "What is the name for the adventure in \"Tunnels and Trolls\", a game designed by Ken St. Andre?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Tunnels and Trolls adventure name Ken St. Andre",
+      "k": 5,
+      "result_ids": [
+        "p_056712beb1",
+        "p_cd2d2ddc48",
+        "p_a03ccd404f",
+        "p_271d0156af",
+        "p_b2bd3b5836"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Tunnels and Trolls first adventure name",
+      "k": 5,
+      "result_ids": [
+        "p_271d0156af",
+        "p_b2bd3b5836",
+        "p_056712beb1",
+        "p_2f2688c402",
+        "p_cd2d2ddc48"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Buffalo Castle Tunnels and Trolls adventure",
+      "k": 5,
+      "result_ids": [
+        "p_271d0156af",
+        "p_b2bd3b5836",
+        "p_056712beb1",
+        "p_2f2688c402",
+        "p_cd2d2ddc48"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Buffalo Castle Tunnels and Trolls 1975",
+      "k": 5,
+      "result_ids": [
+        "p_056712beb1",
+        "p_b2bd3b5836",
+        "p_271d0156af",
+        "p_2f2688c402",
+        "p_cd2d2ddc48"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "\"Buffalo Castle\" Tunnels and Trolls",
+      "k": 5,
+      "result_ids": [
+        "p_b2bd3b5836",
+        "p_056712beb1",
+        "p_271d0156af",
+        "p_2f2688c402",
+        "p_cd2d2ddc48"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Buffalo Castle Tunnels and Trolls first solo adventure",
+      "k": 5,
+      "result_ids": [
+        "p_271d0156af",
+        "p_b2bd3b5836",
+        "p_056712beb1",
+        "p_2f2688c402",
+        "p_cd2d2ddc48"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Tunnels and Trolls adventure name solo dungeons",
+      "k": 5,
+      "result_ids": [
+        "p_056712beb1",
+        "p_271d0156af",
+        "p_b2bd3b5836",
+        "p_2f2688c402",
+        "p_cd2d2ddc48"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "\"Buffalo Castle\" Ken St. Andre",
+      "k": 5,
+      "result_ids": [
+        "p_a03ccd404f",
+        "p_056712beb1",
+        "p_cd2d2ddc48",
+        "p_18c574eb70",
+        "p_51ca404583"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "",
+      "citations": []
+    }
+  ],
+  "score": {
+    "answer": "",
+    "gold_answer": "Arena of Khazan",
+    "answer_correct": false,
+    "em": 0,
+    "f1": 0.0,
+    "citations": [],
+    "citation_counts": {
+      "faithful": 0,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 0.0,
+    "citation_trustworthy": false,
+    "quadrant": "worst",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

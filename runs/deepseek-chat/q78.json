@@ -1,0 +1,80 @@
+{
+  "qid": "q78",
+  "question": "Is the Marsilea or the Brabejum the genus of more individual species of plants?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Marsilea number of species",
+      "k": 8,
+      "result_ids": [
+        "p_15b039b497",
+        "p_16081179fe",
+        "p_8c0d09fb20",
+        "p_b9c85384c8",
+        "p_5cde530a44",
+        "p_10caa34e26",
+        "p_efc31a02f5",
+        "p_2519668ea9"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Brabejum number of species",
+      "k": 8,
+      "result_ids": [
+        "p_f577ef9c48",
+        "p_b9c85384c8",
+        "p_5cde530a44",
+        "p_10caa34e26",
+        "p_efc31a02f5",
+        "p_2519668ea9",
+        "p_5d1fb96b29",
+        "p_15b039b497"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Marsilea",
+      "citations": [
+        {
+          "claim": "Marsilea is a genus of approximately 65 species",
+          "passage_id": "p_15b039b497"
+        },
+        {
+          "claim": "Brabejum is a genus of a single species",
+          "passage_id": "p_f577ef9c48"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Marsilea",
+    "gold_answer": "Marsilea",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Marsilea is a genus of approximately 65 species",
+        "passage_id": "p_15b039b497",
+        "label": "faithful"
+      },
+      {
+        "claim": "Brabejum is a genus of a single species",
+        "passage_id": "p_f577ef9c48",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

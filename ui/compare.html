@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Citation Trap — model leaderboard</title>
+<style>
+  :root{
+    --bg:#fcfcfc; --surface:#fff; --ink:#16181d; --ink-2:#4c515b; --muted:#868c97;
+    --faint:#aab0ba; --hair:#ececee; --hair-2:#f1f1f3; --accent:#4f46e5;
+    --faithful:#1c8a55; --misattrib:#9a6b16; --fabricated:#d23b4e; --unsupported:#7a52d0;
+    --mono:ui-monospace,"SF Mono",Menlo,monospace;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box} html,body{margin:0}
+  body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:14px;
+    -webkit-font-smoothing:antialiased}
+  .tnum{font-variant-numeric:tabular-nums}
+  .app{max-width:1080px;margin:0 auto;padding:0 32px}
+  header{display:flex;align-items:flex-end;justify-content:space-between;padding:30px 0 18px;
+    border-bottom:1px solid var(--hair)}
+  .wordmark{display:flex;align-items:center;gap:11px}
+  .glyph{width:26px;height:26px;border-radius:7px;border:1px solid var(--ink);display:grid;place-items:center;font-size:14px}
+  h1{margin:0;font-size:17px;font-weight:640;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:12.5px;margin-top:2px}
+  a.back{font-size:12.5px;color:var(--accent);text-decoration:none}
+  a.back:hover{text-decoration:underline}
+
+  .lead{font-size:13px;color:var(--ink-2);margin:22px 0 18px;max-width:720px;line-height:1.6}
+  table{width:100%;border-collapse:collapse;margin-bottom:30px}
+  thead th{text-align:left;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--faint);padding:0 14px 10px 0;border-bottom:1px solid var(--hair)}
+  thead th.num{text-align:right}
+  tbody td{padding:16px 14px 16px 0;border-bottom:1px solid var(--hair-2);vertical-align:middle}
+  .rank{font-size:13px;color:var(--faint);font-family:var(--mono);width:26px}
+  .model{font-weight:600;font-size:14px}
+  .model .jb{font-size:10px;font-weight:600;color:var(--faithful);background:#f1f8f3;
+    padding:1px 7px;border-radius:99px;margin-left:8px;vertical-align:middle}
+  .model .n{display:block;color:var(--muted);font-size:11.5px;font-weight:400;margin-top:2px}
+  .big{font-size:20px;font-weight:600;letter-spacing:-.02em}
+  .bar{width:130px;height:7px;border-radius:99px;background:var(--hair);overflow:hidden;margin-top:7px}
+  .bar i{display:block;height:100%;border-radius:99px;background:var(--faithful)}
+  td.num{text-align:right}
+  .quadbar{display:flex;width:200px;height:22px;border-radius:6px;overflow:hidden;border:1px solid var(--hair)}
+  .quadbar i{display:block;height:100%}
+  .qi{background:var(--faithful)} .qhw{background:var(--misattrib)}
+  .qcbf{background:var(--fabricated)} .qw{background:#9aa1ab}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-2);margin-top:8px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:9px;height:9px;border-radius:2px;display:inline-block}
+  .cbf-cell{color:var(--fabricated);font-weight:600}
+  .empty{padding:60px 0;color:var(--muted);text-align:center}
+  .foot{font-size:11.5px;color:var(--faint);margin:10px 0 40px;line-height:1.6;max-width:720px}
+  .foot code{font-family:var(--mono);color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="wordmark"><span class="glyph">⚑</span>
+      <div><h1>Model leaderboard</h1><div class="sub">Citation Trap · who cites faithfully?</div></div>
+    </div>
+    <a class="back" href="index.html">← trace dashboard</a>
+  </header>
+
+  <p class="lead">Same 100 multi-hop questions, same corpus, same retrieval — only
+  the model under test changes. Ranked by <b>citation faithfulness</b> (of the
+  sources a model cites, how many genuinely support the claim), scored by the
+  entailment judge. The column that matters: <b style="color:var(--fabricated)">correct&nbsp;but&nbsp;fabricated</b>
+  — right answer, invented or misattributed evidence.</p>
+
+  <div id="board"></div>
+
+  <p class="foot">Faithfulness and the <code>correct_but_fabricated</code> cell
+  are computed by the LLM entailment judge (a citation is faithful iff the cited
+  passage actually supports the claim). Accuracy is lenient (EM, gold-span
+  containment, or F1≥0.7).</p>
+</div>
+
+<script src="leaderboard.js"></script>
+<script>
+const B = window.CITATION_TRAP_LEADERBOARD;
+const el = document.getElementById("board");
+if (!B || !B.models || !B.models.length) {
+  el.innerHTML = '<div class="empty">No leaderboard yet — run two or more models:<br>'+
+    '<code style="font-family:ui-monospace,monospace">python -m agent.driver --agent deepseek --model deepseek-reasoner --judge</code></div>';
+} else {
+  const pct = x => Math.round((x||0)*100);
+  const rows = B.models.map((m,i) => {
+    const tot = (m.ideal+m.honest_wrong+m.correct_but_fabricated+m.worst)||1;
+    const seg = (n,c) => n ? `<i class="${c}" style="width:${n/tot*100}%" title="${n}"></i>` : "";
+    return `<tr>
+      <td class="rank">${i+1}</td>
+      <td class="model">${m.model}${m.judge?'<span class="jb">judge</span>':''}
+        <span class="n">${m.n} questions</span></td>
+      <td><div class="big tnum">${pct(m.mean_faithfulness)}%</div>
+        <div class="bar"><i style="width:${pct(m.mean_faithfulness)}%"></i></div></td>
+      <td class="num tnum">${pct(m.accuracy)}%</td>
+      <td class="cbf-cell tnum">${m.correct_but_fabricated}</td>
+      <td><div class="quadbar">${seg(m.ideal,'qi')}${seg(m.honest_wrong,'qhw')}${seg(m.correct_but_fabricated,'qcbf')}${seg(m.worst,'qw')}</div></td>
+    </tr>`;
+  }).join("");
+  el.innerHTML = `<table>
+    <thead><tr>
+      <th></th><th>Model</th><th>Faithfulness</th><th class="num">Accuracy</th>
+      <th class="num">Corr. but fab.</th><th>Outcome mix</th>
+    </tr></thead><tbody>${rows}</tbody></table>
+    <div class="legend">
+      <span><i class="dot qi"></i>ideal</span>
+      <span><i class="dot qhw"></i>honest wrong</span>
+      <span><i class="dot qcbf"></i>correct but fabricated</span>
+      <span><i class="dot qw"></i>worst</span>
+    </div>`;
+}
+</script>
+</body>
+</html>

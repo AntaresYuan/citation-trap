@@ -1,0 +1,65 @@
+{
+  "qid": "q91",
+  "question": "What distinction is held by the former NBA player who was a member of the Charlotte Hornets during their 1992-93 season and was head coach for the WNBA team Charlotte Sting?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "former NBA player member of Charlotte Hornets 1992-93 season head coach Charlotte Sting distinction",
+      "k": 8,
+      "result_ids": [
+        "p_f2e8a08525",
+        "p_0e4b3d1d3a",
+        "p_ee1eda35e6",
+        "p_99b29bc197",
+        "p_ea04c26f4f",
+        "p_466b46aa58",
+        "p_35ca13ae4f",
+        "p_3ecc2250c7"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "shortest player ever to play in the NBA",
+      "citations": [
+        {
+          "claim": "Muggsy Bogues played for the Charlotte Hornets during the 1992-93 season and was head coach of the Charlotte Sting",
+          "passage_id": "p_f2e8a08525"
+        },
+        {
+          "claim": "He is the shortest player ever to play in the NBA",
+          "passage_id": "p_f2e8a08525"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "shortest player ever to play in the NBA",
+    "gold_answer": "shortest player ever to play in the National Basketball Association",
+    "answer_correct": true,
+    "em": 0,
+    "f1": 0.75,
+    "citations": [
+      {
+        "claim": "Muggsy Bogues played for the Charlotte Hornets during the 1992-93 season and was head coach of the Charlotte Sting",
+        "passage_id": "p_f2e8a08525",
+        "label": "faithful"
+      },
+      {
+        "claim": "He is the shortest player ever to play in the NBA",
+        "passage_id": "p_f2e8a08525",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

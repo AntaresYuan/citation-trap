@@ -1,0 +1,65 @@
+{
+  "qid": "q76",
+  "question": "Are both Dafeng District and Dazhou located in the same province?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Dafeng District province",
+      "k": 8,
+      "result_ids": [
+        "p_1f6327f165",
+        "p_2ff18b6b04",
+        "p_9e90b08e73",
+        "p_7db4cc118a",
+        "p_bd9438617a",
+        "p_fd8539ad58",
+        "p_69ef36f40f",
+        "p_47704aa592"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "No",
+      "citations": [
+        {
+          "claim": "Dafeng District is in Jiangsu province",
+          "passage_id": "p_1f6327f165"
+        },
+        {
+          "claim": "Dazhou is in Sichuan Province",
+          "passage_id": "p_7db4cc118a"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "No",
+    "gold_answer": "no",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Dafeng District is in Jiangsu province",
+        "passage_id": "p_1f6327f165",
+        "label": "faithful"
+      },
+      {
+        "claim": "Dazhou is in Sichuan Province",
+        "passage_id": "p_7db4cc118a",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

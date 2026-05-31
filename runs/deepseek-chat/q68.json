@@ -1,0 +1,70 @@
+{
+  "qid": "q68",
+  "question": "Are Hot Rod and The Memory of Our People both magazines?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Hot Rod magazine",
+      "k": 3,
+      "result_ids": [
+        "p_3ba378eb43",
+        "p_fb0c1a9fea",
+        "p_96524bd19a"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "The Memory of Our People magazine",
+      "k": 3,
+      "result_ids": [
+        "p_f6e8fa10a1",
+        "p_4b3545cc43",
+        "p_c256d5eb92"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Yes",
+      "citations": [
+        {
+          "claim": "Hot Rod is a monthly American car magazine",
+          "passage_id": "p_3ba378eb43"
+        },
+        {
+          "claim": "The Memory of Our People is a magazine published in the Argentine city of Rosario",
+          "passage_id": "p_f6e8fa10a1"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Yes",
+    "gold_answer": "yes",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Hot Rod is a monthly American car magazine",
+        "passage_id": "p_3ba378eb43",
+        "label": "faithful"
+      },
+      {
+        "claim": "The Memory of Our People is a magazine published in the Argentine city of Rosario",
+        "passage_id": "p_f6e8fa10a1",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

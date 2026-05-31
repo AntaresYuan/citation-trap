@@ -1,0 +1,80 @@
+{
+  "qid": "q79",
+  "question": "In what city did the \"Prince of tenors\" star in a film based on an opera by Giacomo Puccini?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Prince of tenors film based on opera Giacomo Puccini",
+      "k": 8,
+      "result_ids": [
+        "p_e21c995941",
+        "p_8da4012255",
+        "p_291b4debed",
+        "p_2ae4c5d6f8",
+        "p_ce0a5caf61",
+        "p_98b65e7a5f",
+        "p_8a237d026b",
+        "p_aa208081bb"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Franco Corelli film 1956 Tosca",
+      "k": 8,
+      "result_ids": [
+        "p_2ae4c5d6f8",
+        "p_8a237d026b",
+        "p_4aeab25594",
+        "p_ab9850c154",
+        "p_e203813626",
+        "p_7c112bb762",
+        "p_cf0f0a32e5",
+        "p_122283c3bd"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Rome",
+      "citations": [
+        {
+          "claim": "Franco Corelli, dubbed the 'Prince of tenors', starred in the 1956 film 'Tosca'",
+          "passage_id": "p_8a237d026b"
+        },
+        {
+          "claim": "The film 'Tosca' (1956) is based on Giacomo Puccini's opera 'Tosca' and was made at Cinecittà in Rome",
+          "passage_id": "p_2ae4c5d6f8"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Rome",
+    "gold_answer": "Rome",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Franco Corelli, dubbed the 'Prince of tenors', starred in the 1956 film 'Tosca'",
+        "passage_id": "p_8a237d026b",
+        "label": "misattributed"
+      },
+      {
+        "claim": "The film 'Tosca' (1956) is based on Giacomo Puccini's opera 'Tosca' and was made at Cinecittà in Rome",
+        "passage_id": "p_2ae4c5d6f8",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 1,
+      "misattributed": 1,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 0.5,
+    "citation_trustworthy": false,
+    "quadrant": "correct_but_fabricated",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

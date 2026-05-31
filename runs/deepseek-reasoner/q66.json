@@ -1,0 +1,80 @@
+{
+  "qid": "q66",
+  "question": "Do The Importance of Being Icelandic and The Five Obstructions belong to different film genres ?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "The Importance of Being Icelandic film genre",
+      "k": 8,
+      "result_ids": [
+        "p_d49d0fa428",
+        "p_31d5fc908f",
+        "p_de0002fe9b",
+        "p_a56d25c568",
+        "p_e203813626",
+        "p_3b9adb762a",
+        "p_4b8c44633c",
+        "p_47bed011cb"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "The Five Obstructions film genre",
+      "k": 8,
+      "result_ids": [
+        "p_2ce5e0d995",
+        "p_31d5fc908f",
+        "p_de0002fe9b",
+        "p_a56d25c568",
+        "p_e203813626",
+        "p_3b9adb762a",
+        "p_6fb7815044",
+        "p_4bce465878"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "No",
+      "citations": [
+        {
+          "claim": "The Importance of Being Icelandic is a 1998 documentary film",
+          "passage_id": "p_d49d0fa428"
+        },
+        {
+          "claim": "The Five Obstructions is a 2003 Danish documentary film",
+          "passage_id": "p_2ce5e0d995"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "No",
+    "gold_answer": "no",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "The Importance of Being Icelandic is a 1998 documentary film",
+        "passage_id": "p_d49d0fa428",
+        "label": "faithful"
+      },
+      {
+        "claim": "The Five Obstructions is a 2003 Danish documentary film",
+        "passage_id": "p_2ce5e0d995",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

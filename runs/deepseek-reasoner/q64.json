@@ -1,0 +1,72 @@
+{
+  "qid": "q64",
+  "question": "Are Bamboo Mañalac and Danny Jones both musicians?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Bamboo Mañalac musician",
+      "k": 4,
+      "result_ids": [
+        "p_bfbe1650d4",
+        "p_f96b139ac9",
+        "p_637c2d189b",
+        "p_4a3da14684"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Danny Jones musician",
+      "k": 4,
+      "result_ids": [
+        "p_0ed868a9fe",
+        "p_e2c95bc01a",
+        "p_4e8bd3bc38",
+        "p_ae7b866896"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Yes",
+      "citations": [
+        {
+          "claim": "Bamboo Mañalac is a musician",
+          "passage_id": "p_bfbe1650d4"
+        },
+        {
+          "claim": "Danny Jones is a musician",
+          "passage_id": "p_0ed868a9fe"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Yes",
+    "gold_answer": "yes",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Bamboo Mañalac is a musician",
+        "passage_id": "p_bfbe1650d4",
+        "label": "faithful"
+      },
+      {
+        "claim": "Danny Jones is a musician",
+        "passage_id": "p_0ed868a9fe",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

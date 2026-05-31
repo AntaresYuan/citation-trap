@@ -1,0 +1,86 @@
+{
+  "qid": "q91",
+  "question": "What distinction is held by the former NBA player who was a member of the Charlotte Hornets during their 1992-93 season and was head coach for the WNBA team Charlotte Sting?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Charlotte Hornets 1992-93 season member former NBA player head coach Charlotte Sting",
+      "k": 8,
+      "result_ids": [
+        "p_f2e8a08525",
+        "p_0e4b3d1d3a",
+        "p_ee1eda35e6",
+        "p_99b29bc197",
+        "p_ea04c26f4f",
+        "p_466b46aa58",
+        "p_35ca13ae4f",
+        "p_3ecc2250c7"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Muggsy Bogues distinction shortest player",
+      "k": 5,
+      "result_ids": [
+        "p_f2e8a08525",
+        "p_99b29bc197",
+        "p_0ec34cc27b",
+        "p_adc0a73ba7",
+        "p_cf0f0a32e5"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Shortest player ever to play in the NBA",
+      "citations": [
+        {
+          "claim": "The shortest player ever to play in the National Basketball Association",
+          "passage_id": "p_f2e8a08525"
+        },
+        {
+          "claim": "Muggsy Bogues was a member of the Charlotte Hornets during their 1992-93 season",
+          "passage_id": "p_99b29bc197"
+        },
+        {
+          "claim": "Muggsy Bogues served as head coach of the Charlotte Sting",
+          "passage_id": "p_f2e8a08525"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Shortest player ever to play in the NBA",
+    "gold_answer": "shortest player ever to play in the National Basketball Association",
+    "answer_correct": true,
+    "em": 0,
+    "f1": 0.75,
+    "citations": [
+      {
+        "claim": "The shortest player ever to play in the National Basketball Association",
+        "passage_id": "p_f2e8a08525",
+        "label": "faithful"
+      },
+      {
+        "claim": "Muggsy Bogues was a member of the Charlotte Hornets during their 1992-93 season",
+        "passage_id": "p_99b29bc197",
+        "label": "faithful"
+      },
+      {
+        "claim": "Muggsy Bogues served as head coach of the Charlotte Sting",
+        "passage_id": "p_f2e8a08525",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 3,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

@@ -1,0 +1,720 @@
+{
+  "agent": "deepseek-reasoner",
+  "model": "deepseek-reasoner",
+  "judge": true,
+  "n": 100,
+  "em": 64,
+  "correct": 80,
+  "faithful_sum": 91.0,
+  "quadrants": {
+    "ideal": 77,
+    "honest_wrong": 13,
+    "correct_but_fabricated": 3,
+    "worst": 7
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "em": 0,
+      "f1": 0.6667,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q2",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q3",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q4",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q5",
+      "em": 0,
+      "f1": 0.75,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q6",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q7",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q8",
+      "em": 0,
+      "f1": 0.0,
+      "faithfulness": 1.0,
+      "quadrant": "honest_wrong"
+    },
+    {
+      "qid": "q9",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q10",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q11",
+      "em": 0,
+      "f1": 0.6667,
+      "faithfulness": 1.0,
+      "quadrant": "honest_wrong"
+    },
+    {
+      "qid": "q12",
+      "em": 0,
+      "f1": 0.8571,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q13",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q14",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q15",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q16",
+      "em": 0,
+      "f1": 0.8,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q17",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q18",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q19",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 0.5,
+      "quadrant": "correct_but_fabricated"
+    },
+    {
+      "qid": "q20",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q21",
+      "em": 0,
+      "f1": 0.8571,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q22",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q23",
+      "em": 0,
+      "f1": 0.0,
+      "faithfulness": 0.0,
+      "quadrant": "worst"
+    },
+    {
+      "qid": "q24",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q25",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q26",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q27",
+      "em": 0,
+      "f1": 0.0,
+      "faithfulness": 1.0,
+      "quadrant": "honest_wrong"
+    },
+    {
+      "qid": "q28",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q29",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 0.0,
+      "quadrant": "correct_but_fabricated"
+    },
+    {
+      "qid": "q30",
+      "em": 0,
+      "f1": 0.8,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q31",
+      "em": 0,
+      "f1": 0.0,
+      "faithfulness": 0.0,
+      "quadrant": "worst"
+    },
+    {
+      "qid": "q32",
+      "em": 0,
+      "f1": 0.2857,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q33",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q34",
+      "em": 0,
+      "f1": 0.6667,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q35",
+      "em": 0,
+      "f1": 0.8571,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q36",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q37",
+      "em": 0,
+      "f1": 0.8,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q38",
+      "em": 0,
+      "f1": 0.5,
+      "faithfulness": 1.0,
+      "quadrant": "honest_wrong"
+    },
+    {
+      "qid": "q39",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q40",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q41",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q42",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q43",
+      "em": 0,
+      "f1": 0.0,
+      "faithfulness": 0.0,
+      "quadrant": "worst"
+    },
+    {
+      "qid": "q44",
+      "em": 0,
+      "f1": 0.3333,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q45",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q46",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q47",
+      "em": 0,
+      "f1": 0.5,
+      "faithfulness": 1.0,
+      "quadrant": "honest_wrong"
+    },
+    {
+      "qid": "q48",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q49",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q50",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q51",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q52",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q53",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q54",
+      "em": 0,
+      "f1": 0.125,
+      "faithfulness": 1.0,
+      "quadrant": "honest_wrong"
+    },
+    {
+      "qid": "q55",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q56",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q57",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q58",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q59",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q60",
+      "em": 0,
+      "f1": 0.0,
+      "faithfulness": 0.0,
+      "quadrant": "worst"
+    },
+    {
+      "qid": "q61",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q62",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q63",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q64",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q65",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q66",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q67",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q68",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q69",
+      "em": 0,
+      "f1": 0.0,
+      "faithfulness": 1.0,
+      "quadrant": "honest_wrong"
+    },
+    {
+      "qid": "q70",
+      "em": 0,
+      "f1": 0.8,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q71",
+      "em": 0,
+      "f1": 0.0,
+      "faithfulness": 0.0,
+      "quadrant": "worst"
+    },
+    {
+      "qid": "q72",
+      "em": 0,
+      "f1": 0.6667,
+      "faithfulness": 1.0,
+      "quadrant": "honest_wrong"
+    },
+    {
+      "qid": "q73",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q74",
+      "em": 0,
+      "f1": 0.8571,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q75",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q76",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q77",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q78",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q79",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q80",
+      "em": 0,
+      "f1": 0.2222,
+      "faithfulness": 1.0,
+      "quadrant": "honest_wrong"
+    },
+    {
+      "qid": "q81",
+      "em": 0,
+      "f1": 0.0,
+      "faithfulness": 0.0,
+      "quadrant": "worst"
+    },
+    {
+      "qid": "q82",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q83",
+      "em": 0,
+      "f1": 0.5,
+      "faithfulness": 1.0,
+      "quadrant": "honest_wrong"
+    },
+    {
+      "qid": "q84",
+      "em": 0,
+      "f1": 0.8,
+      "faithfulness": 0.5,
+      "quadrant": "correct_but_fabricated"
+    },
+    {
+      "qid": "q85",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q86",
+      "em": 0,
+      "f1": 0.6667,
+      "faithfulness": 1.0,
+      "quadrant": "honest_wrong"
+    },
+    {
+      "qid": "q87",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q88",
+      "em": 0,
+      "f1": 0.0,
+      "faithfulness": 1.0,
+      "quadrant": "honest_wrong"
+    },
+    {
+      "qid": "q89",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q90",
+      "em": 0,
+      "f1": 0.0,
+      "faithfulness": 0.0,
+      "quadrant": "worst"
+    },
+    {
+      "qid": "q91",
+      "em": 0,
+      "f1": 0.75,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q92",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q93",
+      "em": 0,
+      "f1": 0.0,
+      "faithfulness": 1.0,
+      "quadrant": "honest_wrong"
+    },
+    {
+      "qid": "q94",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q95",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q96",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q97",
+      "em": 0,
+      "f1": 0.8571,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q98",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q99",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    },
+    {
+      "qid": "q100",
+      "em": 1,
+      "f1": 1.0,
+      "faithfulness": 1.0,
+      "quadrant": "ideal"
+    }
+  ],
+  "accuracy": 0.8,
+  "em_accuracy": 0.64,
+  "mean_faithfulness": 0.91
+}

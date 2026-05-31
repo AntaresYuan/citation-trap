@@ -1,0 +1,75 @@
+{
+  "qid": "q53",
+  "question": "The Livesey Hal War Memorial commemorates the fallen of which war, that had over 60 million casualties?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Livesey Hal War Memorial",
+      "k": 8,
+      "result_ids": [
+        "p_c5eddd4702",
+        "p_80877f3e62",
+        "p_1f779163b0",
+        "p_9a72be5829",
+        "p_59d430a507",
+        "p_e634c155b4",
+        "p_8a4c499176",
+        "p_4bc9b524f1"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "World War II casualties over 60 million",
+      "k": 3,
+      "result_ids": [
+        "p_fc87c060e4",
+        "p_9a72be5829",
+        "p_1f779163b0"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "World War II",
+      "citations": [
+        {
+          "claim": "The Livesey Hall War Memorial commemorates the fallen of World War II",
+          "passage_id": "p_c5eddd4702"
+        },
+        {
+          "claim": "World War II had over 60 million casualties",
+          "passage_id": "p_fc87c060e4"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "World War II",
+    "gold_answer": "World War II",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "The Livesey Hall War Memorial commemorates the fallen of World War II",
+        "passage_id": "p_c5eddd4702",
+        "label": "faithful"
+      },
+      {
+        "claim": "World War II had over 60 million casualties",
+        "passage_id": "p_fc87c060e4",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-reasoner"
+}

@@ -1,0 +1,80 @@
+{
+  "qid": "q75",
+  "question": "In 1991 Euromarché was bought by a chain that operated how any hypermarkets at the end of 2016?",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Euromarché bought by chain 1991 hypermarkets end of 2016",
+      "k": 8,
+      "result_ids": [
+        "p_555a3035db",
+        "p_fd087714b0",
+        "p_b35f2c58d5",
+        "p_ccc3a4683c",
+        "p_a487038f4d",
+        "p_c6858d51ea",
+        "p_8cbb13b8b1",
+        "p_a20dd2f007"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "Carrefour number of hypermarkets end of 2016",
+      "k": 8,
+      "result_ids": [
+        "p_8cbb13b8b1",
+        "p_a487038f4d",
+        "p_ccc3a4683c",
+        "p_d96b0c75d9",
+        "p_c6858d51ea",
+        "p_d2aea57c49",
+        "p_5b2a1e76af",
+        "p_6e18f62a00"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "1,462",
+      "citations": [
+        {
+          "claim": "Euromarché was bought by Carrefour in June 1991",
+          "passage_id": "p_555a3035db"
+        },
+        {
+          "claim": "Carrefour had 1,462 hypermarkets at the end of 2016",
+          "passage_id": "p_8cbb13b8b1"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "1,462",
+    "gold_answer": "1,462",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Euromarché was bought by Carrefour in June 1991",
+        "passage_id": "p_555a3035db",
+        "label": "faithful"
+      },
+      {
+        "claim": "Carrefour had 1,462 hypermarkets at the end of 2016",
+        "passage_id": "p_8cbb13b8b1",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}

@@ -1,0 +1,74 @@
+{
+  "qid": "q62",
+  "question": "Which came out first, Dinosaur or McFarland, USA",
+  "steps": [
+    {
+      "action": "search",
+      "query": "Dinosaur release date",
+      "k": 5,
+      "result_ids": [
+        "p_69c56cceb5",
+        "p_2091110a30",
+        "p_1f2f6a6149",
+        "p_a308489335",
+        "p_70ccce41fe"
+      ]
+    },
+    {
+      "action": "search",
+      "query": "McFarland USA release date",
+      "k": 5,
+      "result_ids": [
+        "p_127e25a08e",
+        "p_96ed9f38fa",
+        "p_70ccce41fe",
+        "p_a308489335",
+        "p_551a902b42"
+      ]
+    },
+    {
+      "action": "submit",
+      "answer": "Dinosaur",
+      "citations": [
+        {
+          "claim": "Dinosaur was released in 2000",
+          "passage_id": "p_2091110a30"
+        },
+        {
+          "claim": "McFarland, USA was released in 2015",
+          "passage_id": "p_127e25a08e"
+        }
+      ]
+    }
+  ],
+  "score": {
+    "answer": "Dinosaur",
+    "gold_answer": "Dinosaur",
+    "answer_correct": true,
+    "em": 1,
+    "f1": 1.0,
+    "citations": [
+      {
+        "claim": "Dinosaur was released in 2000",
+        "passage_id": "p_2091110a30",
+        "label": "faithful"
+      },
+      {
+        "claim": "McFarland, USA was released in 2015",
+        "passage_id": "p_127e25a08e",
+        "label": "faithful"
+      }
+    ],
+    "citation_counts": {
+      "faithful": 2,
+      "misattributed": 0,
+      "fabricated": 0,
+      "unsupported": 0
+    },
+    "faithfulness_score": 1.0,
+    "citation_trustworthy": true,
+    "quadrant": "ideal",
+    "scored_by": "entailment_judge"
+  },
+  "agent": "deepseek-chat"
+}
