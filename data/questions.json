@@ -9,7 +9,8 @@
     ],
     "hop": 2,
     "type": "bridge",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "span"
   },
   {
     "qid": "q2",
@@ -21,7 +22,8 @@
     ],
     "hop": 2,
     "type": "comparison",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "yes_no"
   },
   {
     "qid": "q3",
@@ -33,7 +35,8 @@
     ],
     "hop": 2,
     "type": "bridge",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "span"
   },
   {
     "qid": "q4",
@@ -45,7 +48,8 @@
     ],
     "hop": 2,
     "type": "comparison",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "yes_no"
   },
   {
     "qid": "q5",
@@ -57,7 +61,8 @@
     ],
     "hop": 2,
     "type": "bridge",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "span"
   },
   {
     "qid": "q6",
@@ -69,7 +74,8 @@
     ],
     "hop": 2,
     "type": "comparison",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "yes_no"
   },
   {
     "qid": "q7",
@@ -81,7 +87,8 @@
     ],
     "hop": 2,
     "type": "bridge",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "span"
   },
   {
     "qid": "q8",
@@ -93,7 +100,8 @@
     ],
     "hop": 2,
     "type": "comparison",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "yes_no"
   },
   {
     "qid": "q9",
@@ -105,7 +113,8 @@
     ],
     "hop": 2,
     "type": "bridge",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "span"
   },
   {
     "qid": "q10",
@@ -117,7 +126,8 @@
     ],
     "hop": 2,
     "type": "comparison",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "yes_no"
   },
   {
     "qid": "q11",
@@ -129,7 +139,8 @@
     ],
     "hop": 2,
     "type": "bridge",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "span"
   },
   {
     "qid": "q12",
@@ -141,7 +152,8 @@
     ],
     "hop": 2,
     "type": "comparison",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "span"
   },
   {
     "qid": "q13",
@@ -153,7 +165,8 @@
     ],
     "hop": 2,
     "type": "bridge",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "span"
   },
   {
     "qid": "q14",
@@ -165,7 +178,8 @@
     ],
     "hop": 2,
     "type": "comparison",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "span"
   },
   {
     "qid": "q15",
@@ -177,19 +191,21 @@
     ],
     "hop": 2,
     "type": "bridge",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "span"
   },
   {
     "qid": "q16",
-    "question": "Are both Dictyosperma, and Huernia described as a genus?",
-    "gold_answer": "yes",
+    "question": "Hayden is a singer-songwriter from Canada, but where does Buck-Tick hail from?",
+    "gold_answer": "Fujioka, Gunma",
     "gold_support_ids": [
-      "p_4d241b8029",
-      "p_d08b8879ec"
+      "p_35321c72ff",
+      "p_c6864ff6ef"
     ],
     "hop": 2,
     "type": "comparison",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "span"
   },
   {
     "qid": "q17",
@@ -201,18 +217,1086 @@
     ],
     "hop": 2,
     "type": "bridge",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "span"
   },
   {
     "qid": "q18",
-    "question": "Hayden is a singer-songwriter from Canada, but where does Buck-Tick hail from?",
-    "gold_answer": "Fujioka, Gunma",
+    "question": "Are Freakonomics and In the Realm of the Hackers both American documentaries?",
+    "gold_answer": "no",
     "gold_support_ids": [
-      "p_1b049e9319",
-      "p_8a2d70fac5"
+      "p_3b22cae235",
+      "p_42999eddc4"
     ],
     "hop": 2,
     "type": "comparison",
-    "level": "hard"
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q19",
+    "question": "What year did Guns N Roses perform a promo for a movie starring Arnold Schwarzenegger as a former New York Police detective?",
+    "gold_answer": "1999",
+    "gold_support_ids": [
+      "p_8fae985ac9",
+      "p_4bce465878"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q20",
+    "question": "Which band, Letters to Cleo or Screaming Trees, had more members?",
+    "gold_answer": "Letters to Cleo",
+    "gold_support_ids": [
+      "p_f03266ee23",
+      "p_0a07cfb344"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q21",
+    "question": "The football manager who recruited David Beckham managed Manchester United during what timeframe?",
+    "gold_answer": "from 1986 to 2013",
+    "gold_support_ids": [
+      "p_a217c165e0",
+      "p_c6999108c8"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q22",
+    "question": "Are both Elko Regional Airport and Gerald R. Ford International Airport located in Michigan?",
+    "gold_answer": "no",
+    "gold_support_ids": [
+      "p_2f000490be",
+      "p_8ff928c241"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q23",
+    "question": "Brown State Fishing Lake is in a country that has a population of how many inhabitants ?",
+    "gold_answer": "9,984",
+    "gold_support_ids": [
+      "p_eec5c44a18",
+      "p_951dc4213a"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q24",
+    "question": "Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?",
+    "gold_answer": "Scotch Collie",
+    "gold_support_ids": [
+      "p_57b1dfeccb",
+      "p_e468273cb6"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q25",
+    "question": "The Vermont Catamounts men's soccer team currently competes in a conference that was formerly known as what from 1988 to 1996?",
+    "gold_answer": "the North Atlantic Conference",
+    "gold_support_ids": [
+      "p_c845bd9f15",
+      "p_4a637e7dfb"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q26",
+    "question": "Are Ferocactus and Silene both types of plant?",
+    "gold_answer": "yes",
+    "gold_support_ids": [
+      "p_74448bb453",
+      "p_502f90b27b"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q27",
+    "question": "Roger O. Egeberg was Assistant Secretary for Health and Scientific Affairs during the administration of a president that served during what years?",
+    "gold_answer": "1969 until 1974",
+    "gold_support_ids": [
+      "p_a37b021a5e",
+      "p_f5faaa0c35"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q28",
+    "question": "Are both Cypress and Ajuga genera?",
+    "gold_answer": "no",
+    "gold_support_ids": [
+      "p_5d1fb96b29",
+      "p_15d2b7ba14"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q29",
+    "question": "Which other Mexican Formula One race car driver has held the podium besides the Force India driver born in 1990?",
+    "gold_answer": "Pedro Rodríguez",
+    "gold_support_ids": [
+      "p_15b7d8b065",
+      "p_eca509fe2f"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q30",
+    "question": "Who was born earlier, Emma Bull or Virginia Woolf?",
+    "gold_answer": "Adeline Virginia Woolf",
+    "gold_support_ids": [
+      "p_7e3f81f4d8",
+      "p_365dea3739"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q31",
+    "question": "This singer of A Rather Blustery Day also voiced what hedgehog?",
+    "gold_answer": "Sonic",
+    "gold_support_ids": [
+      "p_78be011537",
+      "p_a70f23601c"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q32",
+    "question": "Where are Teide National Park and Garajonay National Park located?",
+    "gold_answer": "Canary Islands, Spain",
+    "gold_support_ids": [
+      "p_ac6a9f18cd",
+      "p_92ec1e4650"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q33",
+    "question": "Aside from the Apple Remote, what other device can control the program Apple Remote was originally designed to interact with?",
+    "gold_answer": "keyboard function keys",
+    "gold_support_ids": [
+      "p_5c799c977d",
+      "p_cb2edb0e1d"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q34",
+    "question": "What occupation do Chris Menges and Aram Avakian share?",
+    "gold_answer": "director",
+    "gold_support_ids": [
+      "p_e1cac0c796",
+      "p_2fae067fac"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q35",
+    "question": "What was the father of Kasper Schmeichel voted to be by the IFFHS in 1992?",
+    "gold_answer": "World's Best Goalkeeper",
+    "gold_support_ids": [
+      "p_d2c37f0b5d",
+      "p_bdb2bf3f03"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q36",
+    "question": "Do the drinks Gibson and Zurracapote both contain gin?",
+    "gold_answer": "no",
+    "gold_support_ids": [
+      "p_de6059d7f8",
+      "p_dab99599d3"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q37",
+    "question": "Who was the writer of These Boots Are Made for Walkin' and who died in 2007?",
+    "gold_answer": "Barton Lee Hazlewood",
+    "gold_support_ids": [
+      "p_c724482694",
+      "p_ac14aab49f"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q38",
+    "question": "Which filmmaker was known for animation, Lev Yilmaz or Pamela B. Green?",
+    "gold_answer": "Levni Yilmaz",
+    "gold_support_ids": [
+      "p_2cf433d8d7",
+      "p_0ec48dd0c5"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q39",
+    "question": "The 2011–12 VCU Rams men's basketball team, led by third year head coach Shaka Smart, represented Virginia Commonwealth University which was founded in what year?",
+    "gold_answer": "1838",
+    "gold_support_ids": [
+      "p_b608ad3c0a",
+      "p_1e163f6c09"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q40",
+    "question": "Are Yingkou and Fuding the same level of city?",
+    "gold_answer": "no",
+    "gold_support_ids": [
+      "p_552cd4eace",
+      "p_47704aa592"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q41",
+    "question": "Kaiser Ventures corporation was founded by an American industrialist who became known as the father of modern American shipbuilding?",
+    "gold_answer": "Henry J. Kaiser",
+    "gold_support_ids": [
+      "p_1947113154",
+      "p_fbb22ba096"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q42",
+    "question": "Who died first, George Archainbaud or Ralph Murphy?",
+    "gold_answer": "George Archainbaud",
+    "gold_support_ids": [
+      "p_60c2d2154b",
+      "p_8228c2d1b8"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q43",
+    "question": "What is the name for the adventure in \"Tunnels and Trolls\", a game designed by Ken St. Andre?",
+    "gold_answer": "Arena of Khazan",
+    "gold_support_ids": [
+      "p_056712beb1",
+      "p_271d0156af"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q44",
+    "question": "Were the bands Skin Yard and Ostava from the U.S.?",
+    "gold_answer": "no",
+    "gold_support_ids": [
+      "p_a956617594",
+      "p_217b6bf0d8"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q45",
+    "question": "When was Poison's album \"Shut Up, Make Love\" released?",
+    "gold_answer": "2000",
+    "gold_support_ids": [
+      "p_c7cf1a6c94",
+      "p_45c863fd44"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q46",
+    "question": "Are Daryl Hall and Gerry Marsden both musicians?",
+    "gold_answer": "yes",
+    "gold_support_ids": [
+      "p_225bce32b7",
+      "p_10e677c75c"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q47",
+    "question": "Which  French ace pilot and adventurer fly L'Oiseau Blanc",
+    "gold_answer": "Charles Eugène",
+    "gold_support_ids": [
+      "p_e611d24d23",
+      "p_41c8fe291a"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q48",
+    "question": "Which film was Oscar nominated, LaLee's Kin: The Legacy of Cotton or Gimme Shelter, the 1970 Rolling Stones documentary?",
+    "gold_answer": "LaLee's Kin: The Legacy of Cotton",
+    "gold_support_ids": [
+      "p_28adee78a3",
+      "p_eb374266cc"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q49",
+    "question": "Alexander Kerensky was defeated and destroyed by the Bolsheviks in the course of a civil war that ended when ?",
+    "gold_answer": "October 1922",
+    "gold_support_ids": [
+      "p_0ba2f35758",
+      "p_2da8870c3c"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q50",
+    "question": "Which board game was published most recently, Pirate's Cove or Catan?",
+    "gold_answer": "Pirate's Cove",
+    "gold_support_ids": [
+      "p_f4d12373cf",
+      "p_d767edebdb"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q51",
+    "question": "Seven Brief Lessons on Physics was written by an Italian physicist that has worked in France since what year?",
+    "gold_answer": "2000",
+    "gold_support_ids": [
+      "p_ed3b33ba32",
+      "p_460d34887a"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q52",
+    "question": "Who had the best singles ranking, Roberta Vinci or Jorge Lozano?",
+    "gold_answer": "Roberta Vinci",
+    "gold_support_ids": [
+      "p_4695a8a6e2",
+      "p_b5eac08bc3"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q53",
+    "question": "The Livesey Hal War Memorial commemorates the fallen of which war, that had over 60 million casualties?",
+    "gold_answer": "World War II",
+    "gold_support_ids": [
+      "p_c5eddd4702",
+      "p_fc87c060e4"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q54",
+    "question": "Josey Scott and Ian Watkins were both promising musicians. Which of these talented men was incarcerated, impacting his career with a rock band?",
+    "gold_answer": "Lostprophets disbanded in 2013 after Watkins was charged with sexual offences in late 2012.",
+    "gold_support_ids": [
+      "p_292bd4fc3b",
+      "p_0e66fb0f66"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q55",
+    "question": "Ralph Hefferline was a psychology professor at a university that is located in what city?",
+    "gold_answer": "New York City",
+    "gold_support_ids": [
+      "p_a49a6081c2",
+      "p_f9961d6294"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q56",
+    "question": "What occupation was shared by David Yates and Pietro Germi?",
+    "gold_answer": "director",
+    "gold_support_ids": [
+      "p_2a0c9bb697",
+      "p_e40bc11a5b"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q57",
+    "question": "Where is the company that Sachin Warrier worked for as a software engineer headquartered? ",
+    "gold_answer": "Mumbai",
+    "gold_support_ids": [
+      "p_8b4ba42732",
+      "p_2c6104f69f"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q58",
+    "question": "Are Broughtonia and Laeliocattleya both orchids?",
+    "gold_answer": "yes",
+    "gold_support_ids": [
+      "p_96259976a3",
+      "p_5c9af255e7"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q59",
+    "question": "A Japanese manga series based on a 16 year old high school student Ichitaka Seto, is written and illustrated by someone born in what year?",
+    "gold_answer": "1962",
+    "gold_support_ids": [
+      "p_2abfbf036f",
+      "p_1fc6f696bc"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q60",
+    "question": "Which was fought earlier in our nation's history, the Seven Days Battles or the Battle of Manila?",
+    "gold_answer": "The Seven Days Battles",
+    "gold_support_ids": [
+      "p_7a05b21c92",
+      "p_a661299645"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q61",
+    "question": "The battle in which Giuseppe Arimondi lost his life secured what for Ethiopia?",
+    "gold_answer": "sovereignty",
+    "gold_support_ids": [
+      "p_e5a206ebf5",
+      "p_8f2337817e"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q62",
+    "question": "Which came out first, Dinosaur or McFarland, USA",
+    "gold_answer": "Dinosaur",
+    "gold_support_ids": [
+      "p_127e25a08e",
+      "p_2091110a30"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q63",
+    "question": "Alfred Balk served as the secretary of the Committee on the Employment of Minority Groups in the News Media under which United States Vice President?",
+    "gold_answer": "Nelson Rockefeller",
+    "gold_support_ids": [
+      "p_90fb6699ed",
+      "p_9c25839f17"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q64",
+    "question": "Are Bamboo Mañalac and Danny Jones both musicians?",
+    "gold_answer": "yes",
+    "gold_support_ids": [
+      "p_0ed868a9fe",
+      "p_bfbe1650d4"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q65",
+    "question": "A medieval fortress in Dirleton, East Lothian, Scotland borders on the south side of what coastal area?",
+    "gold_answer": "Yellowcraig",
+    "gold_support_ids": [
+      "p_7d458c65a2",
+      "p_b3cdece549"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q66",
+    "question": "Do The Importance of Being Icelandic and The Five Obstructions belong to different film genres ?",
+    "gold_answer": "no",
+    "gold_support_ids": [
+      "p_d49d0fa428",
+      "p_2ce5e0d995"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q67",
+    "question": "Who is the writer of this song that was inspired by words on a tombstone and was the first track on the box set Back to Mono?",
+    "gold_answer": "Phil Spector",
+    "gold_support_ids": [
+      "p_cf20ea110f",
+      "p_b8fee7cdba"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q68",
+    "question": "Are Hot Rod and The Memory of Our People both magazines?",
+    "gold_answer": "yes",
+    "gold_support_ids": [
+      "p_3ba378eb43",
+      "p_f6e8fa10a1"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q69",
+    "question": "What type of forum did a former Soviet statesman initiate?",
+    "gold_answer": "Organizations could come together to address global issues",
+    "gold_support_ids": [
+      "p_559e8dba28",
+      "p_634d632bd7"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q70",
+    "question": "Who has written more than 300 papers, Semyon Aranovich Gershgorin or Pavel Alexandrov?",
+    "gold_answer": "Pavel Sergeyevich Alexandrov",
+    "gold_support_ids": [
+      "p_f0b214c15e",
+      "p_61d2d64eb2"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q71",
+    "question": "Which British first-generation jet-powered medium bomber was used in the South West Pacific theatre of World War II?",
+    "gold_answer": "English Electric Canberra",
+    "gold_support_ids": [
+      "p_8c59240206",
+      "p_3a40401c5f"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q72",
+    "question": "Which tower is taller, 712 Fifth Avenue or Manhattan Life Insurance Building?",
+    "gold_answer": "712 5th Avenue",
+    "gold_support_ids": [
+      "p_9c7e4aa773",
+      "p_f58160a2e2"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q73",
+    "question": "Which year and which conference was the 14th season for this conference as part of the NCAA Division that the Colorado Buffaloes played in with a record of 2-6 in conference play?",
+    "gold_answer": "2009 Big 12 Conference",
+    "gold_support_ids": [
+      "p_0169deab28",
+      "p_a356498474"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q74",
+    "question": "Who was born first, Arthur Conan Doyle or Penelope Lively?",
+    "gold_answer": "Arthur Ignatius Conan Doyle",
+    "gold_support_ids": [
+      "p_35bc6df012",
+      "p_7c27d69035"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q75",
+    "question": "In 1991 Euromarché was bought by a chain that operated how any hypermarkets at the end of 2016?",
+    "gold_answer": "1,462",
+    "gold_support_ids": [
+      "p_8cbb13b8b1",
+      "p_555a3035db"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q76",
+    "question": "Are both Dafeng District and Dazhou located in the same province?",
+    "gold_answer": "no",
+    "gold_support_ids": [
+      "p_0cdb6239fa",
+      "p_9e90b08e73"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q77",
+    "question": "What race track in the midwest hosts a 500 mile race eavery May?",
+    "gold_answer": "Indianapolis Motor Speedway",
+    "gold_support_ids": [
+      "p_7ba984bb3c",
+      "p_92feb04575"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q78",
+    "question": "Is the Marsilea or the Brabejum the genus of more individual species of plants?",
+    "gold_answer": "Marsilea",
+    "gold_support_ids": [
+      "p_15b039b497",
+      "p_f577ef9c48"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q79",
+    "question": "In what city did the \"Prince of tenors\" star in a film based on an opera by Giacomo Puccini?",
+    "gold_answer": "Rome",
+    "gold_support_ids": [
+      "p_8a237d026b",
+      "p_2ae4c5d6f8"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q80",
+    "question": "Which case came first, Craig v. Boren or United States v. Paramount Pictures, Inc.?",
+    "gold_answer": "Craig v. Boren",
+    "gold_support_ids": [
+      "p_02e5d2c81e",
+      "p_b6bbd7dd34"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q81",
+    "question": "Ellie Goulding worked with what other writers on her third studio album, Delirium?",
+    "gold_answer": "Max Martin, Savan Kotecha and Ilya Salmanzadeh",
+    "gold_support_ids": [
+      "p_f381c8da52",
+      "p_2acb9234b9"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q82",
+    "question": "Are  Chrysalis and Look both women's magazines?",
+    "gold_answer": "yes",
+    "gold_support_ids": [
+      "p_dc396a1f76",
+      "p_ebcb47549e"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q83",
+    "question": "Which Australian city founded in 1838 contains a boarding school opened by a Prime Minister of Australia and named after a school in London of the same name.",
+    "gold_answer": "Marion, South Australia",
+    "gold_support_ids": [
+      "p_d5a82a5449",
+      "p_3b2ab9826c"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q84",
+    "question": "Which author has won more Pulitzer Prizes, Thomas Friedman or Henri Bergson?",
+    "gold_answer": "Thomas Loren Friedman",
+    "gold_support_ids": [
+      "p_7f06d23378",
+      "p_a3bc0efcc1"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q85",
+    "question": "D1NZ is a series based on what oversteering technique?",
+    "gold_answer": "Drifting",
+    "gold_support_ids": [
+      "p_d2138ee37f",
+      "p_95aba4b7fd"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q86",
+    "question": "In what city can a person find both the Nusretiye Clock Tower and the Eski Imaret Mosque be found?",
+    "gold_answer": "Istanbul, Turkey",
+    "gold_support_ids": [
+      "p_2b4bda530b",
+      "p_089ccb4916"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q87",
+    "question": "who is younger Keith Bostic or Jerry Glanville ?",
+    "gold_answer": "Keith Bostic",
+    "gold_support_ids": [
+      "p_e2206d6e2c",
+      "p_093d8a36ca"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q88",
+    "question": "Which director had the longest career, Alain Resnais or Scott Sidney?",
+    "gold_answer": "Scott Sidney",
+    "gold_support_ids": [
+      "p_25f9cb9b82",
+      "p_d96574d648"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q89",
+    "question": "According to the 2001 census, what was the population of the city in which Kirton End is located?",
+    "gold_answer": "35,124",
+    "gold_support_ids": [
+      "p_5d1c749274",
+      "p_6e18f62a00"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q90",
+    "question": "which is larger Asante Traditional Buildings or Gulangyu?",
+    "gold_answer": "Gulangyu",
+    "gold_support_ids": [
+      "p_722ade8839",
+      "p_cade420caa"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q91",
+    "question": "What distinction is held by the former NBA player who was a member of the Charlotte Hornets during their 1992-93 season and was head coach for the WNBA team Charlotte Sting?",
+    "gold_answer": "shortest player ever to play in the National Basketball Association",
+    "gold_support_ids": [
+      "p_99b29bc197",
+      "p_f2e8a08525"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q92",
+    "question": "Can Stenocereus and Pachypodium both include tree like plants?",
+    "gold_answer": "yes",
+    "gold_support_ids": [
+      "p_593df79565",
+      "p_b692676f8b"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
+  },
+  {
+    "qid": "q93",
+    "question": "What is the name of the executive producer of the film that has a score composed by Jerry Goldsmith?",
+    "gold_answer": "Ronald Shusett",
+    "gold_support_ids": [
+      "p_18c5e626a8",
+      "p_5ca8b3c172"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q94",
+    "question": "Which film was released first: Sacred Planet or Oz the Great and Powerful?",
+    "gold_answer": "Sacred Planet",
+    "gold_support_ids": [
+      "p_7c112bb762",
+      "p_a3bfd26bf3"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q95",
+    "question": "What was the Roud Folk Song Index of the nursery rhyme inspiring What Are Little Girls Made Of?",
+    "gold_answer": "821",
+    "gold_support_ids": [
+      "p_811d0d8716",
+      "p_704661039f"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q96",
+    "question": "Who is older, Ferdi Taygan or Mahesh Bhupathi?",
+    "gold_answer": "Ferdi Taygan",
+    "gold_support_ids": [
+      "p_cf0f0a32e5",
+      "p_68072908dc"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q97",
+    "question": "Scott Parkin has been a vocal critic of Exxonmobil and another corporation that has operations in how many countries ?",
+    "gold_answer": "more than 70 countries",
+    "gold_support_ids": [
+      "p_684eb88ba2",
+      "p_e7c7bcd8a5"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q98",
+    "question": "Which came to market first, \"Hey Pa! There's a Goat on the Roof\" or \"Poleconomy\"",
+    "gold_answer": "Hey Pa! There's a Goat on the Roof",
+    "gold_support_ids": [
+      "p_72f8274d24",
+      "p_9838ab85bc"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q99",
+    "question": "What WB supernatrual drama series was Jawbreaker star Rose Mcgowan best known for being in?",
+    "gold_answer": "Charmed",
+    "gold_support_ids": [
+      "p_60de919375",
+      "p_353dc2156e"
+    ],
+    "hop": 2,
+    "type": "bridge",
+    "level": "hard",
+    "answer_kind": "span"
+  },
+  {
+    "qid": "q100",
+    "question": "Are Skeptical Inquirer and The Progressive Populist both tabloid-style magazines?",
+    "gold_answer": "no",
+    "gold_support_ids": [
+      "p_e649d31405",
+      "p_0729b822d8"
+    ],
+    "hop": 2,
+    "type": "comparison",
+    "level": "hard",
+    "answer_kind": "yes_no"
   }
 ]
