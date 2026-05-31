@@ -30,28 +30,31 @@ citation ledger across the whole run, a per-question table, and a detail panel
 that flags each invented or misattributed citation. *(Shipped `data.js` uses the
 scripted fixture; live runs replace it with real DeepSeek results.)*
 
-First full run (DeepSeek-chat, 100 Q): **accuracy 57%, mean faithfulness 90%** —
-`ideal 70 / honest_wrong 17 / worst 9 / correct_but_fabricated 4`. The cleanest
-headline case: the agent answers *"who is younger…"* correctly but cites a
-**non-existent passage id** for the birth date it used (a one-character
-corruption of the real id) — right answer, fabricated source.
+First full run (DeepSeek-chat, 100 Q, **entailment judge on**): **accuracy 60%,
+mean faithfulness 95%** — `ideal 77 / honest_wrong 16 / worst 5 /
+correct_but_fabricated 2`. Both headline cases survive scrutiny:
 
-### Scoring caveats (read this)
+- *q19* — answers "1999" correctly but cites a **non-existent passage id** for
+  the release-date fact it used (fabricated source).
+- *q79* — answers "Rome" correctly but cites a real Corelli biography passage
+  that the judge confirms **does not actually support** the film claim
+  (genuine misattribution — the kind the gold-set proxy cannot catch).
 
-The deterministic faithfulness score is a **proxy**: a citation is "faithful"
-iff its `passage_id` is in the question's `gold_support_ids`. That is not the
-same as "the cited passage actually supports the claim", so the proxy has two
-known false-positive modes:
+### How faithfulness is scored
 
-1. ~~A claim with no citation (e.g. a pure deduction "1882 is earlier than
-   1954") was counted against faithfulness.~~ **Fixed** — `unsupported` claims
-   are now a coverage note, not a trust failure, and faithfulness is computed
-   over citations actually made.
-2. **Still open:** an agent that cites a *real, genuinely-supporting* passage
-   that simply isn't one of the gold ones is labelled `misattributed`. Only
-   `fabricated` (a `passage_id` absent from the corpus) is unambiguous without
-   entailment. The fix is the LLM entailment judge (issue #10): score whether
-   the cited passage *entails* the claim, not whether it's the blessed gold id.
+A citation is `fabricated` if its `passage_id` isn't in the corpus (objective),
+`unsupported` if there's no id (a coverage note — e.g. a pure deduction, *not* a
+trust failure), else `faithful`/`misattributed`. That last split is decided two
+ways:
+
+- **gold-set proxy (default, offline):** faithful iff the id is in the
+  question's `gold_support_ids`. Fast and deterministic, but it mislabels a
+  real *supporting* passage that isn't the blessed gold id, and can't tell a
+  gold passage actually supports *this* claim.
+- **entailment judge (`--judge`, issue #10 — done):** an LLM decides whether
+  the cited passage genuinely supports the claim, regardless of gold membership.
+  Removes both proxy errors. `serve.py` enables it by default; each result
+  carries `scored_by`.
 
 ## Status
 
@@ -93,8 +96,9 @@ Composition: 50 bridge / 50 comparison · 79 span / 21 yes-no.
 ## Stack
 
 Python 3.9+ · `rank_bm25` (keyword retrieval) · DeepSeek API (system under test,
-intentionally cheap/error-prone) · vanilla JS trace UI. LLM-judge faithfulness
-(Gemini Flash) is an optional upgrade, off by default.
+intentionally cheap/error-prone; also reused as the entailment judge) · vanilla
+JS trace UI. The entailment judge is on by default when served, off in the
+deterministic CLI default.
 
 ## Quickstart
 
