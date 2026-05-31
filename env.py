@@ -94,6 +94,19 @@ def f1_score(pred, gold):
     return 2 * precision * recall / (precision + recall)
 
 
+def answer_is_correct(pred, gold):
+    """Lenient correctness for the 2x2 axis. EM alone is too strict for a
+    free-form agent (e.g. "Greenwich Village" vs "Greenwich Village, New York
+    City"), so we also accept when the gold span is contained in the answer or
+    token-F1 is high. EM and F1 are still reported separately."""
+    if exact_match(pred, gold):
+        return True
+    np_, ng = normalize_answer(pred), normalize_answer(gold)
+    if ng and ng in np_:
+        return True
+    return f1_score(pred, gold) >= 0.7
+
+
 # --------------------------------------------------------------------------- #
 # Citation faithfulness (deterministic proxy)
 # --------------------------------------------------------------------------- #
@@ -138,7 +151,7 @@ def score_submission(answer, citations, question, corpus):
     faithfulness = (counts["faithful"] / total) if total else 0.0
     trustworthy = total > 0 and faithfulness == 1.0
 
-    answer_correct = bool(em)
+    answer_correct = answer_is_correct(answer, gold)
     if answer_correct and trustworthy:
         quadrant = "ideal"
     elif answer_correct and not trustworthy:

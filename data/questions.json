@@ -4,8 +4,8 @@
     "question": "What government position was held by the woman who portrayed Corliss Archer in the film Kiss and Tell?",
     "gold_answer": "Chief of Protocol",
     "gold_support_ids": [
-      "q1_supp_1",
-      "q1_supp_2"
+      "p_342a97756e",
+      "p_93fa34e103"
     ],
     "hop": 2,
     "type": "bridge",
@@ -16,8 +16,8 @@
     "question": "Were Scott Derrickson and Ed Wood of the same nationality?",
     "gold_answer": "yes",
     "gold_support_ids": [
-      "q2_supp_1",
-      "q2_supp_2"
+      "p_99f5c064e8",
+      "p_c21444d1cb"
     ],
     "hop": 2,
     "type": "comparison",
@@ -28,8 +28,8 @@
     "question": "What science fantasy young adult series, told in first person, has a set of companion books narrating the stories of enslaved worlds and alien species?",
     "gold_answer": "Animorphs",
     "gold_support_ids": [
-      "q3_supp_1",
-      "q3_supp_2"
+      "p_e249b058a6",
+      "p_4b9edbfeb8"
     ],
     "hop": 2,
     "type": "bridge",
@@ -40,8 +40,8 @@
     "question": "Are the Laleli Mosque and Esma Sultan Mansion located in the same neighborhood?",
     "gold_answer": "no",
     "gold_support_ids": [
-      "q4_supp_1",
-      "q4_supp_2"
+      "p_fe4bd75cbe",
+      "p_d98361504e"
     ],
     "hop": 2,
     "type": "comparison",
@@ -52,8 +52,8 @@
     "question": "The director of the romantic comedy \"Big Stone Gap\" is based in what New York city?",
     "gold_answer": "Greenwich Village, New York City",
     "gold_support_ids": [
-      "q5_supp_1",
-      "q5_supp_2"
+      "p_6121371d11",
+      "p_f4ef5ee3da"
     ],
     "hop": 2,
     "type": "bridge",
@@ -64,8 +64,8 @@
     "question": "Are Local H and For Against both from the United States?",
     "gold_answer": "yes",
     "gold_support_ids": [
-      "q6_supp_1",
-      "q6_supp_2"
+      "p_e6a07c0541",
+      "p_b932cee843"
     ],
     "hop": 2,
     "type": "comparison",
@@ -76,8 +76,8 @@
     "question": "2014 S/S is the debut album of a South Korean boy group that was formed by who?",
     "gold_answer": "YG Entertainment",
     "gold_support_ids": [
-      "q7_supp_1",
-      "q7_supp_2"
+      "p_a16c8da122",
+      "p_db09c1532f"
     ],
     "hop": 2,
     "type": "bridge",
@@ -88,8 +88,8 @@
     "question": "Are Random House Tower and 888 7th Avenue both used for real estate?",
     "gold_answer": "no",
     "gold_support_ids": [
-      "q8_supp_1",
-      "q8_supp_2"
+      "p_fb07709a6f",
+      "p_2646f51b7d"
     ],
     "hop": 2,
     "type": "comparison",
@@ -100,8 +100,8 @@
     "question": "Who was known by his stage name Aladin and helped organizations improve their performance as a consultant?",
     "gold_answer": "Eenasul Fateh",
     "gold_support_ids": [
-      "q9_supp_1",
-      "q9_supp_2"
+      "p_6a194c55bb",
+      "p_581be00144"
     ],
     "hop": 2,
     "type": "bridge",
@@ -112,8 +112,8 @@
     "question": "Are Giuseppe Verdi and Ambroise Thomas both Opera composers ?",
     "gold_answer": "yes",
     "gold_support_ids": [
-      "q10_supp_1",
-      "q10_supp_2"
+      "p_a082561063",
+      "p_2e2f61086b"
     ],
     "hop": 2,
     "type": "comparison",
@@ -124,8 +124,8 @@
     "question": "The arena where the Lewiston Maineiacs played their home games can seat how many people?",
     "gold_answer": "3,677 seated",
     "gold_support_ids": [
-      "q11_supp_1",
-      "q11_supp_2"
+      "p_17ee57e25c",
+      "p_442ad9d966"
     ],
     "hop": 2,
     "type": "bridge",
@@ -136,8 +136,8 @@
     "question": "Which writer was from England, Henry Roth or Robert Erskine Childers?",
     "gold_answer": "Robert Erskine Childers DSC",
     "gold_support_ids": [
-      "q12_supp_1",
-      "q12_supp_2"
+      "p_89a174d3b4",
+      "p_5be74413cf"
     ],
     "hop": 2,
     "type": "comparison",
@@ -148,8 +148,8 @@
     "question": "Who is older, Annie Morton or Terry Richardson?",
     "gold_answer": "Terry Richardson",
     "gold_support_ids": [
-      "q13_supp_1",
-      "q13_supp_2"
+      "p_86d4257cec",
+      "p_4f0a90bf27"
     ],
     "hop": 2,
     "type": "bridge",
@@ -160,8 +160,8 @@
     "question": "Which performance act has a higher instrument to person ratio, Badly Drawn Boy or Wolf Alice? ",
     "gold_answer": "Badly Drawn Boy",
     "gold_support_ids": [
-      "q14_supp_1",
-      "q14_supp_2"
+      "p_7f29895e67",
+      "p_e9406cf54f"
     ],
     "hop": 2,
     "type": "comparison",
@@ -172,8 +172,8 @@
     "question": "What is the name of the fight song of the university whose main campus is in Lawrence, Kansas and whose branch campuses are in the Kansas City metropolitan area?",
     "gold_answer": "Kansas Song",
     "gold_support_ids": [
-      "q15_supp_1",
-      "q15_supp_2"
+      "p_64936bb051",
+      "p_c27f528002"
     ],
     "hop": 2,
     "type": "bridge",
@@ -184,8 +184,8 @@
     "question": "Are both Dictyosperma, and Huernia described as a genus?",
     "gold_answer": "yes",
     "gold_support_ids": [
-      "q16_supp_1",
-      "q16_supp_2"
+      "p_4d241b8029",
+      "p_d08b8879ec"
     ],
     "hop": 2,
     "type": "comparison",
@@ -196,8 +196,8 @@
     "question": "What screenwriter with credits for \"Evolution\" co-wrote a film starring Nicolas Cage and Téa Leoni?",
     "gold_answer": "David Weissman",
     "gold_support_ids": [
-      "q17_supp_1",
-      "q17_supp_2"
+      "p_5623036024",
+      "p_98bfa9a41d"
     ],
     "hop": 2,
     "type": "bridge",
@@ -208,8 +208,8 @@
     "question": "Hayden is a singer-songwriter from Canada, but where does Buck-Tick hail from?",
     "gold_answer": "Fujioka, Gunma",
     "gold_support_ids": [
-      "q18_supp_1",
-      "q18_supp_2"
+      "p_1b049e9319",
+      "p_8a2d70fac5"
     ],
     "hop": 2,
     "type": "comparison",

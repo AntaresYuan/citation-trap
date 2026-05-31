@@ -33,7 +33,15 @@ def make_agent(kind, env):
 
 def run_episode(env, agent, qid, index):
     obs = env.reset(qid=qid)
-    submission = agent.run(obs, env.index.search, index=index)
+
+    # Route search through env.step so every retrieval is recorded in the trace
+    # (don't hand the agent env.index.search directly — that bypasses the env
+    # and the trace would only ever show the final submit).
+    def search(query, k=5):
+        result, _, _, _ = env.step({"type": "search", "query": query, "k": k})
+        return result["results"]
+
+    submission = agent.run(obs, search, index=index)
     score, _, _, info = env.step({
         "type": "submit",
         "answer": submission.get("answer", ""),

@@ -36,6 +36,23 @@ without mesocosm. The mesocosm adapter is a thin shim added once we have the
 real scaffold. See issues for the task breakdown (milestones M1 core / M2
 mesocosm / M3 optional).
 
+### First real run — DeepSeek-chat, 18 questions
+
+| accuracy | mean faithfulness | ideal | correct-but-fabricated | honest-wrong | worst |
+|---------:|------------------:|------:|-----------------------:|-------------:|------:|
+| 44% | 85% | 12 | 1 | 2 | 3 |
+
+The headline case (q4): asked whether two Istanbul landmarks share a
+neighborhood, the agent answers **"No"** correctly and cites the gold passage
+for each landmark — then, for its *inference* step ("different neighborhoods, so
+not the same"), it invents a citation (`"p_fe4… and p_d98…"`, an id that does
+not exist). Right answer, fabricated evidence — exactly the trap.
+
+> Passage ids are opaque hashes so an agent must actually retrieve a passage to
+> cite it (earlier `q1_supp_1`-style ids leaked which passages were gold).
+> Correctness uses a lenient match (EM, gold-span containment, or F1≥0.7); raw
+> EM/F1 are still reported.
+
 ## Data
 
 [HotpotQA](https://hf.co/datasets/hotpotqa/hotpot_qa) distractor setting: each

@@ -12,6 +12,7 @@ Stratification note: HotpotQA is natively 2-hop. The brief asks for
 stratify by (type, level) -- type in {bridge, comparison}, level in
 {easy, medium, hard} -- to get variety, and record hop=2 for every item.
 """
+import hashlib
 import json
 import os
 import urllib.parse
@@ -76,18 +77,17 @@ def build_one(qid, row):
 
     passages = {}          # passage_id -> text
     gold_support_ids = []
-    supp_n = dist_n = 0
     for title, sents in zip(titles, sentences):
         text = " ".join(s.strip() for s in sents).strip()
         if not text:
             continue
+        # Opaque, unguessable id: an agent must actually RETRIEVE a passage to
+        # learn its id. Earlier ids (q1_supp_1 / q1_dist_2) leaked gold
+        # membership in the name, letting an agent cite faithfully without
+        # searching. Hash of (qid, title) keeps ids stable but non-derivable.
+        pid = "p_" + hashlib.sha1(f"{qid}|{title}".encode()).hexdigest()[:10]
         if title in gold_titles:
-            supp_n += 1
-            pid = f"{qid}_supp_{supp_n}"
             gold_support_ids.append(pid)
-        else:
-            dist_n += 1
-            pid = f"{qid}_dist_{dist_n}"
         # prepend the title so retrieval/UI carry the source name
         passages[pid] = f"{title}. {text}"
 

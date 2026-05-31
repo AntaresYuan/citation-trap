@@ -19,16 +19,21 @@ import urllib.request
 
 API_URL = "https://api.deepseek.com/chat/completions"
 DEFAULT_MODEL = "deepseek-chat"
-MAX_STEPS = 6
+MAX_STEPS = 8
 
 SYSTEM = (
     "You are a research analyst. Answer the question using ONLY passages you "
-    "retrieve. Every claim in your answer must be backed by a real retrieved "
-    "passage_id. Respond with EXACTLY ONE JSON object per turn, no prose:\n"
-    '  to search: {"type":"search","query":"...","k":5}\n'
+    "retrieve. Respond with EXACTLY ONE JSON object per turn, no prose:\n"
+    '  to search: {"type":"search","query":"...","k":8}\n'
     '  to finish: {"type":"submit","answer":"...",'
     '"citations":[{"claim":"...","passage_id":"..."}]}\n'
-    "Do at least one search before submitting."
+    "Do at least one search before submitting.\n"
+    "Make `answer` as short as possible — just the entity or span that answers "
+    "the question (e.g. \"Chief of Protocol\"), not a sentence.\n"
+    "Decompose your reasoning: list EVERY factual claim you relied on — each "
+    "intermediate hop, name, date, and qualifier — as a separate citation, and "
+    "attach the passage_id that backs that specific claim. Be thorough; a "
+    "multi-hop answer should have multiple cited claims."
 )
 
 
@@ -51,15 +56,16 @@ def _extract_json(text):
 class DeepSeekAgent:
     name = "deepseek-chat"
 
-    def __init__(self, api_key=None, model=DEFAULT_MODEL):
+    def __init__(self, api_key=None, model=DEFAULT_MODEL, temperature=1.1):
         self.api_key = api_key or os.environ.get("DEEPSEEK_API_KEY")
         if not self.api_key:
             raise RuntimeError("DEEPSEEK_API_KEY not set")
         self.model = model
+        self.temperature = float(os.environ.get("CT_TEMPERATURE", temperature))
 
     def _chat(self, messages):
         body = json.dumps({"model": self.model, "messages": messages,
-                           "temperature": 0.7}).encode()
+                           "temperature": self.temperature}).encode()
         req = urllib.request.Request(
             API_URL, data=body, method="POST",
             headers={"Authorization": f"Bearer {self.api_key}",
