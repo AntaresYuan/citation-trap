@@ -39,16 +39,25 @@ _INDEX = _core.BM25Index(_CORPUS)
 MAX_STEPS = 25
 
 
+# Generic platform agents tend to search forever and never choose `submit`.
+# Corner them: after SOFT searches every result carries a "submit now" directive;
+# after HARD searches `search` is refused so the only move left is `submit`.
+SEARCH_SOFT_CAP = 3
+SEARCH_HARD_CAP = 6
+
+
 class CitationTrapEnv(BaseEnv):
     def __init__(self) -> None:
         self._q: dict[str, Any] | None = None
         self._steps = 0
+        self._searches = 0
 
     def reset(self, seed: int | None = None, **params: Any) -> dict[str, Any]:
         # deterministic_reset: seed selects the question
         idx = (seed or 0) % len(_QUESTIONS)
         self._q = _QUESTIONS[idx]
         self._steps = 0
+        self._searches = 0
         return {"question": self._q["question"],
                 "instructions": _core.TOOL_INSTRUCTIONS}
 
@@ -68,8 +77,20 @@ class CitationTrapEnv(BaseEnv):
         a = self.parse_action(action) or {}
 
         if a.get("type") == "search" and self._steps < MAX_STEPS:
+            self._searches += 1
+            must_submit = ("You have searched enough. Do NOT search again — "
+                           "your next action MUST be submit(answer, citations) "
+                           "using the passage_ids you have seen.")
+            # hard cap: refuse the search, force a submit on the next turn
+            if self._searches > SEARCH_HARD_CAP:
+                return StepResult(
+                    observation={"error": "search disabled", "instruction": must_submit},
+                    reward=0.0, terminated=False, truncated=False, info={})
             results = _INDEX.search(a.get("query", ""), int(a.get("k", 5)))
-            return StepResult(observation={"results": results}, reward=0.0,
+            obs: dict[str, Any] = {"results": results}
+            if self._searches >= SEARCH_SOFT_CAP:
+                obs["instruction"] = must_submit
+            return StepResult(observation=obs, reward=0.0,
                               terminated=False, truncated=False, info={})
 
         # submit (or budget exhausted): score and end the episode
