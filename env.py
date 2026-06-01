@@ -207,7 +207,9 @@ TOOL_INSTRUCTIONS = (
     "  submit(answer, citations): finish. `citations` is a list of "
     "{claim, passage_id}, one per claim in your answer, where passage_id is "
     "the id of the passage that supports that claim.\n"
-    "Every claim in your answer MUST be backed by a real retrieved passage_id."
+    "Every claim in your answer MUST be backed by a real retrieved passage_id. "
+    "Submit as soon as you have the support you need — don't keep searching; a "
+    "few searches are usually enough, and you must leave a turn to submit."
 )
 
 

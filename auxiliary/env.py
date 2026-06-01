@@ -33,7 +33,10 @@ _spec.loader.exec_module(_core)  # type: ignore[union-attr]
 # Build corpus + retrieval index once; reused across episodes.
 _CORPUS, _QUESTIONS = _core.load_data()
 _INDEX = _core.BM25Index(_CORPUS)
-MAX_STEPS = 10
+# Room to search the ~5000-passage corpus several times AND still submit.
+# At 10, a thorough agent (e.g. Claude on the platform) burns all steps
+# searching and never gets to submit -> 0 citations.
+MAX_STEPS = 25
 
 
 class CitationTrapEnv(BaseEnv):
