@@ -79,10 +79,13 @@ BenchAnything four-endpoint protocol:
 
 - `auxiliary/env.py` — `CitationTrapEnv(BaseEnv)` with `reset(seed)` / `step(action)`;
   reuses the repo-root core for BM25 + scoring. Reward = citation faithfulness;
-  answer correctness and the 2×2 quadrant ride in `info`.
+  answer correctness and the 2×2 quadrant ride in `info`. Generic platform agents
+  tend to search forever and never submit, so the env nudges then forces a submit
+  (search soft-cap 3, hard-cap 6; `max_steps` 25).
 - `auxiliary/adapter.py` — `serve(CitationTrapEnv)` exposes `/health /reset /step /close`.
-- `auxiliary/benchanything.json` — manifest (json action space, continuous reward,
-  primary metric `faithfulness`). Passes `mesocosm validate`.
+- `auxiliary/benchanything.json` — manifest (json action space with an explicit
+  `schema_ref` so the platform enforces valid actions; `scalar` reward; primary
+  metric `faithfulness`). Passes `mesocosm validate`.
 
 ```bash
 python3.11 -m venv .venv311 && . .venv311/bin/activate
@@ -98,9 +101,15 @@ Verified end-to-end through the four endpoints: `/reset` (seed-selected question
 `info.quadrant` = e.g. `correct_but_fabricated`) → `/close`.
 
 **Submitted and live on the platform** (`mesocosm env submit --solo`): status
-`ready`. Note: the platform's `BindingVow` schema is stricter than the local
-`mesocosm validate` — reward `type` must be `scalar` (not `continuous`) and
-`techniques` must be objects, not strings.
+`ready`. Platform runs (gold-proxy scored, 10 episodes): **Claude Sonnet 4.6
+(42.5%) > GPT-4o (26.7%)** — both genuinely search and cite.
+
+Gotchas the platform surfaced:
+- The `BindingVow` schema is stricter than local `mesocosm validate` — reward
+  `type` must be `scalar` (not `continuous`), `techniques` must be objects.
+- **All Gemini models emit an empty `{}` action and score 0** on the same env
+  where Claude/GPT-4o work — the platform doesn't enforce our action `schema_ref`
+  for Gemini. Filed as a platform bug; not an env issue.
 
 Design choices worth knowing:
 

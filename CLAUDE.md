@@ -64,3 +64,11 @@ never commit it). Model registry lives in `agent/deepseek_agent.py` (`MODELS`).
   with `mesocosm auth token` to read `status` / `error_message`.
 - `auxiliary/env.py` loads the repo-root `env.py` core via importlib under a
   distinct name to avoid the module-name collision (both are `env`).
+- `run create --model` allowlist: only `anthropic/claude-sonnet-4-6` and
+  `openai/gpt-4o` actually work. **All Gemini models emit an empty `{}` action
+  → 0** (platform doesn't enforce our action `schema_ref` for Gemini — a platform
+  bug, not ours). The domain is pinned to `vow-version 1.0.0` (resubmits update
+  the 1.0.0 vow in place; a new version string is rejected).
+- The platform's generic agent searches forever and won't submit unless forced —
+  `auxiliary/env.py` keeps search caps (`SEARCH_SOFT_CAP`/`HARD_CAP`) + a
+  `schema_ref` action schema. Don't remove them.

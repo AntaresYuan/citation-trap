@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  :root{
+    --bg:#fcfcfc; --ink:#16181d; --ink2:#4c515b; --muted:#868c97;
+    --faithful:#1c8a55; --fabricated:#d23b4e; --misattrib:#9a6b16; --gray:#9aa1ab;
+    --line:#e6e8eb;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1500px;height:1000px}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);
+    display:flex;flex-direction:column;justify-content:center;
+    padding:0 110px;-webkit-font-smoothing:antialiased}
+  .glyph{width:64px;height:64px;border-radius:16px;display:grid;place-items:center;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;font-size:34px;font-weight:800;margin-bottom:34px}
+  h1{font-size:88px;letter-spacing:-.03em;line-height:.98;font-weight:800}
+  .tag{font-size:30px;color:var(--ink2);margin-top:24px;max-width:1040px;line-height:1.4}
+  .tag b{color:var(--fabricated)}
+  .row{display:flex;gap:54px;margin-top:60px;align-items:flex-end}
+  /* the 2x2 */
+  .m{display:grid;grid-template-columns:150px 250px 250px;grid-template-rows:30px 96px 96px;
+    gap:8px;align-items:center}
+  .m .h{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;text-align:center;font-weight:600}
+  .m .rh{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;text-align:right;padding-right:6px}
+  .cell{height:96px;border:1px solid var(--line);border-radius:14px;background:#fff;
+    display:flex;flex-direction:column;justify-content:center;padding:0 18px}
+  .cell .t{font-size:17px;font-weight:700;line-height:1.18}
+  .cell .s{font-size:13px;color:var(--muted);margin-top:3px}
+  .cell.ideal{border-color:#cde6d8} .cell.ideal .t{color:var(--faithful)}
+  .cell.cbf{background:#fcedef;border-color:#f3c6cd}
+  .cell.cbf .t{color:var(--fabricated)} .cell.cbf .s{color:var(--fabricated);opacity:.8}
+  .meta{margin-left:auto;text-align:right;font-size:17px;color:var(--ink2);line-height:1.9}
+  .meta b{color:var(--ink);font-weight:700}
+  .foot{margin-top:64px;font-size:19px;color:var(--muted);font-family:var(--mono)}
+</style>
+</head>
+<body>
+  <div class="glyph">⚑</div>
+  <h1>Citation&nbsp;Trap</h1>
+  <div class="tag">A benchmark that catches LLMs red-handed:
+    <b>right answer, fabricated sources.</b><br>
+    Citation faithfulness vs. answer correctness, over 500 multi-hop questions.</div>
+
+  <div class="row">
+    <div class="m">
+      <div></div><div class="h">citations trustworthy</div><div class="h">citations fabricated</div>
+      <div class="rh">answer&nbsp;right</div>
+      <div class="cell ideal"><div class="t">ideal</div><div class="s">right · trustworthy</div></div>
+      <div class="cell cbf"><div class="t">correct but fabricated</div><div class="s">right · invented ← the trap</div></div>
+      <div class="rh">answer&nbsp;wrong</div>
+      <div class="cell"><div class="t">honest wrong</div><div class="s">wrong · trustworthy</div></div>
+      <div class="cell"><div class="t">worst</div><div class="s">wrong · fabricated</div></div>
+    </div>
+    <div class="meta">
+      <b>500</b> multi-hop questions<br>
+      <b>~5,000</b> shared passages<br>
+      LLM <b>entailment judge</b><br>
+      live on <b>SWECC&nbsp;mesocosm</b>
+    </div>
+  </div>
+
+  <div class="foot">github.com/AntaresYuan/citation-trap</div>
+</body>
+</html>
